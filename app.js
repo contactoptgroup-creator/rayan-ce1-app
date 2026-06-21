@@ -638,8 +638,9 @@ function updateChallengesView() {
 
         CHALLENGES_DATA[type].forEach(challenge => {
             const completed = progress.challengesCompleted?.includes(challenge.id);
+            const hasSubject = challenge.subject ? true : false;
             const card = document.createElement('div');
-            card.className = `challenge-card ${completed ? 'completed' : ''}`;
+            card.className = `challenge-card ${completed ? 'completed' : ''} ${hasSubject ? 'clickable' : ''}`;
             card.innerHTML = `
                 <div class="challenge-card-icon">${challenge.icon}</div>
                 <div class="challenge-card-info">
@@ -647,10 +648,42 @@ function updateChallengesView() {
                     <p>${challenge.description}</p>
                 </div>
                 <div class="challenge-card-reward">+${challenge.reward} XP</div>
+                ${hasSubject ? '<div class="challenge-go-btn">Commencer →</div>' : ''}
             `;
+
+            // Add click handler to redirect to subject exercises
+            if (hasSubject) {
+                card.addEventListener('click', () => startChallengeExercises(challenge));
+            }
+
             container.appendChild(card);
         });
     });
+}
+
+// Start exercises directly from a challenge
+function startChallengeExercises(challenge) {
+    const subjectKey = challenge.subject;
+    const subjects = getSubjectsData();
+    const subject = subjects[subjectKey];
+
+    if (!subject || !subject.fiches || subject.fiches.length === 0) {
+        showToast('Matière non disponible', 'error');
+        return;
+    }
+
+    // Find the first incomplete fiche, or the first one if all completed
+    const progress = getProgress();
+    const subjectProgress = progress.subjects[subjectKey] || {};
+
+    let ficheToStart = subject.fiches.find(f => !subjectProgress[f.id]?.completed);
+    if (!ficheToStart) {
+        ficheToStart = subject.fiches[0]; // Start from beginning if all completed
+    }
+
+    // Show toast and start the fiche
+    showToast(`Défi "${challenge.name}" lancé !`, 'success');
+    startFiche(subjectKey, ficheToStart);
 }
 
 // ==================== SETTINGS ====================
@@ -819,3 +852,4 @@ function levenshteinDistance(str1, str2) {
     }
     return dp[m][n];
 }
+

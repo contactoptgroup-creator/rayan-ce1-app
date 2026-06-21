@@ -1048,6 +1048,60 @@ body {
     font-size: 0.85rem;
 }
 
+/* Clickable challenge cards */
+.challenge-card.clickable {
+    cursor: pointer;
+    position: relative;
+}
+
+.challenge-card.clickable:hover {
+    border-color: var(--accent-green);
+    background: rgba(39, 174, 96, 0.05);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(39, 174, 96, 0.2);
+}
+
+.challenge-card.clickable:active {
+    transform: translateY(-2px);
+}
+
+.challenge-go-btn {
+    background: linear-gradient(135deg, var(--accent-green), #2ecc71);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    transition: var(--transition);
+    animation: pulse-go 2s infinite;
+}
+
+.challenge-card.clickable:hover .challenge-go-btn {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+}
+
+@keyframes pulse-go {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(39, 174, 96, 0); }
+}
+
+/* Mobile adjustments for challenge go button */
+@media (max-width: 768px) {
+    .challenge-card.clickable {
+        flex-wrap: wrap;
+    }
+
+    .challenge-go-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.75rem;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
 /* ==================== BADGES VIEW ==================== */
 .badges-grid {
     display: grid;
