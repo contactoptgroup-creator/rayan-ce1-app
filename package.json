@@ -1,0 +1,13 @@
+{
+  "name": "rayan-ce1-app",
+  "version": "1.0.0",
+  "description": "Application d'apprentissage interactive pour Rayan - niveau CE1",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": ["education", "ce1", "french", "learning", "kids"],
+  "author": "Jean-Marc Taouo",
+  "license": "MIT"
+}

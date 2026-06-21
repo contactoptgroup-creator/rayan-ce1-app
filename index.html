@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayan CE1 - Application d'apprentissage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <h1>Rayan CE1</h1>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-btn active" data-view="home">Accueil</button>
+                <button class="nav-btn" data-view="progress">Mes Progrès</button>
+                <button class="nav-btn" data-view="settings">Paramètres</button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home View -->
+            <section id="home-view" class="view active">
+                <div class="welcome-banner">
+                    <div class="welcome-text">
+                        <h2>Bonjour Rayan ! 👋</h2>
+                        <p>Prêt à apprendre aujourd'hui ?</p>
+                    </div>
+                    <div class="daily-stats">
+                        <div class="stat-item">
+                            <span class="stat-value" id="today-exercises">0</span>
+                            <span class="stat-label">Exercices aujourd'hui</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="streak-days">0</span>
+                            <span class="stat-label">Jours consécutifs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subjects-grid">
+                    <!-- Dictée Flash -->
+                    <div class="subject-card" data-subject="dictee">
+                        <div class="card-icon">✏️</div>
+                        <h3>Dictée Flash</h3>
+                        <p>10 fiches d'entraînement</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+
+                    <!-- Géométrie -->
+                    <div class="subject-card" data-subject="geometrie">
+                        <div class="card-icon">📐</div>
+                        <h3>Géométrie</h3>
+                        <p>12 fiches d'exercices</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+
+                    <!-- Calcul Mental -->
+                    <div class="subject-card" data-subject="calcul_mental">
+                        <div class="card-icon">🧮</div>
+                        <h3>Calcul Mental</h3>
+                        <p>8 fiches d'entraînement</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+
+                    <!-- Nombres et Calculs -->
+                    <div class="subject-card" data-subject="nombres_calculs">
+                        <div class="card-icon">🔢</div>
+                        <h3>Nombres et Calculs</h3>
+                        <p>12 fiches d'exercices</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+
+                    <!-- Problèmes -->
+                    <div class="subject-card" data-subject="problemes">
+                        <div class="card-icon">🤔</div>
+                        <h3>Problèmes</h3>
+                        <p>16 fiches de problèmes</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+
+                    <!-- Grandeurs et Mesures -->
+                    <div class="subject-card" data-subject="grandeurs_mesures">
+                        <div class="card-icon">📏</div>
+                        <h3>Grandeurs et Mesures</h3>
+                        <p>10 fiches d'exercices</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+
+                    <!-- Tables de Multiplication -->
+                    <div class="subject-card" data-subject="tables">
+                        <div class="card-icon">✖️</div>
+                        <h3>Tables de Multiplication</h3>
+                        <p>Tables de 1 à 10</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subject View -->
+            <section id="subject-view" class="view">
+                <div class="subject-header">
+                    <button class="back-btn" id="back-to-home">← Retour</button>
+                    <h2 id="subject-title">Matière</h2>
+                </div>
+                <div class="fiches-grid" id="fiches-container">
+                    <!-- Fiches will be loaded dynamically -->
+                </div>
+            </section>
+
+            <!-- Exercise View -->
+            <section id="exercise-view" class="view">
+                <div class="exercise-header">
+                    <button class="back-btn" id="back-to-subject">← Retour</button>
+                    <h2 id="exercise-title">Exercice</h2>
+                    <div class="exercise-progress">
+                        <span id="current-question">1</span> / <span id="total-questions">10</span>
+                    </div>
+                </div>
+                <div class="exercise-content" id="exercise-container">
+                    <!-- Exercise content will be loaded dynamically -->
+                </div>
+                <div class="exercise-actions">
+                    <button class="btn btn-primary" id="check-answer">Vérifier</button>
+                    <button class="btn btn-secondary" id="next-question" style="display: none;">Suivant →</button>
+                </div>
+                <div class="exercise-feedback" id="feedback-container"></div>
+            </section>
+
+            <!-- Progress View -->
+            <section id="progress-view" class="view">
+                <h2>Mes Progrès</h2>
+                <div class="global-progress">
+                    <div class="progress-circle">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="progress-fill-circle" cx="50" cy="50" r="45" id="global-progress-circle"></circle>
+                        </svg>
+                        <span class="progress-percentage" id="global-percentage">0%</span>
+                    </div>
+                    <h3>Progression Globale</h3>
+                </div>
+                <div class="subject-progress-list" id="subject-progress-list">
+                    <!-- Subject progress will be loaded dynamically -->
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-icon">📝</span>
+                        <span class="stat-value" id="total-completed">0</span>
+                        <span class="stat-label">Exercices complétés</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">⭐</span>
+                        <span class="stat-value" id="total-stars">0</span>
+                        <span class="stat-label">Étoiles gagnées</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">🎯</span>
+                        <span class="stat-value" id="accuracy-rate">0%</span>
+                        <span class="stat-label">Taux de réussite</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings View -->
+            <section id="settings-view" class="view">
+                <h2>Paramètres</h2>
+                <div class="settings-section">
+                    <h3>🤖 Intégration OpenAI</h3>
+                    <p>Ajouter du nouveau contenu avec l'IA</p>
+                    <div class="api-key-input">
+                        <input type="password" id="openai-api-key" placeholder="Clé API OpenAI">
+                        <button class="btn btn-primary" id="save-api-key">Enregistrer</button>
+                    </div>
+                    <div class="ai-content-generator" id="ai-generator" style="display: none;">
+                        <h4>Générer du nouveau contenu</h4>
+                        <select id="ai-subject">
+                            <option value="dictee">Dictée Flash</option>
+                            <option value="calcul_mental">Calcul Mental</option>
+                            <option value="problemes">Problèmes</option>
+                            <option value="geometrie">Géométrie</option>
+                        </select>
+                        <textarea id="ai-prompt" placeholder="Décris le type d'exercice à générer..."></textarea>
+                        <button class="btn btn-primary" id="generate-content">Générer</button>
+                        <div id="ai-result"></div>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3>🗑️ Réinitialiser</h3>
+                    <p>Effacer tous les progrès</p>
+                    <button class="btn btn-danger" id="reset-progress">Réinitialiser les progrès</button>
+                </div>
+                <div class="settings-section">
+                    <h3>📊 Exporter les données</h3>
+                    <button class="btn btn-secondary" id="export-data">Exporter en JSON</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p>Application d'apprentissage pour Rayan - CE1 📚</p>
+        </footer>
+    </div>
+
+    <!-- Modal for results -->
+    <div class="modal" id="result-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Bravo !</h2>
+            </div>
+            <div class="modal-body">
+                <div class="result-stars" id="result-stars"></div>
+                <p id="result-message"></p>
+                <div class="result-stats">
+                    <span id="result-score"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="modal-close">Continuer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
