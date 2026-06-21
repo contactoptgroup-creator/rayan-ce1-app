@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rayan CE1 - Application d'apprentissage</title>
+    <title>Rayan - Champion de l'Apprentissage</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="app-container">
         <!-- Header -->
         <header class="main-header">
             <div class="logo">
-                <span class="logo-icon">📚</span>
-                <h1>Rayan CE1</h1>
+                <span class="logo-icon">🏆</span>
+                <h1>Champion Rayan</h1>
+            </div>
+            <div class="level-badge" id="level-badge">
+                <span class="level-icon">🌱</span>
+                <span class="level-name">Niveau 1</span>
+                <div class="xp-bar">
+                    <div class="xp-fill" id="xp-fill"></div>
+                </div>
             </div>
             <nav class="main-nav">
-                <button class="nav-btn active" data-view="home">Accueil</button>
-                <button class="nav-btn" data-view="progress">Mes Progrès</button>
-                <button class="nav-btn" data-view="settings">Paramètres</button>
+                <button class="nav-btn active" data-view="home">🏠</button>
+                <button class="nav-btn" data-view="challenges">🎯</button>
+                <button class="nav-btn" data-view="progress">📊</button>
+                <button class="nav-btn" data-view="badges">🏅</button>
+                <button class="nav-btn" data-view="settings">⚙️</button>
             </nav>
         </header>
 
@@ -28,133 +37,96 @@
         <main class="main-content">
             <!-- Home View -->
             <section id="home-view" class="view active">
+                <!-- Class Selector -->
+                <div class="class-selector">
+                    <button class="class-btn active" data-class="ce1">CE1</button>
+                    <button class="class-btn" data-class="ce2">CE2</button>
+                </div>
+
                 <div class="welcome-banner">
                     <div class="welcome-text">
                         <h2>Bonjour Rayan ! 👋</h2>
-                        <p>Prêt à apprendre aujourd'hui ?</p>
+                        <p>Objectif : Devenir le Major de ta classe !</p>
                     </div>
                     <div class="daily-stats">
                         <div class="stat-item">
                             <span class="stat-value" id="today-exercises">0</span>
-                            <span class="stat-label">Exercices aujourd'hui</span>
+                            <span class="stat-label">Exercices</span>
+                        </div>
+                        <div class="stat-item streak-item">
+                            <span class="stat-value" id="streak-days">0</span>
+                            <span class="stat-label">🔥 Streak</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-value" id="streak-days">0</span>
-                            <span class="stat-label">Jours consécutifs</span>
+                            <span class="stat-value" id="total-xp">0</span>
+                            <span class="stat-label">XP</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="subjects-grid">
-                    <!-- Français -->
-                    <div class="subject-card" data-subject="francais">
-                        <div class="card-icon">📖</div>
-                        <h3>Français</h3>
-                        <p>12 fiches d'exercices</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0%</span>
+                <!-- Daily Challenge Banner -->
+                <div class="daily-challenge-banner" id="daily-challenge">
+                    <div class="challenge-icon">🎯</div>
+                    <div class="challenge-info">
+                        <h3>Défi du jour</h3>
+                        <p id="daily-challenge-text">Complète 5 exercices de calcul mental</p>
                     </div>
+                    <div class="challenge-progress">
+                        <div class="challenge-progress-bar">
+                            <div class="challenge-progress-fill" id="daily-challenge-fill"></div>
+                        </div>
+                        <span id="daily-challenge-status">0/5</span>
+                    </div>
+                    <div class="challenge-reward">+50 XP</div>
+                </div>
 
-                    <!-- Dictée Flash -->
-                    <div class="subject-card" data-subject="dictee">
-                        <div class="card-icon">✏️</div>
-                        <h3>Dictée Flash</h3>
-                        <p>12 fiches d'entraînement</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0%</span>
-                    </div>
+                <!-- Subjects Grid CE1 -->
+                <div id="subjects-ce1" class="subjects-grid">
+                    <div class="subject-card" data-subject="francais"><div class="card-icon">📖</div><h3>Français</h3><p>12 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
+                    <div class="subject-card" data-subject="lecture"><div class="card-icon">📚</div><h3>Lecture</h3><p>8 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
+                    <div class="subject-card" data-subject="dictee"><div class="card-icon">✏️</div><h3>Dictée Flash</h3><p>12 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
+                    <div class="subject-card" data-subject="calcul_mental"><div class="card-icon">🧮</div><h3>Calcul Mental</h3><p>10 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐</div></div>
+                    <div class="subject-card" data-subject="tables"><div class="card-icon">✖️</div><h3>Tables</h3><p>12 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐</div></div>
+                    <div class="subject-card" data-subject="nombres_calculs"><div class="card-icon">🔢</div><h3>Nombres</h3><p>8 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
+                    <div class="subject-card" data-subject="geometrie"><div class="card-icon">📐</div><h3>Géométrie</h3><p>10 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
+                    <div class="subject-card" data-subject="problemes"><div class="card-icon">🤔</div><h3>Problèmes</h3><p>10 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
+                    <div class="subject-card" data-subject="grandeurs_mesures"><div class="card-icon">📏</div><h3>Mesures</h3><p>6 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
+                    <div class="subject-card" data-subject="anglais"><div class="card-icon">🇬🇧</div><h3>Anglais</h3><p>6 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐</div></div>
+                    <div class="subject-card" data-subject="sciences"><div class="card-icon">🔬</div><h3>Sciences</h3><p>6 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
+                </div>
 
-                    <!-- Calcul Mental -->
-                    <div class="subject-card" data-subject="calcul_mental">
-                        <div class="card-icon">🧮</div>
-                        <h3>Calcul Mental</h3>
-                        <p>10 fiches d'entraînement</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0%</span>
-                    </div>
+                <!-- Subjects Grid CE2 -->
+                <div id="subjects-ce2" class="subjects-grid" style="display: none;">
+                    <div class="subject-card" data-subject="francais_ce2"><div class="card-icon">📖</div><h3>Français CE2</h3><p>10 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
+                    <div class="subject-card" data-subject="lecture_ce2"><div class="card-icon">📚</div><h3>Lecture CE2</h3><p>3 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
+                    <div class="subject-card" data-subject="dictee_ce2"><div class="card-icon">✏️</div><h3>Dictée CE2</h3><p>3 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
+                    <div class="subject-card" data-subject="calcul_ce2"><div class="card-icon">🧮</div><h3>Calcul CE2</h3><p>8 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
+                    <div class="subject-card" data-subject="tables_ce2"><div class="card-icon">✖️</div><h3>Tables CE2</h3><p>4 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
+                    <div class="subject-card" data-subject="geometrie_ce2"><div class="card-icon">📐</div><h3>Géométrie CE2</h3><p>4 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
+                    <div class="subject-card" data-subject="problemes_ce2"><div class="card-icon">🤔</div><h3>Problèmes CE2</h3><p>4 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
+                    <div class="subject-card" data-subject="mesures_ce2"><div class="card-icon">📏</div><h3>Mesures CE2</h3><p>4 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
+                    <div class="subject-card" data-subject="anglais_ce2"><div class="card-icon">🇬🇧</div><h3>Anglais CE2</h3><p>5 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
+                    <div class="subject-card" data-subject="sciences_ce2"><div class="card-icon">🔬</div><h3>Sciences CE2</h3><p>4 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
+                </div>
+            </section>
 
-                    <!-- Tables de Multiplication -->
-                    <div class="subject-card" data-subject="tables">
-                        <div class="card-icon">✖️</div>
-                        <h3>Tables de Multiplication</h3>
-                        <p>12 fiches (tables 1-10)</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0%</span>
-                    </div>
+            <!-- Challenges View -->
+            <section id="challenges-view" class="view">
+                <h2>🎯 Défis & Challenges</h2>
 
-                    <!-- Nombres et Calculs -->
-                    <div class="subject-card" data-subject="nombres_calculs">
-                        <div class="card-icon">🔢</div>
-                        <h3>Nombres et Calculs</h3>
-                        <p>8 fiches d'exercices</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0%</span>
-                    </div>
+                <div class="challenges-section">
+                    <h3>📅 Défis Quotidiens</h3>
+                    <div class="challenges-grid" id="daily-challenges"></div>
+                </div>
 
-                    <!-- Géométrie -->
-                    <div class="subject-card" data-subject="geometrie">
-                        <div class="card-icon">📐</div>
-                        <h3>Géométrie</h3>
-                        <p>10 fiches d'exercices</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0%</span>
-                    </div>
+                <div class="challenges-section">
+                    <h3>📆 Défis Hebdomadaires</h3>
+                    <div class="challenges-grid" id="weekly-challenges"></div>
+                </div>
 
-                    <!-- Problèmes -->
-                    <div class="subject-card" data-subject="problemes">
-                        <div class="card-icon">🤔</div>
-                        <h3>Problèmes</h3>
-                        <p>10 fiches de problèmes</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0%</span>
-                    </div>
-
-                    <!-- Grandeurs et Mesures -->
-                    <div class="subject-card" data-subject="grandeurs_mesures">
-                        <div class="card-icon">📏</div>
-                        <h3>Grandeurs et Mesures</h3>
-                        <p>6 fiches d'exercices</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0%</span>
-                    </div>
-
-                    <!-- Anglais -->
-                    <div class="subject-card" data-subject="anglais">
-                        <div class="card-icon">🇬🇧</div>
-                        <h3>Anglais</h3>
-                        <p>6 fiches d'exercices</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0%</span>
-                    </div>
-
-                    <!-- Sciences -->
-                    <div class="subject-card" data-subject="sciences">
-                        <div class="card-icon">🔬</div>
-                        <h3>Sciences</h3>
-                        <p>6 fiches d'exercices</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0%</span>
-                    </div>
+                <div class="challenges-section">
+                    <h3>🌟 Défis Spéciaux</h3>
+                    <div class="challenges-grid" id="special-challenges"></div>
                 </div>
             </section>
 
@@ -163,10 +135,14 @@
                 <div class="subject-header">
                     <button class="back-btn" id="back-to-home">← Retour</button>
                     <h2 id="subject-title">Matière</h2>
+                    <div class="difficulty-filter">
+                        <button class="filter-btn active" data-diff="all">Tous</button>
+                        <button class="filter-btn" data-diff="1">⭐</button>
+                        <button class="filter-btn" data-diff="2">⭐⭐</button>
+                        <button class="filter-btn" data-diff="3">⭐⭐⭐</button>
+                    </div>
                 </div>
-                <div class="fiches-grid" id="fiches-container">
-                    <!-- Fiches will be loaded dynamically -->
-                </div>
+                <div class="fiches-grid" id="fiches-container"></div>
             </section>
 
             <!-- Exercise View -->
@@ -174,13 +150,15 @@
                 <div class="exercise-header">
                     <button class="back-btn" id="back-to-subject">← Retour</button>
                     <h2 id="exercise-title">Exercice</h2>
+                    <div class="exercise-timer" id="exercise-timer" style="display: none;">
+                        <span class="timer-icon">⏱️</span>
+                        <span id="timer-value">0:00</span>
+                    </div>
                     <div class="exercise-progress">
                         <span id="current-question">1</span> / <span id="total-questions">10</span>
                     </div>
                 </div>
-                <div class="exercise-content" id="exercise-container">
-                    <!-- Exercise content will be loaded dynamically -->
-                </div>
+                <div class="exercise-content" id="exercise-container"></div>
                 <div class="exercise-actions">
                     <button class="btn btn-primary" id="check-answer">Vérifier</button>
                     <button class="btn btn-secondary" id="next-question" style="display: none;">Suivant →</button>
@@ -190,7 +168,7 @@
 
             <!-- Progress View -->
             <section id="progress-view" class="view">
-                <h2>Mes Progrès</h2>
+                <h2>📊 Mes Progrès</h2>
                 <div class="global-progress">
                     <div class="progress-circle">
                         <svg viewBox="0 0 100 100">
@@ -201,64 +179,44 @@
                     </div>
                     <h3>Progression Globale</h3>
                 </div>
-                <div class="subject-progress-list" id="subject-progress-list">
-                    <!-- Subject progress will be loaded dynamically -->
-                </div>
                 <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-icon">📝</span>
-                        <span class="stat-value" id="total-completed">0</span>
-                        <span class="stat-label">Exercices complétés</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-icon">⭐</span>
-                        <span class="stat-value" id="total-stars">0</span>
-                        <span class="stat-label">Étoiles gagnées</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-icon">🎯</span>
-                        <span class="stat-value" id="accuracy-rate">0%</span>
-                        <span class="stat-label">Taux de réussite</span>
-                    </div>
+                    <div class="stat-card"><span class="stat-icon">📝</span><span class="stat-value" id="total-completed">0</span><span class="stat-label">Fiches complétées</span></div>
+                    <div class="stat-card"><span class="stat-icon">⭐</span><span class="stat-value" id="total-stars">0</span><span class="stat-label">Étoiles gagnées</span></div>
+                    <div class="stat-card"><span class="stat-icon">🎯</span><span class="stat-value" id="accuracy-rate">0%</span><span class="stat-label">Taux de réussite</span></div>
+                    <div class="stat-card"><span class="stat-icon">⚡</span><span class="stat-value" id="total-xp-stat">0</span><span class="stat-label">XP Total</span></div>
                 </div>
+                <div class="subject-progress-list" id="subject-progress-list"></div>
+            </section>
+
+            <!-- Badges View -->
+            <section id="badges-view" class="view">
+                <h2>🏅 Mes Badges</h2>
+                <div class="badges-grid" id="badges-container"></div>
             </section>
 
             <!-- Settings View -->
             <section id="settings-view" class="view">
-                <h2>Paramètres</h2>
+                <h2>⚙️ Paramètres</h2>
                 <div class="settings-section">
-                    <h3>🤖 Intégration OpenAI</h3>
-                    <p>Ajouter du nouveau contenu avec l'IA</p>
+                    <h3>🤖 Ajouter du contenu avec l'IA</h3>
                     <div class="api-key-input">
                         <input type="password" id="openai-api-key" placeholder="Clé API OpenAI">
                         <button class="btn btn-primary" id="save-api-key">Enregistrer</button>
                     </div>
                     <div class="ai-content-generator" id="ai-generator" style="display: none;">
                         <h4>Générer du nouveau contenu</h4>
-                        <select id="ai-subject">
-                            <option value="francais">Français</option>
-                            <option value="dictee">Dictée Flash</option>
-                            <option value="calcul_mental">Calcul Mental</option>
-                            <option value="tables">Tables de Multiplication</option>
-                            <option value="nombres_calculs">Nombres et Calculs</option>
-                            <option value="geometrie">Géométrie</option>
-                            <option value="problemes">Problèmes</option>
-                            <option value="grandeurs_mesures">Grandeurs et Mesures</option>
-                            <option value="anglais">Anglais</option>
-                            <option value="sciences">Sciences</option>
-                        </select>
-                        <textarea id="ai-prompt" placeholder="Décris le type d'exercice à générer..."></textarea>
+                        <select id="ai-subject"></select>
+                        <textarea id="ai-prompt" placeholder="Décris le type d'exercice..."></textarea>
                         <button class="btn btn-primary" id="generate-content">Générer</button>
                         <div id="ai-result"></div>
                     </div>
                 </div>
                 <div class="settings-section">
                     <h3>🗑️ Réinitialiser</h3>
-                    <p>Effacer tous les progrès</p>
                     <button class="btn btn-danger" id="reset-progress">Réinitialiser les progrès</button>
                 </div>
                 <div class="settings-section">
-                    <h3>📊 Exporter les données</h3>
+                    <h3>📊 Exporter</h3>
                     <button class="btn btn-secondary" id="export-data">Exporter en JSON</button>
                 </div>
             </section>
@@ -266,30 +224,47 @@
 
         <!-- Footer -->
         <footer class="main-footer">
-            <p>Application d'apprentissage pour Rayan - CE1 📚</p>
+            <p>🏆 Objectif : Major de la Classe ! 🏆</p>
         </footer>
     </div>
 
-    <!-- Modal for results -->
+    <!-- Result Modal -->
     <div class="modal" id="result-modal">
         <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modal-title">Bravo !</h2>
-            </div>
+            <div class="modal-header"><h2 id="modal-title">Bravo !</h2></div>
             <div class="modal-body">
                 <div class="result-stars" id="result-stars"></div>
                 <p id="result-message"></p>
-                <div class="result-stats">
-                    <span id="result-score"></span>
-                </div>
+                <div class="result-stats"><span id="result-score"></span></div>
+                <div class="xp-gained" id="xp-gained">+0 XP</div>
             </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="modal-close">Continuer</button>
-            </div>
+            <div class="modal-footer"><button class="btn btn-primary" id="modal-close">Continuer</button></div>
+        </div>
+    </div>
+
+    <!-- Level Up Modal -->
+    <div class="modal" id="levelup-modal">
+        <div class="modal-content levelup">
+            <div class="levelup-icon" id="levelup-icon">🎉</div>
+            <h2>Niveau Supérieur !</h2>
+            <p id="levelup-name">Apprenti</p>
+            <button class="btn btn-primary" id="levelup-close">Super !</button>
+        </div>
+    </div>
+
+    <!-- Badge Unlock Modal -->
+    <div class="modal" id="badge-modal">
+        <div class="modal-content badge-unlock">
+            <div class="badge-unlock-icon" id="badge-unlock-icon">🏅</div>
+            <h2>Nouveau Badge !</h2>
+            <p id="badge-unlock-name">Badge Name</p>
+            <p id="badge-unlock-desc">Description</p>
+            <button class="btn btn-primary" id="badge-close">Génial !</button>
         </div>
     </div>
 
     <script src="data.js"></script>
+    <script src="data-ce2.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

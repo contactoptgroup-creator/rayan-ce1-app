@@ -955,6 +955,100 @@ const SUBJECTS_DATA = {
         ]
     },
 
+    lecture: {
+        name: "Lecture & Compréhension",
+        icon: "📚",
+        color: "#e91e63",
+        fiches: [
+            {
+                id: 1, title: "Comprendre un texte court", description: "Niveau 1", difficulty: 1,
+                exercises: [
+                    { type: "lecture", text: "Tom a un chat. Son chat s'appelle Minou. Minou aime dormir sur le canapé.", questions: [
+                        { type: "qcm", question: "Comment s'appelle le chat de Tom ?", options: ["Félix", "Minou", "Tigrou", "Pacha"], answer: "Minou" },
+                        { type: "qcm", question: "Où aime dormir Minou ?", options: ["Sur le lit", "Sur le canapé", "Dans le jardin", "Sous la table"], answer: "Sur le canapé" }
+                    ]},
+                    { type: "lecture", text: "Léa va à l'école. Elle prend son cartable rouge. Dans son cartable, il y a ses cahiers et sa trousse.", questions: [
+                        { type: "qcm", question: "De quelle couleur est le cartable de Léa ?", options: ["Bleu", "Vert", "Rouge", "Jaune"], answer: "Rouge" },
+                        { type: "qcm", question: "Qu'y a-t-il dans le cartable ?", options: ["Des jouets", "Des cahiers et une trousse", "Des bonbons", "Un livre"], answer: "Des cahiers et une trousse" }
+                    ]}
+                ]
+            },
+            {
+                id: 2, title: "Histoire courte", description: "Niveau 1", difficulty: 1,
+                exercises: [
+                    { type: "lecture", text: "C'est l'anniversaire de Marie. Elle a 7 ans. Ses amis lui offrent un beau cadeau. C'est une poupée avec une robe bleue.", questions: [
+                        { type: "input", question: "Quel âge a Marie ?", answer: "7" },
+                        { type: "qcm", question: "Quel cadeau reçoit Marie ?", options: ["Un ballon", "Une poupée", "Un livre", "Un vélo"], answer: "Une poupée" },
+                        { type: "qcm", question: "De quelle couleur est la robe de la poupée ?", options: ["Rouge", "Verte", "Bleue", "Rose"], answer: "Bleue" }
+                    ]}
+                ]
+            },
+            {
+                id: 3, title: "À la ferme", description: "Niveau 2", difficulty: 2,
+                exercises: [
+                    { type: "lecture", text: "Pierre habite dans une ferme. Chaque matin, il aide son père à nourrir les animaux. Il donne du grain aux poules, du foin aux vaches et des carottes aux lapins. Pierre aime beaucoup les lapins.", questions: [
+                        { type: "qcm", question: "Où habite Pierre ?", options: ["En ville", "Dans une ferme", "À la montagne", "Au bord de la mer"], answer: "Dans une ferme" },
+                        { type: "qcm", question: "Que mange les poules ?", options: ["Du foin", "Des carottes", "Du grain", "De l'herbe"], answer: "Du grain" },
+                        { type: "qcm", question: "Quel animal Pierre préfère-t-il ?", options: ["Les poules", "Les vaches", "Les lapins", "Les chiens"], answer: "Les lapins" }
+                    ]}
+                ]
+            },
+            {
+                id: 4, title: "La sortie au parc", description: "Niveau 2", difficulty: 2,
+                exercises: [
+                    { type: "lecture", text: "Samedi, Emma va au parc avec sa maman. Il fait beau et chaud. Emma joue sur la balançoire pendant une heure. Ensuite, elle mange une glace à la fraise. C'est sa saveur préférée !", questions: [
+                        { type: "qcm", question: "Quel jour Emma va au parc ?", options: ["Lundi", "Mercredi", "Samedi", "Dimanche"], answer: "Samedi" },
+                        { type: "qcm", question: "Quel temps fait-il ?", options: ["Il pleut", "Il fait froid", "Il neige", "Il fait beau et chaud"], answer: "Il fait beau et chaud" },
+                        { type: "qcm", question: "Quelle est la saveur préférée d'Emma ?", options: ["Chocolat", "Vanille", "Fraise", "Citron"], answer: "Fraise" }
+                    ]}
+                ]
+            },
+            {
+                id: 5, title: "Le petit déjeuner", description: "Niveau 2", difficulty: 2,
+                exercises: [
+                    { type: "lecture", text: "Tous les matins, Lucas se lève à 7 heures. Il se lave le visage et les mains. Puis il va dans la cuisine pour prendre son petit déjeuner. Il boit un grand bol de chocolat chaud et mange deux tartines de confiture. Sa confiture préférée est la confiture d'abricot.", questions: [
+                        { type: "qcm", question: "À quelle heure Lucas se lève-t-il ?", options: ["6 heures", "7 heures", "8 heures", "9 heures"], answer: "7 heures" },
+                        { type: "input", question: "Combien de tartines mange Lucas ?", answer: "2" },
+                        { type: "qcm", question: "Quelle est la confiture préférée de Lucas ?", options: ["Fraise", "Abricot", "Cerise", "Orange"], answer: "Abricot" }
+                    ]}
+                ]
+            },
+            {
+                id: 6, title: "L'école de Jules", description: "Niveau 3", difficulty: 3,
+                exercises: [
+                    { type: "lecture", text: "Jules est en classe de CE1. Sa maîtresse s'appelle Madame Martin. Elle est très gentille. Ce matin, les élèves ont fait une dictée. Jules a fait deux fautes seulement. Il est content car c'est son meilleur résultat ! Madame Martin l'a félicité devant toute la classe.", questions: [
+                        { type: "qcm", question: "En quelle classe est Jules ?", options: ["CP", "CE1", "CE2", "CM1"], answer: "CE1" },
+                        { type: "input", question: "Combien de fautes Jules a-t-il fait ?", answer: "2" },
+                        { type: "qcm", question: "Comment s'appelle la maîtresse ?", options: ["Madame Dupont", "Madame Martin", "Madame Bernard", "Madame Petit"], answer: "Madame Martin" },
+                        { type: "qcm", question: "Pourquoi Jules est-il content ?", options: ["C'est son anniversaire", "Il a eu zéro faute", "C'est son meilleur résultat", "Il a une nouvelle trousse"], answer: "C'est son meilleur résultat" }
+                    ]}
+                ]
+            },
+            {
+                id: 7, title: "Le voyage en train", description: "Niveau 3", difficulty: 3,
+                exercises: [
+                    { type: "lecture", text: "Pendant les vacances, Sophie prend le train avec ses parents pour aller chez ses grands-parents. Le voyage dure trois heures. Sophie regarde par la fenêtre. Elle voit des champs, des vaches et des maisons. Elle lit aussi un livre sur les dinosaures. Quand le train arrive, son grand-père l'attend sur le quai avec un grand sourire.", questions: [
+                        { type: "input", question: "Combien d'heures dure le voyage ?", answer: "3" },
+                        { type: "qcm", question: "Chez qui va Sophie ?", options: ["Chez sa tante", "Chez ses cousins", "Chez ses grands-parents", "Chez son oncle"], answer: "Chez ses grands-parents" },
+                        { type: "qcm", question: "Sur quoi porte le livre de Sophie ?", options: ["Les animaux", "Les dinosaures", "Les voitures", "Les princesses"], answer: "Les dinosaures" },
+                        { type: "qcm", question: "Qui attend Sophie à l'arrivée ?", options: ["Sa grand-mère", "Son grand-père", "Son oncle", "Sa tante"], answer: "Son grand-père" }
+                    ]}
+                ]
+            },
+            {
+                id: 8, title: "La recette du gâteau", description: "Niveau 3", difficulty: 3,
+                exercises: [
+                    { type: "lecture", text: "Pour faire un gâteau au chocolat, il faut : 200 grammes de chocolat, 3 œufs, 100 grammes de sucre et 50 grammes de farine. D'abord, on fait fondre le chocolat. Ensuite, on mélange les œufs et le sucre. Puis on ajoute le chocolat fondu et la farine. Enfin, on met le tout au four pendant 20 minutes.", questions: [
+                        { type: "input", question: "Combien d'œufs faut-il ?", answer: "3" },
+                        { type: "input", question: "Combien de grammes de chocolat faut-il ?", answer: "200" },
+                        { type: "qcm", question: "Que fait-on en premier ?", options: ["Mélanger les œufs", "Fondre le chocolat", "Ajouter la farine", "Mettre au four"], answer: "Fondre le chocolat" },
+                        { type: "input", question: "Combien de minutes au four ?", answer: "20" }
+                    ]}
+                ]
+            }
+        ]
+    },
+
     sciences: {
         name: "Sciences",
         icon: "🔬",
@@ -1053,5 +1147,61 @@ const SUBJECT_ICONS = {
     problemes: "🤔",
     grandeurs_mesures: "📏",
     anglais: "🇬🇧",
-    sciences: "🔬"
+    sciences: "🔬",
+    lecture: "📚"
 };
+
+// ==================== CHALLENGES SYSTEM ====================
+const CHALLENGES_DATA = {
+    daily: [
+        { id: "speed_calc", name: "Calcul Rapide", description: "Réponds à 10 calculs en moins de 2 minutes", icon: "⚡", reward: 50, type: "timed", subject: "calcul_mental", count: 10, timeLimit: 120 },
+        { id: "perfect_dictee", name: "Dictée Parfaite", description: "Fais une dictée sans faute", icon: "✨", reward: 75, type: "perfect", subject: "dictee", count: 1 },
+        { id: "tables_master", name: "Champion des Tables", description: "Récite 3 tables sans erreur", icon: "🏆", reward: 60, type: "streak", subject: "tables", count: 3 },
+        { id: "lecture_hero", name: "Super Lecteur", description: "Lis et comprends 2 textes", icon: "📖", reward: 50, type: "complete", subject: "lecture", count: 2 },
+        { id: "problem_solver", name: "Résolveur de Problèmes", description: "Résous 5 problèmes", icon: "🧩", reward: 55, type: "complete", subject: "problemes", count: 5 }
+    ],
+    weekly: [
+        { id: "week_champion", name: "Champion de la Semaine", description: "Complete 50 exercices cette semaine", icon: "👑", reward: 200, type: "total", count: 50 },
+        { id: "all_subjects", name: "Explorateur", description: "Travaille sur toutes les matières", icon: "🌟", reward: 150, type: "variety", count: 11 },
+        { id: "streak_7", name: "7 Jours d'Affilée", description: "Connecte-toi 7 jours de suite", icon: "🔥", reward: 300, type: "streak", count: 7 },
+        { id: "star_collector", name: "Collectionneur d'Étoiles", description: "Gagne 20 étoiles cette semaine", icon: "⭐", reward: 175, type: "stars", count: 20 },
+        { id: "perfectionist", name: "Perfectionniste", description: "Obtiens 100% sur 10 fiches", icon: "💯", reward: 250, type: "perfect", count: 10 }
+    ],
+    special: [
+        { id: "major_unlock", name: "Futur Major", description: "Complète toutes les fiches d'une matière avec 3 étoiles", icon: "🎓", reward: 500, type: "mastery", unlocks: "badge_major" },
+        { id: "speed_demon", name: "Éclair", description: "Complète 20 exercices en moins de 10 minutes", icon: "💨", reward: 300, type: "speed", count: 20, timeLimit: 600 },
+        { id: "comeback_king", name: "Roi du Retour", description: "Améliore ton score sur 5 fiches difficiles", icon: "👊", reward: 200, type: "improvement", count: 5 }
+    ]
+};
+
+// ==================== BADGES SYSTEM ====================
+const BADGES_DATA = [
+    { id: "first_step", name: "Premier Pas", description: "Complete ta première fiche", icon: "👶", condition: { type: "fiches_completed", count: 1 } },
+    { id: "getting_started", name: "Bien Parti", description: "Complete 10 fiches", icon: "🚀", condition: { type: "fiches_completed", count: 10 } },
+    { id: "hard_worker", name: "Travailleur", description: "Complete 50 fiches", icon: "💪", condition: { type: "fiches_completed", count: 50 } },
+    { id: "star_beginner", name: "Étoile Montante", description: "Gagne 10 étoiles", icon: "⭐", condition: { type: "stars", count: 10 } },
+    { id: "star_collector", name: "Collectionneur", description: "Gagne 50 étoiles", icon: "🌟", condition: { type: "stars", count: 50 } },
+    { id: "star_master", name: "Maître des Étoiles", description: "Gagne 100 étoiles", icon: "✨", condition: { type: "stars", count: 100 } },
+    { id: "math_lover", name: "Matheux", description: "Complete toutes les fiches de maths", icon: "🧮", condition: { type: "subject_complete", subject: "calcul_mental" } },
+    { id: "french_master", name: "Académicien", description: "Complete toutes les fiches de français", icon: "📖", condition: { type: "subject_complete", subject: "francais" } },
+    { id: "streak_3", name: "Régulier", description: "3 jours consécutifs", icon: "🔥", condition: { type: "streak", count: 3 } },
+    { id: "streak_7", name: "Assidu", description: "7 jours consécutifs", icon: "🔥🔥", condition: { type: "streak", count: 7 } },
+    { id: "streak_30", name: "Inarrêtable", description: "30 jours consécutifs", icon: "🔥🔥🔥", condition: { type: "streak", count: 30 } },
+    { id: "perfectionist", name: "Perfectionniste", description: "Obtiens 100% sur 10 fiches", icon: "💯", condition: { type: "perfect_scores", count: 10 } },
+    { id: "speed_demon", name: "Rapide", description: "Complete une fiche en moins d'1 minute", icon: "⚡", condition: { type: "speed", timeLimit: 60 } },
+    { id: "major_potential", name: "Futur Major", description: "Plus de 90% de moyenne générale", icon: "🎓", condition: { type: "average", score: 90 } }
+];
+
+// ==================== LEVEL SYSTEM ====================
+const LEVELS_DATA = [
+    { level: 1, name: "Débutant", xpRequired: 0, icon: "🌱" },
+    { level: 2, name: "Apprenti", xpRequired: 100, icon: "🌿" },
+    { level: 3, name: "Élève Appliqué", xpRequired: 250, icon: "🌳" },
+    { level: 4, name: "Bon Élève", xpRequired: 500, icon: "⭐" },
+    { level: 5, name: "Très Bon Élève", xpRequired: 800, icon: "🌟" },
+    { level: 6, name: "Excellent", xpRequired: 1200, icon: "💫" },
+    { level: 7, name: "Champion", xpRequired: 1800, icon: "🏆" },
+    { level: 8, name: "Expert", xpRequired: 2500, icon: "👑" },
+    { level: 9, name: "Maître", xpRequired: 3500, icon: "🎓" },
+    { level: 10, name: "Major de la Classe", xpRequired: 5000, icon: "🥇" }
+];
