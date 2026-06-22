@@ -711,7 +711,11 @@ function startChallengeExercises(challenge) {
 
 // Show modal to select a subject for multi-subject challenges
 function showSubjectSelectionModal(challenge) {
-    const subjects = getSubjectsData();
+    // Combine both CE1 and CE2 subjects
+    const allSubjects = { ...SUBJECTS_DATA };
+    if (typeof SUBJECTS_DATA_CE2 !== 'undefined') {
+        Object.assign(allSubjects, SUBJECTS_DATA_CE2);
+    }
     const progress = getProgress();
 
     // Create modal HTML
@@ -727,7 +731,7 @@ function showSubjectSelectionModal(challenge) {
                     <h3>Choisis une matière :</h3>
                     <div class="subject-selection-grid" id="subject-selection-grid">
                         ${challenge.subjects.map(subjectKey => {
-                            const subject = subjects[subjectKey];
+                            const subject = allSubjects[subjectKey];
                             if (!subject) return '';
                             const subjectProgress = progress.subjects[subjectKey] || {};
                             const totalFiches = subject.fiches.length;
@@ -783,12 +787,29 @@ function closeSubjectSelectionModal() {
 
 // Launch challenge for a specific subject
 function launchChallengeForSubject(subjectKey, challenge) {
-    const subjects = getSubjectsData();
-    const subject = subjects[subjectKey];
+    // Search in both CE1 and CE2 subjects
+    let subject = SUBJECTS_DATA[subjectKey];
+    let useCE2 = false;
+
+    if (!subject && typeof SUBJECTS_DATA_CE2 !== 'undefined') {
+        subject = SUBJECTS_DATA_CE2[subjectKey];
+        useCE2 = true;
+    }
 
     if (!subject || !subject.fiches || subject.fiches.length === 0) {
         showToast('Matière non disponible', 'error');
         return;
+    }
+
+    // Switch to the correct class if needed
+    if (useCE2 && state.currentClass !== 'ce2') {
+        state.currentClass = 'ce2';
+        document.querySelectorAll('.class-btn').forEach(b => b.classList.remove('active'));
+        document.querySelector('.class-btn[data-class="ce2"]')?.classList.add('active');
+    } else if (!useCE2 && state.currentClass !== 'ce1') {
+        state.currentClass = 'ce1';
+        document.querySelectorAll('.class-btn').forEach(b => b.classList.remove('active'));
+        document.querySelector('.class-btn[data-class="ce1"]')?.classList.add('active');
     }
 
     // Find the first incomplete fiche, or the first one if all completed
