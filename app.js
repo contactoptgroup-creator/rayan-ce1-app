@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSettings();
     checkStreak();
     updateLevelDisplay();
+    initDailyChallengeBanner();
 });
 
 // ==================== NAVIGATION ====================
@@ -490,6 +491,40 @@ function updateHomeStats() {
     updateSubjectCards();
 }
 
+// Initialize the daily challenge banner to be clickable
+function initDailyChallengeBanner() {
+    const banner = document.getElementById('daily-challenge');
+    if (!banner) return;
+
+    // Get a random daily challenge for today (based on day of year)
+    const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+    const dailyChallenges = CHALLENGES_DATA.daily;
+    const todaysChallenge = dailyChallenges[dayOfYear % dailyChallenges.length];
+
+    // Update banner content
+    document.querySelector('#daily-challenge .challenge-icon').textContent = todaysChallenge.icon;
+    document.getElementById('daily-challenge-text').textContent = todaysChallenge.description;
+    document.querySelector('#daily-challenge .challenge-reward').textContent = `+${todaysChallenge.reward} XP`;
+
+    // Make banner clickable
+    banner.style.cursor = 'pointer';
+    banner.classList.add('clickable-banner');
+
+    // Add click handler
+    banner.addEventListener('click', () => {
+        startChallengeExercises(todaysChallenge);
+    });
+
+    // Update progress (exercisesToday / count)
+    const progress = getProgress();
+    const exercisesToday = progress.exercisesToday || 0;
+    const target = todaysChallenge.count || 5;
+    const percentage = Math.min(100, (exercisesToday / target) * 100);
+
+    document.getElementById('daily-challenge-fill').style.width = `${percentage}%`;
+    document.getElementById('daily-challenge-status').textContent = `${exercisesToday}/${target}`;
+}
+
 function updateSubjectCards() {
     const progress = getProgress();
     const subjects = getSubjectsData();
@@ -638,9 +673,9 @@ function updateChallengesView() {
 
         CHALLENGES_DATA[type].forEach(challenge => {
             const completed = progress.challengesCompleted?.includes(challenge.id);
-            const hasSubject = challenge.subject ? true : false;
+            const isClickable = challenge.subject || challenge.multiSubject;
             const card = document.createElement('div');
-            card.className = `challenge-card ${completed ? 'completed' : ''} ${hasSubject ? 'clickable' : ''}`;
+            card.className = `challenge-card ${completed ? 'completed' : ''} ${isClickable ? 'clickable' : ''}`;
             card.innerHTML = `
                 <div class="challenge-card-icon">${challenge.icon}</div>
                 <div class="challenge-card-info">
@@ -648,11 +683,11 @@ function updateChallengesView() {
                     <p>${challenge.description}</p>
                 </div>
                 <div class="challenge-card-reward">+${challenge.reward} XP</div>
-                ${hasSubject ? '<div class="challenge-go-btn">Commencer →</div>' : ''}
+                ${isClickable ? '<div class="challenge-go-btn">Commencer →</div>' : ''}
             `;
 
             // Add click handler to redirect to subject exercises
-            if (hasSubject) {
+            if (isClickable) {
                 card.addEventListener('click', () => startChallengeExercises(challenge));
             }
 
@@ -663,7 +698,91 @@ function updateChallengesView() {
 
 // Start exercises directly from a challenge
 function startChallengeExercises(challenge) {
+    // If it's a multi-subject challenge, show subject selection modal
+    if (challenge.multiSubject && challenge.subjects) {
+        showSubjectSelectionModal(challenge);
+        return;
+    }
+
+    // Single subject challenge
     const subjectKey = challenge.subject;
+    launchChallengeForSubject(subjectKey, challenge);
+}
+
+// Show modal to select a subject for multi-subject challenges
+function showSubjectSelectionModal(challenge) {
+    const subjects = getSubjectsData();
+    const progress = getProgress();
+
+    // Create modal HTML
+    const modalHtml = `
+        <div class="modal active" id="subject-selection-modal">
+            <div class="modal-content subject-selection">
+                <div class="modal-header">
+                    <span class="challenge-modal-icon">${challenge.icon}</span>
+                    <h2>${challenge.name}</h2>
+                    <p class="challenge-modal-desc">${challenge.description}</p>
+                </div>
+                <div class="modal-body">
+                    <h3>Choisis une matière :</h3>
+                    <div class="subject-selection-grid" id="subject-selection-grid">
+                        ${challenge.subjects.map(subjectKey => {
+                            const subject = subjects[subjectKey];
+                            if (!subject) return '';
+                            const subjectProgress = progress.subjects[subjectKey] || {};
+                            const totalFiches = subject.fiches.length;
+                            const completedFiches = Object.values(subjectProgress).filter(f => f.completed).length;
+                            const percentage = Math.round((completedFiches / totalFiches) * 100);
+                            return `
+                                <button class="subject-select-btn" data-subject="${subjectKey}">
+                                    <span class="subject-select-icon">${subject.icon}</span>
+                                    <span class="subject-select-name">${subject.name}</span>
+                                    <span class="subject-select-progress">${percentage}%</span>
+                                </button>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="close-subject-selection">Annuler</button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Remove existing modal if any
+    const existingModal = document.getElementById('subject-selection-modal');
+    if (existingModal) existingModal.remove();
+
+    // Add modal to DOM
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+    // Add event listeners
+    document.getElementById('close-subject-selection').addEventListener('click', closeSubjectSelectionModal);
+
+    document.querySelectorAll('.subject-select-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const subjectKey = btn.dataset.subject;
+            closeSubjectSelectionModal();
+            launchChallengeForSubject(subjectKey, challenge);
+        });
+    });
+
+    // Close on background click
+    document.getElementById('subject-selection-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'subject-selection-modal') {
+            closeSubjectSelectionModal();
+        }
+    });
+}
+
+function closeSubjectSelectionModal() {
+    const modal = document.getElementById('subject-selection-modal');
+    if (modal) modal.remove();
+}
+
+// Launch challenge for a specific subject
+function launchChallengeForSubject(subjectKey, challenge) {
     const subjects = getSubjectsData();
     const subject = subjects[subjectKey];
 

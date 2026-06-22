@@ -1161,16 +1161,16 @@ const CHALLENGES_DATA = {
         { id: "problem_solver", name: "Résolveur de Problèmes", description: "Résous 5 problèmes", icon: "🧩", reward: 55, type: "complete", subject: "problemes", count: 5 }
     ],
     weekly: [
-        { id: "week_champion", name: "Champion de la Semaine", description: "Complete 50 exercices cette semaine", icon: "👑", reward: 200, type: "total", count: 50 },
-        { id: "all_subjects", name: "Explorateur", description: "Travaille sur toutes les matières", icon: "🌟", reward: 150, type: "variety", count: 11 },
-        { id: "streak_7", name: "7 Jours d'Affilée", description: "Connecte-toi 7 jours de suite", icon: "🔥", reward: 300, type: "streak", count: 7 },
-        { id: "star_collector", name: "Collectionneur d'Étoiles", description: "Gagne 20 étoiles cette semaine", icon: "⭐", reward: 175, type: "stars", count: 20 },
-        { id: "perfectionist", name: "Perfectionniste", description: "Obtiens 100% sur 10 fiches", icon: "💯", reward: 250, type: "perfect", count: 10 }
+        { id: "week_champion", name: "Champion de la Semaine", description: "Complete 50 exercices cette semaine", icon: "👑", reward: 200, type: "total", count: 50, multiSubject: true, subjects: ["calcul_mental", "francais", "lecture", "dictee", "tables", "geometrie", "problemes"] },
+        { id: "all_subjects", name: "Explorateur", description: "Travaille sur toutes les matières", icon: "🌟", reward: 150, type: "variety", count: 11, multiSubject: true, subjects: ["calcul_mental", "francais", "lecture", "dictee", "tables", "geometrie", "problemes", "nombres_calculs", "grandeurs_mesures", "anglais", "sciences"] },
+        { id: "streak_7", name: "7 Jours d'Affilée", description: "Connecte-toi 7 jours de suite", icon: "🔥", reward: 300, type: "streak", count: 7, multiSubject: true, subjects: ["calcul_mental", "francais", "lecture"] },
+        { id: "star_collector", name: "Collectionneur d'Étoiles", description: "Gagne 20 étoiles cette semaine", icon: "⭐", reward: 175, type: "stars", count: 20, multiSubject: true, subjects: ["calcul_mental", "tables", "dictee", "geometrie"] },
+        { id: "perfectionist", name: "Perfectionniste", description: "Obtiens 100% sur 10 fiches", icon: "💯", reward: 250, type: "perfect", count: 10, multiSubject: true, subjects: ["calcul_mental", "tables", "francais", "lecture"] }
     ],
     special: [
-        { id: "major_unlock", name: "Futur Major", description: "Complète toutes les fiches d'une matière avec 3 étoiles", icon: "🎓", reward: 500, type: "mastery", unlocks: "badge_major" },
-        { id: "speed_demon", name: "Éclair", description: "Complète 20 exercices en moins de 10 minutes", icon: "💨", reward: 300, type: "speed", count: 20, timeLimit: 600 },
-        { id: "comeback_king", name: "Roi du Retour", description: "Améliore ton score sur 5 fiches difficiles", icon: "👊", reward: 200, type: "improvement", count: 5 }
+        { id: "major_unlock", name: "Futur Major", description: "Complète toutes les fiches d'une matière avec 3 étoiles", icon: "🎓", reward: 500, type: "mastery", unlocks: "badge_major", multiSubject: true, subjects: ["calcul_mental", "francais", "lecture", "dictee", "tables", "geometrie", "problemes"] },
+        { id: "speed_demon", name: "Éclair", description: "Complète 20 exercices en moins de 10 minutes", icon: "💨", reward: 300, type: "speed", count: 20, timeLimit: 600, subject: "calcul_mental" },
+        { id: "comeback_king", name: "Roi du Retour", description: "Améliore ton score sur 5 fiches difficiles", icon: "👊", reward: 200, type: "improvement", count: 5, subject: "problemes" }
     ]
 };
 
