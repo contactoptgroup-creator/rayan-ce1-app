@@ -135,6 +135,201 @@ const SUBJECTS_DATA = {
                     { type: "input", question: "Le contraire de 'entrer' est...", answer: "sortir" },
                     { type: "input", question: "Le contraire de 'ouvrir' est...", answer: "fermer" }
                 ]
+            },
+            // === CONJUGAISON CE1 - MODULE INTENSIF ===
+            {
+                id: 13, title: "Présent - verbes en -ir", description: "finir, grandir, choisir...", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Je ___ mes devoirs. (finir)", answer: "finis" },
+                    { type: "input", question: "Tu ___ vite ! (grandir)", answer: "grandis" },
+                    { type: "input", question: "Il ___ un livre. (choisir)", answer: "choisit" },
+                    { type: "input", question: "Nous ___ notre travail. (finir)", answer: "finissons" },
+                    { type: "input", question: "Vous ___ à vos parents. (obéir)", answer: "obéissez" },
+                    { type: "input", question: "Elles ___ leur assiette. (remplir)", answer: "remplissent" },
+                    { type: "input", question: "Je ___ bien à l'école. (réussir)", answer: "réussis" },
+                    { type: "input", question: "Tu ___ le rouge. (choisir)", answer: "choisis" },
+                    { type: "qcm", question: "Quelle terminaison pour 'nous' au présent (-ir) ?", options: ["-issons", "-issez", "-issent", "-is"], answer: "-issons" },
+                    { type: "qcm", question: "Quelle terminaison pour 'ils' au présent (-ir) ?", options: ["-issons", "-issez", "-issent", "-is"], answer: "-issent" }
+                ]
+            },
+            {
+                id: 14, title: "Présent - aller, faire, dire", description: "Verbes importants du 3ème groupe", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Je ___ à l'école. (aller)", answer: "vais" },
+                    { type: "input", question: "Tu ___ au parc. (aller)", answer: "vas" },
+                    { type: "input", question: "Il ___ chez mamie. (aller)", answer: "va" },
+                    { type: "input", question: "Nous ___ au cinéma. (aller)", answer: "allons" },
+                    { type: "input", question: "Vous ___ en vacances. (aller)", answer: "allez" },
+                    { type: "input", question: "Ils ___ à la plage. (aller)", answer: "vont" },
+                    { type: "input", question: "Je ___ mes devoirs. (faire)", answer: "fais" },
+                    { type: "input", question: "Tu ___ du vélo. (faire)", answer: "fais" },
+                    { type: "input", question: "Elle ___ un gâteau. (faire)", answer: "fait" },
+                    { type: "input", question: "Nous ___ du sport. (faire)", answer: "faisons" },
+                    { type: "input", question: "Vous ___ la cuisine. (faire)", answer: "faites" },
+                    { type: "input", question: "Ils ___ du bruit. (faire)", answer: "font" },
+                    { type: "input", question: "Je ___ bonjour. (dire)", answer: "dis" },
+                    { type: "input", question: "Tu ___ la vérité. (dire)", answer: "dis" },
+                    { type: "input", question: "Il ___ merci. (dire)", answer: "dit" },
+                    { type: "input", question: "Nous ___ oui. (dire)", answer: "disons" },
+                    { type: "input", question: "Vous ___ non. (dire)", answer: "dites" },
+                    { type: "input", question: "Elles ___ au revoir. (dire)", answer: "disent" }
+                ]
+            },
+            {
+                id: 15, title: "Présent - venir, voir, prendre", description: "Autres verbes du 3ème groupe", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Je ___ de la maison. (venir)", answer: "viens" },
+                    { type: "input", question: "Tu ___ avec moi. (venir)", answer: "viens" },
+                    { type: "input", question: "Elle ___ demain. (venir)", answer: "vient" },
+                    { type: "input", question: "Nous ___ te voir. (venir)", answer: "venons" },
+                    { type: "input", question: "Vous ___ d'arriver. (venir)", answer: "venez" },
+                    { type: "input", question: "Ils ___ souvent. (venir)", answer: "viennent" },
+                    { type: "input", question: "Je ___ un oiseau. (voir)", answer: "vois" },
+                    { type: "input", question: "Tu ___ bien. (voir)", answer: "vois" },
+                    { type: "input", question: "Il ___ la mer. (voir)", answer: "voit" },
+                    { type: "input", question: "Nous ___ nos amis. (voir)", answer: "voyons" },
+                    { type: "input", question: "Vous ___ le film. (voir)", answer: "voyez" },
+                    { type: "input", question: "Elles ___ le tableau. (voir)", answer: "voient" },
+                    { type: "input", question: "Je ___ mon sac. (prendre)", answer: "prends" },
+                    { type: "input", question: "Tu ___ le bus. (prendre)", answer: "prends" },
+                    { type: "input", question: "Il ___ son temps. (prendre)", answer: "prend" },
+                    { type: "input", question: "Nous ___ le train. (prendre)", answer: "prenons" },
+                    { type: "input", question: "Vous ___ un café. (prendre)", answer: "prenez" },
+                    { type: "input", question: "Ils ___ des photos. (prendre)", answer: "prennent" }
+                ]
+            },
+            {
+                id: 16, title: "Futur proche", description: "Je vais + infinitif", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Je ___ manger. (aller)", answer: "vais" },
+                    { type: "input", question: "Tu ___ jouer. (aller)", answer: "vas" },
+                    { type: "input", question: "Il ___ dormir. (aller)", answer: "va" },
+                    { type: "input", question: "Nous ___ partir. (aller)", answer: "allons" },
+                    { type: "input", question: "Vous ___ chanter. (aller)", answer: "allez" },
+                    { type: "input", question: "Elles ___ danser. (aller)", answer: "vont" },
+                    { type: "qcm", question: "Comment dit-on 'Je mangerai' au futur proche ?", options: ["Je vais manger", "Je mange", "J'ai mangé"], answer: "Je vais manger" },
+                    { type: "qcm", question: "Quel temps utilise 'Il va partir' ?", options: ["Présent", "Futur proche", "Passé composé"], answer: "Futur proche" },
+                    { type: "input", question: "Demain, je ___ aller à l'école. (aller - futur proche)", answer: "vais" },
+                    { type: "input", question: "Ce soir, tu ___ regarder un film. (aller - futur proche)", answer: "vas" }
+                ]
+            },
+            {
+                id: 17, title: "Futur simple CE1", description: "Je chanterai, tu chanteras...", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Demain, je ___ un gâteau. (manger)", answer: "mangerai" },
+                    { type: "input", question: "Demain, tu ___ bien. (chanter)", answer: "chanteras" },
+                    { type: "input", question: "Demain, il ___ au foot. (jouer)", answer: "jouera" },
+                    { type: "input", question: "Demain, nous ___ la télé. (regarder)", answer: "regarderons" },
+                    { type: "input", question: "Demain, vous ___ français. (parler)", answer: "parlerez" },
+                    { type: "input", question: "Demain, elles ___ une histoire. (raconter)", answer: "raconteront" },
+                    { type: "input", question: "Demain, je ___ content. (être)", answer: "serai" },
+                    { type: "input", question: "Demain, tu ___ 8 ans. (avoir)", answer: "auras" },
+                    { type: "input", question: "Demain, il ___ à l'école. (aller)", answer: "ira" },
+                    { type: "input", question: "Demain, nous ___ nos devoirs. (faire)", answer: "ferons" },
+                    { type: "qcm", question: "Quelle terminaison pour 'je' au futur ?", options: ["-ai", "-as", "-a", "-ons"], answer: "-ai" },
+                    { type: "qcm", question: "Quelle terminaison pour 'nous' au futur ?", options: ["-ai", "-as", "-a", "-ons"], answer: "-ons" }
+                ]
+            },
+            {
+                id: 18, title: "Passé composé CE1", description: "J'ai mangé, je suis allé", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Hier, j'___ mangé. (avoir)", answer: "ai" },
+                    { type: "input", question: "Hier, tu ___ joué. (avoir)", answer: "as" },
+                    { type: "input", question: "Hier, il ___ chanté. (avoir)", answer: "a" },
+                    { type: "input", question: "Hier, nous ___ regardé. (avoir)", answer: "avons" },
+                    { type: "input", question: "Hier, vous ___ écouté. (avoir)", answer: "avez" },
+                    { type: "input", question: "Hier, elles ___ dansé. (avoir)", answer: "ont" },
+                    { type: "input", question: "Hier, je ___ allé à l'école. (être)", answer: "suis" },
+                    { type: "input", question: "Hier, tu ___ parti tôt. (être)", answer: "es" },
+                    { type: "input", question: "Hier, elle ___ arrivée. (être)", answer: "est" },
+                    { type: "input", question: "Hier, nous ___ venus. (être)", answer: "sommes" },
+                    { type: "input", question: "Hier, vous ___ restés. (être)", answer: "êtes" },
+                    { type: "input", question: "Hier, ils ___ tombés. (être)", answer: "sont" },
+                    { type: "qcm", question: "Le passé composé se forme avec...", options: ["être ou avoir + participe passé", "infinitif + terminaison", "radical + terminaison"], answer: "être ou avoir + participe passé" },
+                    { type: "qcm", question: "'J'ai mangé' utilise quel auxiliaire ?", options: ["être", "avoir", "aller"], answer: "avoir" }
+                ]
+            },
+            {
+                id: 19, title: "Révision - Être à tous les temps", description: "Présent, futur, passé composé", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "PRÉSENT: Je ___ content. (être)", answer: "suis" },
+                    { type: "input", question: "PRÉSENT: Tu ___ gentil. (être)", answer: "es" },
+                    { type: "input", question: "PRÉSENT: Il ___ grand. (être)", answer: "est" },
+                    { type: "input", question: "PRÉSENT: Nous ___ amis. (être)", answer: "sommes" },
+                    { type: "input", question: "PRÉSENT: Vous ___ sages. (être)", answer: "êtes" },
+                    { type: "input", question: "PRÉSENT: Elles ___ belles. (être)", answer: "sont" },
+                    { type: "input", question: "FUTUR: Je ___ médecin. (être)", answer: "serai" },
+                    { type: "input", question: "FUTUR: Tu ___ grand. (être)", answer: "seras" },
+                    { type: "input", question: "FUTUR: Elle ___ contente. (être)", answer: "sera" },
+                    { type: "input", question: "FUTUR: Nous ___ ensemble. (être)", answer: "serons" },
+                    { type: "input", question: "FUTUR: Vous ___ là. (être)", answer: "serez" },
+                    { type: "input", question: "FUTUR: Ils ___ présents. (être)", answer: "seront" },
+                    { type: "qcm", question: "'J'ai été malade' est au...", options: ["présent", "futur", "passé composé"], answer: "passé composé" },
+                    { type: "qcm", question: "'Je serai là' est au...", options: ["présent", "futur", "passé composé"], answer: "futur" }
+                ]
+            },
+            {
+                id: 20, title: "Révision - Avoir à tous les temps", description: "Présent, futur, passé composé", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "PRÉSENT: J'___ faim. (avoir)", answer: "ai" },
+                    { type: "input", question: "PRÉSENT: Tu ___ soif. (avoir)", answer: "as" },
+                    { type: "input", question: "PRÉSENT: Il ___ froid. (avoir)", answer: "a" },
+                    { type: "input", question: "PRÉSENT: Nous ___ chaud. (avoir)", answer: "avons" },
+                    { type: "input", question: "PRÉSENT: Vous ___ raison. (avoir)", answer: "avez" },
+                    { type: "input", question: "PRÉSENT: Elles ___ peur. (avoir)", answer: "ont" },
+                    { type: "input", question: "FUTUR: J'___ 8 ans. (avoir)", answer: "aurai" },
+                    { type: "input", question: "FUTUR: Tu ___ un cadeau. (avoir)", answer: "auras" },
+                    { type: "input", question: "FUTUR: Elle ___ une surprise. (avoir)", answer: "aura" },
+                    { type: "input", question: "FUTUR: Nous ___ des vacances. (avoir)", answer: "aurons" },
+                    { type: "input", question: "FUTUR: Vous ___ le temps. (avoir)", answer: "aurez" },
+                    { type: "input", question: "FUTUR: Ils ___ faim. (avoir)", answer: "auront" },
+                    { type: "qcm", question: "'J'ai eu' est au...", options: ["présent", "futur", "passé composé"], answer: "passé composé" },
+                    { type: "qcm", question: "'Tu auras' est au...", options: ["présent", "futur", "passé composé"], answer: "futur" }
+                ]
+            },
+            {
+                id: 21, title: "Révision - Verbes en -er tous temps", description: "Présent, futur, passé composé", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "PRÉSENT: Je ___ une pomme. (manger)", answer: "mange" },
+                    { type: "input", question: "PRÉSENT: Tu ___ bien. (chanter)", answer: "chantes" },
+                    { type: "input", question: "PRÉSENT: Il ___ au foot. (jouer)", answer: "joue" },
+                    { type: "input", question: "FUTUR: Je ___ un gâteau. (manger)", answer: "mangerai" },
+                    { type: "input", question: "FUTUR: Tu ___ fort. (chanter)", answer: "chanteras" },
+                    { type: "input", question: "FUTUR: Elle ___ dehors. (jouer)", answer: "jouera" },
+                    { type: "input", question: "FUTUR: Nous ___ ensemble. (danser)", answer: "danserons" },
+                    { type: "input", question: "FUTUR: Vous ___ français. (parler)", answer: "parlerez" },
+                    { type: "input", question: "FUTUR: Ils ___ la télé. (regarder)", answer: "regarderont" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: J'ai ___. (manger)", answer: "mangé" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Tu as ___. (chanter)", answer: "chanté" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Il a ___. (jouer)", answer: "joué" },
+                    { type: "qcm", question: "Quel est le participe passé de 'danser' ?", options: ["dansé", "dansait", "dansera"], answer: "dansé" },
+                    { type: "qcm", question: "'Nous avons regardé' est au...", options: ["présent", "futur", "passé composé"], answer: "passé composé" }
+                ]
+            },
+            {
+                id: 22, title: "Évaluation Conjugaison CE1", description: "Test tous les temps - 20 questions", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Je ___ à l'école. (aller - présent)", answer: "vais" },
+                    { type: "input", question: "Tu ___ grand. (être - présent)", answer: "es" },
+                    { type: "input", question: "Il ___ 7 ans. (avoir - présent)", answer: "a" },
+                    { type: "input", question: "Nous ___ du sport. (faire - présent)", answer: "faisons" },
+                    { type: "input", question: "Vous ___ bonjour. (dire - présent)", answer: "dites" },
+                    { type: "input", question: "Ils ___ au parc. (aller - présent)", answer: "vont" },
+                    { type: "input", question: "Je ___ mes devoirs. (finir - présent)", answer: "finis" },
+                    { type: "input", question: "Tu ___ un livre. (choisir - présent)", answer: "choisis" },
+                    { type: "input", question: "Demain, je ___ content. (être - futur)", answer: "serai" },
+                    { type: "input", question: "Demain, tu ___ jouer. (aller - futur proche)", answer: "vas" },
+                    { type: "input", question: "Demain, il ___ 8 ans. (avoir - futur)", answer: "aura" },
+                    { type: "input", question: "Demain, nous ___ en vacances. (partir - futur)", answer: "partirons" },
+                    { type: "input", question: "Hier, j'___ mangé. (avoir)", answer: "ai" },
+                    { type: "input", question: "Hier, tu ___ chanté. (avoir)", answer: "as" },
+                    { type: "input", question: "Hier, elle ___ allée. (être)", answer: "est" },
+                    { type: "input", question: "Hier, nous ___ joué. (avoir)", answer: "avons" },
+                    { type: "qcm", question: "'Je mange' est au...", options: ["présent", "futur", "passé composé"], answer: "présent" },
+                    { type: "qcm", question: "'Tu iras' est au...", options: ["présent", "futur", "passé composé"], answer: "futur" },
+                    { type: "qcm", question: "'Il a fini' est au...", options: ["présent", "futur", "passé composé"], answer: "passé composé" },
+                    { type: "qcm", question: "'Nous allons partir' est au...", options: ["présent", "futur proche", "futur simple"], answer: "futur proche" }
+                ]
             }
         ]
     },
@@ -1133,11 +1328,687 @@ const SUBJECTS_DATA = {
                 ]
             }
         ]
+    },
+
+    // ==================== CONJUGAISON ====================
+    conjugaison: {
+        name: "Conjugaison",
+        icon: "📝",
+        color: "#e74c3c",
+        fiches: [
+            // ===== PRÉSENT - CE1 Facile =====
+            {
+                id: 1, title: "Présent - Verbes en -ER", description: "Je chante, tu chantes...", difficulty: 1,
+                exercises: [
+                    { type: "input", question: "Je ___ une chanson. (chanter)", answer: "chante" },
+                    { type: "input", question: "Tu ___ au ballon. (jouer)", answer: "joues" },
+                    { type: "input", question: "Il ___ bien. (danser)", answer: "danse" },
+                    { type: "input", question: "Elle ___ un gâteau. (manger)", answer: "mange" },
+                    { type: "input", question: "Nous ___ la télé. (regarder)", answer: "regardons" },
+                    { type: "input", question: "Vous ___ français. (parler)", answer: "parlez" },
+                    { type: "input", question: "Ils ___ la musique. (écouter)", answer: "écoutent" },
+                    { type: "input", question: "Elles ___ vite. (marcher)", answer: "marchent" },
+                    { type: "qcm", question: "Quelle est la terminaison de 'nous' au présent (-ER) ?", options: ["-ons", "-ez", "-ent", "-e"], answer: "-ons" },
+                    { type: "qcm", question: "Quelle est la terminaison de 'vous' au présent (-ER) ?", options: ["-ons", "-ez", "-ent", "-es"], answer: "-ez" }
+                ]
+            },
+            {
+                id: 2, title: "Présent - ÊTRE et AVOIR", description: "Les verbes essentiels", difficulty: 1,
+                exercises: [
+                    { type: "input", question: "Je ___ content. (être)", answer: "suis" },
+                    { type: "input", question: "Tu ___ faim. (avoir)", answer: "as" },
+                    { type: "input", question: "Il ___ grand. (être)", answer: "est" },
+                    { type: "input", question: "Elle ___ 7 ans. (avoir)", answer: "a" },
+                    { type: "input", question: "Nous ___ en classe. (être)", answer: "sommes" },
+                    { type: "input", question: "Vous ___ raison. (avoir)", answer: "avez" },
+                    { type: "input", question: "Ils ___ gentils. (être)", answer: "sont" },
+                    { type: "input", question: "Elles ___ chaud. (avoir)", answer: "ont" },
+                    { type: "qcm", question: "Je ___ (être)", options: ["suis", "es", "est", "sommes"], answer: "suis" },
+                    { type: "qcm", question: "J'___ (avoir)", options: ["ai", "as", "a", "avons"], answer: "ai" }
+                ]
+            },
+            {
+                id: 3, title: "Présent - Verbes en -IR", description: "Je finis, tu finis...", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Je ___ mon travail. (finir)", answer: "finis" },
+                    { type: "input", question: "Tu ___ un livre. (choisir)", answer: "choisis" },
+                    { type: "input", question: "Il ___ vite. (grandir)", answer: "grandit" },
+                    { type: "input", question: "Elle ___ de honte. (rougir)", answer: "rougit" },
+                    { type: "input", question: "Nous ___ le verre. (remplir)", answer: "remplissons" },
+                    { type: "input", question: "Vous ___ l'exercice. (réussir)", answer: "réussissez" },
+                    { type: "input", question: "Ils ___ à l'appel. (obéir)", answer: "obéissent" },
+                    { type: "input", question: "Elles ___ fort. (applaudir)", answer: "applaudissent" },
+                    { type: "qcm", question: "Quelle terminaison pour 'nous' avec les verbes en -IR ?", options: ["-issons", "-isons", "-ons", "-issez"], answer: "-issons" },
+                    { type: "qcm", question: "Quelle terminaison pour 'ils' avec les verbes en -IR ?", options: ["-issent", "-isent", "-ent", "-issons"], answer: "-issent" }
+                ]
+            },
+            {
+                id: 4, title: "Présent - 3ème groupe", description: "ALLER, FAIRE, PRENDRE...", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Je ___ à l'école. (aller)", answer: "vais" },
+                    { type: "input", question: "Tu ___ tes devoirs. (faire)", answer: "fais" },
+                    { type: "input", question: "Il ___ son sac. (prendre)", answer: "prend" },
+                    { type: "input", question: "Elle ___ chez moi. (venir)", answer: "vient" },
+                    { type: "input", question: "Nous ___ au parc. (aller)", answer: "allons" },
+                    { type: "input", question: "Vous ___ du sport. (faire)", answer: "faites" },
+                    { type: "input", question: "Ils ___ le bus. (prendre)", answer: "prennent" },
+                    { type: "input", question: "Elles ___ demain. (venir)", answer: "viennent" },
+                    { type: "qcm", question: "Je ___ (aller)", options: ["vais", "vas", "va", "allons"], answer: "vais" },
+                    { type: "qcm", question: "Vous ___ (faire)", options: ["faisez", "faites", "faisons", "font"], answer: "faites" }
+                ]
+            },
+
+            // ===== FUTUR SIMPLE - CE1/CE2 =====
+            {
+                id: 5, title: "Futur simple - Introduction", description: "Je chanterai demain", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Demain, je ___ une chanson. (chanter)", answer: "chanterai" },
+                    { type: "input", question: "Tu ___ dehors. (jouer)", answer: "joueras" },
+                    { type: "input", question: "Il ___ un gâteau. (manger)", answer: "mangera" },
+                    { type: "input", question: "Elle ___ bien. (danser)", answer: "dansera" },
+                    { type: "input", question: "Nous ___ un film. (regarder)", answer: "regarderons" },
+                    { type: "input", question: "Vous ___ de la musique. (écouter)", answer: "écouterez" },
+                    { type: "input", question: "Ils ___ français. (parler)", answer: "parleront" },
+                    { type: "input", question: "Elles ___ vite. (marcher)", answer: "marcheront" },
+                    { type: "qcm", question: "Quelle terminaison pour 'je' au futur ?", options: ["-ai", "-as", "-a", "-ons"], answer: "-ai" },
+                    { type: "qcm", question: "Quelle terminaison pour 'nous' au futur ?", options: ["-ons", "-rons", "-ez", "-ont"], answer: "-ons" }
+                ]
+            },
+            {
+                id: 6, title: "Futur - ÊTRE et AVOIR", description: "Je serai, j'aurai", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Je ___ grand. (être)", answer: "serai" },
+                    { type: "input", question: "Tu ___ 10 ans. (avoir)", answer: "auras" },
+                    { type: "input", question: "Il ___ au collège. (aller)", answer: "ira" },
+                    { type: "input", question: "Elle ___ ses devoirs. (faire)", answer: "fera" },
+                    { type: "input", question: "Nous ___ en vacances. (être)", answer: "serons" },
+                    { type: "input", question: "Vous ___ un cadeau. (avoir)", answer: "aurez" },
+                    { type: "input", question: "Ils ___ à Paris. (aller)", answer: "iront" },
+                    { type: "input", question: "Elles ___ du sport. (faire)", answer: "feront" },
+                    { type: "qcm", question: "Je ___ (être au futur)", options: ["serai", "seras", "sera", "serons"], answer: "serai" },
+                    { type: "qcm", question: "J'___ (avoir au futur)", options: ["aurai", "auras", "aura", "aurons"], answer: "aurai" }
+                ]
+            },
+
+            // ===== IMPARFAIT - CE2 =====
+            {
+                id: 7, title: "Imparfait - Introduction", description: "Avant, je chantais...", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Avant, je ___ souvent. (chanter)", answer: "chantais" },
+                    { type: "input", question: "Tu ___ dehors. (jouer)", answer: "jouais" },
+                    { type: "input", question: "Il ___ des bonbons. (manger)", answer: "mangeait" },
+                    { type: "input", question: "Elle ___ bien. (danser)", answer: "dansait" },
+                    { type: "input", question: "Nous ___ un film. (regarder)", answer: "regardions" },
+                    { type: "input", question: "Vous ___ la radio. (écouter)", answer: "écoutiez" },
+                    { type: "input", question: "Ils ___ fort. (parler)", answer: "parlaient" },
+                    { type: "input", question: "Elles ___ vite. (marcher)", answer: "marchaient" },
+                    { type: "qcm", question: "Quelle terminaison pour 'je' à l'imparfait ?", options: ["-ais", "-ait", "-ions", "-iez"], answer: "-ais" },
+                    { type: "qcm", question: "Quelle terminaison pour 'nous' à l'imparfait ?", options: ["-ions", "-ais", "-aient", "-iez"], answer: "-ions" }
+                ]
+            },
+            {
+                id: 8, title: "Imparfait - ÊTRE et AVOIR", description: "J'étais, j'avais", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "J'___ petit. (être)", answer: "étais" },
+                    { type: "input", question: "Tu ___ 5 ans. (avoir)", answer: "avais" },
+                    { type: "input", question: "Il ___ à l'école. (être)", answer: "était" },
+                    { type: "input", question: "Elle ___ peur. (avoir)", answer: "avait" },
+                    { type: "input", question: "Nous ___ en CP. (être)", answer: "étions" },
+                    { type: "input", question: "Vous ___ faim. (avoir)", answer: "aviez" },
+                    { type: "input", question: "Ils ___ contents. (être)", answer: "étaient" },
+                    { type: "input", question: "Elles ___ froid. (avoir)", answer: "avaient" },
+                    { type: "qcm", question: "J'___ (être à l'imparfait)", options: ["étais", "était", "étions", "étiez"], answer: "étais" },
+                    { type: "qcm", question: "J'___ (avoir à l'imparfait)", options: ["avais", "avait", "avions", "aviez"], answer: "avais" }
+                ]
+            },
+
+            // ===== PASSÉ COMPOSÉ - CE2 =====
+            {
+                id: 9, title: "Passé composé - avec AVOIR", description: "J'ai chanté", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Hier, j'ai ___ une pomme. (manger)", answer: "mangé" },
+                    { type: "input", question: "Tu as ___ dehors. (jouer)", answer: "joué" },
+                    { type: "input", question: "Il a ___ une chanson. (chanter)", answer: "chanté" },
+                    { type: "input", question: "Elle a ___ un film. (regarder)", answer: "regardé" },
+                    { type: "input", question: "Nous avons ___ la radio. (écouter)", answer: "écouté" },
+                    { type: "input", question: "Vous avez ___ bien. (danser)", answer: "dansé" },
+                    { type: "input", question: "Ils ont ___ français. (parler)", answer: "parlé" },
+                    { type: "input", question: "Elles ont ___ vite. (marcher)", answer: "marché" },
+                    { type: "qcm", question: "Comment se forme le passé composé avec AVOIR ?", options: ["avoir + participe passé", "être + participe passé", "avoir + infinitif"], answer: "avoir + participe passé" },
+                    { type: "qcm", question: "Le participe passé des verbes en -ER se termine par ?", options: ["-é", "-i", "-u", "-is"], answer: "-é" }
+                ]
+            },
+            {
+                id: 10, title: "Passé composé - avec ÊTRE", description: "Je suis allé", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Je suis ___ au parc. (aller)", answer: "allé" },
+                    { type: "input", question: "Tu es ___ tôt. (partir)", answer: "parti" },
+                    { type: "input", question: "Il est ___ hier. (venir)", answer: "venu" },
+                    { type: "input", question: "Elle est ___ en retard. (arriver)", answer: "arrivée" },
+                    { type: "input", question: "Nous sommes ___ dehors. (sortir)", answer: "sortis" },
+                    { type: "input", question: "Vous êtes ___ dans la maison. (entrer)", answer: "entrés" },
+                    { type: "input", question: "Ils sont ___ par terre. (tomber)", answer: "tombés" },
+                    { type: "input", question: "Elles sont ___ chez mamie. (rester)", answer: "restées" },
+                    { type: "qcm", question: "Avec ÊTRE, le participe passé s'accorde avec ?", options: ["le sujet", "le COD", "rien", "le verbe"], answer: "le sujet" },
+                    { type: "qcm", question: "Elle est ___ (partir)", options: ["partie", "parti", "partis", "parties"], answer: "partie" }
+                ]
+            },
+
+            // ===== PASSÉ SIMPLE - CE2 Avancé =====
+            {
+                id: 11, title: "Passé simple - Verbes en -ER", description: "Il chanta, ils chantèrent", difficulty: 4,
+                exercises: [
+                    { type: "input", question: "Le prince ___ la princesse. (sauver)", answer: "sauva" },
+                    { type: "input", question: "La sorcière ___ dans la forêt. (entrer)", answer: "entra" },
+                    { type: "input", question: "Le loup ___ à la porte. (frapper)", answer: "frappa" },
+                    { type: "input", question: "Les enfants ___ des bonbons. (trouver)", answer: "trouvèrent" },
+                    { type: "input", question: "Le roi ___ un grand festin. (donner)", answer: "donna" },
+                    { type: "input", question: "Elle ___ toute la nuit. (danser)", answer: "dansa" },
+                    { type: "input", question: "Ils ___ dans le château. (entrer)", answer: "entrèrent" },
+                    { type: "input", question: "Il ___ une pomme. (manger)", answer: "mangea" },
+                    { type: "qcm", question: "Quelle terminaison pour 'il' au passé simple (-ER) ?", options: ["-a", "-ai", "-at", "-as"], answer: "-a" },
+                    { type: "qcm", question: "Quelle terminaison pour 'ils' au passé simple (-ER) ?", options: ["-èrent", "-aient", "-ont", "-irent"], answer: "-èrent" }
+                ]
+            },
+            {
+                id: 12, title: "Passé simple - ÊTRE et AVOIR", description: "Il fut, il eut", difficulty: 4,
+                exercises: [
+                    { type: "input", question: "Le prince ___ très brave. (être)", answer: "fut" },
+                    { type: "input", question: "La princesse ___ un sourire. (avoir)", answer: "eut" },
+                    { type: "input", question: "Les chevaliers ___ victorieux. (être)", answer: "furent" },
+                    { type: "input", question: "Le dragon ___ vaincu. (être)", answer: "fut" },
+                    { type: "input", question: "Les enfants ___ peur du loup. (avoir)", answer: "eurent" },
+                    { type: "input", question: "Le roi ___ une grande armée. (avoir)", answer: "eut" },
+                    { type: "input", question: "Elle ___ surprise. (être)", answer: "fut" },
+                    { type: "input", question: "Ils ___ de la chance. (avoir)", answer: "eurent" },
+                    { type: "qcm", question: "Il ___ (être au passé simple)", options: ["fut", "fus", "furent", "était"], answer: "fut" },
+                    { type: "qcm", question: "Il ___ (avoir au passé simple)", options: ["eut", "eus", "eurent", "avait"], answer: "eut" }
+                ]
+            },
+            {
+                id: 13, title: "Passé simple - 3ème groupe", description: "Il fit, il prit, il vit", difficulty: 4,
+                exercises: [
+                    { type: "input", question: "Le chevalier ___ son épée. (prendre)", answer: "prit" },
+                    { type: "input", question: "La reine ___ un discours. (faire)", answer: "fit" },
+                    { type: "input", question: "Le héros ___ le dragon. (voir)", answer: "vit" },
+                    { type: "input", question: "Le magicien ___ une formule. (dire)", answer: "dit" },
+                    { type: "input", question: "La princesse ___ au château. (venir)", answer: "vint" },
+                    { type: "input", question: "Les soldats ___ leur chemin. (prendre)", answer: "prirent" },
+                    { type: "input", question: "Ils ___ le trésor. (voir)", answer: "virent" },
+                    { type: "input", question: "Elle ___ une découverte. (faire)", answer: "fit" },
+                    { type: "qcm", question: "Il ___ (faire au passé simple)", options: ["fit", "fis", "firent", "faisait"], answer: "fit" },
+                    { type: "qcm", question: "Il ___ (prendre au passé simple)", options: ["prit", "pris", "prirent", "prenait"], answer: "prit" }
+                ]
+            },
+
+            // ===== RÉVISIONS =====
+            {
+                id: 14, title: "Révision CE1 - Présent et Futur", description: "Mélange des temps CE1", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Je ___ une chanson. (chanter - présent)", answer: "chante" },
+                    { type: "input", question: "Tu ___ demain. (jouer - futur)", answer: "joueras" },
+                    { type: "input", question: "Il ___ grand. (être - présent)", answer: "est" },
+                    { type: "input", question: "Elle ___ un cadeau. (avoir - futur)", answer: "aura" },
+                    { type: "input", question: "Nous ___ au parc. (aller - présent)", answer: "allons" },
+                    { type: "input", question: "Vous ___ du sport. (faire - futur)", answer: "ferez" },
+                    { type: "qcm", question: "'Je chanterai' est à quel temps ?", options: ["Futur", "Présent", "Imparfait", "Passé composé"], answer: "Futur" },
+                    { type: "qcm", question: "'Tu manges' est à quel temps ?", options: ["Présent", "Futur", "Imparfait", "Passé composé"], answer: "Présent" },
+                    { type: "qcm", question: "'Nous sommes' est à quel temps ?", options: ["Présent", "Futur", "Imparfait", "Passé composé"], answer: "Présent" },
+                    { type: "qcm", question: "'Ils auront' est à quel temps ?", options: ["Futur", "Présent", "Imparfait", "Passé composé"], answer: "Futur" }
+                ]
+            },
+            {
+                id: 15, title: "Révision CE2 - Tous les temps", description: "Présent, Futur, Imparfait, Passé composé", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Je ___ souvent. (chanter - imparfait)", answer: "chantais" },
+                    { type: "input", question: "Tu as ___ dehors. (jouer - passé composé)", answer: "joué" },
+                    { type: "input", question: "Il ___ content. (être - futur)", answer: "sera" },
+                    { type: "input", question: "Elle ___ peur. (avoir - imparfait)", answer: "avait" },
+                    { type: "input", question: "Nous avons ___ une pomme. (manger - passé composé)", answer: "mangé" },
+                    { type: "input", question: "Vous ___ au parc. (aller - présent)", answer: "allez" },
+                    { type: "qcm", question: "'Je chantais' est à quel temps ?", options: ["Imparfait", "Présent", "Futur", "Passé composé"], answer: "Imparfait" },
+                    { type: "qcm", question: "'J'ai mangé' est à quel temps ?", options: ["Passé composé", "Imparfait", "Présent", "Futur"], answer: "Passé composé" },
+                    { type: "qcm", question: "'Tu seras' est à quel temps ?", options: ["Futur", "Présent", "Imparfait", "Passé composé"], answer: "Futur" },
+                    { type: "qcm", question: "'Nous étions' est à quel temps ?", options: ["Imparfait", "Présent", "Futur", "Passé composé"], answer: "Imparfait" }
+                ]
+            },
+
+            // ===== ÉVALUATION INTENSIVE CE1 =====
+            {
+                id: 16, title: "⭐ ÉVALUATION CE1 - Présent", description: "25 questions - Entraînement intensif", difficulty: 1,
+                exercises: [
+                    { type: "input", question: "Je ___ une pomme. (manger)", answer: "mange" },
+                    { type: "input", question: "Tu ___ à l'école. (aller)", answer: "vas" },
+                    { type: "input", question: "Il ___ content. (être)", answer: "est" },
+                    { type: "input", question: "Elle ___ 7 ans. (avoir)", answer: "a" },
+                    { type: "input", question: "Nous ___ au parc. (jouer)", answer: "jouons" },
+                    { type: "input", question: "Vous ___ vos devoirs. (faire)", answer: "faites" },
+                    { type: "input", question: "Ils ___ la musique. (écouter)", answer: "écoutent" },
+                    { type: "input", question: "Elles ___ très bien. (chanter)", answer: "chantent" },
+                    { type: "input", question: "Je ___ français. (parler)", answer: "parle" },
+                    { type: "input", question: "Tu ___ un livre. (lire)", answer: "lis" },
+                    { type: "input", question: "Il ___ son travail. (finir)", answer: "finit" },
+                    { type: "input", question: "Elle ___ chez mamie. (venir)", answer: "vient" },
+                    { type: "input", question: "Nous ___ en classe. (être)", answer: "sommes" },
+                    { type: "input", question: "Vous ___ du sport. (faire)", answer: "faites" },
+                    { type: "input", question: "Ils ___ au cinéma. (aller)", answer: "vont" },
+                    { type: "input", question: "Elles ___ faim. (avoir)", answer: "ont" },
+                    { type: "input", question: "Je ___ un dessin. (faire)", answer: "fais" },
+                    { type: "input", question: "Tu ___ un livre. (choisir)", answer: "choisis" },
+                    { type: "input", question: "Il ___ bonjour. (dire)", answer: "dit" },
+                    { type: "input", question: "Elle ___ le bus. (prendre)", answer: "prend" },
+                    { type: "input", question: "Nous ___ vite. (grandir)", answer: "grandissons" },
+                    { type: "input", question: "Vous ___ la télé. (regarder)", answer: "regardez" },
+                    { type: "input", question: "Ils ___ du bruit. (faire)", answer: "font" },
+                    { type: "input", question: "Je ___ bien. (dormir)", answer: "dors" },
+                    { type: "input", question: "Tu ___ un oiseau. (voir)", answer: "vois" }
+                ]
+            },
+            {
+                id: 17, title: "⭐ ÉVALUATION CE1 - Futur", description: "25 questions - Entraînement intensif", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Demain, je ___ à la plage. (aller)", answer: "irai" },
+                    { type: "input", question: "Demain, tu ___ un gâteau. (manger)", answer: "mangeras" },
+                    { type: "input", question: "Demain, il ___ grand. (être)", answer: "sera" },
+                    { type: "input", question: "Demain, elle ___ 8 ans. (avoir)", answer: "aura" },
+                    { type: "input", question: "Demain, nous ___ au parc. (jouer)", answer: "jouerons" },
+                    { type: "input", question: "Demain, vous ___ du sport. (faire)", answer: "ferez" },
+                    { type: "input", question: "Demain, ils ___ bien. (chanter)", answer: "chanteront" },
+                    { type: "input", question: "Demain, elles ___ vite. (marcher)", answer: "marcheront" },
+                    { type: "input", question: "Je ___ content. (être - futur)", answer: "serai" },
+                    { type: "input", question: "Tu ___ un cadeau. (avoir - futur)", answer: "auras" },
+                    { type: "input", question: "Il ___ ses devoirs. (faire - futur)", answer: "fera" },
+                    { type: "input", question: "Elle ___ demain. (venir - futur)", answer: "viendra" },
+                    { type: "input", question: "Nous ___ en vacances. (partir - futur)", answer: "partirons" },
+                    { type: "input", question: "Vous ___ au cinéma. (aller - futur)", answer: "irez" },
+                    { type: "input", question: "Ils ___ le film. (voir - futur)", answer: "verront" },
+                    { type: "input", question: "Je ___ un livre. (lire - futur)", answer: "lirai" },
+                    { type: "input", question: "Tu ___ la réponse. (savoir - futur)", answer: "sauras" },
+                    { type: "input", question: "Il ___ mieux. (pouvoir - futur)", answer: "pourra" },
+                    { type: "input", question: "Elle ___ du piano. (jouer - futur)", answer: "jouera" },
+                    { type: "input", question: "Nous ___ ensemble. (danser - futur)", answer: "danserons" },
+                    { type: "input", question: "Vous ___ français. (parler - futur)", answer: "parlerez" },
+                    { type: "input", question: "Ils ___ la radio. (écouter - futur)", answer: "écouteront" },
+                    { type: "input", question: "Je ___ mon travail. (finir - futur)", answer: "finirai" },
+                    { type: "input", question: "Tu ___ vite. (grandir - futur)", answer: "grandiras" },
+                    { type: "input", question: "Il ___ un livre. (choisir - futur)", answer: "choisira" }
+                ]
+            },
+            {
+                id: 18, title: "⭐ ÉVALUATION CE1 - Être et Avoir", description: "30 questions - Tous les temps", difficulty: 2,
+                exercises: [
+                    // ÊTRE - Présent
+                    { type: "input", question: "Je ___ content. (être - présent)", answer: "suis" },
+                    { type: "input", question: "Tu ___ gentil. (être - présent)", answer: "es" },
+                    { type: "input", question: "Il ___ grand. (être - présent)", answer: "est" },
+                    { type: "input", question: "Nous ___ en classe. (être - présent)", answer: "sommes" },
+                    { type: "input", question: "Vous ___ sages. (être - présent)", answer: "êtes" },
+                    { type: "input", question: "Ils ___ fatigués. (être - présent)", answer: "sont" },
+                    // AVOIR - Présent
+                    { type: "input", question: "J'___ faim. (avoir - présent)", answer: "ai" },
+                    { type: "input", question: "Tu ___ soif. (avoir - présent)", answer: "as" },
+                    { type: "input", question: "Il ___ froid. (avoir - présent)", answer: "a" },
+                    { type: "input", question: "Nous ___ chaud. (avoir - présent)", answer: "avons" },
+                    { type: "input", question: "Vous ___ raison. (avoir - présent)", answer: "avez" },
+                    { type: "input", question: "Elles ___ peur. (avoir - présent)", answer: "ont" },
+                    // ÊTRE - Futur
+                    { type: "input", question: "Je ___ médecin. (être - futur)", answer: "serai" },
+                    { type: "input", question: "Tu ___ grand. (être - futur)", answer: "seras" },
+                    { type: "input", question: "Elle ___ contente. (être - futur)", answer: "sera" },
+                    { type: "input", question: "Nous ___ ensemble. (être - futur)", answer: "serons" },
+                    { type: "input", question: "Vous ___ là. (être - futur)", answer: "serez" },
+                    { type: "input", question: "Ils ___ présents. (être - futur)", answer: "seront" },
+                    // AVOIR - Futur
+                    { type: "input", question: "J'___ 10 ans. (avoir - futur)", answer: "aurai" },
+                    { type: "input", question: "Tu ___ un cadeau. (avoir - futur)", answer: "auras" },
+                    { type: "input", question: "Il ___ une surprise. (avoir - futur)", answer: "aura" },
+                    { type: "input", question: "Nous ___ des vacances. (avoir - futur)", answer: "aurons" },
+                    { type: "input", question: "Vous ___ le temps. (avoir - futur)", answer: "aurez" },
+                    { type: "input", question: "Elles ___ faim. (avoir - futur)", answer: "auront" },
+                    // Mélange QCM
+                    { type: "qcm", question: "Je ___ (être - présent)", options: ["suis", "es", "est", "sommes"], answer: "suis" },
+                    { type: "qcm", question: "J'___ (avoir - présent)", options: ["ai", "as", "a", "avons"], answer: "ai" },
+                    { type: "qcm", question: "Je ___ (être - futur)", options: ["serai", "seras", "sera", "serons"], answer: "serai" },
+                    { type: "qcm", question: "J'___ (avoir - futur)", options: ["aurai", "auras", "aura", "aurons"], answer: "aurai" },
+                    { type: "qcm", question: "'Tu es' est au...", options: ["présent", "futur", "imparfait"], answer: "présent" },
+                    { type: "qcm", question: "'Il aura' est au...", options: ["futur", "présent", "imparfait"], answer: "futur" }
+                ]
+            },
+            {
+                id: 19, title: "⭐ ÉVALUATION CE1 - Verbes du 1er groupe", description: "30 questions - chanter, manger, jouer...", difficulty: 1,
+                exercises: [
+                    // Présent
+                    { type: "input", question: "Je ___ une chanson. (chanter - présent)", answer: "chante" },
+                    { type: "input", question: "Tu ___ au ballon. (jouer - présent)", answer: "joues" },
+                    { type: "input", question: "Il ___ un gâteau. (manger - présent)", answer: "mange" },
+                    { type: "input", question: "Elle ___ bien. (danser - présent)", answer: "danse" },
+                    { type: "input", question: "Nous ___ la télé. (regarder - présent)", answer: "regardons" },
+                    { type: "input", question: "Vous ___ français. (parler - présent)", answer: "parlez" },
+                    { type: "input", question: "Ils ___ la musique. (écouter - présent)", answer: "écoutent" },
+                    { type: "input", question: "Elles ___ vite. (marcher - présent)", answer: "marchent" },
+                    { type: "input", question: "Je ___ ma chambre. (ranger - présent)", answer: "range" },
+                    { type: "input", question: "Tu ___ un dessin. (colorier - présent)", answer: "colories" },
+                    // Futur
+                    { type: "input", question: "Demain, je ___ une chanson. (chanter - futur)", answer: "chanterai" },
+                    { type: "input", question: "Demain, tu ___ dehors. (jouer - futur)", answer: "joueras" },
+                    { type: "input", question: "Demain, il ___ un gâteau. (manger - futur)", answer: "mangera" },
+                    { type: "input", question: "Demain, elle ___ bien. (danser - futur)", answer: "dansera" },
+                    { type: "input", question: "Demain, nous ___ un film. (regarder - futur)", answer: "regarderons" },
+                    { type: "input", question: "Demain, vous ___ de la musique. (écouter - futur)", answer: "écouterez" },
+                    { type: "input", question: "Demain, ils ___ français. (parler - futur)", answer: "parleront" },
+                    { type: "input", question: "Demain, elles ___ vite. (marcher - futur)", answer: "marcheront" },
+                    { type: "input", question: "Demain, je ___ ma chambre. (ranger - futur)", answer: "rangerai" },
+                    { type: "input", question: "Demain, tu ___ un dessin. (colorier - futur)", answer: "colorieras" },
+                    // Terminaisons
+                    { type: "qcm", question: "Quelle terminaison pour 'je' au présent (-ER) ?", options: ["-e", "-es", "-ons", "-ez"], answer: "-e" },
+                    { type: "qcm", question: "Quelle terminaison pour 'tu' au présent (-ER) ?", options: ["-e", "-es", "-ons", "-ez"], answer: "-es" },
+                    { type: "qcm", question: "Quelle terminaison pour 'nous' au présent (-ER) ?", options: ["-e", "-es", "-ons", "-ez"], answer: "-ons" },
+                    { type: "qcm", question: "Quelle terminaison pour 'vous' au présent (-ER) ?", options: ["-e", "-es", "-ons", "-ez"], answer: "-ez" },
+                    { type: "qcm", question: "Quelle terminaison pour 'ils' au présent (-ER) ?", options: ["-e", "-es", "-ent", "-ez"], answer: "-ent" },
+                    { type: "qcm", question: "Quelle terminaison pour 'je' au futur ?", options: ["-ai", "-as", "-a", "-ons"], answer: "-ai" },
+                    { type: "qcm", question: "Quelle terminaison pour 'tu' au futur ?", options: ["-ai", "-as", "-a", "-ons"], answer: "-as" },
+                    { type: "qcm", question: "Quelle terminaison pour 'il/elle' au futur ?", options: ["-ai", "-as", "-a", "-ons"], answer: "-a" },
+                    { type: "qcm", question: "Quelle terminaison pour 'nous' au futur ?", options: ["-ai", "-ons", "-ez", "-ont"], answer: "-ons" },
+                    { type: "qcm", question: "Quelle terminaison pour 'ils' au futur ?", options: ["-ai", "-as", "-a", "-ont"], answer: "-ont" }
+                ]
+            },
+            {
+                id: 20, title: "⭐ MÉGA ÉVALUATION FINALE", description: "40 questions - Test complet tous verbes", difficulty: 2,
+                exercises: [
+                    // Être - tous temps
+                    { type: "input", question: "Je ___ content. (être - présent)", answer: "suis" },
+                    { type: "input", question: "Tu ___ grand. (être - futur)", answer: "seras" },
+                    // Avoir - tous temps
+                    { type: "input", question: "Il ___ 7 ans. (avoir - présent)", answer: "a" },
+                    { type: "input", question: "Elle ___ un cadeau. (avoir - futur)", answer: "aura" },
+                    // Aller
+                    { type: "input", question: "Je ___ à l'école. (aller - présent)", answer: "vais" },
+                    { type: "input", question: "Tu ___ au parc. (aller - futur)", answer: "iras" },
+                    { type: "input", question: "Nous ___ en vacances. (aller - présent)", answer: "allons" },
+                    { type: "input", question: "Ils ___ à la plage. (aller - futur)", answer: "iront" },
+                    // Faire
+                    { type: "input", question: "Je ___ mes devoirs. (faire - présent)", answer: "fais" },
+                    { type: "input", question: "Tu ___ du sport. (faire - futur)", answer: "feras" },
+                    { type: "input", question: "Vous ___ un gâteau. (faire - présent)", answer: "faites" },
+                    { type: "input", question: "Ils ___ du bruit. (faire - présent)", answer: "font" },
+                    // Verbes en -ER
+                    { type: "input", question: "Je ___ une chanson. (chanter - présent)", answer: "chante" },
+                    { type: "input", question: "Tu ___ au foot. (jouer - présent)", answer: "joues" },
+                    { type: "input", question: "Elle ___ bien. (danser - présent)", answer: "danse" },
+                    { type: "input", question: "Nous ___ la télé. (regarder - présent)", answer: "regardons" },
+                    { type: "input", question: "Vous ___ français. (parler - présent)", answer: "parlez" },
+                    { type: "input", question: "Elles ___ vite. (marcher - futur)", answer: "marcheront" },
+                    // Verbes en -IR
+                    { type: "input", question: "Je ___ mon travail. (finir - présent)", answer: "finis" },
+                    { type: "input", question: "Tu ___ un livre. (choisir - présent)", answer: "choisis" },
+                    { type: "input", question: "Il ___ vite. (grandir - présent)", answer: "grandit" },
+                    { type: "input", question: "Nous ___ l'exercice. (réussir - présent)", answer: "réussissons" },
+                    { type: "input", question: "Vous ___ à vos parents. (obéir - présent)", answer: "obéissez" },
+                    { type: "input", question: "Ils ___ le verre. (remplir - présent)", answer: "remplissent" },
+                    // Venir, Voir, Prendre, Dire
+                    { type: "input", question: "Je ___ chez toi. (venir - présent)", answer: "viens" },
+                    { type: "input", question: "Tu ___ un oiseau. (voir - présent)", answer: "vois" },
+                    { type: "input", question: "Il ___ son sac. (prendre - présent)", answer: "prend" },
+                    { type: "input", question: "Elle ___ bonjour. (dire - présent)", answer: "dit" },
+                    { type: "input", question: "Nous ___ te voir. (venir - futur)", answer: "viendrons" },
+                    { type: "input", question: "Vous ___ le film. (voir - futur)", answer: "verrez" },
+                    // QCM temps
+                    { type: "qcm", question: "'Je mange' est au...", options: ["présent", "futur", "passé composé"], answer: "présent" },
+                    { type: "qcm", question: "'Tu chanteras' est au...", options: ["présent", "futur", "passé composé"], answer: "futur" },
+                    { type: "qcm", question: "'Il est' est au...", options: ["présent", "futur", "passé composé"], answer: "présent" },
+                    { type: "qcm", question: "'Nous serons' est au...", options: ["présent", "futur", "passé composé"], answer: "futur" },
+                    { type: "qcm", question: "'Vous allez' est au...", options: ["présent", "futur", "passé composé"], answer: "présent" },
+                    { type: "qcm", question: "'Ils iront' est au...", options: ["présent", "futur", "passé composé"], answer: "futur" },
+                    { type: "qcm", question: "Quel est l'infinitif de 'je vais' ?", options: ["aller", "venir", "voir"], answer: "aller" },
+                    { type: "qcm", question: "Quel est l'infinitif de 'tu fais' ?", options: ["faire", "finir", "falloir"], answer: "faire" },
+                    { type: "qcm", question: "Quel est l'infinitif de 'ils disent' ?", options: ["dire", "donner", "devoir"], answer: "dire" },
+                    { type: "qcm", question: "Quel est l'infinitif de 'nous prenons' ?", options: ["prendre", "partir", "pouvoir"], answer: "prendre" }
+                ]
+            }
+        ]
+    },
+
+    // ==================== VOCABULAIRE CE1 - MODULE INTENSIF ====================
+    vocabulaire: {
+        name: "Vocabulaire",
+        icon: "📚",
+        color: "#9b59b6",
+        fiches: [
+            // ===== NIVEAU 1 - FACILE =====
+            {
+                id: 1, title: "L'ordre alphabétique - Facile", description: "Ranger les lettres et mots simples", difficulty: 1,
+                exercises: [
+                    { type: "qcm", question: "Quelle lettre vient EN PREMIER ? A ou B ?", options: ["A", "B"], answer: "A" },
+                    { type: "qcm", question: "Quelle lettre vient EN PREMIER ? M ou L ?", options: ["M", "L"], answer: "L" },
+                    { type: "qcm", question: "Quel mot vient EN PREMIER ? chat ou chien ?", options: ["chat", "chien"], answer: "chat" },
+                    { type: "qcm", question: "Quel mot vient EN PREMIER ? arbre ou avion ?", options: ["arbre", "avion"], answer: "arbre" },
+                    { type: "qcm", question: "Quelle lettre vient APRÈS D ?", options: ["C", "E", "F", "B"], answer: "E" },
+                    { type: "qcm", question: "Quelle lettre vient AVANT F ?", options: ["G", "D", "E", "H"], answer: "E" },
+                    { type: "qcm", question: "Quel mot vient EN PREMIER ? maison ou maman ?", options: ["maison", "maman"], answer: "maison" },
+                    { type: "qcm", question: "Quel mot vient EN PREMIER ? papa ou petit ?", options: ["papa", "petit"], answer: "papa" }
+                ]
+            },
+            {
+                id: 2, title: "Les contraires - Niveau 1", description: "Trouver le mot opposé (facile)", difficulty: 1,
+                exercises: [
+                    { type: "qcm", question: "Le contraire de GRAND est...", options: ["petit", "gros", "large"], answer: "petit" },
+                    { type: "qcm", question: "Le contraire de CHAUD est...", options: ["tiède", "froid", "doux"], answer: "froid" },
+                    { type: "qcm", question: "Le contraire de JOUR est...", options: ["soir", "nuit", "matin"], answer: "nuit" },
+                    { type: "qcm", question: "Le contraire de HAUT est...", options: ["bas", "court", "mince"], answer: "bas" },
+                    { type: "input", question: "Le contraire de BEAU est...", answer: "laid" },
+                    { type: "input", question: "Le contraire de VITE est...", answer: "lent" },
+                    { type: "input", question: "Le contraire de OUVRIR est...", answer: "fermer" },
+                    { type: "input", question: "Le contraire de ENTRER est...", answer: "sortir" }
+                ]
+            },
+            {
+                id: 3, title: "Les synonymes - Niveau 1", description: "Mots qui veulent dire la même chose", difficulty: 1,
+                exercises: [
+                    { type: "qcm", question: "Un synonyme de CONTENT est...", options: ["triste", "heureux", "fâché"], answer: "heureux" },
+                    { type: "qcm", question: "Un synonyme de JOLI est...", options: ["laid", "beau", "grand"], answer: "beau" },
+                    { type: "qcm", question: "Un synonyme de MAISON est...", options: ["jardin", "habitation", "rue"], answer: "habitation" },
+                    { type: "qcm", question: "Un synonyme de RAPIDE est...", options: ["lent", "vite", "fort"], answer: "vite" },
+                    { type: "qcm", question: "Un synonyme de PETIT est...", options: ["grand", "minuscule", "gros"], answer: "minuscule" },
+                    { type: "qcm", question: "Un synonyme de TRISTE est...", options: ["joyeux", "malheureux", "content"], answer: "malheureux" },
+                    { type: "qcm", question: "Un synonyme de AIMER est...", options: ["détester", "adorer", "oublier"], answer: "adorer" },
+                    { type: "qcm", question: "Un synonyme de PEUR est...", options: ["joie", "crainte", "colère"], answer: "crainte" }
+                ]
+            },
+
+            // ===== NIVEAU 2 - MOYEN =====
+            {
+                id: 4, title: "L'ordre alphabétique - Moyen", description: "Ranger des mots plus difficiles", difficulty: 2,
+                exercises: [
+                    { type: "qcm", question: "Range ces mots : ballon, arbre, chat. Lequel vient EN PREMIER ?", options: ["ballon", "arbre", "chat"], answer: "arbre" },
+                    { type: "qcm", question: "Range ces mots : éléphant, escargot, école. Lequel vient EN PREMIER ?", options: ["éléphant", "escargot", "école"], answer: "école" },
+                    { type: "qcm", question: "Range ces mots : pomme, poire, prune. Lequel vient EN DERNIER ?", options: ["pomme", "poire", "prune"], answer: "prune" },
+                    { type: "qcm", question: "Lequel de ces mots serait entre CHAT et CHIEN dans le dictionnaire ?", options: ["chameau", "chocolat", "chemin"], answer: "chemin" },
+                    { type: "qcm", question: "Quel mot vient EN PREMIER ? soleil ou samedi ?", options: ["soleil", "samedi"], answer: "samedi" },
+                    { type: "qcm", question: "Quel mot vient EN DERNIER ? table, tigre, train ?", options: ["table", "tigre", "train"], answer: "train" },
+                    { type: "input", question: "Entre MARDI et MERCREDI, quel jour vient en premier dans l'alphabet ?", answer: "mardi" },
+                    { type: "input", question: "Entre JANVIER et JUIN, quel mois vient en premier dans l'alphabet ?", answer: "janvier" }
+                ]
+            },
+            {
+                id: 5, title: "Les contraires - Niveau 2", description: "Antonymes plus complexes", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Le contraire de MONTER est...", answer: "descendre" },
+                    { type: "input", question: "Le contraire de COMMENCER est...", answer: "finir" },
+                    { type: "input", question: "Le contraire de ALLUMER est...", answer: "éteindre" },
+                    { type: "input", question: "Le contraire de RIRE est...", answer: "pleurer" },
+                    { type: "input", question: "Le contraire de AIMER est...", answer: "détester" },
+                    { type: "input", question: "Le contraire de CONSTRUIRE est...", answer: "détruire" },
+                    { type: "input", question: "Le contraire de REMPLIR est...", answer: "vider" },
+                    { type: "input", question: "Le contraire de GAGNER est...", answer: "perdre" },
+                    { type: "qcm", question: "Le contraire de PERMETTRE est...", options: ["autoriser", "interdire", "accepter"], answer: "interdire" },
+                    { type: "qcm", question: "Le contraire de AJOUTER est...", options: ["enlever", "mettre", "placer"], answer: "enlever" }
+                ]
+            },
+            {
+                id: 6, title: "Les synonymes - Niveau 2", description: "Synonymes plus variés", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Un synonyme de COURAGEUX est... (commence par B)", answer: "brave" },
+                    { type: "input", question: "Un synonyme de FATIGUÉ est... (commence par É)", answer: "épuisé" },
+                    { type: "input", question: "Un synonyme de MANGER est... (commence par D)", answer: "dévorer" },
+                    { type: "qcm", question: "Un synonyme de ÉNORME est...", options: ["petit", "immense", "mince"], answer: "immense" },
+                    { type: "qcm", question: "Un synonyme de BIZARRE est...", options: ["normal", "étrange", "simple"], answer: "étrange" },
+                    { type: "qcm", question: "Un synonyme de FURIEUX est...", options: ["calme", "en colère", "triste"], answer: "en colère" },
+                    { type: "qcm", question: "Un synonyme de TERMINER est...", options: ["commencer", "finir", "continuer"], answer: "finir" },
+                    { type: "qcm", question: "Un synonyme de CRIER est...", options: ["murmurer", "hurler", "chanter"], answer: "hurler" },
+                    { type: "qcm", question: "Un synonyme de GENTIL est...", options: ["méchant", "aimable", "sévère"], answer: "aimable" },
+                    { type: "qcm", question: "Un synonyme de PARLER est...", options: ["se taire", "discuter", "écouter"], answer: "discuter" }
+                ]
+            },
+            {
+                id: 7, title: "Les familles de mots - Niveau 1", description: "Mots de la même famille", difficulty: 2,
+                exercises: [
+                    { type: "qcm", question: "Quel mot est de la même famille que CHANTER ?", options: ["chat", "chanson", "chance"], answer: "chanson" },
+                    { type: "qcm", question: "Quel mot est de la même famille que FLEUR ?", options: ["peur", "fleuriste", "pleur"], answer: "fleuriste" },
+                    { type: "qcm", question: "Quel mot est de la même famille que DENT ?", options: ["dedans", "dentiste", "pendant"], answer: "dentiste" },
+                    { type: "qcm", question: "Quel mot est de la même famille que LAIT ?", options: ["laid", "laitier", "laisse"], answer: "laitier" },
+                    { type: "qcm", question: "Quel mot est de la même famille que JARDIN ?", options: ["jardiner", "sardine", "marine"], answer: "jardiner" },
+                    { type: "qcm", question: "Quel mot est de la même famille que TERRE ?", options: ["verre", "terrasse", "guerre"], answer: "terrasse" },
+                    { type: "qcm", question: "Quel mot N'EST PAS de la même famille que NEIGE ?", options: ["neiger", "enneigé", "beige"], answer: "beige" },
+                    { type: "qcm", question: "Quel mot N'EST PAS de la même famille que SOLEIL ?", options: ["ensoleillé", "parasol", "sommeil"], answer: "sommeil" }
+                ]
+            },
+            {
+                id: 8, title: "Le sens des mots", description: "Comprendre le contexte", difficulty: 2,
+                exercises: [
+                    { type: "qcm", question: "Dans 'La glace est froide', GLACE signifie...", options: ["miroir", "eau gelée", "crème glacée"], answer: "eau gelée" },
+                    { type: "qcm", question: "Dans 'Je mange une glace', GLACE signifie...", options: ["miroir", "eau gelée", "crème glacée"], answer: "crème glacée" },
+                    { type: "qcm", question: "Dans 'Je regarde dans la glace', GLACE signifie...", options: ["miroir", "eau gelée", "crème glacée"], answer: "miroir" },
+                    { type: "qcm", question: "Dans 'L'avion décolle', AVION est...", options: ["un véhicule", "un oiseau", "un insecte"], answer: "un véhicule" },
+                    { type: "qcm", question: "Dans 'Le chat dort sur le lit', LIT signifie...", options: ["un meuble pour dormir", "il lit un livre"], answer: "un meuble pour dormir" },
+                    { type: "qcm", question: "Dans 'Il lit un livre', LIT signifie...", options: ["un meuble pour dormir", "il lit un livre"], answer: "il lit un livre" },
+                    { type: "qcm", question: "Dans 'La souris mange du fromage', SOURIS est...", options: ["un animal", "un sourire", "un ordinateur"], answer: "un animal" },
+                    { type: "qcm", question: "Dans 'Clique avec la souris', SOURIS est...", options: ["un animal", "un sourire", "un accessoire d'ordinateur"], answer: "un accessoire d'ordinateur" }
+                ]
+            },
+
+            // ===== NIVEAU 3 - DIFFICILE =====
+            {
+                id: 9, title: "Les contraires - Niveau 3", description: "Antonymes avec préfixes", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Le contraire de POSSIBLE est...", answer: "impossible" },
+                    { type: "input", question: "Le contraire de HEUREUX est...", answer: "malheureux" },
+                    { type: "input", question: "Le contraire de FAIRE est...", answer: "défaire" },
+                    { type: "input", question: "Le contraire de CONNU est...", answer: "inconnu" },
+                    { type: "input", question: "Le contraire de PATIENT est...", answer: "impatient" },
+                    { type: "input", question: "Le contraire de VISIBLE est...", answer: "invisible" },
+                    { type: "input", question: "Le contraire de LÉGAL est...", answer: "illégal" },
+                    { type: "input", question: "Le contraire de AGRÉABLE est...", answer: "désagréable" },
+                    { type: "qcm", question: "Quel préfixe forme le contraire de 'content' ?", options: ["im-", "in-", "mé-", "dé-"], answer: "mé-" },
+                    { type: "qcm", question: "Quel préfixe forme le contraire de 'monter' ?", options: ["dé-", "im-", "in-", "mal-"], answer: "dé-" }
+                ]
+            },
+            {
+                id: 10, title: "Les familles de mots - Niveau 2", description: "Radical et dérivés", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Le radical (mot de base) de JARDINAGE est...", answer: "jardin" },
+                    { type: "input", question: "Le radical de BOULANGERIE est...", answer: "boulanger" },
+                    { type: "input", question: "Un mot de la famille de LIRE (celui qui lit) est...", answer: "lecteur" },
+                    { type: "input", question: "Un mot de la famille de ÉCRIRE (action d'écrire) est...", answer: "écriture" },
+                    { type: "qcm", question: "Tous ces mots sont de la même famille SAUF...", options: ["courir", "coureur", "course", "cour"], answer: "cour" },
+                    { type: "qcm", question: "Tous ces mots sont de la même famille SAUF...", options: ["mer", "mère", "marin", "maritime"], answer: "mère" },
+                    { type: "qcm", question: "Quel est le radical commun à : chanteur, chanson, chanter ?", options: ["chant", "chan", "chante"], answer: "chant" },
+                    { type: "qcm", question: "Quel suffixe forme 'celui qui fait' ? (chant → chant...)", options: ["-eur", "-age", "-tion", "-ment"], answer: "-eur" },
+                    { type: "qcm", question: "Quel suffixe forme l'action ? (nager → nag...)", options: ["-eur", "-age", "-tion", "-ette"], answer: "-age" },
+                    { type: "qcm", question: "Le mot REFAIRE est formé avec le préfixe...", options: ["re-", "dé-", "pré-", "in-"], answer: "re-" }
+                ]
+            },
+            {
+                id: 11, title: "Sens propre et sens figuré", description: "Expressions et images", difficulty: 3,
+                exercises: [
+                    { type: "qcm", question: "'Avoir le cœur sur la main' signifie...", options: ["être généreux", "avoir mal au cœur", "porter un cœur"], answer: "être généreux" },
+                    { type: "qcm", question: "'Tomber dans les pommes' signifie...", options: ["s'évanouir", "tomber dans un pommier", "manger des pommes"], answer: "s'évanouir" },
+                    { type: "qcm", question: "'Avoir la tête dans les nuages' signifie...", options: ["être rêveur", "voler haut", "avoir froid"], answer: "être rêveur" },
+                    { type: "qcm", question: "'Mettre les pieds dans le plat' signifie...", options: ["être maladroit", "manger avec les pieds", "cuisiner"], answer: "être maladroit" },
+                    { type: "qcm", question: "'Il pleut des cordes' est au sens...", options: ["propre", "figuré"], answer: "figuré" },
+                    { type: "qcm", question: "'Le chat dort sur le canapé' est au sens...", options: ["propre", "figuré"], answer: "propre" },
+                    { type: "qcm", question: "'Donner sa langue au chat' signifie...", options: ["abandonner, ne pas savoir", "nourrir un chat", "parler à un chat"], answer: "abandonner, ne pas savoir" },
+                    { type: "qcm", question: "'Avoir un chat dans la gorge' signifie...", options: ["être enroué", "avaler un chat", "tousser fort"], answer: "être enroué" }
+                ]
+            },
+
+            // ===== ÉVALUATION =====
+            {
+                id: 12, title: "Évaluation Vocabulaire CE1", description: "Test complet - 15 questions", difficulty: 2,
+                exercises: [
+                    { type: "qcm", question: "Quel mot vient EN PREMIER dans l'alphabet ?", options: ["soleil", "nuage", "étoile"], answer: "étoile" },
+                    { type: "input", question: "Le contraire de TROUVER est...", answer: "perdre" },
+                    { type: "qcm", question: "Un synonyme de BEAU est...", options: ["laid", "joli", "grand"], answer: "joli" },
+                    { type: "qcm", question: "Quel mot est de la même famille que FLEUR ?", options: ["pleur", "fleurir", "peur"], answer: "fleurir" },
+                    { type: "input", question: "Le contraire de MONTER est...", answer: "descendre" },
+                    { type: "qcm", question: "Un synonyme de CONTENT est...", options: ["triste", "heureux", "fâché"], answer: "heureux" },
+                    { type: "input", question: "Le contraire de POSSIBLE est...", answer: "impossible" },
+                    { type: "qcm", question: "Quel mot N'EST PAS de la même famille que DENT ?", options: ["dentiste", "dedans", "dentier"], answer: "dedans" },
+                    { type: "qcm", question: "'Avoir la tête dans les nuages' signifie...", options: ["voler", "être rêveur", "avoir froid"], answer: "être rêveur" },
+                    { type: "input", question: "Un synonyme de RAPIDE (commence par V)...", answer: "vite" },
+                    { type: "qcm", question: "Dans 'Je mange une glace', GLACE signifie...", options: ["miroir", "crème glacée", "eau gelée"], answer: "crème glacée" },
+                    { type: "input", question: "Le contraire de HEUREUX est...", answer: "malheureux" },
+                    { type: "qcm", question: "Le radical de CHANTEUR est...", options: ["chant", "chante", "chan"], answer: "chant" },
+                    { type: "qcm", question: "Quel mot vient EN DERNIER dans l'alphabet ?", options: ["arbre", "zèbre", "maison"], answer: "zèbre" },
+                    { type: "qcm", question: "'Il pleut des cordes' est une expression au sens...", options: ["propre", "figuré"], answer: "figuré" }
+                ]
+            },
+            {
+                id: 13, title: "Entraînement Intensif - Contraires", description: "20 contraires pour réviser", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Le contraire de GRAND est...", answer: "petit" },
+                    { type: "input", question: "Le contraire de CHAUD est...", answer: "froid" },
+                    { type: "input", question: "Le contraire de JOUR est...", answer: "nuit" },
+                    { type: "input", question: "Le contraire de VIEUX est...", answer: "jeune" },
+                    { type: "input", question: "Le contraire de LONG est...", answer: "court" },
+                    { type: "input", question: "Le contraire de LOURD est...", answer: "léger" },
+                    { type: "input", question: "Le contraire de RAPIDE est...", answer: "lent" },
+                    { type: "input", question: "Le contraire de FACILE est...", answer: "difficile" },
+                    { type: "input", question: "Le contraire de PROPRE est...", answer: "sale" },
+                    { type: "input", question: "Le contraire de RICHE est...", answer: "pauvre" },
+                    { type: "input", question: "Le contraire de PREMIER est...", answer: "dernier" },
+                    { type: "input", question: "Le contraire de DÉBUT est...", answer: "fin" },
+                    { type: "input", question: "Le contraire de AVANT est...", answer: "après" },
+                    { type: "input", question: "Le contraire de DEVANT est...", answer: "derrière" },
+                    { type: "input", question: "Le contraire de DESSUS est...", answer: "dessous" },
+                    { type: "input", question: "Le contraire de AIMER est...", answer: "détester" },
+                    { type: "input", question: "Le contraire de PLEURER est...", answer: "rire" },
+                    { type: "input", question: "Le contraire de PARLER est...", answer: "se taire" },
+                    { type: "input", question: "Le contraire de ARRIVER est...", answer: "partir" },
+                    { type: "input", question: "Le contraire de DONNER est...", answer: "prendre" }
+                ]
+            },
+            {
+                id: 14, title: "Entraînement Intensif - Synonymes", description: "20 synonymes pour réviser", difficulty: 2,
+                exercises: [
+                    { type: "qcm", question: "Un synonyme de BEAU est...", options: ["laid", "joli", "grand"], answer: "joli" },
+                    { type: "qcm", question: "Un synonyme de PETIT est...", options: ["grand", "minuscule", "gros"], answer: "minuscule" },
+                    { type: "qcm", question: "Un synonyme de CONTENT est...", options: ["triste", "joyeux", "fâché"], answer: "joyeux" },
+                    { type: "qcm", question: "Un synonyme de MAISON est...", options: ["jardin", "demeure", "rue"], answer: "demeure" },
+                    { type: "qcm", question: "Un synonyme de CRIER est...", options: ["murmurer", "hurler", "chanter"], answer: "hurler" },
+                    { type: "qcm", question: "Un synonyme de RAPIDE est...", options: ["lent", "vif", "faible"], answer: "vif" },
+                    { type: "qcm", question: "Un synonyme de MANGER est...", options: ["boire", "se nourrir", "dormir"], answer: "se nourrir" },
+                    { type: "qcm", question: "Un synonyme de COURAGEUX est...", options: ["peureux", "brave", "timide"], answer: "brave" },
+                    { type: "qcm", question: "Un synonyme de INTELLIGENT est...", options: ["bête", "malin", "lent"], answer: "malin" },
+                    { type: "qcm", question: "Un synonyme de GENTIL est...", options: ["méchant", "aimable", "sévère"], answer: "aimable" },
+                    { type: "qcm", question: "Un synonyme de TRISTE est...", options: ["joyeux", "malheureux", "content"], answer: "malheureux" },
+                    { type: "qcm", question: "Un synonyme de BIZARRE est...", options: ["normal", "étrange", "simple"], answer: "étrange" },
+                    { type: "qcm", question: "Un synonyme de AIDER est...", options: ["gêner", "secourir", "abandonner"], answer: "secourir" },
+                    { type: "qcm", question: "Un synonyme de TERMINER est...", options: ["commencer", "achever", "continuer"], answer: "achever" },
+                    { type: "qcm", question: "Un synonyme de PEUR est...", options: ["joie", "crainte", "colère"], answer: "crainte" },
+                    { type: "qcm", question: "Un synonyme de CALME est...", options: ["agité", "tranquille", "nerveux"], answer: "tranquille" },
+                    { type: "qcm", question: "Un synonyme de FATIGUÉ est...", options: ["reposé", "épuisé", "vif"], answer: "épuisé" },
+                    { type: "qcm", question: "Un synonyme de ÉNORME est...", options: ["petit", "gigantesque", "mince"], answer: "gigantesque" },
+                    { type: "qcm", question: "Un synonyme de ANCIEN est...", options: ["nouveau", "vieux", "moderne"], answer: "vieux" },
+                    { type: "qcm", question: "Un synonyme de ERREUR est...", options: ["réussite", "faute", "succès"], answer: "faute" }
+                ]
+            }
+        ]
     }
 };
 
 // Subject icons mapping
 const SUBJECT_ICONS = {
+    vocabulaire: "📚",
     francais: "📖",
     dictee: "✏️",
     calcul_mental: "🧮",
@@ -1148,7 +2019,8 @@ const SUBJECT_ICONS = {
     grandeurs_mesures: "📏",
     anglais: "🇬🇧",
     sciences: "🔬",
-    lecture: "📚"
+    lecture: "📚",
+    conjugaison: "📝"
 };
 
 // ==================== CHALLENGES SYSTEM ====================
@@ -1158,14 +2030,15 @@ const CHALLENGES_DATA = {
         { id: "perfect_dictee", name: "Dictée Parfaite", description: "Fais une dictée sans faute", icon: "✨", reward: 75, type: "perfect", subject: "dictee", count: 1 },
         { id: "tables_master", name: "Champion des Tables", description: "Récite 3 tables sans erreur", icon: "🏆", reward: 60, type: "streak", subject: "tables", count: 3 },
         { id: "lecture_hero", name: "Super Lecteur", description: "Lis et comprends 2 textes", icon: "📖", reward: 50, type: "complete", subject: "lecture", count: 2 },
-        { id: "problem_solver", name: "Résolveur de Problèmes", description: "Résous 5 problèmes", icon: "🧩", reward: 55, type: "complete", subject: "problemes", count: 5 }
+        { id: "problem_solver", name: "Résolveur de Problèmes", description: "Résous 5 problèmes", icon: "🧩", reward: 55, type: "complete", subject: "problemes", count: 5 },
+        { id: "conjugaison_master", name: "Maître de Conjugaison", description: "Conjugue 10 verbes sans erreur", icon: "📝", reward: 65, type: "perfect", subject: "conjugaison", count: 10 }
     ],
     weekly: [
-        { id: "week_champion", name: "Champion de la Semaine", description: "Complete 50 exercices cette semaine", icon: "👑", reward: 200, type: "total", count: 50, multiSubject: true, subjects: ["calcul_mental", "francais", "lecture", "dictee", "tables", "geometrie", "problemes"] },
-        { id: "all_subjects", name: "Explorateur", description: "Travaille sur toutes les matières", icon: "🌟", reward: 150, type: "variety", count: 11, multiSubject: true, subjects: ["calcul_mental", "francais", "lecture", "dictee", "tables", "geometrie", "problemes", "nombres_calculs", "grandeurs_mesures", "anglais", "sciences"] },
-        { id: "streak_7", name: "7 Jours d'Affilée", description: "Connecte-toi 7 jours de suite", icon: "🔥", reward: 300, type: "streak", count: 7, multiSubject: true, subjects: ["calcul_mental", "francais", "lecture"] },
-        { id: "star_collector", name: "Collectionneur d'Étoiles", description: "Gagne 20 étoiles cette semaine", icon: "⭐", reward: 175, type: "stars", count: 20, multiSubject: true, subjects: ["calcul_mental", "tables", "dictee", "geometrie"] },
-        { id: "perfectionist", name: "Perfectionniste", description: "Obtiens 100% sur 10 fiches", icon: "💯", reward: 250, type: "perfect", count: 10, multiSubject: true, subjects: ["calcul_mental", "tables", "francais", "lecture"] }
+        { id: "week_champion", name: "Champion de la Semaine", description: "Complete 50 exercices cette semaine", icon: "👑", reward: 200, type: "total", count: 50, multiSubject: true, subjects: ["calcul_mental", "francais", "lecture", "dictee", "tables", "geometrie", "problemes", "vocabulaire", "conjugaison"] },
+        { id: "all_subjects", name: "Explorateur", description: "Travaille sur toutes les matières", icon: "🌟", reward: 150, type: "variety", count: 13, multiSubject: true, subjects: ["calcul_mental", "francais", "lecture", "dictee", "tables", "geometrie", "problemes", "nombres_calculs", "grandeurs_mesures", "anglais", "sciences", "vocabulaire", "conjugaison"] },
+        { id: "streak_7", name: "7 Jours d'Affilée", description: "Connecte-toi 7 jours de suite", icon: "🔥", reward: 300, type: "streak", count: 7, multiSubject: true, subjects: ["calcul_mental", "francais", "lecture", "conjugaison", "vocabulaire"] },
+        { id: "star_collector", name: "Collectionneur d'Étoiles", description: "Gagne 20 étoiles cette semaine", icon: "⭐", reward: 175, type: "stars", count: 20, multiSubject: true, subjects: ["calcul_mental", "tables", "dictee", "geometrie", "conjugaison"] },
+        { id: "perfectionist", name: "Perfectionniste", description: "Obtiens 100% sur 10 fiches", icon: "💯", reward: 250, type: "perfect", count: 10, multiSubject: true, subjects: ["calcul_mental", "tables", "francais", "lecture", "conjugaison", "vocabulaire"] }
     ],
     special: [
         { id: "major_unlock", name: "Futur Major", description: "Complète toutes les fiches d'une matière avec 3 étoiles", icon: "🎓", reward: 500, type: "mastery", unlocks: "badge_major", multiSubject: true, subjects: ["calcul_mental", "francais", "lecture", "dictee", "tables", "geometrie", "problemes"] },
@@ -1184,6 +2057,7 @@ const BADGES_DATA = [
     { id: "star_master", name: "Maître des Étoiles", description: "Gagne 100 étoiles", icon: "✨", condition: { type: "stars", count: 100 } },
     { id: "math_lover", name: "Matheux", description: "Complete toutes les fiches de maths", icon: "🧮", condition: { type: "subject_complete", subject: "calcul_mental" } },
     { id: "french_master", name: "Académicien", description: "Complete toutes les fiches de français", icon: "📖", condition: { type: "subject_complete", subject: "francais" } },
+    { id: "conjugaison_expert", name: "Expert en Conjugaison", description: "Complete toutes les fiches de conjugaison", icon: "📝", condition: { type: "subject_complete", subject: "conjugaison" } },
     { id: "streak_3", name: "Régulier", description: "3 jours consécutifs", icon: "🔥", condition: { type: "streak", count: 3 } },
     { id: "streak_7", name: "Assidu", description: "7 jours consécutifs", icon: "🔥🔥", condition: { type: "streak", count: 7 } },
     { id: "streak_30", name: "Inarrêtable", description: "30 jours consécutifs", icon: "🔥🔥🔥", condition: { type: "streak", count: 30 } },

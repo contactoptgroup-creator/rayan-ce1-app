@@ -109,6 +109,365 @@ const SUBJECTS_DATA_CE2 = {
                     { type: "input", question: "Ils ___ arrivés. (être)", answer: "sont" },
                     { type: "qcm", question: "'J'ai chanté' est au...", options: ["imparfait", "passé composé", "futur"], answer: "passé composé" }
                 ]
+            },
+            // === CONJUGAISON CE2 - MODULE INTENSIF ÉVALUATIONS ===
+            {
+                id: 11, title: "Imparfait - être et avoir", description: "J'étais, j'avais...", difficulty: 1,
+                exercises: [
+                    { type: "input", question: "J'___ content hier. (être)", answer: "étais" },
+                    { type: "input", question: "Tu ___ petit avant. (être)", answer: "étais" },
+                    { type: "input", question: "Il ___ grand. (être)", answer: "était" },
+                    { type: "input", question: "Nous ___ amis. (être)", answer: "étions" },
+                    { type: "input", question: "Vous ___ sages. (être)", answer: "étiez" },
+                    { type: "input", question: "Elles ___ belles. (être)", answer: "étaient" },
+                    { type: "input", question: "J'___ faim. (avoir)", answer: "avais" },
+                    { type: "input", question: "Tu ___ soif. (avoir)", answer: "avais" },
+                    { type: "input", question: "Elle ___ froid. (avoir)", answer: "avait" },
+                    { type: "input", question: "Nous ___ chaud. (avoir)", answer: "avions" },
+                    { type: "input", question: "Vous ___ raison. (avoir)", answer: "aviez" },
+                    { type: "input", question: "Ils ___ peur. (avoir)", answer: "avaient" },
+                    { type: "qcm", question: "Les terminaisons de l'imparfait sont...", options: ["-ais, -ais, -ait, -ions, -iez, -aient", "-ai, -as, -a, -ons, -ez, -ont", "-e, -es, -e, -ons, -ez, -ent"], answer: "-ais, -ais, -ait, -ions, -iez, -aient" }
+                ]
+            },
+            {
+                id: 12, title: "Imparfait - verbes en -er", description: "Je chantais, tu jouais...", difficulty: 1,
+                exercises: [
+                    { type: "input", question: "Je ___ au ballon. (jouer)", answer: "jouais" },
+                    { type: "input", question: "Tu ___ très bien. (chanter)", answer: "chantais" },
+                    { type: "input", question: "Il ___ une histoire. (raconter)", answer: "racontait" },
+                    { type: "input", question: "Elle ___ la télé. (regarder)", answer: "regardait" },
+                    { type: "input", question: "Nous ___ ensemble. (manger)", answer: "mangions" },
+                    { type: "input", question: "Vous ___ français. (parler)", answer: "parliez" },
+                    { type: "input", question: "Ils ___ la corde. (sauter)", answer: "sautaient" },
+                    { type: "input", question: "Je ___ à l'école. (marcher)", answer: "marchais" },
+                    { type: "input", question: "Tu ___ fort. (crier)", answer: "criais" },
+                    { type: "input", question: "Nous ___ en classe. (écouter)", answer: "écoutions" }
+                ]
+            },
+            {
+                id: 13, title: "Imparfait - verbes en -ir", description: "Je finissais, tu grandissais...", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Je ___ mes devoirs. (finir)", answer: "finissais" },
+                    { type: "input", question: "Tu ___ vite. (grandir)", answer: "grandissais" },
+                    { type: "input", question: "Il ___ un livre. (choisir)", answer: "choisissait" },
+                    { type: "input", question: "Elle ___ à ses parents. (obéir)", answer: "obéissait" },
+                    { type: "input", question: "Nous ___ notre travail. (finir)", answer: "finissions" },
+                    { type: "input", question: "Vous ___ bien. (réussir)", answer: "réussissiez" },
+                    { type: "input", question: "Ils ___ leur assiette. (remplir)", answer: "remplissaient" },
+                    { type: "input", question: "Je ___ dans le noir. (réfléchir)", answer: "réfléchissais" },
+                    { type: "input", question: "Tu ___ ton dessert. (choisir)", answer: "choisissais" },
+                    { type: "input", question: "Nous ___ très vite. (grandir)", answer: "grandissions" }
+                ]
+            },
+            {
+                id: 14, title: "Imparfait - aller, faire, dire, voir", description: "Verbes du 3ème groupe", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "J'___ à l'école. (aller)", answer: "allais" },
+                    { type: "input", question: "Tu ___ au parc. (aller)", answer: "allais" },
+                    { type: "input", question: "Il ___ chez mamie. (aller)", answer: "allait" },
+                    { type: "input", question: "Nous ___ en vacances. (aller)", answer: "allions" },
+                    { type: "input", question: "Vous ___ à la plage. (aller)", answer: "alliez" },
+                    { type: "input", question: "Ils ___ au cinéma. (aller)", answer: "allaient" },
+                    { type: "input", question: "Je ___ mes devoirs. (faire)", answer: "faisais" },
+                    { type: "input", question: "Tu ___ du vélo. (faire)", answer: "faisais" },
+                    { type: "input", question: "Elle ___ la cuisine. (faire)", answer: "faisait" },
+                    { type: "input", question: "Nous ___ du sport. (faire)", answer: "faisions" },
+                    { type: "input", question: "Je ___ bonjour. (dire)", answer: "disais" },
+                    { type: "input", question: "Ils ___ la vérité. (dire)", answer: "disaient" },
+                    { type: "input", question: "Je ___ des oiseaux. (voir)", answer: "voyais" },
+                    { type: "input", question: "Nous ___ le film. (voir)", answer: "voyions" }
+                ]
+            },
+            {
+                id: 15, title: "Imparfait - venir, prendre, pouvoir, vouloir", description: "Verbes irréguliers", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Je ___ souvent. (venir)", answer: "venais" },
+                    { type: "input", question: "Tu ___ avec moi. (venir)", answer: "venais" },
+                    { type: "input", question: "Il ___ nous voir. (venir)", answer: "venait" },
+                    { type: "input", question: "Nous ___ tôt. (venir)", answer: "venions" },
+                    { type: "input", question: "Ils ___ le dimanche. (venir)", answer: "venaient" },
+                    { type: "input", question: "Je ___ le bus. (prendre)", answer: "prenais" },
+                    { type: "input", question: "Tu ___ ton temps. (prendre)", answer: "prenais" },
+                    { type: "input", question: "Elle ___ des photos. (prendre)", answer: "prenait" },
+                    { type: "input", question: "Nous ___ le train. (prendre)", answer: "prenions" },
+                    { type: "input", question: "Je ___ jouer. (pouvoir)", answer: "pouvais" },
+                    { type: "input", question: "Tu ___ venir. (pouvoir)", answer: "pouvais" },
+                    { type: "input", question: "Il ___ manger. (vouloir)", answer: "voulait" },
+                    { type: "input", question: "Nous ___ partir. (vouloir)", answer: "voulions" }
+                ]
+            },
+            {
+                id: 16, title: "Futur simple - être et avoir", description: "Je serai, j'aurai...", difficulty: 1,
+                exercises: [
+                    { type: "input", question: "Demain, je ___ content. (être)", answer: "serai" },
+                    { type: "input", question: "Demain, tu ___ grand. (être)", answer: "seras" },
+                    { type: "input", question: "Demain, il ___ présent. (être)", answer: "sera" },
+                    { type: "input", question: "Demain, nous ___ ensemble. (être)", answer: "serons" },
+                    { type: "input", question: "Demain, vous ___ là. (être)", answer: "serez" },
+                    { type: "input", question: "Demain, elles ___ heureuses. (être)", answer: "seront" },
+                    { type: "input", question: "Demain, j'___ 9 ans. (avoir)", answer: "aurai" },
+                    { type: "input", question: "Demain, tu ___ un cadeau. (avoir)", answer: "auras" },
+                    { type: "input", question: "Demain, elle ___ une surprise. (avoir)", answer: "aura" },
+                    { type: "input", question: "Demain, nous ___ des vacances. (avoir)", answer: "aurons" },
+                    { type: "input", question: "Demain, vous ___ le temps. (avoir)", answer: "aurez" },
+                    { type: "input", question: "Demain, ils ___ faim. (avoir)", answer: "auront" },
+                    { type: "qcm", question: "Les terminaisons du futur sont...", options: ["-ai, -as, -a, -ons, -ez, -ont", "-ais, -ais, -ait, -ions, -iez, -aient", "-e, -es, -e, -ons, -ez, -ent"], answer: "-ai, -as, -a, -ons, -ez, -ont" }
+                ]
+            },
+            {
+                id: 17, title: "Futur simple - verbes en -er", description: "Je chanterai, tu joueras...", difficulty: 1,
+                exercises: [
+                    { type: "input", question: "Demain, je ___ un gâteau. (manger)", answer: "mangerai" },
+                    { type: "input", question: "Demain, tu ___ bien. (chanter)", answer: "chanteras" },
+                    { type: "input", question: "Demain, il ___ au foot. (jouer)", answer: "jouera" },
+                    { type: "input", question: "Demain, elle ___ la télé. (regarder)", answer: "regardera" },
+                    { type: "input", question: "Demain, nous ___ ensemble. (danser)", answer: "danserons" },
+                    { type: "input", question: "Demain, vous ___ français. (parler)", answer: "parlerez" },
+                    { type: "input", question: "Demain, ils ___ une histoire. (raconter)", answer: "raconteront" },
+                    { type: "input", question: "Demain, je ___ à l'école. (marcher)", answer: "marcherai" },
+                    { type: "input", question: "Demain, tu ___ ta chambre. (ranger)", answer: "rangeras" },
+                    { type: "input", question: "Demain, nous ___ en classe. (écouter)", answer: "écouterons" }
+                ]
+            },
+            {
+                id: 18, title: "Futur simple - verbes en -ir", description: "Je finirai, tu grandiras...", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Demain, je ___ mes devoirs. (finir)", answer: "finirai" },
+                    { type: "input", question: "Demain, tu ___ encore. (grandir)", answer: "grandiras" },
+                    { type: "input", question: "Demain, il ___ un livre. (choisir)", answer: "choisira" },
+                    { type: "input", question: "Demain, elle ___ son travail. (finir)", answer: "finira" },
+                    { type: "input", question: "Demain, nous ___ bien. (réussir)", answer: "réussirons" },
+                    { type: "input", question: "Demain, vous ___ à vos parents. (obéir)", answer: "obéirez" },
+                    { type: "input", question: "Demain, ils ___ leur assiette. (remplir)", answer: "rempliront" },
+                    { type: "input", question: "Demain, je ___ bien. (réfléchir)", answer: "réfléchirai" },
+                    { type: "input", question: "Demain, tu ___ ton dessert. (choisir)", answer: "choisiras" },
+                    { type: "input", question: "Demain, nous ___ ensemble. (partir)", answer: "partirons" }
+                ]
+            },
+            {
+                id: 19, title: "Futur simple - aller, faire, voir", description: "J'irai, je ferai, je verrai...", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Demain, j'___ à l'école. (aller)", answer: "irai" },
+                    { type: "input", question: "Demain, tu ___ au parc. (aller)", answer: "iras" },
+                    { type: "input", question: "Demain, il ___ chez mamie. (aller)", answer: "ira" },
+                    { type: "input", question: "Demain, nous ___ en vacances. (aller)", answer: "irons" },
+                    { type: "input", question: "Demain, vous ___ à la plage. (aller)", answer: "irez" },
+                    { type: "input", question: "Demain, ils ___ au cinéma. (aller)", answer: "iront" },
+                    { type: "input", question: "Demain, je ___ mes devoirs. (faire)", answer: "ferai" },
+                    { type: "input", question: "Demain, tu ___ du vélo. (faire)", answer: "feras" },
+                    { type: "input", question: "Demain, elle ___ la cuisine. (faire)", answer: "fera" },
+                    { type: "input", question: "Demain, nous ___ du sport. (faire)", answer: "ferons" },
+                    { type: "input", question: "Demain, je ___ mes amis. (voir)", answer: "verrai" },
+                    { type: "input", question: "Demain, tu ___ le film. (voir)", answer: "verras" },
+                    { type: "input", question: "Demain, nous ___ la mer. (voir)", answer: "verrons" }
+                ]
+            },
+            {
+                id: 20, title: "Futur simple - venir, pouvoir, vouloir, dire", description: "Je viendrai, je pourrai...", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Demain, je ___ te voir. (venir)", answer: "viendrai" },
+                    { type: "input", question: "Demain, tu ___ avec moi. (venir)", answer: "viendras" },
+                    { type: "input", question: "Demain, il ___ tôt. (venir)", answer: "viendra" },
+                    { type: "input", question: "Demain, nous ___ ensemble. (venir)", answer: "viendrons" },
+                    { type: "input", question: "Demain, ils ___ nous aider. (venir)", answer: "viendront" },
+                    { type: "input", question: "Demain, je ___ jouer. (pouvoir)", answer: "pourrai" },
+                    { type: "input", question: "Demain, tu ___ venir. (pouvoir)", answer: "pourras" },
+                    { type: "input", question: "Demain, nous ___ sortir. (pouvoir)", answer: "pourrons" },
+                    { type: "input", question: "Demain, je ___ manger. (vouloir)", answer: "voudrai" },
+                    { type: "input", question: "Demain, tu ___ partir. (vouloir)", answer: "voudras" },
+                    { type: "input", question: "Demain, je ___ bonjour. (dire)", answer: "dirai" },
+                    { type: "input", question: "Demain, nous ___ au revoir. (dire)", answer: "dirons" },
+                    { type: "input", question: "Demain, ils ___ la vérité. (dire)", answer: "diront" }
+                ]
+            },
+            {
+                id: 21, title: "Passé composé - auxiliaire avoir", description: "J'ai mangé, tu as joué...", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Hier, j'___ mangé une pomme. (avoir)", answer: "ai" },
+                    { type: "input", question: "Hier, tu ___ joué au foot. (avoir)", answer: "as" },
+                    { type: "input", question: "Hier, il ___ regardé la télé. (avoir)", answer: "a" },
+                    { type: "input", question: "Hier, elle ___ chanté une chanson. (avoir)", answer: "a" },
+                    { type: "input", question: "Hier, nous ___ dansé ensemble. (avoir)", answer: "avons" },
+                    { type: "input", question: "Hier, vous ___ écouté la radio. (avoir)", answer: "avez" },
+                    { type: "input", question: "Hier, ils ___ travaillé dur. (avoir)", answer: "ont" },
+                    { type: "input", question: "Hier, j'ai ___ un gâteau. (manger)", answer: "mangé" },
+                    { type: "input", question: "Hier, tu as ___ très bien. (chanter)", answer: "chanté" },
+                    { type: "input", question: "Hier, il a ___ ses devoirs. (finir)", answer: "fini" },
+                    { type: "input", question: "Hier, nous avons ___ un livre. (choisir)", answer: "choisi" },
+                    { type: "input", question: "Hier, j'ai ___ un bruit. (entendre)", answer: "entendu" },
+                    { type: "qcm", question: "Le participe passé de 'finir' est...", options: ["fini", "finit", "finissé"], answer: "fini" }
+                ]
+            },
+            {
+                id: 22, title: "Passé composé - auxiliaire être", description: "Je suis allé, tu es venu...", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "Hier, je ___ allé à l'école. (être)", answer: "suis" },
+                    { type: "input", question: "Hier, tu ___ parti tôt. (être)", answer: "es" },
+                    { type: "input", question: "Hier, il ___ arrivé en retard. (être)", answer: "est" },
+                    { type: "input", question: "Hier, elle ___ venue me voir. (être)", answer: "est" },
+                    { type: "input", question: "Hier, nous ___ restés à la maison. (être)", answer: "sommes" },
+                    { type: "input", question: "Hier, vous ___ tombés. (être)", answer: "êtes" },
+                    { type: "input", question: "Hier, ils ___ montés au grenier. (être)", answer: "sont" },
+                    { type: "input", question: "Hier, je suis ___ à Paris. (aller)", answer: "allé" },
+                    { type: "input", question: "Hier, elle est ___ tôt. (partir)", answer: "partie" },
+                    { type: "input", question: "Hier, ils sont ___ nous voir. (venir)", answer: "venus" },
+                    { type: "input", question: "Hier, nous sommes ___ en haut. (monter)", answer: "montés" },
+                    { type: "qcm", question: "Avec 'être', le participe passé s'accorde avec...", options: ["le sujet", "le complément", "rien"], answer: "le sujet" },
+                    { type: "qcm", question: "Les verbes de mouvement utilisent l'auxiliaire...", options: ["être", "avoir", "les deux"], answer: "être" }
+                ]
+            },
+            {
+                id: 23, title: "Passé composé - verbes irréguliers", description: "J'ai fait, j'ai dit, j'ai vu...", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "Hier, j'ai ___ mes devoirs. (faire)", answer: "fait" },
+                    { type: "input", question: "Hier, tu as ___ bonjour. (dire)", answer: "dit" },
+                    { type: "input", question: "Hier, il a ___ un film. (voir)", answer: "vu" },
+                    { type: "input", question: "Hier, elle a ___ une lettre. (écrire)", answer: "écrit" },
+                    { type: "input", question: "Hier, nous avons ___ une histoire. (lire)", answer: "lu" },
+                    { type: "input", question: "Hier, vous avez ___ le bus. (prendre)", answer: "pris" },
+                    { type: "input", question: "Hier, ils ont ___ de l'eau. (boire)", answer: "bu" },
+                    { type: "input", question: "Hier, j'ai ___ une réponse. (comprendre)", answer: "compris" },
+                    { type: "input", question: "Hier, tu as ___ la porte. (ouvrir)", answer: "ouvert" },
+                    { type: "input", question: "Hier, il a ___ un cadeau. (offrir)", answer: "offert" },
+                    { type: "input", question: "Hier, j'ai ___ le travail. (mettre)", answer: "mis" },
+                    { type: "qcm", question: "Le participe passé de 'voir' est...", options: ["vu", "voit", "voyé"], answer: "vu" },
+                    { type: "qcm", question: "Le participe passé de 'prendre' est...", options: ["pris", "prend", "prenu"], answer: "pris" }
+                ]
+            },
+            {
+                id: 24, title: "Révision - Être tous les temps CE2", description: "Présent, imparfait, futur, passé composé", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "PRÉSENT: Je ___ content. (être)", answer: "suis" },
+                    { type: "input", question: "PRÉSENT: Nous ___ amis. (être)", answer: "sommes" },
+                    { type: "input", question: "IMPARFAIT: J'___ petit. (être)", answer: "étais" },
+                    { type: "input", question: "IMPARFAIT: Nous ___ ensemble. (être)", answer: "étions" },
+                    { type: "input", question: "IMPARFAIT: Ils ___ contents. (être)", answer: "étaient" },
+                    { type: "input", question: "FUTUR: Je ___ grand. (être)", answer: "serai" },
+                    { type: "input", question: "FUTUR: Nous ___ là. (être)", answer: "serons" },
+                    { type: "input", question: "FUTUR: Ils ___ présents. (être)", answer: "seront" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: J'ai ___ malade. (être)", answer: "été" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Nous avons ___ sages. (être)", answer: "été" },
+                    { type: "qcm", question: "'J'étais content' est à quel temps ?", options: ["présent", "imparfait", "futur", "passé composé"], answer: "imparfait" },
+                    { type: "qcm", question: "'Je serai grand' est à quel temps ?", options: ["présent", "imparfait", "futur", "passé composé"], answer: "futur" }
+                ]
+            },
+            {
+                id: 25, title: "Révision - Avoir tous les temps CE2", description: "Présent, imparfait, futur, passé composé", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "PRÉSENT: J'___ faim. (avoir)", answer: "ai" },
+                    { type: "input", question: "PRÉSENT: Nous ___ soif. (avoir)", answer: "avons" },
+                    { type: "input", question: "IMPARFAIT: J'___ peur. (avoir)", answer: "avais" },
+                    { type: "input", question: "IMPARFAIT: Nous ___ froid. (avoir)", answer: "avions" },
+                    { type: "input", question: "IMPARFAIT: Ils ___ chaud. (avoir)", answer: "avaient" },
+                    { type: "input", question: "FUTUR: J'___ 10 ans. (avoir)", answer: "aurai" },
+                    { type: "input", question: "FUTUR: Nous ___ des vacances. (avoir)", answer: "aurons" },
+                    { type: "input", question: "FUTUR: Ils ___ le temps. (avoir)", answer: "auront" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: J'ai ___ de la chance. (avoir)", answer: "eu" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Nous avons ___ peur. (avoir)", answer: "eu" },
+                    { type: "qcm", question: "'J'avais faim' est à quel temps ?", options: ["présent", "imparfait", "futur", "passé composé"], answer: "imparfait" },
+                    { type: "qcm", question: "'J'aurai un cadeau' est à quel temps ?", options: ["présent", "imparfait", "futur", "passé composé"], answer: "futur" }
+                ]
+            },
+            {
+                id: 26, title: "Révision - Verbes 1er groupe tous temps", description: "Présent, imparfait, futur, passé composé", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "PRÉSENT: Je ___ au foot. (jouer)", answer: "joue" },
+                    { type: "input", question: "PRÉSENT: Nous ___ bien. (chanter)", answer: "chantons" },
+                    { type: "input", question: "IMPARFAIT: Je ___ au ballon. (jouer)", answer: "jouais" },
+                    { type: "input", question: "IMPARFAIT: Nous ___ ensemble. (manger)", answer: "mangions" },
+                    { type: "input", question: "IMPARFAIT: Ils ___ fort. (crier)", answer: "criaient" },
+                    { type: "input", question: "FUTUR: Je ___ demain. (manger)", answer: "mangerai" },
+                    { type: "input", question: "FUTUR: Nous ___ ensemble. (danser)", answer: "danserons" },
+                    { type: "input", question: "FUTUR: Ils ___ une histoire. (raconter)", answer: "raconteront" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: J'ai ___ un gâteau. (manger)", answer: "mangé" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Nous avons ___ en classe. (écouter)", answer: "écouté" },
+                    { type: "qcm", question: "'Je chantais' est à quel temps ?", options: ["présent", "imparfait", "futur", "passé composé"], answer: "imparfait" },
+                    { type: "qcm", question: "'Je chanterai' est à quel temps ?", options: ["présent", "imparfait", "futur", "passé composé"], answer: "futur" }
+                ]
+            },
+            {
+                id: 27, title: "Révision - Aller tous les temps", description: "Présent, imparfait, futur, passé composé", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "PRÉSENT: Je ___ à l'école. (aller)", answer: "vais" },
+                    { type: "input", question: "PRÉSENT: Nous ___ au parc. (aller)", answer: "allons" },
+                    { type: "input", question: "PRÉSENT: Ils ___ à la plage. (aller)", answer: "vont" },
+                    { type: "input", question: "IMPARFAIT: J'___ chez mamie. (aller)", answer: "allais" },
+                    { type: "input", question: "IMPARFAIT: Nous ___ en vacances. (aller)", answer: "allions" },
+                    { type: "input", question: "IMPARFAIT: Ils ___ au cinéma. (aller)", answer: "allaient" },
+                    { type: "input", question: "FUTUR: J'___ à Paris. (aller)", answer: "irai" },
+                    { type: "input", question: "FUTUR: Nous ___ au restaurant. (aller)", answer: "irons" },
+                    { type: "input", question: "FUTUR: Ils ___ à la mer. (aller)", answer: "iront" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Je ___ allé à l'école. (être)", answer: "suis" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Nous ___ allés au cinéma. (être)", answer: "sommes" },
+                    { type: "qcm", question: "'J'allais au parc' est à quel temps ?", options: ["présent", "imparfait", "futur", "passé composé"], answer: "imparfait" }
+                ]
+            },
+            {
+                id: 28, title: "Révision - Faire tous les temps", description: "Présent, imparfait, futur, passé composé", difficulty: 2,
+                exercises: [
+                    { type: "input", question: "PRÉSENT: Je ___ mes devoirs. (faire)", answer: "fais" },
+                    { type: "input", question: "PRÉSENT: Nous ___ du sport. (faire)", answer: "faisons" },
+                    { type: "input", question: "PRÉSENT: Ils ___ du bruit. (faire)", answer: "font" },
+                    { type: "input", question: "IMPARFAIT: Je ___ du vélo. (faire)", answer: "faisais" },
+                    { type: "input", question: "IMPARFAIT: Nous ___ la cuisine. (faire)", answer: "faisions" },
+                    { type: "input", question: "IMPARFAIT: Ils ___ du dessin. (faire)", answer: "faisaient" },
+                    { type: "input", question: "FUTUR: Je ___ un gâteau. (faire)", answer: "ferai" },
+                    { type: "input", question: "FUTUR: Nous ___ la fête. (faire)", answer: "ferons" },
+                    { type: "input", question: "FUTUR: Ils ___ leurs devoirs. (faire)", answer: "feront" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: J'ai ___ mes devoirs. (faire)", answer: "fait" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Nous avons ___ du sport. (faire)", answer: "fait" },
+                    { type: "qcm", question: "'Je faisais du sport' est à quel temps ?", options: ["présent", "imparfait", "futur", "passé composé"], answer: "imparfait" }
+                ]
+            },
+            {
+                id: 29, title: "Évaluation Conjugaison CE2 - Partie 1", description: "Test imparfait et futur - 20 questions", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "IMPARFAIT: J'___ content. (être)", answer: "étais" },
+                    { type: "input", question: "IMPARFAIT: Tu ___ faim. (avoir)", answer: "avais" },
+                    { type: "input", question: "IMPARFAIT: Il ___ au ballon. (jouer)", answer: "jouait" },
+                    { type: "input", question: "IMPARFAIT: Nous ___ nos devoirs. (finir)", answer: "finissions" },
+                    { type: "input", question: "IMPARFAIT: Vous ___ à l'école. (aller)", answer: "alliez" },
+                    { type: "input", question: "IMPARFAIT: Ils ___ du sport. (faire)", answer: "faisaient" },
+                    { type: "input", question: "IMPARFAIT: Je ___ un film. (voir)", answer: "voyais" },
+                    { type: "input", question: "IMPARFAIT: Elle ___ souvent. (venir)", answer: "venait" },
+                    { type: "input", question: "IMPARFAIT: Nous ___ manger. (vouloir)", answer: "voulions" },
+                    { type: "input", question: "IMPARFAIT: Ils ___ jouer. (pouvoir)", answer: "pouvaient" },
+                    { type: "input", question: "FUTUR: Je ___ grand. (être)", answer: "serai" },
+                    { type: "input", question: "FUTUR: Tu ___ 10 ans. (avoir)", answer: "auras" },
+                    { type: "input", question: "FUTUR: Il ___ demain. (partir)", answer: "partira" },
+                    { type: "input", question: "FUTUR: Nous ___ au cinéma. (aller)", answer: "irons" },
+                    { type: "input", question: "FUTUR: Vous ___ vos devoirs. (faire)", answer: "ferez" },
+                    { type: "input", question: "FUTUR: Elles ___ le film. (voir)", answer: "verront" },
+                    { type: "input", question: "FUTUR: Je ___ te voir. (venir)", answer: "viendrai" },
+                    { type: "input", question: "FUTUR: Tu ___ jouer. (pouvoir)", answer: "pourras" },
+                    { type: "qcm", question: "'Nous finissions' est à quel temps ?", options: ["présent", "imparfait", "futur"], answer: "imparfait" },
+                    { type: "qcm", question: "'Ils iront' est à quel temps ?", options: ["présent", "imparfait", "futur"], answer: "futur" }
+                ]
+            },
+            {
+                id: 30, title: "Évaluation Conjugaison CE2 - Partie 2", description: "Test passé composé et tous temps - 20 questions", difficulty: 3,
+                exercises: [
+                    { type: "input", question: "PASSÉ COMPOSÉ: J'___ mangé. (avoir)", answer: "ai" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Tu ___ joué. (avoir)", answer: "as" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Elle ___ allée. (être)", answer: "est" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Nous ___ fini. (avoir)", answer: "avons" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Ils ___ venus. (être)", answer: "sont" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: J'ai ___ mes devoirs. (faire)", answer: "fait" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Tu as ___ un film. (voir)", answer: "vu" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Il a ___ bonjour. (dire)", answer: "dit" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Nous avons ___ un livre. (lire)", answer: "lu" },
+                    { type: "input", question: "PASSÉ COMPOSÉ: Ils ont ___ le bus. (prendre)", answer: "pris" },
+                    { type: "qcm", question: "'Je mange' est au...", options: ["présent", "imparfait", "futur", "passé composé"], answer: "présent" },
+                    { type: "qcm", question: "'Tu mangeais' est au...", options: ["présent", "imparfait", "futur", "passé composé"], answer: "imparfait" },
+                    { type: "qcm", question: "'Il mangera' est au...", options: ["présent", "imparfait", "futur", "passé composé"], answer: "futur" },
+                    { type: "qcm", question: "'Elle a mangé' est au...", options: ["présent", "imparfait", "futur", "passé composé"], answer: "passé composé" },
+                    { type: "input", question: "Identifie le temps: 'Je faisais' → ", answer: "imparfait" },
+                    { type: "input", question: "Identifie le temps: 'Tu seras' → ", answer: "futur" },
+                    { type: "input", question: "Identifie le temps: 'Il a dit' → ", answer: "passé composé" },
+                    { type: "input", question: "Identifie le temps: 'Nous allons' → ", answer: "présent" },
+                    { type: "input", question: "Identifie le temps: 'Vous étiez' → ", answer: "imparfait" },
+                    { type: "input", question: "Identifie le temps: 'Ils viendront' → ", answer: "futur" }
+                ]
             }
         ]
     },
