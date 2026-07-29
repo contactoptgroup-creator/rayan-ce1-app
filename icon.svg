@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Champion">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0b840"/>
+      <stop offset="1" stop-color="#f07a2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <path fill="#1a1200" d="M256 84l52 106 117 17-85 82 20 116-104-55-104 55 20-116-85-82 117-17z"/>
+</svg>

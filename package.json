@@ -1,13 +1,17 @@
 {
   "name": "rayan-ce1-app",
-  "version": "1.0.0",
-  "description": "Application d'apprentissage interactive pour Rayan - niveau CE1",
+  "version": "3.0.0",
+  "description": "Application d'apprentissage interactive pour Rayan - niveaux CE1 & CE2",
+  "type": "module",
   "main": "index.html",
   "scripts": {
     "start": "npx serve .",
     "dev": "npx serve ."
   },
-  "keywords": ["education", "ce1", "french", "learning", "kids"],
+  "dependencies": {
+    "@vercel/blob": "^0.27.3"
+  },
+  "keywords": ["education", "ce1", "ce2", "french", "learning", "kids"],
   "author": "Jean-Marc Taouo",
   "license": "MIT"
 }

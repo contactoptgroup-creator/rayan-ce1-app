@@ -1,5 +1,16 @@
-// Rayan Champion Learning Application - Main Logic
-// With XP, Levels, Badges, Challenges, CE1 & CE2
+/* =========================================================================
+   Champion - Application d'apprentissage CE1 / CE2
+   v3 : sauvegarde cloud (code champion) + sauvegarde locale triple
+        + reprise de session + ergonomie mobile/tablette/ordinateur
+   ========================================================================= */
+
+const SCHEMA_VERSION = 3;
+const PROFILE_KEY = 'rayan_champion_profile';
+const PROGRESS_KEY = 'rayan_champion_progress';
+const BACKUP_KEY = 'rayan_champion_progress_backup';
+const LEGACY_KEYS = ['rayan_champion_progress'];
+const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // sans O/0/I/1
+const SYNC_DEBOUNCE_MS = 2500;
 
 const state = {
     currentView: 'home',
@@ -8,136 +19,684 @@ const state = {
     currentFiche: null,
     currentExerciseIndex: 0,
     currentExercises: [],
-    currentReadingQuestion: 0,
     sessionResults: [],
     difficultyFilter: 'all',
     timer: null,
     timerSeconds: 0,
+    comboStreak: 0,
+    answered: false,
+    autoNextTimer: null,
+    progress: null,
+    profile: null,
+    syncTimer: null,
+    syncing: false,
+    pendingSync: false,
+    lastCloudSave: null,
     speechSynthesis: window.speechSynthesis
 };
 
-const STORAGE_KEY = 'rayan_champion_progress';
+/* =========================================================================
+   1. STOCKAGE LOCAL RÉSISTANT
+   localStorage peut être bloqué (navigation privée iOS) ou vidé (ITP).
+   On écrit donc partout : localStorage + copie de secours + IndexedDB,
+   et on garde une copie en mémoire pour ne jamais planter.
+   ========================================================================= */
 
-// Get subjects data based on current class
-function getSubjectsData() {
-    return state.currentClass === 'ce2' ? SUBJECTS_DATA_CE2 : SUBJECTS_DATA;
+const memoryStore = {};
+
+function lsGet(key) {
+    try {
+        const value = window.localStorage.getItem(key);
+        if (value !== null) return value;
+    } catch (err) { /* stockage bloqué */ }
+    return memoryStore[key] ?? null;
 }
 
-// ==================== INITIALIZATION ====================
-document.addEventListener('DOMContentLoaded', () => {
-    loadProgress();
+function lsSet(key, value) {
+    memoryStore[key] = value;
+    try { window.localStorage.setItem(key, value); } catch (err) { /* quota / privé */ }
+}
+
+function lsRemove(key) {
+    delete memoryStore[key];
+    try { window.localStorage.removeItem(key); } catch (err) { /* ignore */ }
+}
+
+// --- IndexedDB : survit mieux que localStorage sur iOS ---
+let idbPromise = null;
+function idb() {
+    if (idbPromise) return idbPromise;
+    idbPromise = new Promise(resolve => {
+        try {
+            const request = indexedDB.open('champion-rayan', 1);
+            request.onupgradeneeded = () => {
+                const db = request.result;
+                if (!db.objectStoreNames.contains('kv')) db.createObjectStore('kv');
+            };
+            request.onsuccess = () => resolve(request.result);
+            request.onerror = () => resolve(null);
+        } catch (err) { resolve(null); }
+    });
+    return idbPromise;
+}
+
+async function idbSet(key, value) {
+    const db = await idb();
+    if (!db) return;
+    try {
+        await new Promise((resolve, reject) => {
+            const tx = db.transaction('kv', 'readwrite');
+            tx.objectStore('kv').put(value, key);
+            tx.oncomplete = resolve;
+            tx.onerror = reject;
+        });
+    } catch (err) { /* ignore */ }
+}
+
+async function idbGet(key) {
+    const db = await idb();
+    if (!db) return null;
+    try {
+        return await new Promise(resolve => {
+            const tx = db.transaction('kv', 'readonly');
+            const req = tx.objectStore('kv').get(key);
+            req.onsuccess = () => resolve(req.result ?? null);
+            req.onerror = () => resolve(null);
+        });
+    } catch (err) { return null; }
+}
+
+/* =========================================================================
+   2. MODÈLE DE PROGRESSION
+   ========================================================================= */
+
+function defaultProgress(name, code) {
+    return {
+        schema: SCHEMA_VERSION,
+        name: name || 'Champion',
+        code: code || null,
+        subjects: {},
+        totalCompleted: 0,
+        totalStars: 0,
+        correctAnswers: 0,
+        totalAnswers: 0,
+        streak: 0,
+        lastActiveDate: null,
+        exercisesToday: 0,
+        xp: 0,
+        level: 1,
+        badges: [],
+        challengesCompleted: [],
+        session: null,
+        settings: { sound: true, autoNext: true },
+        rev: 0,
+        updatedAt: new Date().toISOString()
+    };
+}
+
+// Répare / complète un objet venant d'une ancienne version ou corrompu.
+function normalizeProgress(raw, fallbackName, fallbackCode) {
+    const base = defaultProgress(fallbackName, fallbackCode);
+    if (!raw || typeof raw !== 'object') return base;
+
+    const out = { ...base, ...raw };
+    out.schema = SCHEMA_VERSION;
+    out.subjects = (raw.subjects && typeof raw.subjects === 'object') ? raw.subjects : {};
+    out.badges = Array.isArray(raw.badges) ? raw.badges : [];
+    out.challengesCompleted = Array.isArray(raw.challengesCompleted) ? raw.challengesCompleted : [];
+    out.settings = { ...base.settings, ...(raw.settings || {}) };
+    out.name = raw.name || fallbackName || base.name;
+    out.code = raw.code || fallbackCode || null;
+
+    ['totalCompleted', 'totalStars', 'correctAnswers', 'totalAnswers', 'streak', 'exercisesToday', 'xp', 'rev']
+        .forEach(k => { out[k] = Number.isFinite(Number(raw[k])) ? Number(raw[k]) : 0; });
+
+    out.level = calculateLevel(out.xp);
+    if (!out.updatedAt) out.updatedAt = new Date().toISOString();
+    return out;
+}
+
+// Fusion sans perte : on garde toujours le meilleur des deux côtés.
+function mergeProgress(a, b) {
+    if (!a) return b;
+    if (!b) return a;
+
+    const aTime = Date.parse(a.updatedAt || 0) || 0;
+    const bTime = Date.parse(b.updatedAt || 0) || 0;
+    const newer = bTime > aTime ? b : a;
+    const out = { ...newer };
+
+    ['totalCompleted', 'totalStars', 'correctAnswers', 'totalAnswers', 'streak', 'xp', 'rev']
+        .forEach(k => { out[k] = Math.max(Number(a[k]) || 0, Number(b[k]) || 0); });
+
+    out.badges = [...new Set([...(a.badges || []), ...(b.badges || [])])];
+    out.challengesCompleted = [...new Set([...(a.challengesCompleted || []), ...(b.challengesCompleted || [])])];
+
+    // Compteur du jour : on ne mélange pas deux journées différentes.
+    if (a.lastActiveDate === b.lastActiveDate) {
+        out.exercisesToday = Math.max(a.exercisesToday || 0, b.exercisesToday || 0);
+        out.lastActiveDate = a.lastActiveDate;
+    } else {
+        out.exercisesToday = newer.exercisesToday || 0;
+        out.lastActiveDate = newer.lastActiveDate || null;
+    }
+
+    // Fiches : meilleur score / meilleures étoiles des deux côtés.
+    const subjects = {};
+    const keys = new Set([...Object.keys(a.subjects || {}), ...Object.keys(b.subjects || {})]);
+    keys.forEach(subjectKey => {
+        const sa = (a.subjects || {})[subjectKey] || {};
+        const sb = (b.subjects || {})[subjectKey] || {};
+        const merged = {};
+        new Set([...Object.keys(sa), ...Object.keys(sb)]).forEach(ficheId => {
+            const fa = sa[ficheId] || {};
+            const fb = sb[ficheId] || {};
+            merged[ficheId] = {
+                completed: Boolean(fa.completed || fb.completed),
+                score: Math.max(Number(fa.score) || 0, Number(fb.score) || 0),
+                stars: Math.max(Number(fa.stars) || 0, Number(fb.stars) || 0),
+                lastAttempt: (Date.parse(fb.lastAttempt || 0) || 0) > (Date.parse(fa.lastAttempt || 0) || 0)
+                    ? fb.lastAttempt : fa.lastAttempt
+            };
+        });
+        subjects[subjectKey] = merged;
+    });
+    out.subjects = subjects;
+
+    out.session = newer.session || null;
+    out.settings = { ...(a.settings || {}), ...(newer.settings || {}) };
+    out.level = calculateLevel(out.xp);
+    out.updatedAt = newer.updatedAt;
+    return out;
+}
+
+function getProgress() {
+    if (!state.progress) state.progress = defaultProgress(state.profile?.name, state.profile?.code);
+    return state.progress;
+}
+
+// Écrit partout, tout de suite, puis programme la synchro cloud.
+function commitProgress(options = {}) {
+    const progress = getProgress();
+    progress.rev = (Number(progress.rev) || 0) + 1;
+    progress.updatedAt = new Date().toISOString();
+    progress.level = calculateLevel(progress.xp);
+
+    const serialized = JSON.stringify(progress);
+    lsSet(PROGRESS_KEY, serialized);
+    lsSet(BACKUP_KEY, serialized);
+    idbSet(PROGRESS_KEY, serialized);
+
+    if (options.immediate) flushCloudSave();
+    else queueCloudSave();
+}
+
+/* =========================================================================
+   3. PROFIL & CODE CHAMPION
+   ========================================================================= */
+
+function generateCode() {
+    let code = '';
+    const random = new Uint32Array(6);
+    (window.crypto || window.msCrypto).getRandomValues(random);
+    for (let i = 0; i < 6; i++) code += CODE_ALPHABET[random[i] % CODE_ALPHABET.length];
+    return code;
+}
+
+function cleanCode(value) {
+    return String(value || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+}
+
+function formatCode(code) {
+    const c = cleanCode(code);
+    return c.length === 6 ? `${c.slice(0, 3)}-${c.slice(3)}` : c;
+}
+
+function loadProfile() {
+    try {
+        const raw = lsGet(PROFILE_KEY);
+        if (raw) {
+            const profile = JSON.parse(raw);
+            if (profile && profile.code) return profile;
+        }
+    } catch (err) { /* ignore */ }
+    return null;
+}
+
+function saveProfile(profile) {
+    state.profile = profile;
+    lsSet(PROFILE_KEY, JSON.stringify(profile));
+    idbSet(PROFILE_KEY, JSON.stringify(profile));
+}
+
+/* =========================================================================
+   4. SYNCHRONISATION CLOUD
+   ========================================================================= */
+
+function setSyncStatus(status, text) {
+    const dot = document.getElementById('sync-dot');
+    const label = document.getElementById('sync-text');
+    if (!dot || !label) return;
+    dot.className = `sync-dot ${status}`;
+    label.textContent = text;
+}
+
+async function cloudLoad(code) {
+    const response = await fetch(`/api/progress?code=${encodeURIComponent(cleanCode(code))}`, {
+        method: 'GET',
+        cache: 'no-store'
+    });
+    if (!response.ok) throw new Error(`GET ${response.status}`);
+    const data = await response.json();
+    if (!data.ok) throw new Error(data.error || 'erreur');
+    return data.found ? data.progress : null;
+}
+
+function queueCloudSave() {
+    clearTimeout(state.syncTimer);
+    setSyncStatus('pending', 'Sauvegarde…');
+    state.syncTimer = setTimeout(flushCloudSave, SYNC_DEBOUNCE_MS);
+}
+
+async function flushCloudSave() {
+    clearTimeout(state.syncTimer);
+    if (!state.profile?.code) return;
+    if (state.syncing) { state.pendingSync = true; return; }
+
+    state.syncing = true;
+    setSyncStatus('pending', 'Sauvegarde…');
+
+    try {
+        const response = await fetch(`/api/progress?code=${encodeURIComponent(state.profile.code)}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(getProgress())
+        });
+        if (!response.ok) throw new Error(`POST ${response.status}`);
+        state.lastCloudSave = new Date();
+        setSyncStatus('ok', 'Sauvegardé');
+        updateSyncDetail();
+    } catch (err) {
+        console.warn('Synchronisation impossible', err);
+        setSyncStatus('offline', 'Hors ligne');
+    } finally {
+        state.syncing = false;
+        if (state.pendingSync) {
+            state.pendingSync = false;
+            queueCloudSave();
+        }
+    }
+}
+
+// Dernière chance quand l'onglet se ferme : sendBeacon part même en fermeture.
+function beaconSave() {
+    if (!state.profile?.code) return;
+    try {
+        const blob = new Blob([JSON.stringify(getProgress())], { type: 'application/json' });
+        navigator.sendBeacon(`/api/progress?code=${encodeURIComponent(state.profile.code)}`, blob);
+    } catch (err) { /* ignore */ }
+}
+
+function updateSyncDetail() {
+    const el = document.getElementById('sync-detail');
+    if (!el) return;
+    el.textContent = state.lastCloudSave
+        ? `Dernière sauvegarde en ligne : aujourd'hui à ${state.lastCloudSave.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}`
+        : 'Dernière sauvegarde en ligne : en attente…';
+}
+
+/* =========================================================================
+   5. DÉMARRAGE
+   ========================================================================= */
+
+document.addEventListener('DOMContentLoaded', boot);
+
+async function boot() {
+    // Rend le stockage plus durable quand le navigateur le permet.
+    try { if (navigator.storage?.persist) navigator.storage.persist(); } catch (err) { /* ignore */ }
+
+    initOnboarding();
+    state.profile = loadProfile();
+
+    if (!state.profile) {
+        const legacy = await readLocalProgress();
+        if (legacy && (legacy.xp > 0 || legacy.totalCompleted > 0)) {
+            // Des progrès existent déjà sur cet appareil : on les adopte
+            // en créant un code, sans rien perdre.
+            const code = generateCode();
+            saveProfile({ code, name: legacy.name || 'Rayan', createdAt: new Date().toISOString() });
+            state.progress = normalizeProgress(legacy, legacy.name || 'Rayan', code);
+            commitProgress({ immediate: true });
+            startApp();
+            showOnboardingCode(code);
+            return;
+        }
+        showOnboarding();
+        return;
+    }
+
+    await startWithProfile();
+}
+
+async function readLocalProgress() {
+    let raw = lsGet(PROGRESS_KEY) || lsGet(BACKUP_KEY);
+    if (!raw) raw = await idbGet(PROGRESS_KEY);
+    if (!raw) { for (const key of LEGACY_KEYS) { raw = lsGet(key); if (raw) break; } }
+    if (!raw) return null;
+    try { return JSON.parse(raw); } catch (err) { return null; }
+}
+
+async function startWithProfile() {
+    const local = normalizeProgress(await readLocalProgress(), state.profile.name, state.profile.code);
+    state.progress = local;
+    startApp();
+
+    // On récupère ensuite la version en ligne et on fusionne : le total est
+    // toujours le meilleur des deux, jamais une remise à zéro.
+    setSyncStatus('pending', 'Synchro…');
+    try {
+        const remote = await cloudLoad(state.profile.code);
+        if (remote) {
+            state.progress = normalizeProgress(mergeProgress(local, normalizeProgress(remote)), state.profile.name, state.profile.code);
+            commitProgress({ immediate: true });
+            refreshEverything();
+        } else {
+            flushCloudSave();
+        }
+        setSyncStatus('ok', 'Sauvegardé');
+    } catch (err) {
+        console.warn('Chargement cloud impossible', err);
+        setSyncStatus('offline', 'Hors ligne');
+    }
+    updateSyncDetail();
+}
+
+function startApp() {
+    document.getElementById('onboarding').hidden = true;
+    document.getElementById('app').hidden = false;
+
+    checkStreak();
     initNavigation();
     initClassSelector();
-    initSubjectCards();
     initDifficultyFilter();
+    initSettings();
+    initDailyChallengeBanner();
+    buildSubjectCards();
+    refreshEverything();
+
+    window.addEventListener('online', flushCloudSave);
+    window.addEventListener('pagehide', beaconSave);
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'hidden') { flushCloudSave(); beaconSave(); }
+    });
+}
+
+function refreshEverything() {
     updateHomeStats();
+    updateSubjectCards();
+    updateLevelDisplay();
     updateProgressView();
     updateBadgesView();
     updateChallengesView();
-    initSettings();
-    checkStreak();
-    updateLevelDisplay();
-    initDailyChallengeBanner();
-});
+    updateResumeCard();
+    updateDailyChallengeProgress();
+    const name = getProgress().name || 'Champion';
+    document.getElementById('header-name').textContent = name;
+    document.getElementById('welcome-title').innerHTML = `Bonjour ${escapeHtml(name)}&nbsp;! 👋`;
+    const codeBox = document.getElementById('settings-code');
+    if (codeBox && state.profile) codeBox.textContent = formatCode(state.profile.code);
+}
 
-// ==================== NAVIGATION ====================
+/* =========================================================================
+   6. ÉCRAN DE DÉMARRAGE (ONBOARDING)
+   ========================================================================= */
+
+function showOnboarding() {
+    document.getElementById('app').hidden = true;
+    const ob = document.getElementById('onboarding');
+    ob.hidden = false;
+    showOnboardingStep('ob-welcome');
+}
+
+function showOnboardingStep(id) {
+    document.querySelectorAll('.onboarding-step').forEach(step => {
+        step.classList.toggle('active', step.id === id);
+    });
+}
+
+function showOnboardingCode(code) {
+    // L'écran se superpose à l'application : on ne la masque pas, sinon
+    // `startApp()` serait rejoué et les écouteurs seraient doublés.
+    document.getElementById('onboarding').hidden = false;
+    document.getElementById('ob-code-display').textContent = formatCode(code);
+    showOnboardingStep('ob-created');
+}
+
+function initOnboarding() {
+    const nameInput = document.getElementById('ob-name');
+    const codeInput = document.getElementById('ob-code');
+    const errorEl = document.getElementById('ob-error');
+
+    document.getElementById('ob-start').addEventListener('click', async () => {
+        const name = (nameInput.value || '').trim() || 'Champion';
+        const code = generateCode();
+        saveProfile({ code, name, createdAt: new Date().toISOString() });
+        state.progress = defaultProgress(name, code);
+        commitProgress({ immediate: true });
+        showOnboardingCode(code);
+    });
+
+    document.getElementById('ob-have-code').addEventListener('click', () => {
+        errorEl.textContent = '';
+        showOnboardingStep('ob-restore');
+        setTimeout(() => codeInput.focus(), 150);
+    });
+
+    document.getElementById('ob-back').addEventListener('click', () => showOnboardingStep('ob-welcome'));
+
+    codeInput.addEventListener('input', () => {
+        const clean = cleanCode(codeInput.value).slice(0, 6);
+        codeInput.value = clean.length > 3 ? `${clean.slice(0, 3)}-${clean.slice(3)}` : clean;
+    });
+
+    document.getElementById('ob-restore-go').addEventListener('click', async () => {
+        const code = cleanCode(codeInput.value);
+        if (code.length !== 6) {
+            errorEl.textContent = 'Le code contient 6 caractères, par exemple ABC-DEF.';
+            return;
+        }
+        errorEl.textContent = 'Recherche de tes progrès…';
+        try {
+            const remote = await cloudLoad(code);
+            if (!remote) {
+                errorEl.textContent = "Aucun progrès trouvé avec ce code. Vérifie qu'il est bien recopié.";
+                return;
+            }
+            const progress = normalizeProgress(remote, remote.name, code);
+            saveProfile({ code, name: progress.name, createdAt: new Date().toISOString() });
+            state.progress = progress;
+            commitProgress({ immediate: true });
+            document.getElementById('onboarding').hidden = true;
+            startApp();
+            showToast(`Bon retour ${progress.name} ! ${progress.xp} XP retrouvés 🎉`, 'success');
+        } catch (err) {
+            errorEl.textContent = 'Connexion impossible. Vérifie internet et réessaie.';
+        }
+    });
+
+    document.getElementById('ob-copy').addEventListener('click', () => {
+        copyToClipboard(formatCode(state.profile?.code || ''));
+    });
+
+    document.getElementById('ob-done').addEventListener('click', () => {
+        document.getElementById('onboarding').hidden = true;
+        if (document.getElementById('app').hidden) startApp();
+        else refreshEverything();
+    });
+}
+
+/* =========================================================================
+   7. NAVIGATION
+   ========================================================================= */
+
 function initNavigation() {
     document.querySelectorAll('.nav-btn').forEach(btn => {
         btn.addEventListener('click', () => navigateTo(btn.dataset.view));
     });
     document.getElementById('back-to-home').addEventListener('click', () => navigateTo('home'));
-    document.getElementById('back-to-subject').addEventListener('click', () => showSubjectView(state.currentSubject));
+    document.getElementById('back-to-subject').addEventListener('click', quitExercise);
     document.getElementById('check-answer').addEventListener('click', checkAnswer);
     document.getElementById('next-question').addEventListener('click', nextQuestion);
     document.getElementById('modal-close').addEventListener('click', closeModal);
-    document.getElementById('levelup-close').addEventListener('click', () => document.getElementById('levelup-modal').classList.remove('active'));
-    document.getElementById('badge-close').addEventListener('click', () => document.getElementById('badge-modal').classList.remove('active'));
+    document.getElementById('modal-retry').addEventListener('click', () => {
+        document.getElementById('result-modal').classList.remove('active');
+        if (state.currentFiche) startFiche(state.currentSubject, state.currentFiche);
+    });
+    document.getElementById('levelup-close').addEventListener('click', () => {
+        document.getElementById('levelup-modal').classList.remove('active');
+    });
+    document.getElementById('badge-close').addEventListener('click', () => {
+        document.getElementById('badge-modal').classList.remove('active');
+    });
+    document.getElementById('resume-card').addEventListener('click', resumeSession);
+    document.getElementById('sync-chip').addEventListener('click', () => {
+        flushCloudSave();
+        showToast('Sauvegarde en cours…', 'info');
+    });
 }
 
 function navigateTo(viewName) {
+    if (state.currentView === 'exercise' && viewName !== 'exercise') stopTimer();
+
     document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.view === viewName));
     document.querySelectorAll('.view').forEach(view => view.classList.remove('active'));
+    document.body.classList.toggle('in-exercise', viewName === 'exercise');
 
-    if (viewName === 'home') {
-        document.getElementById('home-view').classList.add('active');
-        updateHomeStats();
-    } else if (viewName === 'progress') {
-        document.getElementById('progress-view').classList.add('active');
-        updateProgressView();
-    } else if (viewName === 'badges') {
-        document.getElementById('badges-view').classList.add('active');
-        updateBadgesView();
-    } else if (viewName === 'challenges') {
-        document.getElementById('challenges-view').classList.add('active');
-        updateChallengesView();
-    } else if (viewName === 'settings') {
-        document.getElementById('settings-view').classList.add('active');
-    }
+    const target = document.getElementById(`${viewName}-view`);
+    if (target) target.classList.add('active');
+
+    if (viewName === 'home') { updateHomeStats(); updateResumeCard(); updateDailyChallengeProgress(); }
+    if (viewName === 'progress') updateProgressView();
+    if (viewName === 'badges') updateBadgesView();
+    if (viewName === 'challenges') updateChallengesView();
+
     state.currentView = viewName;
+    window.scrollTo(0, 0);
 }
 
-// ==================== CLASS SELECTOR ====================
+/* =========================================================================
+   8. MATIÈRES
+   ========================================================================= */
+
+function getSubjectsData() {
+    return state.currentClass === 'ce2' ? SUBJECTS_DATA_CE2 : SUBJECTS_DATA;
+}
+
+function allSubjects() {
+    return { ...SUBJECTS_DATA, ...(typeof SUBJECTS_DATA_CE2 !== 'undefined' ? SUBJECTS_DATA_CE2 : {}) };
+}
+
 function initClassSelector() {
     document.querySelectorAll('.class-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.class-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             state.currentClass = btn.dataset.class;
-
-            document.getElementById('subjects-ce1').style.display = state.currentClass === 'ce1' ? 'grid' : 'none';
-            document.getElementById('subjects-ce2').style.display = state.currentClass === 'ce2' ? 'grid' : 'none';
-
+            buildSubjectCards();
             updateSubjectCards();
         });
     });
 }
 
-// ==================== SUBJECTS ====================
-function initSubjectCards() {
-    document.querySelectorAll('.subject-card').forEach(card => {
-        card.addEventListener('click', () => showSubjectView(card.dataset.subject));
+// Les cartes sont générées depuis les données : plus de compteur faux et
+// aucune matière oubliée (conjugaison et vocabulaire manquaient).
+function buildSubjectCards() {
+    const grid = document.getElementById('subjects-grid');
+    const subjects = getSubjectsData();
+    grid.innerHTML = '';
+
+    Object.keys(subjects).forEach(key => {
+        const subject = subjects[key];
+        const avgDifficulty = Math.round(
+            subject.fiches.reduce((sum, f) => sum + (f.difficulty || 1), 0) / Math.max(1, subject.fiches.length)
+        );
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'subject-card';
+        card.dataset.subject = key;
+        card.innerHTML = `
+            <div class="card-icon">${subject.icon}</div>
+            <h3>${escapeHtml(subject.name)}</h3>
+            <p>${subject.fiches.length} fiches</p>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+            <div class="card-foot">
+                <span class="progress-text">0%</span>
+                <span class="difficulty-stars">${'⭐'.repeat(Math.max(1, avgDifficulty))}</span>
+            </div>
+        `;
+        card.addEventListener('click', () => showSubjectView(key));
+        grid.appendChild(card);
     });
 }
 
 function showSubjectView(subjectKey) {
     state.currentSubject = subjectKey;
-    const subjects = getSubjectsData();
-    const subject = subjects[subjectKey];
-    if (!subject) return;
+    const subject = allSubjects()[subjectKey];
+    if (!subject) { showToast('Matière introuvable', 'error'); return; }
 
-    document.getElementById('subject-title').textContent = subject.name;
-    const container = document.getElementById('fiches-container');
-    container.innerHTML = '';
+    document.getElementById('subject-title').textContent = `${subject.icon} ${subject.name}`;
 
     const progress = getProgress();
     const subjectProgress = progress.subjects[subjectKey] || {};
+    const done = subject.fiches.filter(f => subjectProgress[f.id]?.completed).length;
+    const stars = subject.fiches.reduce((sum, f) => sum + (subjectProgress[f.id]?.stars || 0), 0);
+    document.getElementById('subject-summary').innerHTML = `
+        <span class="pill">${done}/${subject.fiches.length} fiches</span>
+        <span class="pill">⭐ ${stars}/${subject.fiches.length * 3}</span>
+    `;
 
+    const container = document.getElementById('fiches-container');
+    container.innerHTML = '';
+
+    let shown = 0;
     subject.fiches.forEach(fiche => {
-        if (state.difficultyFilter !== 'all' && fiche.difficulty != state.difficultyFilter) return;
+        if (state.difficultyFilter !== 'all' && String(fiche.difficulty || 1) !== String(state.difficultyFilter)) return;
+        shown++;
 
-        const ficheProgress = subjectProgress[fiche.id] || { completed: false, score: 0 };
-        const stars = ficheProgress.stars || 0;
-        const diffStars = '⭐'.repeat(fiche.difficulty || 1);
+        const ficheProgress = subjectProgress[fiche.id] || { completed: false, score: 0, stars: 0 };
+        const earned = ficheProgress.stars || 0;
 
-        const card = document.createElement('div');
+        const card = document.createElement('button');
+        card.type = 'button';
         card.className = `fiche-card ${ficheProgress.completed ? 'completed' : ''}`;
         card.innerHTML = `
             <div class="fiche-number">${fiche.id}</div>
             <div class="fiche-info">
-                <h4>${fiche.title}</h4>
-                <p>${fiche.description} ${diffStars}</p>
+                <h4>${escapeHtml(fiche.title)}</h4>
+                <p>${escapeHtml(fiche.description || '')}</p>
+                <span class="fiche-diff">${'⭐'.repeat(fiche.difficulty || 1)}</span>
             </div>
             <div class="fiche-status">
-                ${ficheProgress.completed ? '⭐'.repeat(stars) + '☆'.repeat(3-stars) : '📝'}
+                ${ficheProgress.completed
+                    ? `<span class="fiche-stars">${'★'.repeat(earned)}${'☆'.repeat(3 - earned)}</span><span class="fiche-score">${ficheProgress.score}%</span>`
+                    : '<span class="fiche-todo">Commencer</span>'}
             </div>
         `;
         card.addEventListener('click', () => startFiche(subjectKey, fiche));
         container.appendChild(card);
     });
 
+    if (!shown) {
+        container.innerHTML = '<p class="empty-state">Aucune fiche pour ce niveau de difficulté.</p>';
+    }
+
+    stopTimer();
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById('subject-view').classList.add('active');
     document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+    document.body.classList.remove('in-exercise');
+    state.currentView = 'subject';
+    window.scrollTo(0, 0);
 }
 
 function initDifficultyFilter() {
@@ -151,100 +710,197 @@ function initDifficultyFilter() {
     });
 }
 
-// ==================== EXERCISES ====================
-function startFiche(subjectKey, fiche) {
-    state.currentSubject = subjectKey;
-    state.currentFiche = fiche;
-    state.currentExerciseIndex = 0;
-    state.currentReadingQuestion = 0;
-    state.sessionResults = [];
-    state.timerSeconds = 0;
+/* =========================================================================
+   9. EXERCICES
+   ========================================================================= */
 
-    // Flatten exercises (handle lecture type with multiple questions)
-    state.currentExercises = [];
-    fiche.exercises.forEach(ex => {
+function flattenExercises(fiche) {
+    const list = [];
+    (fiche.exercises || []).forEach(ex => {
         if (ex.type === 'lecture' && ex.questions) {
             ex.questions.forEach((q, i) => {
-                state.currentExercises.push({ ...q, readingText: ex.text, isReading: true, questionIndex: i });
+                list.push({ ...q, readingText: ex.text, isReading: true, questionIndex: i });
             });
         } else {
-            state.currentExercises.push(ex);
+            list.push(ex);
         }
     });
+    return list;
+}
+
+function startFiche(subjectKey, fiche, resumeFrom) {
+    state.currentSubject = subjectKey;
+    state.currentFiche = fiche;
+    state.currentExercises = flattenExercises(fiche);
+
+    if (resumeFrom) {
+        state.currentExerciseIndex = Math.min(resumeFrom.index || 0, state.currentExercises.length - 1);
+        state.sessionResults = Array.isArray(resumeFrom.results) ? resumeFrom.results : [];
+        state.timerSeconds = resumeFrom.timerSeconds || 0;
+        state.comboStreak = resumeFrom.comboStreak || 0;
+    } else {
+        state.currentExerciseIndex = 0;
+        state.sessionResults = [];
+        state.timerSeconds = 0;
+        state.comboStreak = 0;
+    }
+
+    if (!state.currentExercises.length) {
+        showToast('Cette fiche est vide', 'error');
+        return;
+    }
 
     document.getElementById('exercise-title').textContent = fiche.title;
     document.getElementById('total-questions').textContent = state.currentExercises.length;
 
-    // Start timer
     startTimer();
     showExercise();
+    persistSession();
 
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById('exercise-view').classList.add('active');
+    document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+    document.body.classList.add('in-exercise');
+    state.currentView = 'exercise';
+    window.scrollTo({ top: 0 });
+}
+
+// La session en cours est sauvegardée : quitter en plein milieu ne fait
+// plus perdre le travail déjà fait.
+function persistSession() {
+    const progress = getProgress();
+    progress.session = state.currentFiche ? {
+        classKey: state.currentClass,
+        subjectKey: state.currentSubject,
+        ficheId: state.currentFiche.id,
+        ficheTitle: state.currentFiche.title,
+        index: state.currentExerciseIndex,
+        total: state.currentExercises.length,
+        results: state.sessionResults,
+        timerSeconds: state.timerSeconds,
+        comboStreak: state.comboStreak,
+        savedAt: new Date().toISOString()
+    } : null;
+    commitProgress();
+}
+
+function clearSession() {
+    const progress = getProgress();
+    progress.session = null;
+    commitProgress();
+    updateResumeCard();
+}
+
+function updateResumeCard() {
+    const card = document.getElementById('resume-card');
+    if (!card) return;
+    const session = getProgress().session;
+    if (!session || !session.ficheId) { card.hidden = true; return; }
+    const subject = allSubjects()[session.subjectKey];
+    document.getElementById('resume-detail').textContent =
+        `${subject ? subject.name : ''} · ${session.ficheTitle} — question ${Math.min(session.index + 1, session.total)}/${session.total}`;
+    card.hidden = false;
+}
+
+function resumeSession() {
+    const session = getProgress().session;
+    if (!session) return;
+    const subject = allSubjects()[session.subjectKey];
+    if (!subject) { showToast('Fiche introuvable', 'error'); clearSession(); return; }
+    const fiche = subject.fiches.find(f => String(f.id) === String(session.ficheId));
+    if (!fiche) { showToast('Fiche introuvable', 'error'); clearSession(); return; }
+    state.currentClass = session.classKey || state.currentClass;
+    startFiche(session.subjectKey, fiche, session);
+}
+
+function quitExercise() {
+    stopTimer();
+    persistSession();
+    if (state.sessionResults.length) {
+        showToast('Progression gardée : tu pourras reprendre 👍', 'success');
+    }
+    showSubjectView(state.currentSubject);
 }
 
 function startTimer() {
-    document.getElementById('exercise-timer').style.display = 'flex';
+    stopTimer();
+    updateTimerDisplay();
     state.timer = setInterval(() => {
         state.timerSeconds++;
-        const mins = Math.floor(state.timerSeconds / 60);
-        const secs = state.timerSeconds % 60;
-        document.getElementById('timer-value').textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+        updateTimerDisplay();
     }, 1000);
 }
 
+function updateTimerDisplay() {
+    const mins = Math.floor(state.timerSeconds / 60);
+    const secs = state.timerSeconds % 60;
+    const el = document.getElementById('timer-value');
+    if (el) el.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+}
+
 function stopTimer() {
-    if (state.timer) {
-        clearInterval(state.timer);
-        state.timer = null;
-    }
+    if (state.timer) { clearInterval(state.timer); state.timer = null; }
+    clearTimeout(state.autoNextTimer);
+}
+
+function renderQuestionDots() {
+    const dots = document.getElementById('question-dots');
+    dots.innerHTML = '';
+    state.currentExercises.forEach((_, i) => {
+        const dot = document.createElement('span');
+        const result = state.sessionResults[i];
+        dot.className = 'dot' +
+            (i === state.currentExerciseIndex ? ' current' : '') +
+            (result ? (result.isCorrect ? ' ok' : ' ko') : '');
+        dots.appendChild(dot);
+    });
 }
 
 function showExercise() {
     const exercise = state.currentExercises[state.currentExerciseIndex];
     const container = document.getElementById('exercise-container');
-    const feedbackContainer = document.getElementById('feedback-container');
+    const feedback = document.getElementById('feedback-container');
+
+    state.answered = false;
+    clearTimeout(state.autoNextTimer);
 
     document.getElementById('current-question').textContent = state.currentExerciseIndex + 1;
-    feedbackContainer.innerHTML = '';
-    feedbackContainer.className = 'exercise-feedback';
-    document.getElementById('check-answer').style.display = 'block';
-    document.getElementById('next-question').style.display = 'none';
+    feedback.innerHTML = '';
+    feedback.className = 'exercise-feedback';
+    document.getElementById('check-answer').hidden = false;
+    document.getElementById('next-question').hidden = true;
+    renderQuestionDots();
+
+    const combo = state.comboStreak >= 3
+        ? `<div class="combo-chip">🔥 ${state.comboStreak} bonnes réponses d'affilée&nbsp;!</div>` : '';
 
     if (exercise.isReading) {
-        // Reading comprehension
         container.innerHTML = `
-            <div class="reading-text">${exercise.readingText}</div>
-            <div class="reading-questions">
-                <p class="question-text">${exercise.question}</p>
-                ${exercise.type === 'qcm' ? `
-                    <div class="answer-options">
-                        ${exercise.options.map(opt => `<button class="option-btn" data-value="${opt}">${opt}</button>`).join('')}
-                    </div>
-                ` : `<input type="text" class="answer-input" id="answer-input" autocomplete="off" placeholder="Ta réponse...">`}
+            ${combo}
+            <div class="reading-layout">
+                <div class="reading-text">${exercise.readingText}</div>
+                <div class="reading-questions">
+                    <p class="question-text">${exercise.question}</p>
+                    ${exercise.type === 'qcm' ? optionsHtml(exercise) : inputHtml(exercise)}
+                </div>
             </div>
         `;
     } else if (exercise.type === 'dictee') {
         container.innerHTML = `
-            <button class="dictee-audio-btn" onclick="speakText('${exercise.text.replace(/'/g, "\\'")}')">🔊 Écouter la dictée</button>
-            <p style="color: var(--text-secondary); margin-bottom: 1rem;">Indice: ${exercise.hint}</p>
-            <textarea class="dictee-textarea" id="answer-input" placeholder="Écris ce que tu entends..."></textarea>
+            ${combo}
+            <button class="dictee-audio-btn" id="dictee-play" type="button">🔊 Écouter la dictée</button>
+            <p class="dictee-hint">💡 ${escapeHtml(exercise.hint || 'Écoute bien puis écris la phrase.')}</p>
+            <textarea class="dictee-textarea" id="answer-input" placeholder="Écris ce que tu entends..." autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
         `;
+        const play = document.getElementById('dictee-play');
+        play.addEventListener('click', () => speakText(exercise.text));
+        setTimeout(() => speakText(exercise.text), 400);
     } else if (exercise.type === 'qcm') {
-        container.innerHTML = `
-            <p class="question-text">${exercise.question}</p>
-            <div class="answer-options">
-                ${exercise.options.map(opt => `<button class="option-btn" data-value="${opt}">${opt}</button>`).join('')}
-            </div>
-        `;
+        container.innerHTML = `${combo}<p class="question-text">${exercise.question}</p>${optionsHtml(exercise)}`;
     } else {
-        container.innerHTML = `
-            <p class="question-text">${exercise.question}</p>
-            <input type="text" class="answer-input" id="answer-input" autocomplete="off" placeholder="Ta réponse...">
-        `;
+        container.innerHTML = `${combo}<p class="question-text">${exercise.question}</p>${inputHtml(exercise)}`;
     }
 
-    // Event listeners for QCM
     container.querySelectorAll('.option-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             container.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
@@ -252,109 +908,138 @@ function showExercise() {
         });
     });
 
-    // Focus input and Enter key
-    setTimeout(() => {
-        const input = document.getElementById('answer-input');
-        if (input) {
-            input.focus();
-            input.addEventListener('keypress', e => { if (e.key === 'Enter') checkAnswer(); });
-        }
-    }, 100);
+    const input = document.getElementById('answer-input');
+    if (input) {
+        input.addEventListener('keydown', e => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                state.answered ? nextQuestion() : checkAnswer();
+            }
+        });
+        if (window.matchMedia('(pointer: fine)').matches) setTimeout(() => input.focus(), 120);
+    }
+}
+
+function optionsHtml(exercise) {
+    return `<div class="answer-options">${exercise.options
+        .map(opt => `<button type="button" class="option-btn" data-value="${escapeAttr(opt)}">${escapeHtml(String(opt))}</button>`)
+        .join('')}</div>`;
+}
+
+function inputHtml(exercise) {
+    const numeric = /^-?[\d\s.,/]+$/.test(String(exercise.answer ?? ''));
+    return `<input type="text" class="answer-input" id="answer-input" autocomplete="off"
+        autocapitalize="off" autocorrect="off" spellcheck="false"
+        inputmode="${numeric ? 'decimal' : 'text'}" placeholder="Ta réponse...">`;
+}
+
+function normalizeAnswer(value) {
+    return String(value ?? '')
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, ' ')
+        .replace(/[.!?;]+$/, '');
 }
 
 function checkAnswer() {
+    if (state.answered) return;
     const exercise = state.currentExercises[state.currentExerciseIndex];
-    const feedbackContainer = document.getElementById('feedback-container');
+    const feedback = document.getElementById('feedback-container');
     let userAnswer = '';
     let isCorrect = false;
 
     if (exercise.type === 'qcm') {
         const selected = document.querySelector('.option-btn.selected');
-        if (!selected) { showToast('Sélectionne une réponse !', 'error'); return; }
+        if (!selected) { showToast('Choisis une réponse d\'abord !', 'error'); return; }
         userAnswer = selected.dataset.value;
-        isCorrect = userAnswer === exercise.answer;
+        isCorrect = normalizeAnswer(userAnswer) === normalizeAnswer(exercise.answer);
         document.querySelectorAll('.option-btn').forEach(btn => {
-            if (btn.dataset.value === exercise.answer) btn.classList.add('correct');
+            if (normalizeAnswer(btn.dataset.value) === normalizeAnswer(exercise.answer)) btn.classList.add('correct');
             else if (btn.classList.contains('selected')) btn.classList.add('incorrect');
-            btn.style.pointerEvents = 'none';
+            btn.disabled = true;
         });
     } else if (exercise.type === 'dictee') {
-        userAnswer = document.getElementById('answer-input').value.trim().toLowerCase();
-        const correctAnswer = exercise.text.toLowerCase();
-        isCorrect = userAnswer === correctAnswer || levenshteinDistance(userAnswer, correctAnswer) <= 2;
+        userAnswer = document.getElementById('answer-input').value;
+        const clean = normalizeAnswer(userAnswer);
+        const expected = normalizeAnswer(exercise.text);
+        if (!clean) { showToast('Écris ta réponse d\'abord !', 'error'); return; }
+        isCorrect = clean === expected || levenshteinDistance(clean, expected) <= 2;
     } else {
-        userAnswer = document.getElementById('answer-input').value.trim();
-        isCorrect = userAnswer.toLowerCase() === exercise.answer.toString().toLowerCase();
+        userAnswer = document.getElementById('answer-input').value;
+        if (!userAnswer.trim()) { showToast('Écris ta réponse d\'abord !', 'error'); return; }
+        isCorrect = normalizeAnswer(userAnswer) === normalizeAnswer(exercise.answer);
     }
 
-    state.sessionResults.push({
+    state.answered = true;
+    state.sessionResults[state.currentExerciseIndex] = {
         question: exercise.question || exercise.text,
         userAnswer,
-        correctAnswer: exercise.answer || exercise.text,
+        correctAnswer: exercise.answer ?? exercise.text,
         isCorrect
-    });
+    };
 
     if (isCorrect) {
-        feedbackContainer.innerHTML = '✅ Bravo ! C\'est correct !';
-        feedbackContainer.className = 'exercise-feedback correct';
+        state.comboStreak++;
+        feedback.innerHTML = `<span class="fb-ico">✅</span> Bravo, c'est correct&nbsp;!`;
+        feedback.className = 'exercise-feedback correct';
         playSound('correct');
     } else {
-        feedbackContainer.innerHTML = `❌ Pas tout à fait. La réponse était : <strong>${exercise.answer || exercise.text}</strong>`;
-        feedbackContainer.className = 'exercise-feedback incorrect';
+        state.comboStreak = 0;
+        feedback.innerHTML = `<span class="fb-ico">❌</span> Presque&nbsp;! La bonne réponse était&nbsp;: <strong>${escapeHtml(String(exercise.answer ?? exercise.text))}</strong>`;
+        feedback.className = 'exercise-feedback incorrect';
         playSound('incorrect');
     }
 
-    document.getElementById('check-answer').style.display = 'none';
-    document.getElementById('next-question').style.display = 'block';
+    renderQuestionDots();
+    document.getElementById('check-answer').hidden = true;
+    document.getElementById('next-question').hidden = false;
+    persistSession();
+
+    if (isCorrect && getProgress().settings?.autoNext) {
+        state.autoNextTimer = setTimeout(() => { if (state.answered) nextQuestion(); }, 1300);
+    }
 }
 
 function nextQuestion() {
+    clearTimeout(state.autoNextTimer);
+    if (!state.answered) return;
     state.currentExerciseIndex++;
     if (state.currentExerciseIndex >= state.currentExercises.length) {
         finishFiche();
     } else {
         showExercise();
+        persistSession();
     }
 }
 
 function finishFiche() {
     stopTimer();
-    const correctCount = state.sessionResults.filter(r => r.isCorrect).length;
-    const totalCount = state.sessionResults.length;
+    const results = state.sessionResults.filter(Boolean);
+    const correctCount = results.filter(r => r.isCorrect).length;
+    const totalCount = results.length || 1;
     const percentage = Math.round((correctCount / totalCount) * 100);
     const difficulty = state.currentFiche.difficulty || 1;
 
-    // Calculate stars
     let stars = 0;
     if (percentage >= 90) stars = 3;
     else if (percentage >= 70) stars = 2;
     else if (percentage >= 50) stars = 1;
 
-    // Calculate XP based on difficulty and performance
     let xpGained = Math.round(10 * difficulty * (percentage / 100));
-    if (percentage === 100) xpGained += 20; // Perfect bonus
-    if (state.timerSeconds < 60 && percentage >= 70) xpGained += 10; // Speed bonus
+    if (percentage === 100) xpGained += 20;
+    if (state.timerSeconds < 60 && percentage >= 70) xpGained += 10;
 
-    // Save progress
-    const leveledUp = saveProgress(state.currentSubject, state.currentFiche.id, percentage, correctCount, stars, xpGained);
+    const leveledUp = recordFicheResult(state.currentSubject, state.currentFiche.id, percentage, correctCount, totalCount, stars, xpGained);
 
-    // Show modal
-    const modal = document.getElementById('result-modal');
     document.getElementById('modal-title').textContent = percentage >= 50 ? 'Bravo ! 🎉' : 'Continue ! 💪';
-    document.getElementById('result-stars').innerHTML = '⭐'.repeat(stars) + '☆'.repeat(3 - stars);
+    document.getElementById('result-stars').innerHTML = '★'.repeat(stars) + '☆'.repeat(3 - stars);
     document.getElementById('result-message').textContent = `${correctCount} bonnes réponses sur ${totalCount}`;
     document.getElementById('result-score').textContent = `Score : ${percentage}%`;
     document.getElementById('xp-gained').textContent = `+${xpGained} XP`;
+    document.getElementById('result-modal').classList.add('active');
 
-    modal.classList.add('active');
     if (percentage >= 70) playSound('celebration');
-
-    // Check for level up
-    if (leveledUp) {
-        setTimeout(() => showLevelUpModal(leveledUp), 1500);
-    }
-
-    // Check for badges
+    if (leveledUp) setTimeout(() => showLevelUpModal(leveledUp), 1400);
     checkAndAwardBadges();
 }
 
@@ -363,42 +1048,21 @@ function closeModal() {
     showSubjectView(state.currentSubject);
 }
 
-// ==================== PROGRESS & XP ====================
-function loadProgress() {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (!stored) {
-        const defaultProgress = {
-            subjects: {},
-            totalCompleted: 0,
-            totalStars: 0,
-            correctAnswers: 0,
-            totalAnswers: 0,
-            streak: 0,
-            lastActiveDate: null,
-            exercisesToday: 0,
-            xp: 0,
-            level: 1,
-            badges: [],
-            challengesCompleted: []
-        };
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultProgress));
-    }
-}
+/* =========================================================================
+   10. PROGRESSION, XP, NIVEAUX
+   ========================================================================= */
 
-function getProgress() {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY));
-}
-
-function saveProgress(subjectKey, ficheId, percentage, correctCount, stars, xpGained) {
+function recordFicheResult(subjectKey, ficheId, percentage, correctCount, answeredCount, stars, xpGained) {
     const progress = getProgress();
     if (!progress.subjects[subjectKey]) progress.subjects[subjectKey] = {};
 
-    const previouslyCompleted = progress.subjects[subjectKey][ficheId]?.completed || false;
-    const previousStars = progress.subjects[subjectKey][ficheId]?.stars || 0;
+    const previous = progress.subjects[subjectKey][ficheId] || {};
+    const previouslyCompleted = Boolean(previous.completed);
+    const previousStars = previous.stars || 0;
 
     progress.subjects[subjectKey][ficheId] = {
-        completed: percentage >= 50,
-        score: percentage,
+        completed: previouslyCompleted || percentage >= 50,
+        score: Math.max(previous.score || 0, percentage),
         stars: Math.max(stars, previousStars),
         lastAttempt: new Date().toISOString()
     };
@@ -407,26 +1071,33 @@ function saveProgress(subjectKey, ficheId, percentage, correctCount, stars, xpGa
     if (stars > previousStars) progress.totalStars += (stars - previousStars);
 
     progress.correctAnswers += correctCount;
-    progress.totalAnswers += state.currentExercises.length;
+    progress.totalAnswers += answeredCount;
 
-    // XP and Level
     const oldLevel = progress.level;
     progress.xp += xpGained;
     progress.level = calculateLevel(progress.xp);
 
-    // Daily stats
+    // Série de jours consécutifs
     const today = new Date().toDateString();
     if (progress.lastActiveDate !== today) {
+        const gap = progress.lastActiveDate
+            ? Math.round((new Date(today) - new Date(progress.lastActiveDate)) / 86400000)
+            : null;
+        progress.streak = gap === 1 ? (progress.streak || 0) + 1 : 1;
         progress.exercisesToday = 1;
     } else {
-        progress.exercisesToday++;
+        progress.exercisesToday = (progress.exercisesToday || 0) + 1;
     }
     progress.lastActiveDate = today;
 
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    progress.session = null;
+    commitProgress({ immediate: true });
+
     updateHomeStats();
     updateSubjectCards();
     updateLevelDisplay();
+    updateResumeCard();
+    updateDailyChallengeProgress();
 
     return progress.level > oldLevel ? progress.level : null;
 }
@@ -441,7 +1112,6 @@ function calculateLevel(xp) {
 function showLevelUpModal(newLevel) {
     const levelData = LEVELS_DATA.find(l => l.level === newLevel);
     if (!levelData) return;
-
     document.getElementById('levelup-icon').textContent = levelData.icon;
     document.getElementById('levelup-name').textContent = levelData.name;
     document.getElementById('levelup-modal').classList.add('active');
@@ -454,16 +1124,18 @@ function updateLevelDisplay() {
     const nextLevel = LEVELS_DATA.find(l => l.level === progress.level + 1);
 
     document.querySelector('.level-icon').textContent = currentLevel.icon;
-    document.querySelector('.level-name').textContent = `Niv. ${progress.level}`;
+    document.querySelector('.level-name').textContent = `Niv. ${progress.level} · ${currentLevel.name}`;
+    document.getElementById('level-xp').textContent = nextLevel
+        ? `${progress.xp} / ${nextLevel.xpRequired} XP`
+        : `${progress.xp} XP · Max`;
 
+    let percentage = 100;
     if (nextLevel) {
         const xpInLevel = progress.xp - currentLevel.xpRequired;
         const xpNeeded = nextLevel.xpRequired - currentLevel.xpRequired;
-        const percentage = Math.min(100, (xpInLevel / xpNeeded) * 100);
-        document.getElementById('xp-fill').style.width = `${percentage}%`;
-    } else {
-        document.getElementById('xp-fill').style.width = '100%';
+        percentage = Math.max(0, Math.min(100, (xpInLevel / xpNeeded) * 100));
     }
+    document.getElementById('xp-fill').style.width = `${percentage}%`;
 }
 
 function checkStreak() {
@@ -471,16 +1143,13 @@ function checkStreak() {
     const today = new Date().toDateString();
     const lastActive = progress.lastActiveDate;
 
-    if (!lastActive) {
-        progress.streak = 0;
-    } else if (lastActive !== today) {
-        const lastDate = new Date(lastActive);
-        const todayDate = new Date(today);
-        const diffDays = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
-        if (diffDays === 1) progress.streak++;
-        else if (diffDays > 1) progress.streak = 0;
+    if (lastActive && lastActive !== today) {
+        const diffDays = Math.round((new Date(today) - new Date(lastActive)) / 86400000);
+        if (diffDays > 1) progress.streak = 0;
+        progress.exercisesToday = 0;
     }
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    if (!lastActive) progress.streak = progress.streak || 0;
+    commitProgress();
 }
 
 function updateHomeStats() {
@@ -488,41 +1157,6 @@ function updateHomeStats() {
     document.getElementById('today-exercises').textContent = progress.exercisesToday || 0;
     document.getElementById('streak-days').textContent = progress.streak || 0;
     document.getElementById('total-xp').textContent = progress.xp || 0;
-    updateSubjectCards();
-}
-
-// Initialize the daily challenge banner to be clickable
-function initDailyChallengeBanner() {
-    const banner = document.getElementById('daily-challenge');
-    if (!banner) return;
-
-    // Get a random daily challenge for today (based on day of year)
-    const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
-    const dailyChallenges = CHALLENGES_DATA.daily;
-    const todaysChallenge = dailyChallenges[dayOfYear % dailyChallenges.length];
-
-    // Update banner content
-    document.querySelector('#daily-challenge .challenge-icon').textContent = todaysChallenge.icon;
-    document.getElementById('daily-challenge-text').textContent = todaysChallenge.description;
-    document.querySelector('#daily-challenge .challenge-reward').textContent = `+${todaysChallenge.reward} XP`;
-
-    // Make banner clickable
-    banner.style.cursor = 'pointer';
-    banner.classList.add('clickable-banner');
-
-    // Add click handler
-    banner.addEventListener('click', () => {
-        startChallengeExercises(todaysChallenge);
-    });
-
-    // Update progress (exercisesToday / count)
-    const progress = getProgress();
-    const exercisesToday = progress.exercisesToday || 0;
-    const target = todaysChallenge.count || 5;
-    const percentage = Math.min(100, (exercisesToday / target) * 100);
-
-    document.getElementById('daily-challenge-fill').style.width = `${percentage}%`;
-    document.getElementById('daily-challenge-status').textContent = `${exercisesToday}/${target}`;
 }
 
 function updateSubjectCards() {
@@ -532,45 +1166,35 @@ function updateSubjectCards() {
     document.querySelectorAll('.subject-card').forEach(card => {
         const subjectKey = card.dataset.subject;
         const subject = subjects[subjectKey];
+        if (!subject) return;
         const subjectProgress = progress.subjects[subjectKey] || {};
+        const total = subject.fiches.length;
+        const completed = subject.fiches.filter(f => subjectProgress[f.id]?.completed).length;
+        const percentage = total ? Math.round((completed / total) * 100) : 0;
 
-        if (subject) {
-            const totalFiches = subject.fiches.length;
-            const completedFiches = Object.values(subjectProgress).filter(f => f.completed).length;
-            const percentage = Math.round((completedFiches / totalFiches) * 100);
-
-            card.querySelector('.progress-fill').style.width = `${percentage}%`;
-            card.querySelector('.progress-text').textContent = `${percentage}%`;
-        }
+        card.querySelector('.progress-fill').style.width = `${percentage}%`;
+        card.querySelector('.progress-text').textContent = `${percentage}%`;
+        card.classList.toggle('done', percentage === 100);
     });
 }
 
 function updateProgressView() {
     const progress = getProgress();
-    let totalFiches = 0, completedFiches = 0;
+    let totalFiches = 0;
+    let completedFiches = 0;
+    const subjects = allSubjects();
 
-    // Count from both CE1 and CE2
-    [SUBJECTS_DATA, SUBJECTS_DATA_CE2].forEach(subjects => {
-        Object.keys(subjects).forEach(key => {
-            const subject = subjects[key];
-            totalFiches += subject.fiches.length;
-            const subjectProgress = progress.subjects[key] || {};
-            completedFiches += Object.values(subjectProgress).filter(f => f.completed).length;
-        });
+    Object.keys(subjects).forEach(key => {
+        totalFiches += subjects[key].fiches.length;
+        const subjectProgress = progress.subjects[key] || {};
+        completedFiches += subjects[key].fiches.filter(f => subjectProgress[f.id]?.completed).length;
     });
 
-    const globalPercentage = totalFiches > 0 ? Math.round((completedFiches / totalFiches) * 100) : 0;
-
+    const globalPercentage = totalFiches ? Math.round((completedFiches / totalFiches) * 100) : 0;
     const circle = document.getElementById('global-progress-circle');
     const circumference = 2 * Math.PI * 45;
+    circle.style.strokeDasharray = `${circumference}`;
     circle.style.strokeDashoffset = circumference - (globalPercentage / 100) * circumference;
-
-    const svg = circle.closest('svg');
-    if (!svg.querySelector('defs')) {
-        const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
-        defs.innerHTML = `<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#d4a853"/><stop offset="100%" style="stop-color:#e67e22"/></linearGradient>`;
-        svg.insertBefore(defs, svg.firstChild);
-    }
 
     document.getElementById('global-percentage').textContent = `${globalPercentage}%`;
     document.getElementById('total-completed').textContent = progress.totalCompleted || 0;
@@ -580,34 +1204,47 @@ function updateProgressView() {
     const accuracy = progress.totalAnswers > 0 ? Math.round((progress.correctAnswers / progress.totalAnswers) * 100) : 0;
     document.getElementById('accuracy-rate').textContent = `${accuracy}%`;
 
-    // Subject progress list
     const list = document.getElementById('subject-progress-list');
     list.innerHTML = '';
+    Object.keys(subjects).forEach(key => {
+        const subject = subjects[key];
+        const subjectProgress = progress.subjects[key] || {};
+        const total = subject.fiches.length;
+        const completed = subject.fiches.filter(f => subjectProgress[f.id]?.completed).length;
+        const percentage = total ? Math.round((completed / total) * 100) : 0;
 
-    [SUBJECTS_DATA, SUBJECTS_DATA_CE2].forEach(subjects => {
-        Object.keys(subjects).forEach(key => {
-            const subject = subjects[key];
-            const subjectProgress = progress.subjects[key] || {};
-            const total = subject.fiches.length;
-            const completed = Object.values(subjectProgress).filter(f => f.completed).length;
-            const percentage = Math.round((completed / total) * 100);
-
-            const item = document.createElement('div');
-            item.className = 'subject-progress-item';
-            item.innerHTML = `
-                <span class="icon">${subject.icon}</span>
-                <div class="info">
-                    <h4>${subject.name}</h4>
-                    <div class="progress-bar"><div class="progress-fill" style="width: ${percentage}%"></div></div>
-                </div>
-                <span class="percentage">${percentage}%</span>
-            `;
-            list.appendChild(item);
+        const item = document.createElement('button');
+        item.type = 'button';
+        item.className = 'subject-progress-item';
+        item.innerHTML = `
+            <span class="icon">${subject.icon}</span>
+            <div class="info">
+                <h4>${escapeHtml(subject.name)}</h4>
+                <div class="progress-bar"><div class="progress-fill" style="width:${percentage}%"></div></div>
+                <span class="muted">${completed}/${total} fiches</span>
+            </div>
+            <span class="percentage">${percentage}%</span>
+        `;
+        item.addEventListener('click', () => {
+            state.currentClass = SUBJECTS_DATA[key] ? 'ce1' : 'ce2';
+            syncClassButtons();
+            buildSubjectCards();
+            showSubjectView(key);
         });
+        list.appendChild(item);
     });
 }
 
-// ==================== BADGES ====================
+function syncClassButtons() {
+    document.querySelectorAll('.class-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.class === state.currentClass);
+    });
+}
+
+/* =========================================================================
+   11. BADGES
+   ========================================================================= */
+
 function updateBadgesView() {
     const progress = getProgress();
     const container = document.getElementById('badges-container');
@@ -618,41 +1255,55 @@ function updateBadgesView() {
         const card = document.createElement('div');
         card.className = `badge-card ${unlocked ? 'unlocked' : 'locked'}`;
         card.innerHTML = `
-            <span class="badge-icon">${badge.icon}</span>
-            <div class="badge-name">${badge.name}</div>
-            <div class="badge-desc">${badge.description}</div>
+            <span class="badge-icon">${unlocked ? badge.icon : '🔒'}</span>
+            <div class="badge-name">${escapeHtml(badge.name)}</div>
+            <div class="badge-desc">${escapeHtml(badge.description)}</div>
         `;
         container.appendChild(card);
     });
+
+    document.getElementById('badges-count').textContent =
+        `${progress.badges?.length || 0} badge${(progress.badges?.length || 0) > 1 ? 's' : ''} débloqué${(progress.badges?.length || 0) > 1 ? 's' : ''} sur ${BADGES_DATA.length}`;
 }
 
 function checkAndAwardBadges() {
     const progress = getProgress();
     if (!progress.badges) progress.badges = [];
+    const subjects = allSubjects();
+    let awarded = false;
 
     BADGES_DATA.forEach(badge => {
         if (progress.badges.includes(badge.id)) return;
-
-        let earned = false;
         const c = badge.condition;
+        let earned = false;
 
         if (c.type === 'fiches_completed' && progress.totalCompleted >= c.count) earned = true;
         if (c.type === 'stars' && progress.totalStars >= c.count) earned = true;
         if (c.type === 'streak' && progress.streak >= c.count) earned = true;
         if (c.type === 'perfect_scores') {
-            let perfectCount = 0;
+            let perfect = 0;
             Object.values(progress.subjects).forEach(subj => {
-                Object.values(subj).forEach(f => { if (f.score === 100) perfectCount++; });
+                Object.values(subj).forEach(f => { if (f.score === 100) perfect++; });
             });
-            if (perfectCount >= c.count) earned = true;
+            if (perfect >= c.count) earned = true;
+        }
+        if (c.type === 'subject_complete' && subjects[c.subject]) {
+            const sp = progress.subjects[c.subject] || {};
+            earned = subjects[c.subject].fiches.every(f => sp[f.id]?.completed);
+        }
+        if (c.type === 'average' && progress.totalAnswers > 0) {
+            const avg = Math.round((progress.correctAnswers / progress.totalAnswers) * 100);
+            if (avg >= (c.count || 90) && progress.totalCompleted >= 5) earned = true;
         }
 
         if (earned) {
             progress.badges.push(badge.id);
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-            showBadgeModal(badge);
+            awarded = true;
+            setTimeout(() => showBadgeModal(badge), 2200);
         }
     });
+
+    if (awarded) { commitProgress({ immediate: true }); updateBadgesView(); }
 }
 
 function showBadgeModal(badge) {
@@ -663,87 +1314,107 @@ function showBadgeModal(badge) {
     playSound('celebration');
 }
 
-// ==================== CHALLENGES ====================
+/* =========================================================================
+   12. DÉFIS
+   ========================================================================= */
+
+function todaysChallenge() {
+    const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+    const list = CHALLENGES_DATA.daily;
+    return list[dayOfYear % list.length];
+}
+
+function initDailyChallengeBanner() {
+    const banner = document.getElementById('daily-challenge');
+    if (!banner) return;
+    const challenge = todaysChallenge();
+
+    banner.querySelector('.challenge-icon').textContent = challenge.icon;
+    document.getElementById('daily-challenge-text').textContent = challenge.description;
+    banner.querySelector('.challenge-reward').textContent = `+${challenge.reward} XP`;
+    banner.addEventListener('click', () => startChallengeExercises(challenge));
+    updateDailyChallengeProgress();
+}
+
+function updateDailyChallengeProgress() {
+    const challenge = todaysChallenge();
+    const done = getProgress().exercisesToday || 0;
+    const target = challenge.count || 5;
+    const percentage = Math.min(100, (done / target) * 100);
+    const fill = document.getElementById('daily-challenge-fill');
+    const status = document.getElementById('daily-challenge-status');
+    if (fill) fill.style.width = `${percentage}%`;
+    if (status) status.textContent = `${Math.min(done, target)}/${target}`;
+}
+
 function updateChallengesView() {
     const progress = getProgress();
-
     ['daily', 'weekly', 'special'].forEach(type => {
         const container = document.getElementById(`${type}-challenges`);
+        if (!container) return;
         container.innerHTML = '';
 
         CHALLENGES_DATA[type].forEach(challenge => {
             const completed = progress.challengesCompleted?.includes(challenge.id);
-            const isClickable = challenge.subject || challenge.multiSubject;
-            const card = document.createElement('div');
-            card.className = `challenge-card ${completed ? 'completed' : ''} ${isClickable ? 'clickable' : ''}`;
+            const clickable = challenge.subject || challenge.multiSubject;
+            const card = document.createElement(clickable ? 'button' : 'div');
+            if (clickable) card.type = 'button';
+            card.className = `challenge-card ${completed ? 'completed' : ''} ${clickable ? 'clickable' : ''}`;
             card.innerHTML = `
                 <div class="challenge-card-icon">${challenge.icon}</div>
                 <div class="challenge-card-info">
-                    <h4>${challenge.name}</h4>
-                    <p>${challenge.description}</p>
+                    <h4>${escapeHtml(challenge.name)}</h4>
+                    <p>${escapeHtml(challenge.description)}</p>
                 </div>
-                <div class="challenge-card-reward">+${challenge.reward} XP</div>
-                ${isClickable ? '<div class="challenge-go-btn">Commencer →</div>' : ''}
+                <div class="challenge-card-side">
+                    <span class="challenge-card-reward">+${challenge.reward} XP</span>
+                    ${clickable ? '<span class="challenge-go-btn">Commencer →</span>' : ''}
+                </div>
             `;
-
-            // Add click handler to redirect to subject exercises
-            if (isClickable) {
-                card.addEventListener('click', () => startChallengeExercises(challenge));
-            }
-
+            if (clickable) card.addEventListener('click', () => startChallengeExercises(challenge));
             container.appendChild(card);
         });
     });
 }
 
-// Start exercises directly from a challenge
 function startChallengeExercises(challenge) {
-    // If it's a multi-subject challenge, show subject selection modal
     if (challenge.multiSubject && challenge.subjects) {
         showSubjectSelectionModal(challenge);
         return;
     }
-
-    // Single subject challenge
-    const subjectKey = challenge.subject;
-    launchChallengeForSubject(subjectKey, challenge);
+    launchChallengeForSubject(challenge.subject, challenge);
 }
 
-// Show modal to select a subject for multi-subject challenges
 function showSubjectSelectionModal(challenge) {
-    // Combine both CE1 and CE2 subjects
-    const allSubjects = { ...SUBJECTS_DATA };
-    if (typeof SUBJECTS_DATA_CE2 !== 'undefined') {
-        Object.assign(allSubjects, SUBJECTS_DATA_CE2);
-    }
+    const subjects = allSubjects();
     const progress = getProgress();
+    const existing = document.getElementById('subject-selection-modal');
+    if (existing) existing.remove();
 
-    // Create modal HTML
-    const modalHtml = `
+    const html = `
         <div class="modal active" id="subject-selection-modal">
-            <div class="modal-content subject-selection">
+            <div class="modal-content subject-selection" role="dialog" aria-modal="true">
                 <div class="modal-header">
                     <span class="challenge-modal-icon">${challenge.icon}</span>
-                    <h2>${challenge.name}</h2>
-                    <p class="challenge-modal-desc">${challenge.description}</p>
+                    <h2>${escapeHtml(challenge.name)}</h2>
+                    <p class="challenge-modal-desc">${escapeHtml(challenge.description)}</p>
                 </div>
                 <div class="modal-body">
-                    <h3>Choisis une matière :</h3>
-                    <div class="subject-selection-grid" id="subject-selection-grid">
-                        ${challenge.subjects.map(subjectKey => {
-                            const subject = allSubjects[subjectKey];
+                    <h3>Choisis une matière</h3>
+                    <div class="subject-selection-grid">
+                        ${challenge.subjects.map(key => {
+                            const subject = subjects[key];
                             if (!subject) return '';
-                            const subjectProgress = progress.subjects[subjectKey] || {};
-                            const totalFiches = subject.fiches.length;
-                            const completedFiches = Object.values(subjectProgress).filter(f => f.completed).length;
-                            const percentage = Math.round((completedFiches / totalFiches) * 100);
+                            const sp = progress.subjects[key] || {};
+                            const total = subject.fiches.length;
+                            const done = subject.fiches.filter(f => sp[f.id]?.completed).length;
+                            const pct = total ? Math.round((done / total) * 100) : 0;
                             return `
-                                <button class="subject-select-btn" data-subject="${subjectKey}">
+                                <button type="button" class="subject-select-btn" data-subject="${escapeAttr(key)}">
                                     <span class="subject-select-icon">${subject.icon}</span>
-                                    <span class="subject-select-name">${subject.name}</span>
-                                    <span class="subject-select-progress">${percentage}%</span>
-                                </button>
-                            `;
+                                    <span class="subject-select-name">${escapeHtml(subject.name)}</span>
+                                    <span class="subject-select-progress">${pct}%</span>
+                                </button>`;
                         }).join('')}
                     </div>
                 </div>
@@ -751,149 +1422,162 @@ function showSubjectSelectionModal(challenge) {
                     <button class="btn btn-secondary" id="close-subject-selection">Annuler</button>
                 </div>
             </div>
-        </div>
-    `;
+        </div>`;
 
-    // Remove existing modal if any
-    const existingModal = document.getElementById('subject-selection-modal');
-    if (existingModal) existingModal.remove();
-
-    // Add modal to DOM
-    document.body.insertAdjacentHTML('beforeend', modalHtml);
-
-    // Add event listeners
+    document.body.insertAdjacentHTML('beforeend', html);
     document.getElementById('close-subject-selection').addEventListener('click', closeSubjectSelectionModal);
-
     document.querySelectorAll('.subject-select-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            const subjectKey = btn.dataset.subject;
+            const key = btn.dataset.subject;
             closeSubjectSelectionModal();
-            launchChallengeForSubject(subjectKey, challenge);
+            launchChallengeForSubject(key, challenge);
         });
     });
-
-    // Close on background click
-    document.getElementById('subject-selection-modal').addEventListener('click', (e) => {
-        if (e.target.id === 'subject-selection-modal') {
-            closeSubjectSelectionModal();
-        }
+    document.getElementById('subject-selection-modal').addEventListener('click', e => {
+        if (e.target.id === 'subject-selection-modal') closeSubjectSelectionModal();
     });
 }
 
 function closeSubjectSelectionModal() {
-    const modal = document.getElementById('subject-selection-modal');
-    if (modal) modal.remove();
+    document.getElementById('subject-selection-modal')?.remove();
 }
 
-// Launch challenge for a specific subject
 function launchChallengeForSubject(subjectKey, challenge) {
-    // Search in both CE1 and CE2 subjects
     let subject = SUBJECTS_DATA[subjectKey];
-    let useCE2 = false;
-
-    if (!subject && typeof SUBJECTS_DATA_CE2 !== 'undefined') {
+    let isCE2 = false;
+    if (!subject && typeof SUBJECTS_DATA_CE2 !== 'undefined' && SUBJECTS_DATA_CE2[subjectKey]) {
         subject = SUBJECTS_DATA_CE2[subjectKey];
-        useCE2 = true;
+        isCE2 = true;
     }
-
-    if (!subject || !subject.fiches || subject.fiches.length === 0) {
-        showToast('Matière non disponible', 'error');
+    if (!subject || !subject.fiches?.length) {
+        showToast('Matière non disponible pour ce défi', 'error');
         return;
     }
 
-    // Switch to the correct class if needed
-    if (useCE2 && state.currentClass !== 'ce2') {
-        state.currentClass = 'ce2';
-        document.querySelectorAll('.class-btn').forEach(b => b.classList.remove('active'));
-        document.querySelector('.class-btn[data-class="ce2"]')?.classList.add('active');
-    } else if (!useCE2 && state.currentClass !== 'ce1') {
-        state.currentClass = 'ce1';
-        document.querySelectorAll('.class-btn').forEach(b => b.classList.remove('active'));
-        document.querySelector('.class-btn[data-class="ce1"]')?.classList.add('active');
-    }
+    state.currentClass = isCE2 ? 'ce2' : 'ce1';
+    syncClassButtons();
+    buildSubjectCards();
 
-    // Find the first incomplete fiche, or the first one if all completed
-    const progress = getProgress();
-    const subjectProgress = progress.subjects[subjectKey] || {};
+    const subjectProgress = getProgress().subjects[subjectKey] || {};
+    const fiche = subject.fiches.find(f => !subjectProgress[f.id]?.completed) || subject.fiches[0];
 
-    let ficheToStart = subject.fiches.find(f => !subjectProgress[f.id]?.completed);
-    if (!ficheToStart) {
-        ficheToStart = subject.fiches[0]; // Start from beginning if all completed
-    }
-
-    // Show toast and start the fiche
-    showToast(`Défi "${challenge.name}" lancé !`, 'success');
-    startFiche(subjectKey, ficheToStart);
+    showToast(`Défi « ${challenge.name} » lancé !`, 'success');
+    startFiche(subjectKey, fiche);
 }
 
-// ==================== SETTINGS ====================
+/* =========================================================================
+   13. RÉGLAGES
+   ========================================================================= */
+
 function initSettings() {
-    const apiKeyInput = document.getElementById('openai-api-key');
-    const savedKey = localStorage.getItem('openai_api_key');
-    if (savedKey) {
-        apiKeyInput.value = savedKey;
-        document.getElementById('ai-generator').style.display = 'block';
-    }
+    const progress = getProgress();
 
-    document.getElementById('save-api-key').addEventListener('click', () => {
-        const key = apiKeyInput.value.trim();
-        if (key) {
-            localStorage.setItem('openai_api_key', key);
-            document.getElementById('ai-generator').style.display = 'block';
-            showToast('Clé API enregistrée !', 'success');
-        }
+    document.getElementById('copy-code').addEventListener('click', () => {
+        copyToClipboard(formatCode(state.profile?.code || ''));
     });
 
-    // Populate AI subject select
-    const select = document.getElementById('ai-subject');
-    [SUBJECTS_DATA, SUBJECTS_DATA_CE2].forEach(subjects => {
-        Object.keys(subjects).forEach(key => {
-            const opt = document.createElement('option');
-            opt.value = key;
-            opt.textContent = subjects[key].name;
-            select.appendChild(opt);
-        });
+    document.getElementById('switch-code').addEventListener('click', async () => {
+        await flushCloudSave();
+        if (!confirm('Utiliser un autre code champion sur cet appareil ?\n\nTes progrès actuels restent sauvegardés en ligne sous le code ' + formatCode(state.profile?.code || '') + '.')) return;
+        // On vide aussi la copie locale, sinon elle serait ré-adoptée au
+        // redémarrage avant même la saisie du nouveau code.
+        lsRemove(PROFILE_KEY);
+        lsRemove(PROGRESS_KEY);
+        lsRemove(BACKUP_KEY);
+        await idbSet(PROGRESS_KEY, null);
+        await idbSet(PROFILE_KEY, null);
+        location.reload();
     });
 
-    document.getElementById('generate-content').addEventListener('click', generateContent);
-
-    document.getElementById('reset-progress').addEventListener('click', () => {
-        if (confirm('Es-tu sûr de vouloir effacer tous tes progrès ?')) {
-            localStorage.removeItem(STORAGE_KEY);
-            loadProgress();
-            updateHomeStats();
-            updateProgressView();
-            updateBadgesView();
-            updateLevelDisplay();
-            showToast('Progrès réinitialisés', 'success');
-        }
+    // Sons / passage automatique
+    const soundToggle = document.getElementById('toggle-sound');
+    const autoToggle = document.getElementById('toggle-autonext');
+    soundToggle.checked = progress.settings?.sound !== false;
+    autoToggle.checked = progress.settings?.autoNext !== false;
+    soundToggle.addEventListener('change', () => {
+        getProgress().settings.sound = soundToggle.checked;
+        commitProgress();
+    });
+    autoToggle.addEventListener('change', () => {
+        getProgress().settings.autoNext = autoToggle.checked;
+        commitProgress();
     });
 
+    // Export / import
     document.getElementById('export-data').addEventListener('click', () => {
-        const data = { progress: getProgress(), exportDate: new Date().toISOString() };
+        const data = { progress: getProgress(), code: state.profile?.code, exportDate: new Date().toISOString() };
         const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `rayan_champion_${new Date().toISOString().split('T')[0]}.json`;
+        a.download = `champion_${new Date().toISOString().split('T')[0]}.json`;
         a.click();
         URL.revokeObjectURL(url);
-        showToast('Données exportées !', 'success');
+        showToast('Sauvegarde exportée !', 'success');
     });
+
+    const importInput = document.getElementById('import-file');
+    document.getElementById('import-data').addEventListener('click', () => importInput.click());
+    importInput.addEventListener('change', async () => {
+        const file = importInput.files?.[0];
+        if (!file) return;
+        try {
+            const parsed = JSON.parse(await file.text());
+            const incoming = normalizeProgress(parsed.progress || parsed, state.profile?.name, state.profile?.code);
+            state.progress = normalizeProgress(mergeProgress(getProgress(), incoming), state.profile?.name, state.profile?.code);
+            commitProgress({ immediate: true });
+            refreshEverything();
+            showToast('Sauvegarde importée et fusionnée 🎉', 'success');
+        } catch (err) {
+            showToast('Fichier illisible', 'error');
+        }
+        importInput.value = '';
+    });
+
+    document.getElementById('reset-progress').addEventListener('click', () => {
+        if (!confirm('Effacer TOUS les progrès de ce code ? Cette action est définitive.')) return;
+        const name = getProgress().name;
+        state.progress = defaultProgress(name, state.profile?.code);
+        commitProgress({ immediate: true });
+        refreshEverything();
+        showToast('Progrès réinitialisés', 'success');
+    });
+
+    // Générateur IA (optionnel)
+    const apiKeyInput = document.getElementById('openai-api-key');
+    const savedKey = lsGet('openai_api_key');
+    if (savedKey) {
+        apiKeyInput.value = savedKey;
+        document.getElementById('ai-generator').hidden = false;
+    }
+    document.getElementById('save-api-key').addEventListener('click', () => {
+        const key = apiKeyInput.value.trim();
+        if (!key) return;
+        lsSet('openai_api_key', key);
+        document.getElementById('ai-generator').hidden = false;
+        showToast('Clé API enregistrée', 'success');
+    });
+
+    const select = document.getElementById('ai-subject');
+    const subjects = allSubjects();
+    Object.keys(subjects).forEach(key => {
+        const opt = document.createElement('option');
+        opt.value = key;
+        opt.textContent = subjects[key].name;
+        select.appendChild(opt);
+    });
+    document.getElementById('generate-content').addEventListener('click', generateContent);
+    updateSyncDetail();
 }
 
 async function generateContent() {
-    const apiKey = localStorage.getItem('openai_api_key');
-    if (!apiKey) { showToast('Entrez votre clé API', 'error'); return; }
-
-    const subject = document.getElementById('ai-subject').value;
+    const apiKey = lsGet('openai_api_key');
     const prompt = document.getElementById('ai-prompt').value.trim();
     const resultDiv = document.getElementById('ai-result');
-
+    if (!apiKey) { showToast('Entre ta clé API', 'error'); return; }
     if (!prompt) { showToast('Décris le type d\'exercice', 'error'); return; }
 
-    resultDiv.innerHTML = '<div class="loading"></div> Génération...';
-
+    resultDiv.textContent = 'Génération…';
     const systemPrompt = `Tu es un expert en création d'exercices pour élèves CE1-CE2 (6-8 ans).
 Génère des exercices au format JSON uniquement. Format:
 [{"type":"input","question":"5 + 3 = ?","answer":"8"}]
@@ -904,7 +1588,7 @@ Génère exactement 5 exercices adaptés au niveau demandé.`;
     try {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
             body: JSON.stringify({
                 model: 'gpt-4o-mini',
                 messages: [
@@ -914,82 +1598,111 @@ Génère exactement 5 exercices adaptés au niveau demandé.`;
                 temperature: 0.7
             })
         });
-
         if (!response.ok) throw new Error('Erreur API');
-
         const data = await response.json();
         const content = data.choices[0].message.content;
-        const jsonMatch = content.match(/\[[\s\S]*\]/);
-
-        if (jsonMatch) {
-            const exercises = JSON.parse(jsonMatch[0]);
-            resultDiv.innerHTML = `<strong>Exercices générés :</strong>\n${JSON.stringify(exercises, null, 2)}`;
-            showToast('Contenu généré !', 'success');
-        } else {
-            resultDiv.innerHTML = content;
-        }
-    } catch (error) {
-        console.error(error);
-        resultDiv.innerHTML = 'Erreur. Vérifiez votre clé API.';
+        const match = content.match(/\[[\s\S]*\]/);
+        resultDiv.textContent = match ? JSON.stringify(JSON.parse(match[0]), null, 2) : content;
+        showToast('Contenu généré !', 'success');
+    } catch (err) {
+        resultDiv.textContent = 'Erreur. Vérifie ta clé API.';
         showToast('Erreur de génération', 'error');
     }
 }
 
-// ==================== UTILITIES ====================
+/* =========================================================================
+   14. UTILITAIRES
+   ========================================================================= */
+
+function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, c => (
+        { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+    ));
+}
+
+function escapeAttr(value) {
+    return escapeHtml(value);
+}
+
+function copyToClipboard(text) {
+    const done = () => showToast('Code copié 📋', 'success');
+    if (navigator.clipboard?.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+    } else {
+        fallbackCopy(text, done);
+    }
+}
+
+function fallbackCopy(text, done) {
+    const area = document.createElement('textarea');
+    area.value = text;
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    try { document.execCommand('copy'); done(); } catch (err) { showToast(text, 'info'); }
+    area.remove();
+}
+
 function speakText(text) {
     if (!state.speechSynthesis) return;
-    state.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'fr-FR';
-    utterance.rate = 0.8;
-    state.speechSynthesis.speak(utterance);
+    try {
+        state.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(String(text));
+        utterance.lang = 'fr-FR';
+        utterance.rate = 0.75;
+        state.speechSynthesis.speak(utterance);
+    } catch (err) { /* ignore */ }
 }
 
 function playSound(type) {
-    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    const oscillator = audioContext.createOscillator();
-    const gainNode = audioContext.createGain();
-    oscillator.connect(gainNode);
-    gainNode.connect(audioContext.destination);
+    if (getProgress().settings?.sound === false) return;
+    try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = ctx.createOscillator();
+        const gain = ctx.createGain();
+        oscillator.connect(gain);
+        gain.connect(ctx.destination);
 
-    if (type === 'correct') {
-        oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime);
-        oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1);
-        oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2);
-    } else if (type === 'incorrect') {
-        oscillator.frequency.setValueAtTime(349.23, audioContext.currentTime);
-        oscillator.frequency.setValueAtTime(311.13, audioContext.currentTime + 0.15);
-    } else if (type === 'celebration') {
-        oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime);
-        oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1);
-        oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2);
-        oscillator.frequency.setValueAtTime(1046.50, audioContext.currentTime + 0.3);
-    }
+        const notes = {
+            correct: [523.25, 659.25, 783.99],
+            incorrect: [349.23, 311.13],
+            celebration: [523.25, 659.25, 783.99, 1046.5]
+        }[type] || [523.25];
 
-    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
-    oscillator.start(audioContext.currentTime);
-    oscillator.stop(audioContext.currentTime + 0.4);
+        notes.forEach((freq, i) => oscillator.frequency.setValueAtTime(freq, ctx.currentTime + i * 0.1));
+        gain.gain.setValueAtTime(0.25, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.45);
+        oscillator.start(ctx.currentTime);
+        oscillator.stop(ctx.currentTime + 0.45);
+        oscillator.onended = () => ctx.close();
+    } catch (err) { /* ignore */ }
 }
 
 function showToast(message, type = 'info') {
+    const stack = document.getElementById('toast-stack');
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
     toast.textContent = message;
-    document.body.appendChild(toast);
-    setTimeout(() => toast.remove(), 3000);
+    stack.appendChild(toast);
+    setTimeout(() => {
+        toast.classList.add('leaving');
+        setTimeout(() => toast.remove(), 300);
+    }, 2600);
 }
 
-function levenshteinDistance(str1, str2) {
-    const m = str1.length, n = str2.length;
+function levenshteinDistance(a, b) {
+    const m = a.length;
+    const n = b.length;
     const dp = Array(m + 1).fill(null).map(() => Array(n + 1).fill(0));
     for (let i = 0; i <= m; i++) dp[i][0] = i;
     for (let j = 0; j <= n; j++) dp[0][j] = j;
     for (let i = 1; i <= m; i++) {
         for (let j = 1; j <= n; j++) {
-            dp[i][j] = str1[i - 1] === str2[j - 1] ? dp[i - 1][j - 1] : 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
+            dp[i][j] = a[i - 1] === b[j - 1]
+                ? dp[i - 1][j - 1]
+                : 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
         }
     }
     return dp[m][n];
 }
-

@@ -2,235 +2,326 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rayan - Champion de l'Apprentissage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0f0f0f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Champion">
+    <meta name="description" content="Application d'entraînement CE1 & CE2 : français, maths, lecture, dictée, anglais et sciences.">
+    <title>Champion - Apprendre en s'amusant</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon-180.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="app-container">
-        <!-- Header -->
+
+    <!-- ============ ÉCRAN DE DÉMARRAGE / PROFIL ============ -->
+    <div class="onboarding" id="onboarding" hidden>
+        <div class="onboarding-card">
+
+            <!-- Étape 1 : bienvenue -->
+            <div class="onboarding-step active" id="ob-welcome">
+                <div class="ob-logo">🏆</div>
+                <h1>Salut, champion&nbsp;!</h1>
+                <p class="ob-lead">Tes points, tes badges et tes étoiles seront sauvegardés automatiquement. Tu ne recommenceras plus jamais à zéro.</p>
+                <label class="ob-label" for="ob-name">Comment tu t'appelles&nbsp;?</label>
+                <input type="text" id="ob-name" class="ob-input" placeholder="Ton prénom" autocomplete="given-name" maxlength="20" value="Rayan">
+                <button class="btn btn-primary btn-xl" id="ob-start">C'est parti&nbsp;! 🚀</button>
+                <button class="btn btn-ghost" id="ob-have-code">J'ai déjà un code</button>
+            </div>
+
+            <!-- Étape 2 : récupérer un compte existant -->
+            <div class="onboarding-step" id="ob-restore">
+                <div class="ob-logo">🔑</div>
+                <h1>Ton code champion</h1>
+                <p class="ob-lead">Tape le code que tu as noté pour retrouver tous tes progrès sur cet appareil.</p>
+                <label class="ob-label" for="ob-code">Ton code</label>
+                <input type="text" id="ob-code" class="ob-input ob-input-code" placeholder="ABC-DEF" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="9">
+                <button class="btn btn-primary btn-xl" id="ob-restore-go">Retrouver mes progrès</button>
+                <button class="btn btn-ghost" id="ob-back">← Retour</button>
+                <p class="ob-error" id="ob-error" role="alert"></p>
+            </div>
+
+            <!-- Étape 3 : code créé -->
+            <div class="onboarding-step" id="ob-created">
+                <div class="ob-logo">🎉</div>
+                <h1>Tout est prêt&nbsp;!</h1>
+                <p class="ob-lead">Voici ton code secret. Note-le&nbsp;: il permet de retrouver tes progrès sur un autre téléphone, une tablette ou un ordinateur.</p>
+                <div class="ob-code-display" id="ob-code-display">ABC-DEF</div>
+                <button class="btn btn-secondary" id="ob-copy">📋 Copier le code</button>
+                <button class="btn btn-primary btn-xl" id="ob-done">J'ai noté, on commence&nbsp;!</button>
+                <p class="ob-hint">Ce code est aussi affiché à tout moment dans ⚙️ Réglages.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============ APPLICATION ============ -->
+    <div class="app-container" id="app" hidden>
+
         <header class="main-header">
             <div class="logo">
                 <span class="logo-icon">🏆</span>
-                <h1>Champion Rayan</h1>
-            </div>
-            <div class="level-badge" id="level-badge">
-                <span class="level-icon">🌱</span>
-                <span class="level-name">Niveau 1</span>
-                <div class="xp-bar">
-                    <div class="xp-fill" id="xp-fill"></div>
+                <div class="logo-text">
+                    <h1>Champion</h1>
+                    <span class="logo-sub" id="header-name">Rayan</span>
                 </div>
             </div>
-            <nav class="main-nav">
-                <button class="nav-btn active" data-view="home">🏠</button>
-                <button class="nav-btn" data-view="challenges">🎯</button>
-                <button class="nav-btn" data-view="progress">📊</button>
-                <button class="nav-btn" data-view="badges">🏅</button>
-                <button class="nav-btn" data-view="settings">⚙️</button>
+
+            <div class="level-badge" id="level-badge" title="Ton niveau">
+                <span class="level-icon">🌱</span>
+                <div class="level-meta">
+                    <span class="level-name">Niv. 1</span>
+                    <span class="level-xp" id="level-xp">0 XP</span>
+                </div>
+                <div class="xp-bar"><div class="xp-fill" id="xp-fill"></div></div>
+            </div>
+
+            <button class="sync-chip" id="sync-chip" type="button" title="État de la sauvegarde">
+                <span class="sync-dot" id="sync-dot"></span>
+                <span class="sync-text" id="sync-text">Sauvegardé</span>
+            </button>
+
+            <nav class="main-nav" aria-label="Navigation principale">
+                <button class="nav-btn active" data-view="home"><span class="nav-ico">🏠</span><span class="nav-label">Accueil</span></button>
+                <button class="nav-btn" data-view="challenges"><span class="nav-ico">🎯</span><span class="nav-label">Défis</span></button>
+                <button class="nav-btn" data-view="progress"><span class="nav-ico">📊</span><span class="nav-label">Progrès</span></button>
+                <button class="nav-btn" data-view="badges"><span class="nav-ico">🏅</span><span class="nav-label">Badges</span></button>
+                <button class="nav-btn" data-view="settings"><span class="nav-ico">⚙️</span><span class="nav-label">Réglages</span></button>
             </nav>
         </header>
 
-        <!-- Main Content -->
         <main class="main-content">
-            <!-- Home View -->
+
+            <!-- ---------- ACCUEIL ---------- -->
             <section id="home-view" class="view active">
-                <!-- Class Selector -->
-                <div class="class-selector">
-                    <button class="class-btn active" data-class="ce1">CE1</button>
-                    <button class="class-btn" data-class="ce2">CE2</button>
-                </div>
 
                 <div class="welcome-banner">
                     <div class="welcome-text">
-                        <h2>Bonjour Rayan ! 👋</h2>
-                        <p>Objectif : Devenir le Major de ta classe !</p>
+                        <h2 id="welcome-title">Bonjour&nbsp;! 👋</h2>
+                        <p>Objectif&nbsp;: devenir le major de ta classe&nbsp;!</p>
                     </div>
                     <div class="daily-stats">
                         <div class="stat-item">
                             <span class="stat-value" id="today-exercises">0</span>
-                            <span class="stat-label">Exercices</span>
+                            <span class="stat-label">Aujourd'hui</span>
                         </div>
                         <div class="stat-item streak-item">
                             <span class="stat-value" id="streak-days">0</span>
-                            <span class="stat-label">🔥 Streak</span>
+                            <span class="stat-label">🔥 Jours</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-value" id="total-xp">0</span>
-                            <span class="stat-label">XP</span>
+                            <span class="stat-label">⚡ XP</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Daily Challenge Banner -->
-                <div class="daily-challenge-banner" id="daily-challenge">
+                <!-- Reprise de session -->
+                <button class="resume-card" id="resume-card" type="button" hidden>
+                    <span class="resume-ico">⏯️</span>
+                    <span class="resume-info">
+                        <strong>Reprendre où tu t'es arrêté</strong>
+                        <span id="resume-detail">Fiche en cours</span>
+                    </span>
+                    <span class="resume-go">Continuer →</span>
+                </button>
+
+                <!-- Défi du jour -->
+                <button class="daily-challenge-banner" id="daily-challenge" type="button">
                     <div class="challenge-icon">🎯</div>
                     <div class="challenge-info">
                         <h3>Défi du jour</h3>
-                        <p id="daily-challenge-text">Complète 5 exercices de calcul mental</p>
-                    </div>
-                    <div class="challenge-progress">
+                        <p id="daily-challenge-text">Complète 5 exercices</p>
                         <div class="challenge-progress-bar">
                             <div class="challenge-progress-fill" id="daily-challenge-fill"></div>
                         </div>
-                        <span id="daily-challenge-status">0/5</span>
                     </div>
-                    <div class="challenge-reward">+50 XP</div>
+                    <div class="challenge-side">
+                        <span class="challenge-reward">+50 XP</span>
+                        <span class="challenge-status" id="daily-challenge-status">0/5</span>
+                    </div>
+                </button>
+
+                <div class="section-head">
+                    <h3>Choisis ta matière</h3>
+                    <div class="class-selector" role="tablist" aria-label="Niveau">
+                        <button class="class-btn active" data-class="ce1" role="tab">CE1</button>
+                        <button class="class-btn" data-class="ce2" role="tab">CE2</button>
+                    </div>
                 </div>
 
-                <!-- Subjects Grid CE1 -->
-                <div id="subjects-ce1" class="subjects-grid">
-                    <div class="subject-card" data-subject="francais"><div class="card-icon">📖</div><h3>Français</h3><p>12 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
-                    <div class="subject-card" data-subject="lecture"><div class="card-icon">📚</div><h3>Lecture</h3><p>8 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
-                    <div class="subject-card" data-subject="dictee"><div class="card-icon">✏️</div><h3>Dictée Flash</h3><p>12 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
-                    <div class="subject-card" data-subject="calcul_mental"><div class="card-icon">🧮</div><h3>Calcul Mental</h3><p>10 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐</div></div>
-                    <div class="subject-card" data-subject="tables"><div class="card-icon">✖️</div><h3>Tables</h3><p>12 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐</div></div>
-                    <div class="subject-card" data-subject="nombres_calculs"><div class="card-icon">🔢</div><h3>Nombres</h3><p>8 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
-                    <div class="subject-card" data-subject="geometrie"><div class="card-icon">📐</div><h3>Géométrie</h3><p>10 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
-                    <div class="subject-card" data-subject="problemes"><div class="card-icon">🤔</div><h3>Problèmes</h3><p>10 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
-                    <div class="subject-card" data-subject="grandeurs_mesures"><div class="card-icon">📏</div><h3>Mesures</h3><p>6 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
-                    <div class="subject-card" data-subject="anglais"><div class="card-icon">🇬🇧</div><h3>Anglais</h3><p>6 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐</div></div>
-                    <div class="subject-card" data-subject="sciences"><div class="card-icon">🔬</div><h3>Sciences</h3><p>6 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
-                </div>
-
-                <!-- Subjects Grid CE2 -->
-                <div id="subjects-ce2" class="subjects-grid" style="display: none;">
-                    <div class="subject-card" data-subject="francais_ce2"><div class="card-icon">📖</div><h3>Français CE2</h3><p>10 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
-                    <div class="subject-card" data-subject="lecture_ce2"><div class="card-icon">📚</div><h3>Lecture CE2</h3><p>3 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
-                    <div class="subject-card" data-subject="dictee_ce2"><div class="card-icon">✏️</div><h3>Dictée CE2</h3><p>3 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
-                    <div class="subject-card" data-subject="calcul_ce2"><div class="card-icon">🧮</div><h3>Calcul CE2</h3><p>8 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
-                    <div class="subject-card" data-subject="tables_ce2"><div class="card-icon">✖️</div><h3>Tables CE2</h3><p>4 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
-                    <div class="subject-card" data-subject="geometrie_ce2"><div class="card-icon">📐</div><h3>Géométrie CE2</h3><p>4 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
-                    <div class="subject-card" data-subject="problemes_ce2"><div class="card-icon">🤔</div><h3>Problèmes CE2</h3><p>4 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
-                    <div class="subject-card" data-subject="mesures_ce2"><div class="card-icon">📏</div><h3>Mesures CE2</h3><p>4 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
-                    <div class="subject-card" data-subject="anglais_ce2"><div class="card-icon">🇬🇧</div><h3>Anglais CE2</h3><p>5 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐</div></div>
-                    <div class="subject-card" data-subject="sciences_ce2"><div class="card-icon">🔬</div><h3>Sciences CE2</h3><p>4 fiches</p><div class="progress-bar"><div class="progress-fill"></div></div><span class="progress-text">0%</span><div class="difficulty-stars">⭐⭐⭐</div></div>
-                </div>
+                <div id="subjects-grid" class="subjects-grid"></div>
             </section>
 
-            <!-- Challenges View -->
+            <!-- ---------- DÉFIS ---------- -->
             <section id="challenges-view" class="view">
-                <h2>🎯 Défis & Challenges</h2>
-
+                <h2 class="view-title">🎯 Défis &amp; Challenges</h2>
                 <div class="challenges-section">
-                    <h3>📅 Défis Quotidiens</h3>
+                    <h3>📅 Défis quotidiens</h3>
                     <div class="challenges-grid" id="daily-challenges"></div>
                 </div>
-
                 <div class="challenges-section">
-                    <h3>📆 Défis Hebdomadaires</h3>
+                    <h3>📆 Défis de la semaine</h3>
                     <div class="challenges-grid" id="weekly-challenges"></div>
                 </div>
-
                 <div class="challenges-section">
-                    <h3>🌟 Défis Spéciaux</h3>
+                    <h3>🌟 Défis spéciaux</h3>
                     <div class="challenges-grid" id="special-challenges"></div>
                 </div>
             </section>
 
-            <!-- Subject View -->
+            <!-- ---------- MATIÈRE ---------- -->
             <section id="subject-view" class="view">
                 <div class="subject-header">
-                    <button class="back-btn" id="back-to-home">← Retour</button>
+                    <button class="back-btn" id="back-to-home">←<span>Retour</span></button>
                     <h2 id="subject-title">Matière</h2>
-                    <div class="difficulty-filter">
-                        <button class="filter-btn active" data-diff="all">Tous</button>
-                        <button class="filter-btn" data-diff="1">⭐</button>
-                        <button class="filter-btn" data-diff="2">⭐⭐</button>
-                        <button class="filter-btn" data-diff="3">⭐⭐⭐</button>
-                    </div>
+                </div>
+                <div class="subject-summary" id="subject-summary"></div>
+                <div class="difficulty-filter" role="group" aria-label="Filtrer par difficulté">
+                    <button class="filter-btn active" data-diff="all">Toutes</button>
+                    <button class="filter-btn" data-diff="1">⭐ Facile</button>
+                    <button class="filter-btn" data-diff="2">⭐⭐ Moyen</button>
+                    <button class="filter-btn" data-diff="3">⭐⭐⭐ Difficile</button>
                 </div>
                 <div class="fiches-grid" id="fiches-container"></div>
             </section>
 
-            <!-- Exercise View -->
-            <section id="exercise-view" class="view">
+            <!-- ---------- EXERCICE ---------- -->
+            <section id="exercise-view" class="view exercise-mode">
                 <div class="exercise-header">
-                    <button class="back-btn" id="back-to-subject">← Retour</button>
-                    <h2 id="exercise-title">Exercice</h2>
-                    <div class="exercise-timer" id="exercise-timer" style="display: none;">
-                        <span class="timer-icon">⏱️</span>
-                        <span id="timer-value">0:00</span>
+                    <button class="back-btn" id="back-to-subject" title="Quitter (ta progression est gardée)">←<span>Quitter</span></button>
+                    <div class="exercise-titles">
+                        <h2 id="exercise-title">Exercice</h2>
+                        <span class="exercise-progress"><span id="current-question">1</span> / <span id="total-questions">10</span></span>
                     </div>
-                    <div class="exercise-progress">
-                        <span id="current-question">1</span> / <span id="total-questions">10</span>
+                    <div class="exercise-timer" id="exercise-timer">
+                        <span class="timer-icon">⏱️</span><span id="timer-value">0:00</span>
                     </div>
                 </div>
-                <div class="exercise-content" id="exercise-container"></div>
+
+                <div class="question-dots" id="question-dots" aria-hidden="true"></div>
+
+                <div class="exercise-body">
+                    <div class="exercise-content" id="exercise-container"></div>
+                    <div class="exercise-feedback" id="feedback-container" role="status" aria-live="polite"></div>
+                </div>
+
                 <div class="exercise-actions">
-                    <button class="btn btn-primary" id="check-answer">Vérifier</button>
-                    <button class="btn btn-secondary" id="next-question" style="display: none;">Suivant →</button>
+                    <button class="btn btn-primary btn-xl" id="check-answer">Vérifier</button>
+                    <button class="btn btn-success btn-xl" id="next-question" hidden>Suivant →</button>
                 </div>
-                <div class="exercise-feedback" id="feedback-container"></div>
             </section>
 
-            <!-- Progress View -->
+            <!-- ---------- PROGRÈS ---------- -->
             <section id="progress-view" class="view">
-                <h2>📊 Mes Progrès</h2>
+                <h2 class="view-title">📊 Mes progrès</h2>
                 <div class="global-progress">
                     <div class="progress-circle">
-                        <svg viewBox="0 0 100 100">
+                        <svg viewBox="0 0 100 100" aria-hidden="true">
                             <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
                             <circle class="progress-fill-circle" cx="50" cy="50" r="45" id="global-progress-circle"></circle>
                         </svg>
                         <span class="progress-percentage" id="global-percentage">0%</span>
                     </div>
-                    <h3>Progression Globale</h3>
+                    <h3>Progression globale</h3>
                 </div>
                 <div class="stats-grid">
-                    <div class="stat-card"><span class="stat-icon">📝</span><span class="stat-value" id="total-completed">0</span><span class="stat-label">Fiches complétées</span></div>
+                    <div class="stat-card"><span class="stat-icon">📝</span><span class="stat-value" id="total-completed">0</span><span class="stat-label">Fiches terminées</span></div>
                     <div class="stat-card"><span class="stat-icon">⭐</span><span class="stat-value" id="total-stars">0</span><span class="stat-label">Étoiles gagnées</span></div>
                     <div class="stat-card"><span class="stat-icon">🎯</span><span class="stat-value" id="accuracy-rate">0%</span><span class="stat-label">Taux de réussite</span></div>
-                    <div class="stat-card"><span class="stat-icon">⚡</span><span class="stat-value" id="total-xp-stat">0</span><span class="stat-label">XP Total</span></div>
+                    <div class="stat-card"><span class="stat-icon">⚡</span><span class="stat-value" id="total-xp-stat">0</span><span class="stat-label">XP total</span></div>
                 </div>
+                <h3 class="sub-title">Par matière</h3>
                 <div class="subject-progress-list" id="subject-progress-list"></div>
             </section>
 
-            <!-- Badges View -->
+            <!-- ---------- BADGES ---------- -->
             <section id="badges-view" class="view">
-                <h2>🏅 Mes Badges</h2>
+                <h2 class="view-title">🏅 Mes badges</h2>
+                <p class="view-sub" id="badges-count">0 badge débloqué</p>
                 <div class="badges-grid" id="badges-container"></div>
             </section>
 
-            <!-- Settings View -->
+            <!-- ---------- RÉGLAGES ---------- -->
             <section id="settings-view" class="view">
-                <h2>⚙️ Paramètres</h2>
+                <h2 class="view-title">⚙️ Réglages</h2>
+
+                <div class="settings-section highlight">
+                    <h3>🔑 Mon code champion</h3>
+                    <p class="settings-help">Tape ce code sur un autre appareil pour y retrouver tous les progrès.</p>
+                    <div class="code-box" id="settings-code">ABC-DEF</div>
+                    <div class="settings-actions">
+                        <button class="btn btn-secondary" id="copy-code">📋 Copier</button>
+                        <button class="btn btn-ghost" id="switch-code">Utiliser un autre code</button>
+                    </div>
+                    <p class="settings-help" id="sync-detail">Dernière sauvegarde en ligne : jamais</p>
+                </div>
+
+                <div class="settings-section">
+                    <h3>💾 Sauvegarde de secours</h3>
+                    <p class="settings-help">Un fichier à garder sur l'ordinateur, au cas où.</p>
+                    <div class="settings-actions">
+                        <button class="btn btn-secondary" id="export-data">⬇️ Exporter</button>
+                        <button class="btn btn-secondary" id="import-data">⬆️ Importer</button>
+                        <input type="file" id="import-file" accept="application/json" hidden>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>🔊 Sons</h3>
+                    <label class="switch-row">
+                        <span>Sons de réussite et d'erreur</span>
+                        <input type="checkbox" id="toggle-sound" checked>
+                        <span class="switch"></span>
+                    </label>
+                    <label class="switch-row">
+                        <span>Passer automatiquement à la question suivante</span>
+                        <input type="checkbox" id="toggle-autonext" checked>
+                        <span class="switch"></span>
+                    </label>
+                </div>
+
                 <div class="settings-section">
                     <h3>🤖 Ajouter du contenu avec l'IA</h3>
                     <div class="api-key-input">
-                        <input type="password" id="openai-api-key" placeholder="Clé API OpenAI">
+                        <input type="password" id="openai-api-key" placeholder="Clé API OpenAI" autocomplete="off">
                         <button class="btn btn-primary" id="save-api-key">Enregistrer</button>
                     </div>
-                    <div class="ai-content-generator" id="ai-generator" style="display: none;">
-                        <h4>Générer du nouveau contenu</h4>
+                    <div class="ai-content-generator" id="ai-generator" hidden>
                         <select id="ai-subject"></select>
                         <textarea id="ai-prompt" placeholder="Décris le type d'exercice..."></textarea>
                         <button class="btn btn-primary" id="generate-content">Générer</button>
-                        <div id="ai-result"></div>
+                        <pre id="ai-result"></pre>
                     </div>
                 </div>
-                <div class="settings-section">
-                    <h3>🗑️ Réinitialiser</h3>
+
+                <div class="settings-section danger">
+                    <h3>🗑️ Recommencer à zéro</h3>
+                    <p class="settings-help">Efface tous les progrès de ce code. Cette action est définitive.</p>
                     <button class="btn btn-danger" id="reset-progress">Réinitialiser les progrès</button>
                 </div>
-                <div class="settings-section">
-                    <h3>📊 Exporter</h3>
-                    <button class="btn btn-secondary" id="export-data">Exporter en JSON</button>
-                </div>
             </section>
+
         </main>
 
-        <!-- Footer -->
-        <footer class="main-footer">
-            <p>🏆 Objectif : Major de la Classe ! 🏆</p>
-        </footer>
+        <!-- Navigation basse (mobile) -->
+        <nav class="bottom-nav" id="bottom-nav" aria-label="Navigation">
+            <button class="nav-btn active" data-view="home"><span class="nav-ico">🏠</span><span class="nav-label">Accueil</span></button>
+            <button class="nav-btn" data-view="challenges"><span class="nav-ico">🎯</span><span class="nav-label">Défis</span></button>
+            <button class="nav-btn" data-view="progress"><span class="nav-ico">📊</span><span class="nav-label">Progrès</span></button>
+            <button class="nav-btn" data-view="badges"><span class="nav-ico">🏅</span><span class="nav-label">Badges</span></button>
+            <button class="nav-btn" data-view="settings"><span class="nav-ico">⚙️</span><span class="nav-label">Réglages</span></button>
+        </nav>
     </div>
 
-    <!-- Result Modal -->
+    <!-- ============ MODALES ============ -->
     <div class="modal" id="result-modal">
-        <div class="modal-content">
+        <div class="modal-content" role="dialog" aria-modal="true">
             <div class="modal-header"><h2 id="modal-title">Bravo !</h2></div>
             <div class="modal-body">
                 <div class="result-stars" id="result-stars"></div>
@@ -238,30 +329,33 @@
                 <div class="result-stats"><span id="result-score"></span></div>
                 <div class="xp-gained" id="xp-gained">+0 XP</div>
             </div>
-            <div class="modal-footer"><button class="btn btn-primary" id="modal-close">Continuer</button></div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modal-retry">↻ Recommencer</button>
+                <button class="btn btn-primary" id="modal-close">Continuer</button>
+            </div>
         </div>
     </div>
 
-    <!-- Level Up Modal -->
     <div class="modal" id="levelup-modal">
-        <div class="modal-content levelup">
+        <div class="modal-content levelup" role="dialog" aria-modal="true">
             <div class="levelup-icon" id="levelup-icon">🎉</div>
-            <h2>Niveau Supérieur !</h2>
+            <h2>Niveau supérieur&nbsp;!</h2>
             <p id="levelup-name">Apprenti</p>
-            <button class="btn btn-primary" id="levelup-close">Super !</button>
+            <button class="btn btn-primary btn-xl" id="levelup-close">Super&nbsp;!</button>
         </div>
     </div>
 
-    <!-- Badge Unlock Modal -->
     <div class="modal" id="badge-modal">
-        <div class="modal-content badge-unlock">
+        <div class="modal-content badge-unlock" role="dialog" aria-modal="true">
             <div class="badge-unlock-icon" id="badge-unlock-icon">🏅</div>
-            <h2>Nouveau Badge !</h2>
-            <p id="badge-unlock-name">Badge Name</p>
-            <p id="badge-unlock-desc">Description</p>
-            <button class="btn btn-primary" id="badge-close">Génial !</button>
+            <h2>Nouveau badge&nbsp;!</h2>
+            <p id="badge-unlock-name">Badge</p>
+            <p class="muted" id="badge-unlock-desc">Description</p>
+            <button class="btn btn-primary btn-xl" id="badge-close">Génial&nbsp;!</button>
         </div>
     </div>
+
+    <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
 
     <script src="data.js"></script>
     <script src="data-ce2.js"></script>
