@@ -93,6 +93,15 @@ async function idbSet(key, value) {
     } catch (err) { /* ignore */ }
 }
 
+// Ne jamais rester bloqué sur une promesse qui ne se résout pas
+// (IndexedDB peut ne jamais répondre en navigation privée iOS).
+function withTimeout(promise, ms, fallback = null) {
+    return Promise.race([
+        promise.catch(() => fallback),
+        new Promise(resolve => setTimeout(() => resolve(fallback), ms))
+    ]);
+}
+
 async function idbGet(key) {
     const db = await idb();
     if (!db) return null;
@@ -351,12 +360,47 @@ function updateSyncDetail() {
 
 document.addEventListener('DOMContentLoaded', boot);
 
-async function boot() {
+// Filet de sécurité : quoi qu'il arrive, un écran doit s'afficher.
+// Sans cela, la moindre erreur de démarrage laissait une page blanche.
+function failsafeScreen(reason) {
+    console.warn('Démarrage de secours :', reason);
+    const ob = document.getElementById('onboarding');
+    const app = document.getElementById('app');
+    if (ob && app && ob.hidden && app.hidden) {
+        ob.hidden = false;
+        showOnboardingStep('ob-welcome');
+    }
+}
+
+window.addEventListener('error', e => failsafeScreen(e.message));
+window.addEventListener('unhandledrejection', e => failsafeScreen(e.reason));
+setTimeout(() => failsafeScreen('délai dépassé'), 4000);
+
+function boot() {
+    try {
+        initOnboarding();
+    } catch (err) {
+        failsafeScreen(err);
+        return;
+    }
+
+    state.profile = loadProfile();
+
+    // Décision synchrone : on affiche tout de suite le bon écran, avant
+    // le moindre await, pour ne jamais laisser l'utilisateur devant du vide.
+    if (state.profile) {
+        document.getElementById('onboarding').hidden = true;
+    } else {
+        document.getElementById('onboarding').hidden = false;
+        showOnboardingStep('ob-welcome');
+    }
+
+    bootAsync().catch(err => failsafeScreen(err));
+}
+
+async function bootAsync() {
     // Rend le stockage plus durable quand le navigateur le permet.
     try { if (navigator.storage?.persist) navigator.storage.persist(); } catch (err) { /* ignore */ }
-
-    initOnboarding();
-    state.profile = loadProfile();
 
     if (!state.profile) {
         const legacy = await readLocalProgress();
@@ -380,14 +424,20 @@ async function boot() {
 
 async function readLocalProgress() {
     let raw = lsGet(PROGRESS_KEY) || lsGet(BACKUP_KEY);
-    if (!raw) raw = await idbGet(PROGRESS_KEY);
     if (!raw) { for (const key of LEGACY_KEYS) { raw = lsGet(key); if (raw) break; } }
+    // IndexedDB seulement en dernier recours, et jamais plus de 1,5 s.
+    if (!raw) raw = await withTimeout(idbGet(PROGRESS_KEY), 1500, null);
     if (!raw) return null;
     try { return JSON.parse(raw); } catch (err) { return null; }
 }
 
 async function startWithProfile() {
-    const local = normalizeProgress(await readLocalProgress(), state.profile.name, state.profile.code);
+    let local;
+    try {
+        local = normalizeProgress(await readLocalProgress(), state.profile.name, state.profile.code);
+    } catch (err) {
+        local = defaultProgress(state.profile.name, state.profile.code);
+    }
     state.progress = local;
     startApp();
 
@@ -411,18 +461,21 @@ async function startWithProfile() {
     updateSyncDetail();
 }
 
+let appStarted = false;
+
 function startApp() {
+    // On montre l'interface AVANT d'initialiser : même si une brique
+    // échoue, l'écran n'est jamais vide.
     document.getElementById('onboarding').hidden = true;
     document.getElementById('app').hidden = false;
+    if (appStarted) return;
+    appStarted = true;
 
-    checkStreak();
-    initNavigation();
-    initClassSelector();
-    initDifficultyFilter();
-    initSettings();
-    initDailyChallengeBanner();
-    buildSubjectCards();
-    refreshEverything();
+    [checkStreak, initNavigation, initClassSelector, initDifficultyFilter,
+     initSettings, initDailyChallengeBanner, buildSubjectCards, refreshEverything]
+        .forEach(step => {
+            try { step(); } catch (err) { console.error(`Init ${step.name} a échoué`, err); }
+        });
 
     window.addEventListener('online', flushCloudSave);
     window.addEventListener('pagehide', beaconSave);

@@ -12,7 +12,7 @@
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icon-180.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=3.1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +20,9 @@
 <body>
 
     <!-- ============ ÉCRAN DE DÉMARRAGE / PROFIL ============ -->
-    <div class="onboarding" id="onboarding" hidden>
+    <!-- Visible par défaut : si le JavaScript échoue, l'enfant voit au moins
+         cet écran au lieu d'une page blanche. -->
+    <div class="onboarding" id="onboarding">
         <div class="onboarding-card">
 
             <!-- Étape 1 : bienvenue -->
@@ -357,8 +359,15 @@
 
     <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
 
-    <script src="data.js"></script>
-    <script src="data-ce2.js"></script>
-    <script src="app.js"></script>
+    <noscript>
+        <div class="noscript-warning">
+            Cette application a besoin de JavaScript pour fonctionner.
+            Active-le dans les réglages de ton navigateur, puis recharge la page.
+        </div>
+    </noscript>
+
+    <script src="data.js?v=3.1"></script>
+    <script src="data-ce2.js?v=3.1"></script>
+    <script src="app.js?v=3.1"></script>
 </body>
 </html>
