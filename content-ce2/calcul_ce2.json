@@ -1,0 +1,293 @@
+{
+  "key": "calcul_ce2",
+  "fiches": [
+    {
+      "id": 9,
+      "title": "Additions faciles",
+      "description": "Additionner de tete des nombres a 2 chiffres.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Combien font 23 + 15 ?", "options": ["37", "38", "39"], "answer": "38"},
+        {"type": "input", "question": "Calcule : 34 + 20", "answer": "54"},
+        {"type": "input", "question": "Calcule : 46 + 9", "answer": "55"},
+        {"type": "qcm", "question": "Combien font 27 + 30 ?", "options": ["55", "57", "60"], "answer": "57"},
+        {"type": "input", "question": "Calcule : 18 + 22", "answer": "40"},
+        {"type": "input", "question": "Calcule : 36 + 14", "answer": "50"},
+        {"type": "qcm", "question": "Combien font 33 + 28 ?", "options": ["59", "61", "63"], "answer": "61"},
+        {"type": "input", "question": "Calcule : 47 + 12", "answer": "59"},
+        {"type": "input", "question": "Calcule : 56 + 7", "answer": "63"},
+        {"type": "input", "question": "Lina a 24 billes. Elle en gagne 17 a la recreation. Combien de billes a-t-elle maintenant ?", "answer": "41"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Soustractions faciles",
+      "description": "Soustraire de tete des nombres a 2 chiffres.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Combien font 30 - 12 ?", "options": ["16", "18", "20"], "answer": "18"},
+        {"type": "input", "question": "Calcule : 45 - 20", "answer": "25"},
+        {"type": "input", "question": "Calcule : 52 - 7", "answer": "45"},
+        {"type": "qcm", "question": "Combien font 60 - 25 ?", "options": ["35", "40", "45"], "answer": "35"},
+        {"type": "input", "question": "Calcule : 38 - 19", "answer": "19"},
+        {"type": "input", "question": "Calcule : 74 - 30", "answer": "44"},
+        {"type": "qcm", "question": "Combien font 50 - 23 ?", "options": ["23", "27", "33"], "answer": "27"},
+        {"type": "input", "question": "Calcule : 66 - 6", "answer": "60"},
+        {"type": "input", "question": "Calcule : 81 - 9", "answer": "72"},
+        {"type": "input", "question": "Le patissier a prepare 35 gateaux. Il en vend 12. Combien de gateaux lui reste-t-il ?", "answer": "23"}
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Complements a 10 et a 100",
+      "description": "Trouver ce qu'il faut ajouter pour atteindre 10 ou 100.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Combien faut-il ajouter a 7 pour faire 10 ?", "answer": "3"},
+        {"type": "input", "question": "Combien faut-il ajouter a 4 pour faire 10 ?", "answer": "6"},
+        {"type": "qcm", "question": "60 + ? = 100. Quel est le nombre manquant ?", "options": ["30", "40", "50"], "answer": "40"},
+        {"type": "input", "question": "25 + ? = 100. Quel est le nombre manquant ?", "answer": "75"},
+        {"type": "input", "question": "83 + ? = 100. Quel est le nombre manquant ?", "answer": "17"},
+        {"type": "qcm", "question": "90 + ? = 100. Quel est le nombre manquant ?", "options": ["5", "10", "20"], "answer": "10"},
+        {"type": "input", "question": "38 + ? = 100. Quel est le nombre manquant ?", "answer": "62"},
+        {"type": "input", "question": "55 + ? = 100. Quel est le nombre manquant ?", "answer": "45"},
+        {"type": "qcm", "question": "Combien faut-il ajouter a 2 pour faire 10 ?", "options": ["6", "7", "8"], "answer": "8"},
+        {"type": "input", "question": "Le livre de Rayan a 100 pages. Il en a deja lu 64. Combien de pages lui reste-t-il a lire ?", "answer": "36"}
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Doubles et moities",
+      "description": "Calculer rapidement le double ou la moitie d'un nombre.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Quel est le double de 6 ?", "answer": "12"},
+        {"type": "input", "question": "Quel est le double de 15 ?", "answer": "30"},
+        {"type": "qcm", "question": "Quel est le double de 25 ?", "options": ["40", "50", "55"], "answer": "50"},
+        {"type": "input", "question": "Quelle est la moitie de 18 ?", "answer": "9"},
+        {"type": "input", "question": "Quelle est la moitie de 40 ?", "answer": "20"},
+        {"type": "input", "question": "Quel est le double de 34 ?", "answer": "68"},
+        {"type": "qcm", "question": "Quelle est la moitie de 50 ?", "options": ["20", "25", "30"], "answer": "25"},
+        {"type": "input", "question": "Quel est le double de 45 ?", "answer": "90"},
+        {"type": "input", "question": "Quelle est la moitie de 36 ?", "answer": "18"},
+        {"type": "input", "question": "Au foot, 24 joueurs se separent en deux equipes egales. Combien de joueurs y a-t-il dans chaque equipe ?", "answer": "12"}
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Suites de nombres",
+      "description": "Trouver le nombre qui continue une suite reguliere.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Complete la suite : 5, 10, 15, 20, ...", "answer": "25"},
+        {"type": "input", "question": "Complete la suite : 2, 4, 6, 8, ...", "answer": "10"},
+        {"type": "qcm", "question": "Quel nombre continue la suite 10, 20, 30 ?", "options": ["35", "40", "50"], "answer": "40"},
+        {"type": "input", "question": "Complete la suite : 3, 6, 9, 12, ...", "answer": "15"},
+        {"type": "input", "question": "Complete la suite : 100, 90, 80, ...", "answer": "70"},
+        {"type": "input", "question": "Complete la suite : 7, 14, 21, ...", "answer": "28"},
+        {"type": "qcm", "question": "Quel nombre continue la suite 50, 45, 40 ?", "options": ["30", "35", "38"], "answer": "35"},
+        {"type": "input", "question": "Complete la suite : 4, 8, 12, 16, ...", "answer": "20"},
+        {"type": "input", "question": "Complete la suite : 11, 22, 33, ...", "answer": "44"},
+        {"type": "qcm", "question": "Quel nombre continue la suite 25, 50, 75 ?", "options": ["90", "95", "100"], "answer": "100"}
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Additions a 3 chiffres en tete",
+      "description": "Additionner de tete des nombres a 3 chiffres sans poser l'operation.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Calcule : 120 + 230", "answer": "350"},
+        {"type": "input", "question": "Calcule : 145 + 30", "answer": "175"},
+        {"type": "qcm", "question": "Combien font 200 + 356 ?", "options": ["456", "546", "556"], "answer": "556"},
+        {"type": "input", "question": "Calcule : 234 + 123", "answer": "357"},
+        {"type": "input", "question": "Calcule : 150 + 150", "answer": "300"},
+        {"type": "qcm", "question": "Combien font 315 + 240 ?", "options": ["545", "555", "565"], "answer": "555"},
+        {"type": "input", "question": "Calcule : 128 + 40", "answer": "168"},
+        {"type": "input", "question": "Calcule : 260 + 140", "answer": "400"},
+        {"type": "input", "question": "Calcule : 250 + 125", "answer": "375"},
+        {"type": "input", "question": "L'ecole compte 214 filles et 135 garcons. Combien y a-t-il d'eleves en tout ?", "answer": "349"}
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Complements a 1000",
+      "description": "Trouver ce qu'il faut ajouter pour atteindre 1000.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "400 + ? = 1000. Quel est le nombre manquant ?", "answer": "600"},
+        {"type": "input", "question": "250 + ? = 1000. Quel est le nombre manquant ?", "answer": "750"},
+        {"type": "qcm", "question": "900 + ? = 1000. Quel est le nombre manquant ?", "options": ["90", "100", "110"], "answer": "100"},
+        {"type": "input", "question": "650 + ? = 1000. Quel est le nombre manquant ?", "answer": "350"},
+        {"type": "input", "question": "380 + ? = 1000. Quel est le nombre manquant ?", "answer": "620"},
+        {"type": "input", "question": "720 + ? = 1000. Quel est le nombre manquant ?", "answer": "280"},
+        {"type": "qcm", "question": "999 + ? = 1000. Quel est le nombre manquant ?", "options": ["1", "10", "11"], "answer": "1"},
+        {"type": "input", "question": "150 + ? = 1000. Quel est le nombre manquant ?", "answer": "850"},
+        {"type": "qcm", "question": "475 + ? = 1000. Quel est le nombre manquant ?", "options": ["515", "525", "535"], "answer": "525"},
+        {"type": "input", "question": "Pour gagner le jeu video, il faut 1000 points. Rayan a deja 640 points. Combien de points lui manque-t-il ?", "answer": "360"}
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Multiplier par 10, 100, 1000",
+      "description": "Multiplier un nombre par 10, 100 ou 1000 en ajoutant des zeros.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Calcule : 7 x 10", "answer": "70"},
+        {"type": "input", "question": "Calcule : 23 x 10", "answer": "230"},
+        {"type": "qcm", "question": "Combien font 5 x 100 ?", "options": ["50", "500", "5000"], "answer": "500"},
+        {"type": "input", "question": "Calcule : 42 x 100", "answer": "4200"},
+        {"type": "input", "question": "Calcule : 6 x 1000", "answer": "6000"},
+        {"type": "input", "question": "Calcule : 80 x 10", "answer": "800"},
+        {"type": "qcm", "question": "Combien font 13 x 100 ?", "options": ["130", "1300", "13000"], "answer": "1300"},
+        {"type": "input", "question": "Calcule : 9 x 1000", "answer": "9000"},
+        {"type": "input", "question": "Calcule : 35 x 10", "answer": "350"},
+        {"type": "input", "question": "La fermiere range 25 oeufs par boite. Combien d'oeufs y a-t-il dans 10 boites ?", "answer": "250"}
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Multiplier par 5 et par 9",
+      "description": "Utiliser les astuces : x5 c'est x10 puis la moitie, x9 c'est x10 moins le nombre.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Calcule : 6 x 5", "answer": "30"},
+        {"type": "input", "question": "Calcule : 8 x 5", "answer": "40"},
+        {"type": "qcm", "question": "Combien font 12 x 5 ?", "options": ["55", "60", "65"], "answer": "60"},
+        {"type": "input", "question": "Calcule : 14 x 5", "answer": "70"},
+        {"type": "input", "question": "Calcule : 7 x 9", "answer": "63"},
+        {"type": "qcm", "question": "Combien font 9 x 9 ?", "options": ["72", "81", "90"], "answer": "81"},
+        {"type": "input", "question": "Calcule : 6 x 9", "answer": "54"},
+        {"type": "input", "question": "Calcule : 12 x 9", "answer": "108"},
+        {"type": "input", "question": "Calcule : 9 x 5", "answer": "45"},
+        {"type": "input", "question": "Rayan colle 8 images sur chacune des 9 pages de son album. Combien d'images colle-t-il en tout ?", "answer": "72"}
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Les quadruples",
+      "description": "Calculer le quadruple d'un nombre : le double du double.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Quel est le quadruple de 5 ?", "answer": "20"},
+        {"type": "input", "question": "Quel est le quadruple de 8 ?", "answer": "32"},
+        {"type": "qcm", "question": "Quel est le quadruple de 12 ?", "options": ["44", "48", "52"], "answer": "48"},
+        {"type": "input", "question": "Quel est le quadruple de 25 ?", "answer": "100"},
+        {"type": "input", "question": "Quel est le quadruple de 15 ?", "answer": "60"},
+        {"type": "input", "question": "Quel est le double du double de 7 ?", "answer": "28"},
+        {"type": "qcm", "question": "Quel est le quadruple de 30 ?", "options": ["90", "120", "150"], "answer": "120"},
+        {"type": "input", "question": "Quel est le quadruple de 9 ?", "answer": "36"},
+        {"type": "input", "question": "Quel est le quadruple de 11 ?", "answer": "44"},
+        {"type": "input", "question": "Un sachet contient 16 billes. Combien de billes y a-t-il dans 4 sachets ?", "answer": "64"}
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Additions posees avec retenue",
+      "description": "Poser et calculer des additions avec retenue.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Pose et calcule : 47 + 38", "answer": "85"},
+        {"type": "input", "question": "Pose et calcule : 156 + 27", "answer": "183"},
+        {"type": "qcm", "question": "Combien font 268 + 154 ?", "options": ["412", "422", "432"], "answer": "422"},
+        {"type": "input", "question": "Pose et calcule : 375 + 248", "answer": "623"},
+        {"type": "input", "question": "Pose et calcule : 189 + 56", "answer": "245"},
+        {"type": "input", "question": "Pose et calcule : 437 + 385", "answer": "822"},
+        {"type": "qcm", "question": "Combien font 296 + 178 ?", "options": ["464", "474", "484"], "answer": "474"},
+        {"type": "input", "question": "Pose et calcule : 549 + 263", "answer": "812"},
+        {"type": "input", "question": "Pose et calcule : 328 + 195", "answer": "523"},
+        {"type": "input", "question": "La bibliotheque recoit 246 livres en janvier et 187 livres en fevrier. Combien de livres recoit-elle en tout ?", "answer": "433"}
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Soustractions posees avec retenue",
+      "description": "Poser et calculer des soustractions avec retenue.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Pose et calcule : 72 - 38", "answer": "34"},
+        {"type": "input", "question": "Pose et calcule : 143 - 56", "answer": "87"},
+        {"type": "qcm", "question": "Combien font 305 - 127 ?", "options": ["168", "178", "188"], "answer": "178"},
+        {"type": "input", "question": "Pose et calcule : 412 - 245", "answer": "167"},
+        {"type": "input", "question": "Pose et calcule : 261 - 183", "answer": "78"},
+        {"type": "input", "question": "Pose et calcule : 500 - 236", "answer": "264"},
+        {"type": "qcm", "question": "Combien font 634 - 458 ?", "options": ["166", "176", "186"], "answer": "176"},
+        {"type": "input", "question": "Pose et calcule : 821 - 345", "answer": "476"},
+        {"type": "input", "question": "Pose et calcule : 230 - 145", "answer": "85"},
+        {"type": "input", "question": "L'ecole a commande 350 cahiers. Elle en a deja distribue 175. Combien de cahiers reste-t-il ?", "answer": "175"}
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Diviser par 2, 3 et 5",
+      "description": "Partager un nombre en 2, 3 ou 5 parts egales.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Calcule : 18 divise par 2", "answer": "9"},
+        {"type": "input", "question": "Calcule : 36 divise par 2", "answer": "18"},
+        {"type": "qcm", "question": "Combien font 21 divise par 3 ?", "options": ["6", "7", "8"], "answer": "7"},
+        {"type": "input", "question": "Calcule : 27 divise par 3", "answer": "9"},
+        {"type": "input", "question": "Calcule : 40 divise par 5", "answer": "8"},
+        {"type": "input", "question": "Calcule : 35 divise par 5", "answer": "7"},
+        {"type": "qcm", "question": "Combien font 60 divise par 3 ?", "options": ["18", "20", "22"], "answer": "20"},
+        {"type": "input", "question": "Calcule : 90 divise par 2", "answer": "45"},
+        {"type": "input", "question": "Calcule : 24 divise par 3", "answer": "8"},
+        {"type": "input", "question": "Mamie partage 30 bonbons entre ses 5 petits-enfants. Combien de bonbons recoit chacun ?", "answer": "6"}
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Multiplications posees",
+      "description": "Poser des multiplications a 1 chiffre puis a 2 chiffres.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Pose et calcule : 34 x 2", "answer": "68"},
+        {"type": "input", "question": "Pose et calcule : 123 x 3", "answer": "369"},
+        {"type": "qcm", "question": "Combien font 214 x 4 ?", "options": ["846", "856", "866"], "answer": "856"},
+        {"type": "input", "question": "Pose et calcule : 56 x 7", "answer": "392"},
+        {"type": "input", "question": "Pose et calcule : 148 x 5", "answer": "740"},
+        {"type": "input", "question": "Pose et calcule : 23 x 12", "answer": "276"},
+        {"type": "qcm", "question": "Combien font 45 x 21 ?", "options": ["935", "945", "955"], "answer": "945"},
+        {"type": "input", "question": "Pose et calcule : 36 x 15", "answer": "540"},
+        {"type": "input", "question": "Pose et calcule : 127 x 6", "answer": "762"},
+        {"type": "input", "question": "Dans la salle de spectacle, il y a 24 rangees de 13 chaises. Combien de chaises y a-t-il en tout ?", "answer": "312"}
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Estimations et parentheses",
+      "description": "Estimer un ordre de grandeur et calculer en ligne avec des parentheses.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Sans calculer exactement, 198 + 305 est proche de :", "options": ["400", "500", "600"], "answer": "500"},
+        {"type": "qcm", "question": "Sans calculer exactement, 402 - 195 est proche de :", "options": ["100", "200", "300"], "answer": "200"},
+        {"type": "qcm", "question": "Sans calculer exactement, 49 x 2 est proche de :", "options": ["80", "100", "120"], "answer": "100"},
+        {"type": "qcm", "question": "Sans calculer exactement, 297 + 503 est proche de :", "options": ["700", "800", "900"], "answer": "800"},
+        {"type": "input", "question": "Calcule : (5 + 3) x 2", "answer": "16"},
+        {"type": "input", "question": "Calcule : (10 - 4) x 5", "answer": "30"},
+        {"type": "input", "question": "Calcule : 20 - (6 + 4)", "answer": "10"},
+        {"type": "input", "question": "Calcule : (2 + 3) x 4", "answer": "20"},
+        {"type": "input", "question": "Calcule : 100 - (25 + 25)", "answer": "50"},
+        {"type": "qcm", "question": "Quel est le nombre 687 arrondi a la dizaine la plus proche ?", "options": ["680", "690", "700"], "answer": "690"}
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Problemes de calcul rapide",
+      "description": "Resoudre vite des petits problemes de la vie de tous les jours.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Le boulanger vend 45 croissants le matin et 38 l'apres-midi. Combien de croissants a-t-il vendus en tout ?", "answer": "83"},
+        {"type": "input", "question": "Rayan a 100 billes. Il en donne 37 a son ami. Combien de billes lui reste-t-il ?", "answer": "63"},
+        {"type": "qcm", "question": "Le fermier a 6 boites de 25 oeufs. Combien d'oeufs a-t-il en tout ?", "options": ["125", "150", "175"], "answer": "150"},
+        {"type": "input", "question": "La course fait 500 metres. Malik a deja couru 275 metres. Combien de metres lui reste-t-il a courir ?", "answer": "225"},
+        {"type": "input", "question": "4 amis se partagent equitablement 36 cartes. Combien de cartes recoit chacun ?", "answer": "9"},
+        {"type": "input", "question": "Un livre coute 8 euros. Combien coutent 9 livres ?", "answer": "72", "accept": ["72", "72 euros"]},
+        {"type": "qcm", "question": "Combien y a-t-il de jours dans 3 semaines ?", "options": ["14", "21", "28"], "answer": "21"},
+        {"type": "input", "question": "Un car transporte 52 enfants. Combien d'enfants y a-t-il dans 2 cars pleins ?", "answer": "104"},
+        {"type": "qcm", "question": "La piscine mesure 25 metres. Nadia nage 4 longueurs. Quelle distance a-t-elle nagee ?", "options": ["75 metres", "100 metres", "125 metres"], "answer": "100 metres"},
+        {"type": "input", "question": "Maman achete 3 packs de 6 bouteilles d'eau. Combien de bouteilles achete-t-elle en tout ?", "answer": "18"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "key": "nombres_ce2",
+  "fiches": [
+    {
+      "id": 1,
+      "title": "Les nombres jusqu'à 100 (révision)",
+      "description": "Lire, écrire et connaître les nombres jusqu'à 100 pour bien démarrer le CE2.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Comment s'écrit en chiffres « soixante-douze » ?", "options": ["62", "72", "92"], "answer": "72"},
+        {"type": "input", "question": "Écris en chiffres : quatre-vingt-quinze.", "answer": "95"},
+        {"type": "qcm", "question": "Quel est le plus grand de ces nombres ?", "options": ["87", "78", "79"], "answer": "87"},
+        {"type": "input", "question": "Écris en lettres le nombre 60.", "answer": "soixante", "accept": ["soixante"]},
+        {"type": "qcm", "question": "Le nombre « quatre-vingts » s'écrit en chiffres :", "options": ["70", "80", "90"], "answer": "80"},
+        {"type": "input", "question": "Quel nombre vient juste après 89 ?", "answer": "90"},
+        {"type": "input", "question": "Quel nombre vient juste avant 70 ?", "answer": "69"},
+        {"type": "qcm", "question": "Dans le nombre 47, quel est le chiffre des dizaines ?", "options": ["4", "7", "47"], "answer": "4"},
+        {"type": "input", "question": "Écris en chiffres : cinquante-huit.", "answer": "58"},
+        {"type": "qcm", "question": "Combien font 10 dizaines ?", "options": ["10", "100", "1000"], "answer": "100"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lire et écrire les nombres jusqu'à 1 000",
+      "description": "Passer de l'écriture en lettres à l'écriture en chiffres pour les nombres jusqu'à 1 000.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Écris en chiffres : trois cent quarante-deux.", "answer": "342"},
+        {"type": "qcm", "question": "Comment s'écrit en chiffres « six cent sept » ?", "options": ["607", "670", "677"], "answer": "607"},
+        {"type": "input", "question": "Écris en chiffres : neuf cent quatre-vingt-dix-neuf.", "answer": "999"},
+        {"type": "qcm", "question": "Comment se lit le nombre 805 ?", "options": ["huit cent cinq", "huit cent cinquante", "huit mille cinq"], "answer": "huit cent cinq"},
+        {"type": "input", "question": "Écris en chiffres : cinq cents.", "answer": "500"},
+        {"type": "qcm", "question": "Comment se lit le nombre 460 ?", "options": ["quatre cent six", "quatre cent soixante", "quatre cent seize"], "answer": "quatre cent soixante"},
+        {"type": "input", "question": "Écris en chiffres : sept cent treize.", "answer": "713"},
+        {"type": "qcm", "question": "Quel nombre a un zéro comme chiffre des dizaines ?", "options": ["208", "280", "288"], "answer": "208"},
+        {"type": "input", "question": "Écris en chiffres : deux cent quatre-vingts.", "answer": "280"},
+        {"type": "qcm", "question": "Comment se lit le nombre 1 000 ?", "options": ["mille", "cent", "dix mille"], "answer": "mille"},
+        {"type": "input", "question": "Écris en chiffres : huit cent soixante-quinze.", "answer": "875"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Écrire les nombres en lettres jusqu'à 1 000",
+      "description": "Écrire correctement les nombres en lettres, avec les règles de « cent » et « vingt ».",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Écris en lettres le nombre 134.", "answer": "cent trente-quatre", "accept": ["cent trente-quatre", "cent-trente-quatre", "cent trente quatre"]},
+        {"type": "input", "question": "Écris en lettres le nombre 400.", "answer": "quatre cents", "accept": ["quatre cents", "quatre-cents"]},
+        {"type": "input", "question": "Écris en lettres le nombre 405.", "answer": "quatre cent cinq", "accept": ["quatre cent cinq", "quatre-cent-cinq"]},
+        {"type": "input", "question": "Écris en lettres le nombre 271.", "answer": "deux cent soixante et onze", "accept": ["deux cent soixante et onze", "deux-cent-soixante-et-onze", "deux cent soixante-et-onze"]},
+        {"type": "qcm", "question": "Quelle est l'écriture correcte du nombre 300 ?", "options": ["trois cents", "trois cent", "troi cents"], "answer": "trois cents"},
+        {"type": "input", "question": "Écris en lettres le nombre 580.", "answer": "cinq cent quatre-vingts", "accept": ["cinq cent quatre-vingts", "cinq-cent-quatre-vingts", "cinq cent quatre vingts"]},
+        {"type": "qcm", "question": "Quelle est l'écriture correcte du nombre 692 ?", "options": ["six cent quatre-vingt-douze", "six cent quatre-vingts-douze", "six cent douze-vingts"], "answer": "six cent quatre-vingt-douze"},
+        {"type": "input", "question": "Écris en lettres le nombre 1 000.", "answer": "mille", "accept": ["mille"]},
+        {"type": "input", "question": "Écris en lettres le nombre 816.", "answer": "huit cent seize", "accept": ["huit cent seize", "huit-cent-seize"]},
+        {"type": "qcm", "question": "Quelle est l'écriture correcte du nombre 200 ?", "options": ["deux cents", "deux cent", "deux sans"], "answer": "deux cents"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Décomposer les nombres jusqu'à 1 000",
+      "description": "Décomposer un nombre en centaines, dizaines et unités, et recomposer un nombre.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Que vaut 100 + 40 + 4 ?", "options": ["144", "1404", "1044"], "answer": "144"},
+        {"type": "input", "question": "5 centaines + 3 dizaines + 7 unités = ?", "answer": "537"},
+        {"type": "qcm", "question": "Quelle est la bonne décomposition de 268 ?", "options": ["200 + 60 + 8", "200 + 6 + 8", "20 + 60 + 8"], "answer": "200 + 60 + 8"},
+        {"type": "input", "question": "700 + 90 + 2 = ?", "answer": "792"},
+        {"type": "qcm", "question": "Dans le nombre 481, le chiffre des centaines est :", "options": ["4", "8", "1"], "answer": "4"},
+        {"type": "input", "question": "Dans le nombre 356, quel est le chiffre des unités ?", "answer": "6"},
+        {"type": "qcm", "question": "3 centaines + 5 unités = ?", "options": ["305", "350", "35"], "answer": "305"},
+        {"type": "input", "question": "600 + 4 = ?", "answer": "604"},
+        {"type": "qcm", "question": "Quelle est la bonne décomposition de 970 ?", "options": ["900 + 70", "90 + 70", "900 + 7"], "answer": "900 + 70"},
+        {"type": "input", "question": "Dans le nombre 823, quel est le chiffre des dizaines ?", "answer": "2"},
+        {"type": "input", "question": "9 centaines + 9 dizaines + 9 unités = ?", "answer": "999"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Comparer et ranger les nombres jusqu'à 1 000",
+      "description": "Utiliser les signes <, > et =, trouver le plus grand, le plus petit, et ranger des nombres.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est le plus grand de ces nombres ?", "options": ["372", "327", "273"], "answer": "372"},
+        {"type": "qcm", "question": "Quel signe faut-il écrire : 456 ... 465 ?", "options": ["<", ">", "="], "answer": "<"},
+        {"type": "input", "question": "Quel est le plus petit de ces nombres : 504, 450, 540 ?", "answer": "450"},
+        {"type": "qcm", "question": "Quelle liste est rangée dans l'ordre croissant ?", "options": ["189, 198, 213", "198, 189, 213", "213, 198, 189"], "answer": "189, 198, 213"},
+        {"type": "input", "question": "Quel est le plus grand : 799 ou 800 ?", "answer": "800"},
+        {"type": "qcm", "question": "Quel signe faut-il écrire : 630 ... 630 ?", "options": ["<", ">", "="], "answer": "="},
+        {"type": "input", "question": "Quel est le plus grand de ces nombres : 909, 990, 899 ?", "answer": "990"},
+        {"type": "qcm", "question": "Quel signe faut-il écrire : 721 ... 712 ?", "options": ["<", ">", "="], "answer": ">"},
+        {"type": "qcm", "question": "Quelle liste est rangée dans l'ordre décroissant ?", "options": ["875, 857, 785", "785, 857, 875", "857, 875, 785"], "answer": "875, 857, 785"},
+        {"type": "input", "question": "Quel nombre entier est plus grand que 599 et plus petit que 601 ?", "answer": "600"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Suites de 2 en 2, de 5 en 5, de 10 en 10",
+      "description": "Continuer une suite de nombres en avançant ou en reculant de 2 en 2, de 5 en 5 ou de 10 en 10.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Continue la suite de 2 en 2 : 12, 14, 16, ...", "answer": "18"},
+        {"type": "input", "question": "Continue la suite de 5 en 5 : 20, 25, 30, ...", "answer": "35"},
+        {"type": "input", "question": "Continue la suite de 10 en 10 : 130, 140, 150, ...", "answer": "160"},
+        {"type": "qcm", "question": "Quel nombre manque dans la suite de 5 en 5 : 35, 40, ..., 50 ?", "options": ["44", "45", "46"], "answer": "45"},
+        {"type": "input", "question": "Continue la suite de 2 en 2 en reculant : 60, 58, 56, ...", "answer": "54"},
+        {"type": "qcm", "question": "Quelle suite avance bien de 5 en 5 ?", "options": ["105, 110, 115", "105, 115, 120", "105, 106, 107"], "answer": "105, 110, 115"},
+        {"type": "input", "question": "Continue la suite de 10 en 10 : 470, 480, 490, ...", "answer": "500"},
+        {"type": "input", "question": "Continue la suite de 5 en 5 en reculant : 200, 195, 190, ...", "answer": "185"},
+        {"type": "qcm", "question": "Quel nombre manque dans la suite de 10 en 10 : 240, ..., 260, 270 ?", "options": ["245", "250", "255"], "answer": "250"},
+        {"type": "input", "question": "Continue la suite de 2 en 2 : 96, 98, 100, ...", "answer": "102"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Nombres pairs et nombres impairs",
+      "description": "Reconnaître les nombres pairs et impairs grâce à leur chiffre des unités.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quel nombre est pair ?", "options": ["27", "34", "45"], "answer": "34"},
+        {"type": "qcm", "question": "Quel nombre est impair ?", "options": ["56", "71", "88"], "answer": "71"},
+        {"type": "input", "question": "Le nombre 128 est-il pair ou impair ?", "answer": "pair"},
+        {"type": "input", "question": "Le nombre 345 est-il pair ou impair ?", "answer": "impair"},
+        {"type": "qcm", "question": "Un nombre pair se termine toujours par :", "options": ["0, 2, 4, 6 ou 8", "1, 3, 5, 7 ou 9", "n'importe quel chiffre"], "answer": "0, 2, 4, 6 ou 8"},
+        {"type": "input", "question": "Quel est le nombre pair qui vient juste après 45 ?", "answer": "46"},
+        {"type": "input", "question": "Quel est le nombre impair qui vient juste avant 100 ?", "answer": "99"},
+        {"type": "qcm", "question": "Dans quelle liste tous les nombres sont-ils pairs ?", "options": ["12, 46, 78", "12, 45, 78", "13, 46, 79"], "answer": "12, 46, 78"},
+        {"type": "input", "question": "Le nombre 2 000 est-il pair ou impair ?", "answer": "pair"},
+        {"type": "qcm", "question": "Quel nombre est impair ?", "options": ["430", "403", "434"], "answer": "403"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Lire et écrire les nombres jusqu'à 10 000",
+      "description": "Lire et écrire en chiffres les grands nombres, avec les milliers.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Écris en chiffres : trois mille cinq cent vingt.", "answer": "3520", "accept": ["3520", "3 520"]},
+        {"type": "qcm", "question": "Comment s'écrit en chiffres « deux mille sept » ?", "options": ["2007", "2700", "2070"], "answer": "2007"},
+        {"type": "input", "question": "Écris en chiffres : neuf mille neuf cent quatre-vingt-dix-neuf.", "answer": "9999", "accept": ["9999", "9 999"]},
+        {"type": "qcm", "question": "Comment se lit le nombre 4 060 ?", "options": ["quatre mille soixante", "quatre mille six", "quatre mille six cents"], "answer": "quatre mille soixante"},
+        {"type": "input", "question": "Écris en chiffres : six mille huit cents.", "answer": "6800", "accept": ["6800", "6 800"]},
+        {"type": "qcm", "question": "Comment s'écrit en chiffres « cinq mille quarante-deux » ?", "options": ["5042", "5420", "5402"], "answer": "5042"},
+        {"type": "input", "question": "Écris en chiffres : huit mille.", "answer": "8000", "accept": ["8000", "8 000"]},
+        {"type": "qcm", "question": "Comment se lit le nombre 7 305 ?", "options": ["sept mille trois cent cinq", "sept mille trente-cinq", "sept mille trois cent cinquante"], "answer": "sept mille trois cent cinq"},
+        {"type": "input", "question": "Écris en chiffres : mille un.", "answer": "1001", "accept": ["1001", "1 001"]},
+        {"type": "input", "question": "Écris en chiffres : deux mille six cent quatre-vingt-quatorze.", "answer": "2694", "accept": ["2694", "2 694"]},
+        {"type": "qcm", "question": "Comment se lit le nombre 10 000 ?", "options": ["dix mille", "mille", "cent mille"], "answer": "dix mille"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Écrire les nombres en lettres jusqu'à 10 000",
+      "description": "Écrire en lettres les nombres avec des milliers, en se souvenant que « mille » est invariable.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Écris en lettres le nombre 2 345.", "answer": "deux mille trois cent quarante-cinq", "accept": ["deux mille trois cent quarante-cinq", "deux-mille-trois-cent-quarante-cinq", "deux mille trois cent quarante cinq"]},
+        {"type": "qcm", "question": "Quelle est l'écriture correcte du nombre 3 000 ?", "options": ["trois mille", "trois milles", "trois mils"], "answer": "trois mille"},
+        {"type": "input", "question": "Écris en lettres le nombre 4 500.", "answer": "quatre mille cinq cents", "accept": ["quatre mille cinq cents", "quatre-mille-cinq-cents"]},
+        {"type": "input", "question": "Écris en lettres le nombre 6 009.", "answer": "six mille neuf", "accept": ["six mille neuf", "six-mille-neuf"]},
+        {"type": "qcm", "question": "Quelle est l'écriture correcte du nombre 5 080 ?", "options": ["cinq mille quatre-vingts", "cinq mille quatre-vingt", "cinq milles quatre-vingts"], "answer": "cinq mille quatre-vingts"},
+        {"type": "input", "question": "Écris en lettres le nombre 7 777.", "answer": "sept mille sept cent soixante-dix-sept", "accept": ["sept mille sept cent soixante-dix-sept", "sept-mille-sept-cent-soixante-dix-sept", "sept mille sept cent soixante dix sept"]},
+        {"type": "input", "question": "Écris en lettres le nombre 1 015.", "answer": "mille quinze", "accept": ["mille quinze", "mille-quinze"]},
+        {"type": "qcm", "question": "Quelle est l'écriture correcte du nombre 9 100 ?", "options": ["neuf mille cent", "neuf mille un cent", "neuf cent mille"], "answer": "neuf mille cent"},
+        {"type": "input", "question": "Écris en lettres le nombre 8 642.", "answer": "huit mille six cent quarante-deux", "accept": ["huit mille six cent quarante-deux", "huit-mille-six-cent-quarante-deux", "huit mille six cent quarante deux"]},
+        {"type": "input", "question": "Écris en lettres le nombre 10 000.", "answer": "dix mille", "accept": ["dix mille", "dix-mille"]}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Décomposer les nombres jusqu'à 10 000",
+      "description": "Décomposer et recomposer les nombres avec les milliers, centaines, dizaines et unités.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "4 milliers + 2 centaines + 7 dizaines + 5 unités = ?", "answer": "4275", "accept": ["4275", "4 275"]},
+        {"type": "qcm", "question": "Quelle est la bonne décomposition de 3 608 ?", "options": ["3000 + 600 + 8", "3000 + 60 + 8", "300 + 600 + 8"], "answer": "3000 + 600 + 8"},
+        {"type": "input", "question": "5000 + 300 + 20 + 1 = ?", "answer": "5321", "accept": ["5321", "5 321"]},
+        {"type": "qcm", "question": "Dans le nombre 7 294, le chiffre des milliers est :", "options": ["7", "2", "9"], "answer": "7"},
+        {"type": "input", "question": "Dans le nombre 8 156, quel est le chiffre des centaines ?", "answer": "1"},
+        {"type": "input", "question": "6 milliers + 4 dizaines = ?", "answer": "6040", "accept": ["6040", "6 040"]},
+        {"type": "qcm", "question": "Quelle est la bonne décomposition de 9 999 ?", "options": ["9000 + 900 + 90 + 9", "9000 + 90 + 9", "900 + 900 + 90 + 9"], "answer": "9000 + 900 + 90 + 9"},
+        {"type": "input", "question": "2000 + 500 + 90 + 9 = ?", "answer": "2599", "accept": ["2599", "2 599"]},
+        {"type": "qcm", "question": "Dans le nombre 4 703, le chiffre des dizaines est :", "options": ["0", "7", "3"], "answer": "0"},
+        {"type": "input", "question": "7 milliers + 7 unités = ?", "answer": "7007", "accept": ["7007", "7 007"]},
+        {"type": "qcm", "question": "Que vaut 1000 + 100 + 10 + 1 ?", "options": ["1111", "1110", "1011"], "answer": "1111"}
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Chiffre des centaines ou nombre de centaines ?",
+      "description": "Distinction essentielle : dans 3 456, le chiffre des centaines est 4, mais le nombre de centaines est 34.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Dans le nombre 3 456, le chiffre des centaines est :", "options": ["4", "34", "5"], "answer": "4"},
+        {"type": "input", "question": "Dans le nombre 3 456, quel est le nombre de centaines ?", "answer": "34"},
+        {"type": "input", "question": "Dans le nombre 782, quel est le chiffre des dizaines ?", "answer": "8"},
+        {"type": "input", "question": "Dans le nombre 782, quel est le nombre de dizaines ?", "answer": "78"},
+        {"type": "qcm", "question": "Dans le nombre 5 209, le nombre de centaines est :", "options": ["52", "2", "520"], "answer": "52"},
+        {"type": "input", "question": "Dans le nombre 6 340, quel est le chiffre des centaines ?", "answer": "3"},
+        {"type": "input", "question": "Dans le nombre 6 340, quel est le nombre de centaines ?", "answer": "63"},
+        {"type": "qcm", "question": "Dans le nombre 917, le nombre de dizaines est :", "options": ["91", "1", "9"], "answer": "91"},
+        {"type": "input", "question": "Dans le nombre 4 000, quel est le nombre de centaines ?", "answer": "40"},
+        {"type": "input", "question": "Dans le nombre 2 685, quel est le nombre de dizaines ?", "answer": "268"},
+        {"type": "qcm", "question": "Dans le nombre 8 512, le nombre de milliers est :", "options": ["8", "85", "851"], "answer": "8"}
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Encadrer et intercaler des nombres",
+      "description": "Encadrer un nombre à l'unité, à la dizaine, à la centaine, et intercaler un nombre entre deux autres.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Quel est le nombre juste avant 457 ?", "answer": "456"},
+        {"type": "input", "question": "Quel est le nombre juste après 999 ?", "answer": "1000", "accept": ["1000", "1 000"]},
+        {"type": "qcm", "question": "Quel est l'encadrement à la dizaine du nombre 342 ?", "options": ["340 < 342 < 350", "330 < 342 < 340", "300 < 342 < 400"], "answer": "340 < 342 < 350"},
+        {"type": "qcm", "question": "Quel est l'encadrement à la centaine du nombre 675 ?", "options": ["600 < 675 < 700", "670 < 675 < 680", "500 < 675 < 600"], "answer": "600 < 675 < 700"},
+        {"type": "input", "question": "Quelle est la dizaine entière juste inférieure à 786 ?", "answer": "780"},
+        {"type": "input", "question": "Quelle est la centaine entière juste supérieure à 431 ?", "answer": "500"},
+        {"type": "qcm", "question": "Quel nombre entier se trouve entre 899 et 901 ?", "options": ["898", "900", "902"], "answer": "900"},
+        {"type": "input", "question": "Quel nombre entier se trouve entre 1 249 et 1 251 ?", "answer": "1250", "accept": ["1250", "1 250"]},
+        {"type": "qcm", "question": "Quel est l'encadrement à la dizaine du nombre 905 ?", "options": ["900 < 905 < 910", "890 < 905 < 900", "905 < 910 < 915"], "answer": "900 < 905 < 910"},
+        {"type": "qcm", "question": "Quel nombre peut s'intercaler entre 340 et 350 ?", "options": ["345", "335", "355"], "answer": "345"},
+        {"type": "input", "question": "Quel est le nombre juste avant 6 000 ?", "answer": "5999", "accept": ["5999", "5 999"]}
+      ]
+    },
+    {
+      "id": 13,
+      "title": "La droite graduée et les compléments",
+      "description": "Se repérer sur une droite graduée et trouver les compléments à 100, à 500 et à 1 000.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Sur une droite graduée de 10 en 10 qui commence à 0, quel nombre se trouve sur la 5e graduation après 0 ?", "options": ["5", "50", "500"], "answer": "50"},
+        {"type": "input", "question": "Une droite est graduée de 100 en 100 : 0, 100, 200, ... Quel nombre vient juste après 200 ?", "answer": "300"},
+        {"type": "qcm", "question": "Sur une droite graduée de 10 en 10, le point A est exactement au milieu entre 340 et 350. Quel nombre représente-t-il ?", "options": ["344", "345", "346"], "answer": "345"},
+        {"type": "input", "question": "Combien faut-il ajouter à 70 pour faire 100 ?", "answer": "30"},
+        {"type": "input", "question": "Complète : 250 + ... = 300", "answer": "50"},
+        {"type": "qcm", "question": "Complète : 480 + ... = 500", "options": ["20", "30", "120"], "answer": "20"},
+        {"type": "input", "question": "Combien faut-il ajouter à 600 pour faire 1 000 ?", "answer": "400"},
+        {"type": "input", "question": "Complète : 750 + ... = 1 000", "answer": "250"},
+        {"type": "qcm", "question": "Sur une droite graduée de 5 en 5, quel nombre manque : 60, 65, ..., 75 ?", "options": ["69", "70", "71"], "answer": "70"},
+        {"type": "input", "question": "Combien faut-il ajouter à 9 990 pour faire 10 000 ?", "answer": "10"},
+        {"type": "qcm", "question": "Quel nombre se trouve exactement au milieu entre 400 et 500 ?", "options": ["450", "405", "550"], "answer": "450"}
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Arrondir à la dizaine et à la centaine",
+      "description": "Trouver la dizaine ou la centaine la plus proche d'un nombre.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est l'arrondi de 47 à la dizaine la plus proche ?", "options": ["40", "45", "50"], "answer": "50"},
+        {"type": "input", "question": "Arrondis 82 à la dizaine la plus proche.", "answer": "80"},
+        {"type": "input", "question": "Arrondis 367 à la dizaine la plus proche.", "answer": "370"},
+        {"type": "qcm", "question": "Quel est l'arrondi de 234 à la centaine la plus proche ?", "options": ["200", "230", "300"], "answer": "200"},
+        {"type": "input", "question": "Arrondis 678 à la centaine la plus proche.", "answer": "700"},
+        {"type": "qcm", "question": "Quel est l'arrondi de 449 à la centaine la plus proche ?", "options": ["400", "450", "500"], "answer": "400"},
+        {"type": "input", "question": "Arrondis 1 234 à la centaine la plus proche.", "answer": "1200", "accept": ["1200", "1 200"]},
+        {"type": "input", "question": "Arrondis 96 à la dizaine la plus proche.", "answer": "100"},
+        {"type": "qcm", "question": "Quel est l'arrondi de 2 981 à la centaine la plus proche ?", "options": ["3000", "2900", "2980"], "answer": "3000"},
+        {"type": "input", "question": "Arrondis 5 049 à la centaine la plus proche.", "answer": "5000", "accept": ["5000", "5 000"]},
+        {"type": "qcm", "question": "Quel est l'arrondi de 713 à la dizaine la plus proche ?", "options": ["700", "710", "720"], "answer": "710"}
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Les fractions simples : demi, quart, trois quarts",
+      "description": "Découvrir un demi, un quart et trois quarts à partir de partages en parts égales.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Une pizza est partagée en 2 parts égales. Une part représente :", "options": ["un demi", "un quart", "un tiers"], "answer": "un demi"},
+        {"type": "qcm", "question": "Un gâteau est partagé en 4 parts égales. Une part représente :", "options": ["un quart", "un demi", "trois quarts"], "answer": "un quart"},
+        {"type": "input", "question": "Quelle est la moitié de 10 ?", "answer": "5"},
+        {"type": "input", "question": "Quel est le quart de 8 ?", "answer": "2"},
+        {"type": "qcm", "question": "Une tarte est partagée en 4 parts égales et on en mange 3. On a mangé :", "options": ["trois quarts", "un quart", "un demi"], "answer": "trois quarts"},
+        {"type": "input", "question": "Quelle est la moitié de 100 ?", "answer": "50"},
+        {"type": "qcm", "question": "Un carré est partagé en 4 parts égales et 2 parts sont coloriées. La partie coloriée représente :", "options": ["la moitié du carré", "un quart du carré", "trois quarts du carré"], "answer": "la moitié du carré"},
+        {"type": "input", "question": "Quel est le quart de 100 ?", "answer": "25"},
+        {"type": "qcm", "question": "Comment s'écrit la fraction « un demi » ?", "options": ["1/2", "2/1", "1/4"], "answer": "1/2"},
+        {"type": "qcm", "question": "Comment s'écrit la fraction « trois quarts » ?", "options": ["3/4", "4/3", "3/2"], "answer": "3/4"},
+        {"type": "input", "question": "Quelle est la moitié de 1 000 ?", "answer": "500"}
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Défi expert : les nombres jusqu'à 10 000",
+      "description": "Suites de 100 en 100, comparaisons, compléments et questions de champion sur les grands nombres.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Continue la suite de 100 en 100 : 4 600, 4 700, 4 800, ...", "answer": "4900", "accept": ["4900", "4 900"]},
+        {"type": "input", "question": "Continue la suite de 100 en 100 en reculant : 7 200, 7 100, 7 000, ...", "answer": "6900", "accept": ["6900", "6 900"]},
+        {"type": "qcm", "question": "Quel est le plus grand de ces nombres ?", "options": ["9 087", "9 807", "9 078"], "answer": "9 807"},
+        {"type": "input", "question": "Quel est le nombre juste avant 10 000 ?", "answer": "9999", "accept": ["9999", "9 999"]},
+        {"type": "qcm", "question": "Dans le nombre 9 999, le nombre de dizaines est :", "options": ["999", "9", "99"], "answer": "999"},
+        {"type": "input", "question": "Écris en chiffres : neuf mille neuf.", "answer": "9009", "accept": ["9009", "9 009"]},
+        {"type": "qcm", "question": "Quelle liste est rangée dans l'ordre croissant ?", "options": ["2 999, 3 001, 3 010", "3 001, 2 999, 3 010", "3 010, 3 001, 2 999"], "answer": "2 999, 3 001, 3 010"},
+        {"type": "input", "question": "Complète : 6 000 + ... = 10 000", "answer": "4000", "accept": ["4000", "4 000"]},
+        {"type": "qcm", "question": "Quel est l'arrondi de 5 555 à la centaine la plus proche ?", "options": ["5500", "5600", "5550"], "answer": "5600"},
+        {"type": "input", "question": "Quelle est la moitié de 5 000 ?", "answer": "2500", "accept": ["2500", "2 500"]},
+        {"type": "input", "question": "8 milliers + 15 dizaines = ?", "answer": "8150", "accept": ["8150", "8 150"]},
+        {"type": "qcm", "question": "Combien y a-t-il de centaines entières dans 1 000 ?", "options": ["10", "100", "1000"], "answer": "10"}
+      ]
+    }
+  ]
+}

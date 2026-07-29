@@ -1,0 +1,261 @@
+{
+  "key": "problemes_ce2",
+  "fiches": [
+    {
+      "id": 5,
+      "title": "Problèmes additifs",
+      "description": "Trouver le total en ajoutant deux quantités.",
+      "difficulty": 1,
+      "exercises": [
+        { "type": "input", "question": "Léa a 27 billes. Elle en gagne 15 à la récréation. Combien de billes a-t-elle maintenant ? Réponds par un nombre.", "answer": "42" },
+        { "type": "input", "question": "Tom range 34 livres sur une étagère et 28 livres sur une autre. Combien de livres range-t-il en tout ? Réponds par un nombre.", "answer": "62" },
+        { "type": "qcm", "question": "Dans le bus, il y a 46 personnes. À l'arrêt, 17 personnes montent. Combien de personnes y a-t-il maintenant dans le bus ?", "options": ["53", "63", "29"], "answer": "63" },
+        { "type": "input", "question": "Pour le goûter, Nadia achète 12 croissants et 19 pains au chocolat. Combien de viennoiseries achète-t-elle en tout ? Réponds par un nombre.", "answer": "31" },
+        { "type": "input", "question": "Le jardinier plante 125 tulipes et 240 rosiers. Combien de plantes met-il en terre en tout ? Réponds par un nombre.", "answer": "365" },
+        { "type": "qcm", "question": "À la bibliothèque, 58 livres sont prêtés le matin et 36 l'après-midi. Combien de livres sont prêtés dans la journée ?", "options": ["84", "94", "22"], "answer": "94" },
+        { "type": "input", "question": "Pendant le voyage, la famille roule 156 kilomètres le matin et 123 kilomètres l'après-midi. Combien de kilomètres en tout ? Réponds par un nombre.", "answer": "279" },
+        { "type": "qcm", "question": "Au match de football, il y a 215 supporters de l'équipe bleue et 184 supporters de l'équipe rouge. Combien de supporters en tout ?", "options": ["399", "389", "31"], "answer": "399" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Problèmes soustractifs",
+      "description": "Trouver ce qui reste après avoir enlevé une quantité.",
+      "difficulty": 1,
+      "exercises": [
+        { "type": "input", "question": "Inès a 50 billes. Elle en perd 18 dans la cour. Combien de billes lui reste-t-il ? Réponds par un nombre.", "answer": "32" },
+        { "type": "input", "question": "Un car transporte 62 passagers. Au premier arrêt, 25 passagers descendent. Combien de passagers restent dans le car ? Réponds par un nombre.", "answer": "37" },
+        { "type": "qcm", "question": "Malik avait 85 images. Il en donne 29 à son frère. Combien d'images lui reste-t-il ?", "options": ["56", "66", "54"], "answer": "56" },
+        { "type": "input", "question": "La boulangère avait 120 baguettes ce matin. Elle en a vendu 95. Combien de baguettes lui reste-t-il ? Réponds par un nombre.", "answer": "25" },
+        { "type": "input", "question": "Il y avait 74 pommes sur l'arbre du jardin. On en cueille 38. Combien de pommes restent sur l'arbre ? Réponds par un nombre.", "answer": "36" },
+        { "type": "qcm", "question": "Un livre a 96 pages. Sarah en a déjà lu 47. Combien de pages lui reste-t-il à lire ?", "options": ["49", "51", "143"], "answer": "49" },
+        { "type": "input", "question": "À l'anniversaire, il y avait 45 ballons. 17 ballons ont éclaté. Combien de ballons restent gonflés ? Réponds par un nombre.", "answer": "28" },
+        { "type": "qcm", "question": "Le fleuriste avait 230 roses. Il en vend 140 dans la journée. Combien de roses lui reste-t-il ?", "options": ["90", "110", "370"], "answer": "90" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Recherche du complément",
+      "description": "Trouver combien il manque pour atteindre une quantité.",
+      "difficulty": 1,
+      "exercises": [
+        { "type": "input", "question": "Hugo a 35 cartes. Il en veut 50 pour compléter sa collection. Combien de cartes lui manque-t-il ? Réponds par un nombre.", "answer": "15" },
+        { "type": "input", "question": "Lina a lu 42 pages de son livre de 70 pages. Combien de pages doit-elle encore lire pour le terminer ? Réponds par un nombre.", "answer": "28" },
+        { "type": "qcm", "question": "Il faut 60 œufs pour préparer la fête. On en a déjà 45. Combien d'œufs manque-t-il ?", "options": ["15", "25", "105"], "answer": "15" },
+        { "type": "input", "question": "Le car peut transporter 55 élèves. 38 élèves sont déjà assis. Combien de places restent libres ? Réponds par un nombre.", "answer": "17" },
+        { "type": "input", "question": "Sami veut acheter un jeu à 30 euros. Il a 22 euros dans sa tirelire. Combien d'euros lui manque-t-il ? Réponds par un nombre.", "answer": "8" },
+        { "type": "qcm", "question": "Pour compléter son album, Awa doit coller 100 images. Elle en a déjà collé 64. Combien d'images lui manque-t-il ?", "options": ["36", "46", "164"], "answer": "36" },
+        { "type": "input", "question": "L'équipe de basket a 27 points. Il faut 40 points pour gagner le match. Combien de points manquent à l'équipe ? Réponds par un nombre.", "answer": "13" },
+        { "type": "qcm", "question": "La maîtresse a 24 cahiers. Il lui en faut 32 pour toute la classe. Combien de cahiers doit-elle encore acheter ?", "options": ["8", "12", "56"], "answer": "8" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Problèmes multiplicatifs",
+      "description": "Trouver un total en répétant plusieurs fois la même quantité.",
+      "difficulty": 1,
+      "exercises": [
+        { "type": "input", "question": "Un paquet contient 6 gâteaux. Zoé achète 4 paquets pour le goûter. Combien de gâteaux a-t-elle en tout ? Réponds par un nombre.", "answer": "24" },
+        { "type": "input", "question": "Chaque équipe de football compte 11 joueurs. Combien de joueurs y a-t-il dans 3 équipes ? Réponds par un nombre.", "answer": "33" },
+        { "type": "qcm", "question": "Une boîte contient 8 crayons. Combien de crayons y a-t-il dans 5 boîtes ?", "options": ["40", "45", "13"], "answer": "40" },
+        { "type": "input", "question": "Un vélo a 2 roues. Combien de roues ont 9 vélos ? Réponds par un nombre.", "answer": "18" },
+        { "type": "input", "question": "Dans le jardin, il y a 7 rangées de 5 salades. Combien de salades y a-t-il en tout ? Réponds par un nombre.", "answer": "35" },
+        { "type": "qcm", "question": "Un sachet contient 10 billes. Nino achète 6 sachets. Combien de billes a-t-il ?", "options": ["60", "16", "66"], "answer": "60" },
+        { "type": "input", "question": "Chaque table de la cantine a 4 chaises. Il y a 8 tables. Combien de chaises y a-t-il en tout ? Réponds par un nombre.", "answer": "32" },
+        { "type": "qcm", "question": "Une semaine compte 7 jours. Combien de jours y a-t-il dans 4 semaines ?", "options": ["28", "21", "11"], "answer": "28" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Problèmes de partage équitable",
+      "description": "Partager une quantité en parts égales.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "input", "question": "Maman partage 24 fraises entre 4 enfants. Chacun en reçoit autant. Combien de fraises pour chaque enfant ? Réponds par un nombre.", "answer": "6" },
+        { "type": "input", "question": "On distribue 30 cartes à 5 joueurs. Chaque joueur en reçoit le même nombre. Combien de cartes par joueur ? Réponds par un nombre.", "answer": "6" },
+        { "type": "qcm", "question": "Le maître partage 27 cahiers entre 3 groupes. Combien de cahiers reçoit chaque groupe ?", "options": ["9", "8", "24"], "answer": "9" },
+        { "type": "input", "question": "Papi partage 40 euros entre ses 8 petits-enfants. Combien d'euros reçoit chacun ? Réponds par un nombre.", "answer": "5" },
+        { "type": "input", "question": "18 élèves se répartissent en 2 équipes égales pour jouer au football. Combien d'élèves dans chaque équipe ? Réponds par un nombre.", "answer": "9" },
+        { "type": "qcm", "question": "On partage 35 bonbons entre 7 enfants à l'anniversaire. Combien de bonbons reçoit chacun ?", "options": ["5", "6", "28"], "answer": "5" },
+        { "type": "input", "question": "La fleuriste répartit 48 roses dans 6 vases, autant dans chaque vase. Combien de roses par vase ? Réponds par un nombre.", "answer": "8" },
+        { "type": "qcm", "question": "4 amis se partagent équitablement 32 billes. Combien de billes reçoit chacun ?", "options": ["8", "7", "36"], "answer": "8" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Problèmes de groupement",
+      "description": "Trouver combien de groupes on peut former.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "input", "question": "Lucas range 24 œufs dans des boîtes de 6 œufs. Combien de boîtes remplit-il ? Réponds par un nombre.", "answer": "4" },
+        { "type": "input", "question": "La maîtresse forme des équipes de 5 avec les 30 élèves de la classe. Combien d'équipes forme-t-elle ? Réponds par un nombre.", "answer": "6" },
+        { "type": "qcm", "question": "La boulangère met 40 cookies dans des sachets de 8. Combien de sachets prépare-t-elle ?", "options": ["5", "6", "32"], "answer": "5" },
+        { "type": "input", "question": "Un petit livre coûte 4 euros. Avec 20 euros, combien de livres Yanis peut-il acheter ? Réponds par un nombre.", "answer": "5" },
+        { "type": "input", "question": "On range 36 chaises par rangées de 9 pour le spectacle. Combien de rangées obtient-on ? Réponds par un nombre.", "answer": "4" },
+        { "type": "qcm", "question": "Avec 21 fleurs du jardin, combien de bouquets de 3 fleurs peut-on faire ?", "options": ["7", "6", "18"], "answer": "7" },
+        { "type": "input", "question": "Le fermier range 45 pommes dans des paniers de 5 pommes. Combien de paniers remplit-il ? Réponds par un nombre.", "answer": "9" },
+        { "type": "qcm", "question": "Il faut 2 piles pour chaque jouet. Avec 16 piles, combien de jouets peut-on faire fonctionner ?", "options": ["8", "14", "32"], "answer": "8" }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Problèmes de monnaie : euros et centimes",
+      "description": "Calculer des prix avec des euros et des centimes.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "input", "question": "Un pain coûte 2 euros et un jus de fruits coûte 3 euros. Combien coûtent les deux en euros ? Réponds par un nombre.", "answer": "5" },
+        { "type": "input", "question": "Emma achète un livre à 12 euros et un stylo à 3 euros. Combien d'euros dépense-t-elle en tout ? Réponds par un nombre.", "answer": "15" },
+        { "type": "qcm", "question": "Une baguette coûte 1 euro et 20 centimes. Combien cela fait-il en centimes ?", "options": ["120 centimes", "102 centimes", "12 centimes"], "answer": "120 centimes" },
+        { "type": "input", "question": "Un croissant coûte 90 centimes. Combien coûtent 2 croissants, en centimes ? Réponds par un nombre.", "answer": "180" },
+        { "type": "qcm", "question": "Yanis a un billet de 10 euros et une pièce de 2 euros. Combien d'euros a-t-il ?", "options": ["12 euros", "8 euros", "20 euros"], "answer": "12 euros" },
+        { "type": "input", "question": "Un euro vaut 100 centimes. Combien de centimes valent 3 euros ? Réponds par un nombre.", "answer": "300" },
+        { "type": "input", "question": "Au marché, Fatou paie 7 euros de fruits et 9 euros de légumes. Combien d'euros dépense-t-elle ? Réponds par un nombre.", "answer": "16" },
+        { "type": "qcm", "question": "Léo a 3 pièces de 2 euros et 1 pièce de 1 euro dans sa poche. Combien d'euros a-t-il ?", "options": ["7 euros", "6 euros", "4 euros"], "answer": "7 euros" }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Problèmes de monnaie : rendre la monnaie",
+      "description": "Calculer la monnaie à rendre après un achat.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "input", "question": "Un cahier coûte 3 euros. Paul paie avec un billet de 5 euros. Combien d'euros lui rend-on ? Réponds par un nombre.", "answer": "2" },
+        { "type": "input", "question": "Le goûter coûte 7 euros. Mia paie avec un billet de 10 euros. Combien d'euros lui rend-on ? Réponds par un nombre.", "answer": "3" },
+        { "type": "qcm", "question": "Un jouet coûte 13 euros. Sofiane paie avec un billet de 20 euros. Combien d'euros lui rend-on ?", "options": ["7 euros", "6 euros", "33 euros"], "answer": "7 euros" },
+        { "type": "input", "question": "Une glace coûte 2 euros et 50 centimes. Ana paie avec une pièce de 2 euros et une pièce de 1 euro. Combien de centimes lui rend-on ? Réponds par un nombre.", "answer": "50" },
+        { "type": "input", "question": "Les courses coûtent 16 euros. Papa paie avec un billet de 20 euros. Combien d'euros lui rend-on ? Réponds par un nombre.", "answer": "4" },
+        { "type": "qcm", "question": "Un livre coûte 8 euros. Jade paie avec un billet de 10 euros. Combien lui rend-on ?", "options": ["2 euros", "18 euros", "3 euros"], "answer": "2 euros" },
+        { "type": "input", "question": "Le pain coûte 1 euro et 10 centimes. Karim paie avec une pièce de 2 euros. Combien de centimes lui rend-on ? Réponds par un nombre.", "answer": "90" },
+        { "type": "qcm", "question": "Un ballon de football coûte 9 euros. Noé paie avec un billet de 20 euros. Combien d'euros lui rend-on ?", "options": ["11 euros", "12 euros", "29 euros"], "answer": "11 euros" }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Problèmes de durée : heures et minutes",
+      "description": "Calculer des horaires et des durées.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "input", "question": "Le film commence à 14 h et dure 2 heures. À quelle heure se termine-t-il ? Réponds par un nombre.", "answer": "16" },
+        { "type": "input", "question": "La récréation dure 15 minutes le matin et 15 minutes l'après-midi. Combien de minutes de récréation dans la journée ? Réponds par un nombre.", "answer": "30" },
+        { "type": "qcm", "question": "Combien de minutes y a-t-il dans une heure ?", "options": ["60 minutes", "100 minutes", "30 minutes"], "answer": "60 minutes" },
+        { "type": "input", "question": "L'entraînement de football commence à 10 h et se termine à 11 h 30. Combien de minutes dure-t-il ? Réponds par un nombre.", "answer": "90" },
+        { "type": "qcm", "question": "Le gâteau d'anniversaire doit cuire 45 minutes. Il est au four depuis 30 minutes. Combien de minutes de cuisson reste-t-il ?", "options": ["15 minutes", "25 minutes", "75 minutes"], "answer": "15 minutes" },
+        { "type": "input", "question": "Le voyage en train dure 3 heures. Le départ est à 9 h. À quelle heure arrive-t-on ? Réponds par un nombre.", "answer": "12" },
+        { "type": "input", "question": "Combien de minutes y a-t-il dans une demi-heure ? Réponds par un nombre.", "answer": "30" },
+        { "type": "qcm", "question": "Zoé lit à la bibliothèque de 17 h à 17 h 20. Combien de minutes a-t-elle lu ?", "options": ["20 minutes", "30 minutes", "3 minutes"], "answer": "20 minutes" }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Problèmes de longueur et de masse",
+      "description": "Calculer avec des mètres, des centimètres, des kilogrammes et des grammes.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "input", "question": "Un mètre vaut 100 centimètres. Combien de centimètres mesurent 2 mètres ? Réponds par un nombre.", "answer": "200" },
+        { "type": "input", "question": "La corde de Lila mesure 45 centimètres et celle de Tom mesure 55 centimètres. Quelle longueur en centimètres obtient-on en les mettant bout à bout ? Réponds par un nombre.", "answer": "100" },
+        { "type": "qcm", "question": "Combien de grammes y a-t-il dans un kilogramme ?", "options": ["1000 grammes", "100 grammes", "10 grammes"], "answer": "1000 grammes" },
+        { "type": "input", "question": "Au marché, un sac de farine pèse 1 kilogramme et un sac de sucre pèse 2 kilogrammes. Combien de kilogrammes en tout ? Réponds par un nombre.", "answer": "3" },
+        { "type": "input", "question": "Le couloir de l'école mesure 25 mètres. Rayan en a déjà parcouru 9 mètres. Combien de mètres lui reste-t-il à parcourir ? Réponds par un nombre.", "answer": "16" },
+        { "type": "qcm", "question": "Une pastèque pèse 3 kilogrammes et un melon pèse 1 kilogramme. Combien la pastèque pèse-t-elle de plus que le melon ?", "options": ["2 kg", "4 kg", "3 kg"], "answer": "2 kg" },
+        { "type": "input", "question": "Un crayon mesure 12 centimètres. La règle est 2 fois plus longue que le crayon. Combien de centimètres mesure la règle ? Réponds par un nombre.", "answer": "24" },
+        { "type": "qcm", "question": "Un paquet de pâtes pèse 500 grammes. Combien pèsent 2 paquets ?", "options": ["1000 grammes", "700 grammes", "502 grammes"], "answer": "1000 grammes" }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Problèmes de comparaison",
+      "description": "Trouver combien de plus, combien de moins, combien de fois plus.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "input", "question": "Ali a 24 billes et Samia en a 15. Combien de billes Ali a-t-il de plus que Samia ? Réponds par un nombre.", "answer": "9" },
+        { "type": "input", "question": "Le chêne mesure 18 mètres et le pommier mesure 6 mètres. Combien de fois le chêne est-il plus haut que le pommier ? Réponds par un nombre.", "answer": "3" },
+        { "type": "qcm", "question": "Nora a lu 32 pages et Théo en a lu 25. Combien de pages Nora a-t-elle lues de plus que Théo ?", "options": ["7", "8", "57"], "answer": "7" },
+        { "type": "input", "question": "Papa a 40 ans et son fils a 8 ans. Combien de fois Papa est-il plus âgé que son fils ? Réponds par un nombre.", "answer": "5" },
+        { "type": "input", "question": "Au match, l'équipe rouge a marqué 36 points et l'équipe verte 28 points. Combien de points l'équipe rouge a-t-elle marqués de plus ? Réponds par un nombre.", "answer": "8" },
+        { "type": "qcm", "question": "Un vélo coûte 90 euros et une trottinette coûte 30 euros. Combien de fois le vélo coûte-t-il plus cher que la trottinette ?", "options": ["3 fois", "60 fois", "2 fois"], "answer": "3 fois" },
+        { "type": "input", "question": "Jules a 12 ans. Sa petite sœur a 5 ans de moins que lui. Quel âge a sa petite sœur ? Réponds par un nombre.", "answer": "7" },
+        { "type": "qcm", "question": "Mia a 16 images. Elle en a 2 fois plus que Lou. Combien d'images Lou a-t-elle ?", "options": ["8", "32", "14"], "answer": "8" }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Choisir la bonne opération",
+      "description": "Trouver quelle opération résout le problème, puis calculer.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "qcm", "question": "Lisa a 25 billes et en gagne 13. Quelle opération permet de trouver combien elle en a maintenant ?", "options": ["25 + 13", "25 - 13", "25 x 13"], "answer": "25 + 13" },
+        { "type": "qcm", "question": "Il y a 6 paquets de 4 gâteaux. Quelle opération permet de trouver le nombre de gâteaux en tout ?", "options": ["6 x 4", "6 + 4", "6 - 4"], "answer": "6 x 4" },
+        { "type": "qcm", "question": "Tom avait 40 euros et il dépense 15 euros. Quelle opération permet de savoir combien il lui reste ?", "options": ["40 - 15", "40 + 15", "40 x 15"], "answer": "40 - 15" },
+        { "type": "qcm", "question": "On partage 28 cartes entre 4 enfants, chacun en reçoit autant. Quelle opération faut-il faire ?", "options": ["28 : 4", "28 x 4", "28 + 4"], "answer": "28 : 4" },
+        { "type": "input", "question": "Un car de 52 places transporte 47 élèves. Combien de places sont vides ? Réponds par un nombre.", "answer": "5" },
+        { "type": "input", "question": "Chaque boîte contient 9 feutres. Combien de feutres y a-t-il dans 3 boîtes ? Réponds par un nombre.", "answer": "27" },
+        { "type": "qcm", "question": "Léa avait des billes. Elle en gagne 12 et en a maintenant 30. Quelle opération permet de trouver combien elle en avait au départ ?", "options": ["30 - 12", "30 + 12", "30 x 12"], "answer": "30 - 12" },
+        { "type": "input", "question": "La maîtresse partage 45 cahiers entre 5 groupes, autant pour chacun. Combien de cahiers reçoit chaque groupe ? Réponds par un nombre.", "answer": "9" }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Problèmes à deux étapes",
+      "description": "Résoudre un problème en faisant deux calculs à la suite.",
+      "difficulty": 3,
+      "exercises": [
+        { "type": "input", "question": "Sami achète 3 paquets de 10 images, puis il en donne 8 à son cousin. Combien d'images lui reste-t-il ? Réponds par un nombre.", "answer": "22" },
+        { "type": "input", "question": "Pour le goûter, Léa prépare 2 assiettes de 6 crêpes. Les enfants en mangent 7. Combien de crêpes restent ? Réponds par un nombre.", "answer": "5" },
+        { "type": "qcm", "question": "Un livre coûte 8 euros. Nadia en achète 2 et paie avec un billet de 20 euros. Combien d'euros lui rend-on ?", "options": ["4 euros", "12 euros", "5 euros"], "answer": "4 euros" },
+        { "type": "input", "question": "Dans le bus, il y a 34 passagers. À l'arrêt, 12 passagers descendent et 9 montent. Combien de passagers y a-t-il maintenant ? Réponds par un nombre.", "answer": "31" },
+        { "type": "input", "question": "Le jardinier plante 4 rangées de 8 tulipes, puis encore 5 tulipes près du portail. Combien de tulipes plante-t-il en tout ? Réponds par un nombre.", "answer": "37" },
+        { "type": "qcm", "question": "Emma a 50 euros. Elle achète un jeu à 24 euros et un livre à 12 euros. Combien d'euros lui reste-t-il ?", "options": ["14 euros", "26 euros", "16 euros"], "answer": "14 euros" },
+        { "type": "input", "question": "Pour l'anniversaire, on gonfle 3 sachets de 12 ballons. 6 ballons éclatent. Combien de ballons restent gonflés ? Réponds par un nombre.", "answer": "30" },
+        { "type": "qcm", "question": "La bibliothécaire range 5 piles de 9 livres, puis reçoit 13 nouveaux livres. Combien de livres a-t-elle en tout ?", "options": ["58", "57", "45"], "answer": "58" }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Problèmes avec une information inutile",
+      "description": "Repérer l'information qui ne sert pas à résoudre le problème.",
+      "difficulty": 3,
+      "exercises": [
+        { "type": "input", "question": "Zoé a 9 ans. Elle range 26 billes rouges et 17 billes bleues dans sa boîte. Combien de billes range-t-elle en tout ? Réponds par un nombre.", "answer": "43" },
+        { "type": "input", "question": "Le car part à 8 h avec 48 élèves. Au musée, 19 élèves descendent. Combien d'élèves restent dans le car ? Réponds par un nombre.", "answer": "29" },
+        { "type": "qcm", "question": "Lucas a 3 frères. Il achète 4 paquets de 5 gâteaux. Combien de gâteaux achète-t-il ?", "options": ["20", "12", "60"], "answer": "20" },
+        { "type": "input", "question": "La classe de 24 élèves visite une ferme où il y a 15 vaches et 12 moutons. Combien d'animaux les élèves voient-ils ? Réponds par un nombre.", "answer": "27" },
+        { "type": "input", "question": "Papa, qui a 42 ans, achète un gâteau à 12 euros et paie avec un billet de 20 euros. Combien d'euros lui rend-on ? Réponds par un nombre.", "answer": "8" },
+        { "type": "qcm", "question": "Mila habite au troisième étage. Elle lit un livre de 60 pages et en a déjà lu 35. Combien de pages lui reste-t-il à lire ?", "options": ["25", "35", "95"], "answer": "25" },
+        { "type": "input", "question": "Le match de football dure 60 minutes. L'équipe de Tom marque 3 buts en première mi-temps et 2 buts en seconde. Combien de buts marque-t-elle en tout ? Réponds par un nombre.", "answer": "5" },
+        { "type": "qcm", "question": "Dans son jardin de 20 mètres de long, Nour plante 6 rangées de 7 fraisiers. Combien de fraisiers plante-t-elle ?", "options": ["42", "33", "27"], "answer": "42" }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Problèmes de logique et de raisonnement",
+      "description": "Réfléchir, déduire et trouver l'astuce.",
+      "difficulty": 3,
+      "exercises": [
+        { "type": "input", "question": "Je suis un nombre. Si on m'ajoute 10, on obtient 34. Quel nombre suis-je ? Réponds par un nombre.", "answer": "24" },
+        { "type": "qcm", "question": "Ali est plus grand que Ben. Ben est plus grand que Carl. Qui est le plus petit des trois ?", "options": ["Carl", "Ali", "Ben"], "answer": "Carl" },
+        { "type": "input", "question": "Observe la suite : 5, 10, 15, 20. Quel est le nombre suivant ? Réponds par un nombre.", "answer": "25" },
+        { "type": "input", "question": "Dans la cour de la ferme, il y a 3 poules et 2 lapins. Combien de pattes compte-t-on en tout ? Réponds par un nombre.", "answer": "14" },
+        { "type": "qcm", "question": "Dans exactement une semaine, nous serons mercredi. Quel jour sommes-nous aujourd'hui ?", "options": ["mercredi", "mardi", "jeudi"], "answer": "mercredi" },
+        { "type": "input", "question": "Léo pense à un nombre. Quand il le double, il trouve 18. Quel est ce nombre ? Réponds par un nombre.", "answer": "9" },
+        { "type": "qcm", "question": "Trois amis se serrent la main une seule fois chacun avec chacun. Combien de poignées de main y a-t-il en tout ?", "options": ["3", "6", "2"], "answer": "3" },
+        { "type": "input", "question": "Observe la suite : 2, 4, 8, 16. Quel est le nombre suivant ? Réponds par un nombre.", "answer": "32" }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Défis : problèmes variés",
+      "description": "Des problèmes de tous les types pour devenir un champion.",
+      "difficulty": 3,
+      "exercises": [
+        { "type": "input", "question": "Une araignée a 8 pattes. Combien de pattes ont 5 araignées ? Réponds par un nombre.", "answer": "40" },
+        { "type": "input", "question": "Maya achète 2 livres à 9 euros chacun et un marque-page à 3 euros. Combien d'euros dépense-t-elle en tout ? Réponds par un nombre.", "answer": "21" },
+        { "type": "qcm", "question": "Le boulanger prépare 60 croissants. Il en vend 25 le matin et 20 l'après-midi. Combien de croissants lui reste-t-il ?", "options": ["15", "35", "20"], "answer": "15" },
+        { "type": "input", "question": "Un escargot monte de 3 mètres chaque jour le long du mur du jardin. De combien de mètres est-il monté après 4 jours ? Réponds par un nombre.", "answer": "12" },
+        { "type": "qcm", "question": "La classe part en car à 9 h et le trajet dure 1 heure et 30 minutes. À quelle heure arrive-t-elle ?", "options": ["10 h 30", "10 h", "11 h"], "answer": "10 h 30" },
+        { "type": "input", "question": "Nina a 3 pièces de 2 euros. Elle achète une glace à 2 euros et 50 centimes. Combien de centimes lui reste-t-il ? Réponds par un nombre.", "answer": "350" },
+        { "type": "input", "question": "Un pack contient 6 bouteilles d'eau. La famille boit 2 bouteilles par jour pendant le voyage. Combien de jours dure un pack ? Réponds par un nombre.", "answer": "3" },
+        { "type": "qcm", "question": "Karim a deux fois plus de billes que Sonia. Sonia a 7 billes. Combien de billes Karim et Sonia ont-ils ensemble ?", "options": ["21", "14", "28"], "answer": "21" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "key": "mesures_ce2",
+  "fiches": [
+    {
+      "id": 5,
+      "title": "Connaître les unités de longueur",
+      "description": "Découvrir le millimètre, le centimètre, le décimètre, le mètre et le kilomètre.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Combien y a-t-il de millimètres dans 1 centimètre ?", "options": ["10", "100", "1000"], "answer": "10"},
+        {"type": "qcm", "question": "Combien y a-t-il de centimètres dans 1 mètre ?", "options": ["10", "100", "1000"], "answer": "100"},
+        {"type": "qcm", "question": "Combien y a-t-il de mètres dans 1 kilomètre ?", "options": ["10", "100", "1000"], "answer": "1000"},
+        {"type": "qcm", "question": "Combien y a-t-il de centimètres dans 1 décimètre ?", "options": ["5", "10", "100"], "answer": "10"},
+        {"type": "input", "question": "Complète : 1 m = ? cm", "answer": "100"},
+        {"type": "input", "question": "Complète : 1 km = ? m", "answer": "1000"},
+        {"type": "input", "question": "Complète : 1 cm = ? mm", "answer": "10"},
+        {"type": "input", "question": "Complète : 1 dm = ? cm", "answer": "10"},
+        {"type": "qcm", "question": "Quelle unité est la plus grande ?", "options": ["le kilomètre", "le mètre", "le centimètre"], "answer": "le kilomètre"},
+        {"type": "qcm", "question": "Quelle unité est la plus petite ?", "options": ["le millimètre", "le centimètre", "le décimètre"], "answer": "le millimètre"},
+        {"type": "qcm", "question": "Que signifie l'abréviation cm ?", "options": ["centimètre", "centilitre", "kilomètre"], "answer": "centimètre"},
+        {"type": "input", "question": "Complète : 1 m = ? mm", "answer": "1000"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Choisir l'unité de longueur adaptée",
+      "description": "Choisir entre mm, cm, m et km selon ce que l'on mesure.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer la longueur d'un crayon ?", "options": ["cm", "m", "km"], "answer": "cm"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer la distance entre Paris et Lyon ?", "options": ["cm", "m", "km"], "answer": "km"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer la hauteur d'une porte ?", "options": ["mm", "m", "km"], "answer": "m"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer l'épaisseur d'une pièce de monnaie ?", "options": ["mm", "m", "km"], "answer": "mm"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer la longueur d'un terrain de football ?", "options": ["cm", "m", "km"], "answer": "m"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer la largeur d'un cahier ?", "options": ["cm", "m", "km"], "answer": "cm"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer la longueur d'une fourmi ?", "options": ["mm", "m", "km"], "answer": "mm"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer la hauteur de la tour Eiffel ?", "options": ["mm", "cm", "m"], "answer": "m"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer la distance parcourue par une voiture en une heure ?", "options": ["cm", "m", "km"], "answer": "km"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer la longueur d'un doigt ?", "options": ["cm", "m", "km"], "answer": "cm"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer la longueur d'un bus ?", "options": ["mm", "m", "km"], "answer": "m"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Les masses : le gramme et le kilogramme",
+      "description": "Connaître le gramme et le kilogramme et faire des conversions simples.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Combien y a-t-il de grammes dans 1 kilogramme ?", "options": ["10", "100", "1000"], "answer": "1000"},
+        {"type": "input", "question": "Complète : 1 kg = ? g", "answer": "1000"},
+        {"type": "input", "question": "Complète : 2 kg = ? g", "answer": "2000"},
+        {"type": "input", "question": "Complète : 3 kg = ? g", "answer": "3000"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour peser une lettre ?", "options": ["le gramme", "le kilogramme", "le mètre"], "answer": "le gramme"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour peser un enfant ?", "options": ["le gramme", "le kilogramme", "le litre"], "answer": "le kilogramme"},
+        {"type": "qcm", "question": "Qu'est-ce qui est le plus lourd ?", "options": ["1 kg de plumes", "500 g de fer", "ils pèsent pareil"], "answer": "1 kg de plumes"},
+        {"type": "input", "question": "Complète : 5 kg = ? g", "answer": "5000"},
+        {"type": "qcm", "question": "1000 g, c'est la même chose que :", "options": ["1 kg", "10 kg", "100 kg"], "answer": "1 kg"},
+        {"type": "input", "question": "Complète : 4000 g = ? kg", "answer": "4"},
+        {"type": "qcm", "question": "Quelle est la masse d'une pomme, environ ?", "options": ["150 g", "2 kg", "150 kg"], "answer": "150 g"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Les contenances : mL, cL et L",
+      "description": "Connaître le millilitre, le centilitre et le litre et faire des conversions simples.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Combien y a-t-il de centilitres dans 1 litre ?", "options": ["10", "100", "1000"], "answer": "100"},
+        {"type": "qcm", "question": "Combien y a-t-il de millilitres dans 1 litre ?", "options": ["10", "100", "1000"], "answer": "1000"},
+        {"type": "input", "question": "Complète : 1 L = ? cL", "answer": "100"},
+        {"type": "input", "question": "Complète : 1 L = ? mL", "answer": "1000"},
+        {"type": "input", "question": "Complète : 2 L = ? cL", "answer": "200"},
+        {"type": "input", "question": "Complète : 3 L = ? mL", "answer": "3000"},
+        {"type": "qcm", "question": "Combien y a-t-il de millilitres dans 1 centilitre ?", "options": ["10", "100", "1000"], "answer": "10"},
+        {"type": "qcm", "question": "Quelle unité choisis-tu pour mesurer une cuillère de sirop ?", "options": ["mL", "L", "kg"], "answer": "mL"},
+        {"type": "qcm", "question": "Quelle est la contenance d'une grande bouteille d'eau ?", "options": ["1 L", "1 cL", "1 mL"], "answer": "1 L"},
+        {"type": "qcm", "question": "Qu'est-ce qui contient le plus de liquide ?", "options": ["1 L", "50 cL", "500 mL"], "answer": "1 L"},
+        {"type": "input", "question": "Complète : 200 cL = ? L", "answer": "2"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Lire l'heure : heures pleines et demies",
+      "description": "Lire l'heure sur une horloge à aiguilles pour les heures pleines et les demi-heures.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "La petite aiguille est sur le 8 et la grande aiguille est sur le 12. Quelle heure est-il ? (format 8h30)", "answer": "8h00", "accept": ["8 h 00", "8:00", "8h", "8 h"]},
+        {"type": "input", "question": "La petite aiguille est sur le 3 et la grande aiguille est sur le 6. Quelle heure est-il ? (format 8h30)", "answer": "3h30", "accept": ["3 h 30", "3:30"]},
+        {"type": "input", "question": "La petite aiguille est sur le 12 et la grande aiguille est sur le 12. Quelle heure est-il ? (format 8h30)", "answer": "12h00", "accept": ["12 h 00", "12:00", "12h", "midi"]},
+        {"type": "input", "question": "La petite aiguille est sur le 5 et la grande aiguille est sur le 12. Quelle heure est-il ? (format 8h30)", "answer": "5h00", "accept": ["5 h 00", "5:00", "5h", "5 h"]},
+        {"type": "input", "question": "La petite aiguille est sur le 9 et la grande aiguille est sur le 6. Quelle heure est-il ? (format 8h30)", "answer": "9h30", "accept": ["9 h 30", "9:30"]},
+        {"type": "qcm", "question": "Quand la grande aiguille est sur le 6, on dit qu'il est l'heure...", "options": ["et demie", "pile", "et quart"], "answer": "et demie"},
+        {"type": "qcm", "question": "Sur une horloge, la petite aiguille indique :", "options": ["les heures", "les minutes", "les secondes"], "answer": "les heures"},
+        {"type": "qcm", "question": "Sur une horloge, la grande aiguille indique :", "options": ["les minutes", "les heures", "les jours"], "answer": "les minutes"},
+        {"type": "input", "question": "La petite aiguille est sur le 7 et la grande aiguille est sur le 12. Quelle heure est-il ? (format 8h30)", "answer": "7h00", "accept": ["7 h 00", "7:00", "7h", "7 h"]},
+        {"type": "input", "question": "La petite aiguille est sur le 11 et la grande aiguille est sur le 6. Quelle heure est-il ? (format 8h30)", "answer": "11h30", "accept": ["11 h 30", "11:30"]},
+        {"type": "qcm", "question": "Quand la grande aiguille est sur le 12, il est :", "options": ["une heure pile", "une heure et demie", "une heure et quart"], "answer": "une heure pile"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Le calendrier : jours, mois, saisons",
+      "description": "Connaître les jours, les semaines, les mois, l'année et les saisons.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Combien y a-t-il de jours dans une semaine ?", "options": ["5", "7", "10"], "answer": "7"},
+        {"type": "qcm", "question": "Combien y a-t-il de mois dans une année ?", "options": ["10", "12", "24"], "answer": "12"},
+        {"type": "qcm", "question": "Combien y a-t-il de saisons dans une année ?", "options": ["2", "4", "6"], "answer": "4"},
+        {"type": "input", "question": "Combien y a-t-il de jours dans une année qui n'est pas bissextile ? (nombre de jours)", "answer": "365"},
+        {"type": "qcm", "question": "Quel jour vient juste après mardi ?", "options": ["mercredi", "lundi", "jeudi"], "answer": "mercredi"},
+        {"type": "qcm", "question": "Quel mois vient juste après juin ?", "options": ["juillet", "mai", "août"], "answer": "juillet"},
+        {"type": "qcm", "question": "Combien de jours y a-t-il au mois d'avril ?", "options": ["28", "30", "31"], "answer": "30"},
+        {"type": "qcm", "question": "Combien de jours y a-t-il au mois de janvier ?", "options": ["29", "30", "31"], "answer": "31"},
+        {"type": "qcm", "question": "Quelle saison vient juste après l'été ?", "options": ["l'automne", "l'hiver", "le printemps"], "answer": "l'automne"},
+        {"type": "qcm", "question": "Quel est le premier mois de l'année ?", "options": ["janvier", "décembre", "mars"], "answer": "janvier"},
+        {"type": "input", "question": "Combien y a-t-il de jours dans 2 semaines ? (nombre de jours)", "answer": "14"},
+        {"type": "qcm", "question": "Le mois de février compte le plus souvent :", "options": ["28 jours", "30 jours", "31 jours"], "answer": "28 jours"}
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Convertir des longueurs",
+      "description": "Convertir entre mm, cm, dm, m et km.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "3 m = ? cm", "answer": "300"},
+        {"type": "input", "question": "5 km = ? m", "answer": "5000"},
+        {"type": "input", "question": "40 mm = ? cm", "answer": "4"},
+        {"type": "input", "question": "7 dm = ? cm", "answer": "70"},
+        {"type": "input", "question": "200 cm = ? m", "answer": "2"},
+        {"type": "input", "question": "6 m = ? mm", "answer": "6000"},
+        {"type": "input", "question": "8000 m = ? km", "answer": "8"},
+        {"type": "input", "question": "25 cm = ? mm", "answer": "250"},
+        {"type": "input", "question": "4 m et 50 cm = ? cm", "answer": "450"},
+        {"type": "input", "question": "1 km et 300 m = ? m", "answer": "1300"},
+        {"type": "qcm", "question": "2 m et 40 cm, c'est la même chose que :", "options": ["240 cm", "24 cm", "2400 cm"], "answer": "240 cm"},
+        {"type": "input", "question": "90 cm = ? dm", "answer": "9"}
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Comparer des longueurs",
+      "description": "Comparer et ranger des longueurs exprimées dans des unités différentes.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quelle est la plus grande longueur ?", "options": ["1 m", "80 cm", "9 dm"], "answer": "1 m"},
+        {"type": "qcm", "question": "Quelle est la plus petite longueur ?", "options": ["5 cm", "40 mm", "1 dm"], "answer": "40 mm"},
+        {"type": "qcm", "question": "Compare 2 km et 1500 m :", "options": ["2 km est plus long", "1500 m est plus long", "c'est pareil"], "answer": "2 km est plus long"},
+        {"type": "qcm", "question": "Compare 300 cm et 3 m :", "options": ["c'est pareil", "300 cm est plus long", "3 m est plus long"], "answer": "c'est pareil"},
+        {"type": "qcm", "question": "Quelle est la plus grande longueur ?", "options": ["25 mm", "3 cm", "2 cm"], "answer": "3 cm"},
+        {"type": "qcm", "question": "Léa saute 1 m et 20 cm. Tom saute 130 cm. Qui saute le plus loin ?", "options": ["Tom", "Léa", "ils sautent pareil"], "answer": "Tom"},
+        {"type": "qcm", "question": "Quel rangement va du plus petit au plus grand ?", "options": ["1 cm, 1 dm, 1 m", "1 m, 1 dm, 1 cm", "1 dm, 1 cm, 1 m"], "answer": "1 cm, 1 dm, 1 m"},
+        {"type": "qcm", "question": "Quelle est la plus grande longueur ?", "options": ["5 dm", "45 cm", "400 mm"], "answer": "5 dm"},
+        {"type": "qcm", "question": "Un couloir mesure 10 m, un autre mesure 950 cm. Lequel est le plus long ?", "options": ["le couloir de 10 m", "le couloir de 950 cm", "ils sont pareils"], "answer": "le couloir de 10 m"},
+        {"type": "qcm", "question": "Quelle est la plus petite longueur ?", "options": ["2 m", "19 dm", "250 cm"], "answer": "19 dm"},
+        {"type": "qcm", "question": "Quelle est la plus grande distance ?", "options": ["1 km", "900 m", "1200 m"], "answer": "1200 m"}
+      ]
+    },
+    {
+      "id": 13,
+      "title": "La monnaie : euros et centimes",
+      "description": "Compter avec les euros et les centimes, additionner des pièces et des billets.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Combien y a-t-il de centimes dans 1 euro ?", "options": ["10", "100", "1000"], "answer": "100"},
+        {"type": "input", "question": "2 euros = ? centimes", "answer": "200"},
+        {"type": "input", "question": "Tu as une pièce de 2 euros et une pièce de 1 euro. Combien d'euros as-tu en tout ? (nombre seul)", "answer": "3"},
+        {"type": "input", "question": "Tu as 3 pièces de 2 euros. Combien d'euros as-tu en tout ? (nombre seul)", "answer": "6"},
+        {"type": "input", "question": "50 centimes + 50 centimes = ? euro (nombre seul)", "answer": "1"},
+        {"type": "qcm", "question": "20 centimes + 20 centimes + 10 centimes = ?", "options": ["40 centimes", "50 centimes", "60 centimes"], "answer": "50 centimes"},
+        {"type": "input", "question": "Tu as un billet de 10 euros et un billet de 5 euros. Combien d'euros as-tu en tout ? (nombre seul)", "answer": "15"},
+        {"type": "input", "question": "5 euros = ? centimes", "answer": "500"},
+        {"type": "qcm", "question": "Avec quelles pièces peux-tu faire exactement 1 euro ?", "options": ["deux pièces de 50 centimes", "deux pièces de 20 centimes", "une pièce de 50 centimes"], "answer": "deux pièces de 50 centimes"},
+        {"type": "input", "question": "Tu as 2 pièces de 2 euros, 1 pièce de 1 euro et 1 pièce de 50 centimes. Combien de centimes as-tu en tout ? (nombre seul)", "answer": "550"},
+        {"type": "qcm", "question": "1 euro et 25 centimes s'écrit :", "options": ["1,25 euro", "12,5 euros", "125 euros"], "answer": "1,25 euro"},
+        {"type": "input", "question": "Un billet de 20 euros vaut combien de billets de 5 euros ? (nombre seul)", "answer": "4"}
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Heures et minutes",
+      "description": "Lire l'heure avec les minutes, les quarts d'heure et les demi-heures.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Combien y a-t-il de minutes dans une heure ?", "options": ["30", "60", "100"], "answer": "60"},
+        {"type": "qcm", "question": "Combien y a-t-il de minutes dans une demi-heure ?", "options": ["15", "30", "60"], "answer": "30"},
+        {"type": "qcm", "question": "Combien y a-t-il de minutes dans un quart d'heure ?", "options": ["15", "25", "30"], "answer": "15"},
+        {"type": "input", "question": "La petite aiguille est un peu après le 4 et la grande aiguille est sur le 3. Quelle heure est-il ? (format 8h30)", "answer": "4h15", "accept": ["4 h 15", "4:15"]},
+        {"type": "input", "question": "La petite aiguille est presque sur le 7 et la grande aiguille est sur le 9. Quelle heure est-il ? (format 8h30)", "answer": "6h45", "accept": ["6 h 45", "6:45"]},
+        {"type": "input", "question": "Quand la grande aiguille est sur le 2, combien de minutes sont passées depuis l'heure pile ? (nombre de minutes)", "answer": "10"},
+        {"type": "input", "question": "Quand la grande aiguille est sur le 8, combien de minutes sont passées depuis l'heure pile ? (nombre de minutes)", "answer": "40"},
+        {"type": "input", "question": "La petite aiguille est entre le 10 et le 11 et la grande aiguille est sur le 6. Quelle heure est-il ? (format 8h30)", "answer": "10h30", "accept": ["10 h 30", "10:30"]},
+        {"type": "qcm", "question": "8h45, on peut aussi le dire :", "options": ["9 heures moins le quart", "8 heures et quart", "8 heures et demie"], "answer": "9 heures moins le quart"},
+        {"type": "input", "question": "Combien y a-t-il d'heures dans une journée complète ? (nombre d'heures)", "answer": "24"},
+        {"type": "input", "question": "2 heures = ? minutes", "answer": "120"},
+        {"type": "qcm", "question": "7h15, on peut aussi le dire :", "options": ["7 heures et quart", "7 heures et demie", "8 heures moins le quart"], "answer": "7 heures et quart"}
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Le périmètre en centimètres",
+      "description": "Calculer le périmètre de carrés, de rectangles et de triangles en centimètres.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Le périmètre d'une figure, c'est :", "options": ["la longueur de son tour", "sa surface", "sa hauteur"], "answer": "la longueur de son tour"},
+        {"type": "input", "question": "Un carré a des côtés de 5 cm. Quel est son périmètre en cm ? (nombre seul)", "answer": "20"},
+        {"type": "input", "question": "Un carré a des côtés de 8 cm. Quel est son périmètre en cm ? (nombre seul)", "answer": "32"},
+        {"type": "input", "question": "Un rectangle a une longueur de 6 cm et une largeur de 4 cm. Quel est son périmètre en cm ? (nombre seul)", "answer": "20"},
+        {"type": "input", "question": "Un rectangle a une longueur de 10 cm et une largeur de 3 cm. Quel est son périmètre en cm ? (nombre seul)", "answer": "26"},
+        {"type": "input", "question": "Un triangle a des côtés de 3 cm, 4 cm et 5 cm. Quel est son périmètre en cm ? (nombre seul)", "answer": "12"},
+        {"type": "input", "question": "Un triangle a 3 côtés égaux de 7 cm. Quel est son périmètre en cm ? (nombre seul)", "answer": "21"},
+        {"type": "input", "question": "Un rectangle a une longueur de 9 cm et une largeur de 5 cm. Quel est son périmètre en cm ? (nombre seul)", "answer": "28"},
+        {"type": "input", "question": "Un carré a des côtés de 10 cm. Quel est son périmètre en cm ? (nombre seul)", "answer": "40"},
+        {"type": "qcm", "question": "Quel est le périmètre d'un carré de côté 6 cm ?", "options": ["12 cm", "24 cm", "36 cm"], "answer": "24 cm"},
+        {"type": "input", "question": "Une figure a 5 côtés qui mesurent chacun 2 cm. Quel est son périmètre en cm ? (nombre seul)", "answer": "10"}
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Calculer des durées",
+      "description": "Calculer une heure de fin, une heure de départ ou une durée.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Un film commence à 14h00 et dure 2 heures. À quelle heure finit-il ? (format 8h30)", "answer": "16h00", "accept": ["16 h 00", "16:00", "16h", "16 h"]},
+        {"type": "input", "question": "L'école commence à 8h30 et se termine à 11h30. Combien d'heures cela dure-t-il ? (nombre d'heures)", "answer": "3"},
+        {"type": "input", "question": "Le bus part à 9h00 et arrive à 9h45. Combien de minutes dure le trajet ? (nombre de minutes)", "answer": "45"},
+        {"type": "input", "question": "Un gâteau cuit pendant 30 minutes. Il est mis au four à 17h00. À quelle heure est-il prêt ? (format 8h30)", "answer": "17h30", "accept": ["17 h 30", "17:30"]},
+        {"type": "input", "question": "Léa part de chez elle à 10h15 et marche pendant 30 minutes. À quelle heure arrive-t-elle ? (format 8h30)", "answer": "10h45", "accept": ["10 h 45", "10:45"]},
+        {"type": "input", "question": "Un match commence à 15h30 et dure 1 heure. À quelle heure finit-il ? (format 8h30)", "answer": "16h30", "accept": ["16 h 30", "16:30"]},
+        {"type": "input", "question": "Combien de minutes s'écoulent entre 7h00 et 7h20 ? (nombre de minutes)", "answer": "20"},
+        {"type": "input", "question": "La récréation dure de 10h00 à 10h15. Combien de minutes dure-t-elle ? (nombre de minutes)", "answer": "15"},
+        {"type": "input", "question": "1 heure et 30 minutes = ? minutes", "answer": "90"},
+        {"type": "input", "question": "Un trajet dure 1 heure. Pour arriver à 18h00, à quelle heure faut-il partir ? (format 8h30)", "answer": "17h00", "accept": ["17 h 00", "17:00", "17h", "17 h"]},
+        {"type": "input", "question": "Combien de minutes s'écoulent entre 13h30 et 14h00 ? (nombre de minutes)", "answer": "30"},
+        {"type": "qcm", "question": "Combien de temps s'écoule entre 8h30 et 16h30 ?", "options": ["7 heures", "8 heures", "9 heures"], "answer": "8 heures"}
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Problèmes de mesures du quotidien",
+      "description": "Résoudre des problèmes de longueurs, de masses, de contenances et de monnaie.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Un pain coûte 90 centimes. Tu paies avec une pièce de 1 euro (100 centimes). Combien de centimes doit-on te rendre ? (nombre seul)", "answer": "10"},
+        {"type": "input", "question": "Un livre coûte 7 euros. Tu paies avec un billet de 10 euros. Combien d'euros doit-on te rendre ? (nombre seul)", "answer": "3"},
+        {"type": "input", "question": "Un ruban mesure 2 m, c'est-à-dire 200 cm. On en coupe 50 cm. Combien de cm reste-t-il ? (nombre seul)", "answer": "150"},
+        {"type": "input", "question": "Une bouteille contient 1 L, c'est-à-dire 100 cL. Tu bois 25 cL. Combien de cL reste-t-il ? (nombre seul)", "answer": "75"},
+        {"type": "input", "question": "Un sac de farine pèse 1 kg, c'est-à-dire 1000 g. On utilise 250 g. Combien de g reste-t-il ? (nombre seul)", "answer": "750"},
+        {"type": "input", "question": "Rayan mesure 130 cm et son grand frère mesure 145 cm. Quelle est la différence en cm ? (nombre seul)", "answer": "15"},
+        {"type": "input", "question": "On achète 3 sacs de pommes de 2 kg chacun. Combien de kg de pommes en tout ? (nombre seul)", "answer": "6"},
+        {"type": "input", "question": "Un cahier coûte 2 euros et un stylo coûte 1 euro. Tu paies avec un billet de 5 euros. Combien d'euros doit-on te rendre ? (nombre seul)", "answer": "2"},
+        {"type": "input", "question": "Tu marches 400 m le matin et 600 m le soir. Combien de mètres as-tu parcourus en tout ? (nombre seul)", "answer": "1000"},
+        {"type": "qcm", "question": "Tu as parcouru 1000 m. C'est la même chose que :", "options": ["1 km", "10 km", "100 m"], "answer": "1 km"},
+        {"type": "input", "question": "Chaque jour, tu bois 2 verres de 20 cL. Combien de cL bois-tu en un jour ? (nombre seul)", "answer": "40"},
+        {"type": "input", "question": "On achète 4 packs de jus de 1 L chacun. 1 L = 1000 mL. Combien de mL en tout ? (nombre seul)", "answer": "4000"}
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Estimer un ordre de grandeur",
+      "description": "Choisir la mesure la plus vraisemblable pour des objets du quotidien.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Quelle est la hauteur d'une porte, environ ?", "options": ["2 m", "20 m", "2 cm"], "answer": "2 m"},
+        {"type": "qcm", "question": "Quelle est la masse d'une pomme, environ ?", "options": ["200 g", "2 kg", "20 kg"], "answer": "200 g"},
+        {"type": "qcm", "question": "Quelle est la longueur d'une voiture, environ ?", "options": ["4 m", "40 m", "4 km"], "answer": "4 m"},
+        {"type": "qcm", "question": "Quelle est la masse d'un enfant de 8 ans, environ ?", "options": ["25 kg", "250 kg", "2 kg"], "answer": "25 kg"},
+        {"type": "qcm", "question": "Quelle est la contenance d'un verre d'eau, environ ?", "options": ["20 cL", "20 L", "2 L"], "answer": "20 cL"},
+        {"type": "qcm", "question": "Quelle est la longueur d'un stylo, environ ?", "options": ["14 cm", "14 m", "14 mm"], "answer": "14 cm"},
+        {"type": "qcm", "question": "Quelle est la hauteur d'un immeuble de 5 étages, environ ?", "options": ["15 m", "15 km", "15 cm"], "answer": "15 m"},
+        {"type": "qcm", "question": "Quelle est la masse d'un cartable rempli, environ ?", "options": ["5 kg", "50 kg", "50 g"], "answer": "5 kg"},
+        {"type": "qcm", "question": "Quelle est la contenance d'une baignoire, environ ?", "options": ["150 L", "150 mL", "1 L"], "answer": "150 L"},
+        {"type": "qcm", "question": "Quelle est l'épaisseur d'un gros livre, environ ?", "options": ["3 cm", "3 m", "30 cm"], "answer": "3 cm"},
+        {"type": "qcm", "question": "Quelle distance peut-on parcourir à pied en 10 minutes, environ ?", "options": ["500 m", "50 km", "5 m"], "answer": "500 m"},
+        {"type": "qcm", "question": "Combien de temps faut-il pour se brosser les dents, environ ?", "options": ["3 minutes", "3 heures", "3 secondes"], "answer": "3 minutes"}
+      ]
+    }
+  ]
+}

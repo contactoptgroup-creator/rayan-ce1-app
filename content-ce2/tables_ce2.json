@@ -1,0 +1,270 @@
+{
+  "key": "tables_ce2",
+  "fiches": [
+    {
+      "id": 5,
+      "title": "La table de 2",
+      "description": "Révision rapide de la table de 2.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "2 x 3 = ?", "answer": "6"},
+        {"type": "qcm", "question": "2 x 5 = ?", "options": ["8", "10", "12"], "answer": "10"},
+        {"type": "input", "question": "2 x 7 = ?", "answer": "14"},
+        {"type": "input", "question": "2 x 9 = ?", "answer": "18"},
+        {"type": "qcm", "question": "2 x 6 = ?", "options": ["10", "12", "14"], "answer": "12"},
+        {"type": "input", "question": "? x 2 = 16", "answer": "8"},
+        {"type": "input", "question": "2 x 4 = ?", "answer": "8"},
+        {"type": "qcm", "question": "2 x 8 = ?", "options": ["14", "16", "18"], "answer": "16"},
+        {"type": "input", "question": "2 x 10 = ?", "answer": "20"},
+        {"type": "input", "question": "? x 2 = 6", "answer": "3"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "La table de 3",
+      "description": "Révision rapide de la table de 3.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "3 x 2 = ?", "answer": "6"},
+        {"type": "input", "question": "3 x 3 = ?", "answer": "9"},
+        {"type": "qcm", "question": "3 x 4 = ?", "options": ["9", "12", "15"], "answer": "12"},
+        {"type": "input", "question": "3 x 5 = ?", "answer": "15"},
+        {"type": "input", "question": "3 x 6 = ?", "answer": "18"},
+        {"type": "qcm", "question": "3 x 7 = ?", "options": ["21", "24", "27"], "answer": "21"},
+        {"type": "input", "question": "3 x 8 = ?", "answer": "24"},
+        {"type": "input", "question": "3 x 9 = ?", "answer": "27"},
+        {"type": "input", "question": "3 x 10 = ?", "answer": "30"},
+        {"type": "input", "question": "? x 3 = 12", "answer": "4"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "La table de 4",
+      "description": "Révision rapide de la table de 4.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "4 x 2 = ?", "answer": "8"},
+        {"type": "input", "question": "4 x 3 = ?", "answer": "12"},
+        {"type": "qcm", "question": "4 x 4 = ?", "options": ["12", "16", "20"], "answer": "16"},
+        {"type": "input", "question": "4 x 5 = ?", "answer": "20"},
+        {"type": "input", "question": "4 x 6 = ?", "answer": "24"},
+        {"type": "qcm", "question": "4 x 7 = ?", "options": ["24", "28", "32"], "answer": "28"},
+        {"type": "input", "question": "4 x 8 = ?", "answer": "32"},
+        {"type": "input", "question": "4 x 9 = ?", "answer": "36"},
+        {"type": "input", "question": "4 x 10 = ?", "answer": "40"},
+        {"type": "input", "question": "? x 4 = 24", "answer": "6"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "La table de 5",
+      "description": "Révision rapide de la table de 5.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "5 x 2 = ?", "answer": "10"},
+        {"type": "input", "question": "5 x 3 = ?", "answer": "15"},
+        {"type": "qcm", "question": "5 x 4 = ?", "options": ["15", "20", "25"], "answer": "20"},
+        {"type": "input", "question": "5 x 5 = ?", "answer": "25"},
+        {"type": "input", "question": "5 x 6 = ?", "answer": "30"},
+        {"type": "qcm", "question": "5 x 7 = ?", "options": ["30", "35", "40"], "answer": "35"},
+        {"type": "input", "question": "5 x 8 = ?", "answer": "40"},
+        {"type": "input", "question": "5 x 9 = ?", "answer": "45"},
+        {"type": "input", "question": "5 x 10 = ?", "answer": "50"},
+        {"type": "input", "question": "? x 5 = 30", "answer": "6"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "La table de 6",
+      "description": "Apprendre et mémoriser la table de 6.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "6 x 2 = ?", "answer": "12"},
+        {"type": "input", "question": "6 x 3 = ?", "answer": "18"},
+        {"type": "qcm", "question": "6 x 4 = ?", "options": ["22", "24", "26"], "answer": "24"},
+        {"type": "input", "question": "6 x 5 = ?", "answer": "30"},
+        {"type": "input", "question": "6 x 6 = ?", "answer": "36"},
+        {"type": "qcm", "question": "6 x 7 = ?", "options": ["40", "42", "44"], "answer": "42"},
+        {"type": "input", "question": "6 x 8 = ?", "answer": "48"},
+        {"type": "input", "question": "6 x 9 = ?", "answer": "54"},
+        {"type": "input", "question": "6 x 10 = ?", "answer": "60"},
+        {"type": "input", "question": "? x 6 = 42", "answer": "7"},
+        {"type": "input", "question": "? x 6 = 54", "answer": "9"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "La table de 7",
+      "description": "Apprendre et mémoriser la table de 7.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "7 x 2 = ?", "answer": "14"},
+        {"type": "input", "question": "7 x 3 = ?", "answer": "21"},
+        {"type": "qcm", "question": "7 x 4 = ?", "options": ["27", "28", "29"], "answer": "28"},
+        {"type": "input", "question": "7 x 5 = ?", "answer": "35"},
+        {"type": "input", "question": "7 x 6 = ?", "answer": "42"},
+        {"type": "qcm", "question": "7 x 7 = ?", "options": ["47", "48", "49"], "answer": "49"},
+        {"type": "input", "question": "7 x 8 = ?", "answer": "56"},
+        {"type": "input", "question": "7 x 9 = ?", "answer": "63"},
+        {"type": "input", "question": "7 x 10 = ?", "answer": "70"},
+        {"type": "input", "question": "? x 7 = 56", "answer": "8"},
+        {"type": "input", "question": "? x 7 = 35", "answer": "5"}
+      ]
+    },
+    {
+      "id": 11,
+      "title": "La table de 8",
+      "description": "Apprendre et mémoriser la table de 8.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "8 x 2 = ?", "answer": "16"},
+        {"type": "input", "question": "8 x 3 = ?", "answer": "24"},
+        {"type": "qcm", "question": "8 x 4 = ?", "options": ["30", "32", "34"], "answer": "32"},
+        {"type": "input", "question": "8 x 5 = ?", "answer": "40"},
+        {"type": "input", "question": "8 x 6 = ?", "answer": "48"},
+        {"type": "qcm", "question": "8 x 7 = ?", "options": ["54", "56", "58"], "answer": "56"},
+        {"type": "input", "question": "8 x 8 = ?", "answer": "64"},
+        {"type": "input", "question": "8 x 9 = ?", "answer": "72"},
+        {"type": "input", "question": "8 x 10 = ?", "answer": "80"},
+        {"type": "input", "question": "? x 8 = 48", "answer": "6"},
+        {"type": "input", "question": "? x 8 = 72", "answer": "9"}
+      ]
+    },
+    {
+      "id": 12,
+      "title": "La table de 9",
+      "description": "Apprendre et mémoriser la table de 9.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "9 x 2 = ?", "answer": "18"},
+        {"type": "input", "question": "9 x 3 = ?", "answer": "27"},
+        {"type": "qcm", "question": "9 x 4 = ?", "options": ["34", "36", "38"], "answer": "36"},
+        {"type": "input", "question": "9 x 5 = ?", "answer": "45"},
+        {"type": "input", "question": "9 x 6 = ?", "answer": "54"},
+        {"type": "qcm", "question": "9 x 7 = ?", "options": ["61", "63", "65"], "answer": "63"},
+        {"type": "input", "question": "9 x 8 = ?", "answer": "72"},
+        {"type": "input", "question": "9 x 9 = ?", "answer": "81"},
+        {"type": "input", "question": "9 x 10 = ?", "answer": "90"},
+        {"type": "input", "question": "? x 9 = 63", "answer": "7"},
+        {"type": "input", "question": "? x 9 = 81", "answer": "9"}
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Tables mélangées de 2 à 5",
+      "description": "S'entraîner sur les tables de 2, 3, 4 et 5 dans le désordre.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Combien font 3 x 6 ?", "options": ["16", "18", "21"], "answer": "18"},
+        {"type": "input", "question": "Combien font 4 x 9 ?", "answer": "36"},
+        {"type": "input", "question": "Calcule 5 x 7", "answer": "35"},
+        {"type": "input", "question": "? x 3 = 27", "answer": "9"},
+        {"type": "input", "question": "? x 2 = 14", "answer": "7"},
+        {"type": "input", "question": "? x 5 = 45", "answer": "9"},
+        {"type": "qcm", "question": "Combien font 4 x 6 ?", "options": ["24", "26", "28"], "answer": "24"},
+        {"type": "input", "question": "Calcule 3 x 9", "answer": "27"},
+        {"type": "input", "question": "? x 4 = 32", "answer": "8"},
+        {"type": "qcm", "question": "Combien font 5 x 8 ?", "options": ["35", "40", "45"], "answer": "40"},
+        {"type": "input", "question": "? x 3 = 18", "answer": "6"}
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Tables mélangées de 6 à 9",
+      "description": "S'entraîner sur les tables de 6, 7, 8 et 9 dans le désordre.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Calcule 6 x 7", "answer": "42"},
+        {"type": "qcm", "question": "Combien font 7 x 8 ?", "options": ["54", "56", "63"], "answer": "56"},
+        {"type": "input", "question": "Calcule 8 x 9", "answer": "72"},
+        {"type": "input", "question": "? x 6 = 48", "answer": "8"},
+        {"type": "qcm", "question": "Combien font 9 x 7 ?", "options": ["56", "63", "72"], "answer": "63"},
+        {"type": "input", "question": "Calcule 7 x 7", "answer": "49"},
+        {"type": "input", "question": "? x 9 = 36", "answer": "4"},
+        {"type": "qcm", "question": "Combien font 6 x 9 ?", "options": ["52", "54", "56"], "answer": "54"},
+        {"type": "input", "question": "? x 8 = 56", "answer": "7"},
+        {"type": "input", "question": "Calcule 8 x 6", "answer": "48"},
+        {"type": "qcm", "question": "Combien font 7 x 4 ?", "options": ["24", "28", "32"], "answer": "28"},
+        {"type": "input", "question": "? x 7 = 63", "answer": "9"}
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Toutes les tables en désordre",
+      "description": "Toutes les tables de 2 à 9 mélangées pour devenir un champion.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Calcule 9 x 8", "answer": "72"},
+        {"type": "input", "question": "Calcule 3 x 8", "answer": "24"},
+        {"type": "qcm", "question": "Combien font 8 x 7 ?", "options": ["48", "54", "56"], "answer": "56"},
+        {"type": "input", "question": "? x 5 = 35", "answer": "7"},
+        {"type": "input", "question": "Calcule 6 x 4", "answer": "24"},
+        {"type": "qcm", "question": "Combien font 9 x 9 ?", "options": ["79", "81", "89"], "answer": "81"},
+        {"type": "input", "question": "? x 4 = 28", "answer": "7"},
+        {"type": "input", "question": "Calcule 7 x 5", "answer": "35"},
+        {"type": "qcm", "question": "Combien font 6 x 8 ?", "options": ["42", "48", "54"], "answer": "48"},
+        {"type": "input", "question": "? x 6 = 30", "answer": "5"},
+        {"type": "input", "question": "Calcule 4 x 8", "answer": "32"},
+        {"type": "input", "question": "? x 9 = 45", "answer": "5"}
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Les divisions des tables",
+      "description": "Retrouver les divisions qui viennent des tables de multiplication.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "28 divisé par 7 = ?", "answer": "4"},
+        {"type": "input", "question": "Combien de fois 9 dans 63 ?", "answer": "7"},
+        {"type": "qcm", "question": "54 divisé par 6 = ?", "options": ["7", "8", "9"], "answer": "9"},
+        {"type": "input", "question": "45 divisé par 5 = ?", "answer": "9"},
+        {"type": "input", "question": "Combien de fois 8 dans 56 ?", "answer": "7"},
+        {"type": "qcm", "question": "72 divisé par 9 = ?", "options": ["7", "8", "9"], "answer": "8"},
+        {"type": "input", "question": "36 divisé par 4 = ?", "answer": "9"},
+        {"type": "input", "question": "Combien de fois 6 dans 42 ?", "answer": "7"},
+        {"type": "input", "question": "64 divisé par 8 = ?", "answer": "8"},
+        {"type": "qcm", "question": "35 divisé par 7 = ?", "options": ["4", "5", "6"], "answer": "5"},
+        {"type": "input", "question": "Combien de fois 3 dans 24 ?", "answer": "8"},
+        {"type": "input", "question": "81 divisé par 9 = ?", "answer": "9"}
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Multiples et tables",
+      "description": "Reconnaître les multiples et savoir dans quelle table se trouve un nombre.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "54 est dans la table de...", "options": ["6", "7", "8"], "answer": "6"},
+        {"type": "qcm", "question": "Quel nombre est dans la table de 7 ?", "options": ["25", "42", "50"], "answer": "42"},
+        {"type": "qcm", "question": "35 est dans la table de...", "options": ["4", "5", "6"], "answer": "5"},
+        {"type": "qcm", "question": "Quel nombre est un multiple de 9 ?", "options": ["45", "46", "47"], "answer": "45"},
+        {"type": "qcm", "question": "48 est dans la table de...", "options": ["6", "7", "9"], "answer": "6"},
+        {"type": "qcm", "question": "Quel nombre est dans la table de 8 ?", "options": ["34", "44", "56"], "answer": "56"},
+        {"type": "qcm", "question": "63 est dans la table de...", "options": ["6", "7", "8"], "answer": "7"},
+        {"type": "qcm", "question": "Quel nombre est un multiple de 4 ?", "options": ["26", "32", "34"], "answer": "32"},
+        {"type": "qcm", "question": "27 est dans la table de...", "options": ["3", "4", "6"], "answer": "3"},
+        {"type": "qcm", "question": "Quel nombre est un multiple de 6 ?", "options": ["32", "36", "38"], "answer": "36"},
+        {"type": "input", "question": "Quel est le multiple de 7 juste après 49 ?", "answer": "56"}
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Petits problèmes avec les tables",
+      "description": "Utiliser les tables de multiplication et de division pour résoudre des problèmes.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Un paquet contient 6 gâteaux. Combien de gâteaux y a-t-il dans 4 paquets ?", "answer": "24"},
+        {"type": "input", "question": "Une araignée a 8 pattes. Combien de pattes ont 7 araignées ?", "answer": "56"},
+        {"type": "qcm", "question": "Rayan achète 3 boîtes de 9 feutres. Combien de feutres a-t-il en tout ?", "options": ["24", "27", "30"], "answer": "27"},
+        {"type": "input", "question": "Une fleur a 5 pétales. Combien de pétales ont 9 fleurs ?", "answer": "45"},
+        {"type": "input", "question": "On range 42 billes dans des sacs de 6 billes. Combien de sacs faut-il ?", "answer": "7"},
+        {"type": "qcm", "question": "Un livre coûte 8 euros. Combien coûtent 6 livres ?", "options": ["42 euros", "48 euros", "54 euros"], "answer": "48 euros"},
+        {"type": "input", "question": "Une semaine compte 7 jours. Combien de jours y a-t-il dans 5 semaines ?", "answer": "35"},
+        {"type": "input", "question": "On partage 36 bonbons entre 9 enfants. Combien de bonbons reçoit chaque enfant ?", "answer": "4"},
+        {"type": "qcm", "question": "Un bus a 4 roues. Combien de roues ont 8 bus ?", "options": ["28", "32", "36"], "answer": "32"},
+        {"type": "input", "question": "Un vélo a 2 roues. Combien de roues ont 9 vélos ?", "answer": "18"},
+        {"type": "input", "question": "On distribue 24 cartes à 3 joueurs. Combien de cartes reçoit chaque joueur ?", "answer": "8"}
+      ]
+    }
+  ]
+}

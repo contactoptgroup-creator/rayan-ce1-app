@@ -1,0 +1,216 @@
+{
+  "key": "dictee_ce2",
+  "fiches": [
+    {
+      "id": 4,
+      "title": "Les sons complexes (ill, gn, eil, ouil)",
+      "description": "Dictées de phrases avec les sons ill, gn, eil et ouil pour bien écrire ces graphies difficiles.",
+      "difficulty": 1,
+      "exercises": [
+        { "type": "dictee", "text": "La grenouille verte saute dans la mare.", "hint": "le son ouille" },
+        { "type": "dictee", "text": "Ma famille prépare une belle fête pour dimanche.", "hint": "le son ill" },
+        { "type": "dictee", "text": "Le soleil brille sur la montagne enneigée.", "hint": "les sons eil et gn" },
+        { "type": "dictee", "text": "La fillette cueille des fleurs dans le jardin.", "hint": "le son ill" },
+        { "type": "dictee", "text": "Mon oncle taille les branches du vieux chêne.", "hint": "le son aill" },
+        { "type": "dictee", "text": "Le papillon jaune vole au-dessus des roses.", "hint": "le son ill" },
+        { "type": "dictee", "text": "L'agneau suit sa mère dans le pré.", "hint": "le son gn" },
+        { "type": "dictee", "text": "Je me réveille tôt tous les matins d'école.", "hint": "le son eill" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Les valeurs des lettres g et c",
+      "description": "Dictées pour distinguer le g dur, le g doux, le c dur, le c doux et la cédille.",
+      "difficulty": 1,
+      "exercises": [
+        { "type": "dictee", "text": "Le garçon mange une glace à la vanille.", "hint": "g et c cédille" },
+        { "type": "dictee", "text": "La girafe regarde les nuages dans le ciel.", "hint": "g doux et g dur" },
+        { "type": "dictee", "text": "Nous plongeons dans la piscine tous les mercredis.", "hint": "le g suivi de e" },
+        { "type": "dictee", "text": "Le magicien agite sa baguette devant le public.", "hint": "g doux et g dur" },
+        { "type": "dictee", "text": "Maman coupe des carottes et des courgettes.", "hint": "valeurs de c et g" },
+        { "type": "dictee", "text": "Le pigeon gris se pose sur le balcon.", "hint": "le son je" },
+        { "type": "dictee", "text": "François reçoit un cadeau pour son anniversaire.", "hint": "la cédille" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Le pluriel des noms en -s et -x",
+      "description": "Dictées pour écrire correctement les pluriels réguliers en s et les pluriels en x.",
+      "difficulty": 1,
+      "exercises": [
+        { "type": "dictee", "text": "Les enfants rangent leurs jouets dans les coffres.", "hint": "pluriel en s" },
+        { "type": "dictee", "text": "Les oiseaux chantent dans les arbres du parc.", "hint": "pluriel en x" },
+        { "type": "dictee", "text": "Mes cousins ramassent des cailloux près du ruisseau.", "hint": "pluriel en x" },
+        { "type": "dictee", "text": "Papa achète des gâteaux et des bonbons délicieux.", "hint": "pluriel en x" },
+        { "type": "dictee", "text": "Les hiboux dorment le jour et chassent la nuit.", "hint": "pluriel des mots en ou" },
+        { "type": "dictee", "text": "Les élèves posent leurs manteaux sur les chaises.", "hint": "pluriels en x et s" },
+        { "type": "dictee", "text": "Les feux rouges arrêtent les voitures prudentes.", "hint": "pluriel en x" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Le pluriel des noms en -al et -ail",
+      "description": "Dictées pour maîtriser les pluriels en aux et les exceptions des noms en al et ail.",
+      "difficulty": 1,
+      "exercises": [
+        { "type": "dictee", "text": "Les chevaux galopent dans les champs verts.", "hint": "pluriel en aux" },
+        { "type": "dictee", "text": "Les journaux du matin attendent sur la table.", "hint": "pluriel de journal" },
+        { "type": "dictee", "text": "Les animaux de la ferme dorment dans l'étable.", "hint": "pluriel en aux" },
+        { "type": "dictee", "text": "Le fermier répare les portails de la ferme.", "hint": "pluriel en ails" },
+        { "type": "dictee", "text": "Les travaux de la route dureront trois semaines.", "hint": "pluriel de travail" },
+        { "type": "dictee", "text": "Nous admirons les vitraux colorés de l'église.", "hint": "pluriel de vitrail" },
+        { "type": "dictee", "text": "Les chacals hurlent dans le désert pendant la nuit.", "hint": "exception en als" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "L'accord dans le groupe nominal",
+      "description": "Dictées pour accorder le déterminant, le nom et l'adjectif en genre et en nombre.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "dictee", "text": "Les petites filles portent des robes bleues.", "hint": "accord de l'adjectif" },
+        { "type": "dictee", "text": "Mon voisin promène ses deux gros chiens noirs.", "hint": "accord du groupe nominal" },
+        { "type": "dictee", "text": "La vieille dame arrose ses jolies fleurs rouges.", "hint": "accords au féminin pluriel" },
+        { "type": "dictee", "text": "Les grands arbres verts bordent la longue allée.", "hint": "accord du groupe nominal" },
+        { "type": "dictee", "text": "Une énorme vague blanche recouvre les rochers gris.", "hint": "accord de l'adjectif" },
+        { "type": "dictee", "text": "Ces nouvelles chaussures vertes plaisent beaucoup à ma sœur.", "hint": "accords au féminin pluriel" },
+        { "type": "dictee", "text": "Le petit chat gris joue avec une pelote rouge.", "hint": "accord du groupe nominal" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "L'accord sujet-verbe",
+      "description": "Dictées pour accorder le verbe avec son sujet au singulier et au pluriel.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "dictee", "text": "Les enfants jouent dans la cour de récréation.", "hint": "accord sujet verbe" },
+        { "type": "dictee", "text": "Mon frère et ma sœur regardent un dessin animé.", "hint": "deux sujets, verbe au pluriel" },
+        { "type": "dictee", "text": "La maîtresse explique la leçon aux élèves attentifs.", "hint": "sujet au singulier" },
+        { "type": "dictee", "text": "Les hirondelles reviennent au printemps chaque année.", "hint": "accord sujet verbe" },
+        { "type": "dictee", "text": "Tu ranges ta chambre avant de sortir jouer.", "hint": "terminaison avec tu" },
+        { "type": "dictee", "text": "Nous chantons une chanson pour la fête de l'école.", "hint": "terminaison avec nous" },
+        { "type": "dictee", "text": "Vous préparez le repas pendant que je mets la table.", "hint": "terminaison avec vous" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Les homophones a et à",
+      "description": "Dictées pour distinguer le verbe avoir et la petite préposition avec accent.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "dictee", "text": "Rayan a un nouveau cartable pour la rentrée.", "hint": "a ou à" },
+        { "type": "dictee", "text": "Nous allons à la piscine tous les samedis.", "hint": "a ou à" },
+        { "type": "dictee", "text": "Elle a mal à la gorge depuis hier soir.", "hint": "a ou à" },
+        { "type": "dictee", "text": "Le train arrive à la gare en avance.", "hint": "a ou à" },
+        { "type": "dictee", "text": "Mon ami a invité toute la classe à son anniversaire.", "hint": "a ou à" },
+        { "type": "dictee", "text": "Il a plu toute la journée à la montagne.", "hint": "a ou à" },
+        { "type": "dictee", "text": "Papa a acheté des croissants à la boulangerie.", "hint": "a ou à" }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Les homophones et / est",
+      "description": "Dictées pour distinguer le petit mot et du verbe être.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "dictee", "text": "Mon chat est doux et très câlin.", "hint": "et ou est" },
+        { "type": "dictee", "text": "La mer est calme et le ciel est bleu.", "hint": "et ou est" },
+        { "type": "dictee", "text": "Cette histoire est longue et un peu triste.", "hint": "et ou est" },
+        { "type": "dictee", "text": "Léo est grand et son frère est petit.", "hint": "et ou est" },
+        { "type": "dictee", "text": "Le repas est prêt et la table est mise.", "hint": "et ou est" },
+        { "type": "dictee", "text": "L'hiver est froid et l'été est chaud.", "hint": "et ou est" },
+        { "type": "dictee", "text": "Ma trousse est neuve et mon stylo est cassé.", "hint": "et ou est" }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Les homophones son / sont",
+      "description": "Dictées pour distinguer le déterminant possessif son et le verbe être au pluriel.",
+      "difficulty": 2,
+      "exercises": [
+        { "type": "dictee", "text": "Les élèves sont contents de retrouver leur maîtresse.", "hint": "son ou sont" },
+        { "type": "dictee", "text": "Il a oublié son cahier et son stylo.", "hint": "son ou sont" },
+        { "type": "dictee", "text": "Mes parents sont partis au marché ce matin.", "hint": "son ou sont" },
+        { "type": "dictee", "text": "Le chien remue la queue quand son maître rentre.", "hint": "son ou sont" },
+        { "type": "dictee", "text": "Les fraises du jardin sont mûres et sucrées.", "hint": "son ou sont" },
+        { "type": "dictee", "text": "Elle prête son vélo à sa petite sœur.", "hint": "son ou sont" },
+        { "type": "dictee", "text": "Les fenêtres de la classe sont grandes ouvertes.", "hint": "son ou sont" }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Les homophones on / ont",
+      "description": "Dictées pour distinguer le pronom on et le verbe avoir au pluriel.",
+      "difficulty": 3,
+      "exercises": [
+        { "type": "dictee", "text": "On entend les oiseaux chanter dans le jardin.", "hint": "on ou ont" },
+        { "type": "dictee", "text": "Mes amis ont apporté des jeux pour la fête.", "hint": "on ou ont" },
+        { "type": "dictee", "text": "On mange souvent des crêpes le dimanche matin.", "hint": "on ou ont" },
+        { "type": "dictee", "text": "Les élèves ont appris une nouvelle poésie.", "hint": "on ou ont" },
+        { "type": "dictee", "text": "On part en vacances quand les cours se terminent.", "hint": "on ou ont" },
+        { "type": "dictee", "text": "Ils ont couru très vite pour attraper le bus.", "hint": "on ou ont" },
+        { "type": "dictee", "text": "On dirait que les nuages ont caché le soleil.", "hint": "on ou ont" }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Les homophones ce / se",
+      "description": "Dictées pour distinguer le déterminant ce et le petit mot se devant un verbe.",
+      "difficulty": 3,
+      "exercises": [
+        { "type": "dictee", "text": "Ce matin, mon frère se lève très tôt.", "hint": "ce ou se" },
+        { "type": "dictee", "text": "Ce chien se cache sous la table du salon.", "hint": "ce ou se" },
+        { "type": "dictee", "text": "Elle se dépêche pour ne pas rater ce train.", "hint": "ce ou se" },
+        { "type": "dictee", "text": "Ce soir, nous regarderons les étoiles ensemble.", "hint": "ce ou se" },
+        { "type": "dictee", "text": "Le hérisson se roule en boule quand il a peur.", "hint": "ce ou se" },
+        { "type": "dictee", "text": "Ce livre se termine par une belle surprise.", "hint": "ce ou se" },
+        { "type": "dictee", "text": "Ce garçon se brosse les dents matin et soir.", "hint": "ce ou se" }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Les mots invariables courants",
+      "description": "Dictées avec les petits mots qui ne changent jamais : toujours, souvent, beaucoup, demain, soudain.",
+      "difficulty": 3,
+      "exercises": [
+        { "type": "dictee", "text": "Aujourd'hui, il pleut beaucoup depuis le matin.", "hint": "mots invariables" },
+        { "type": "dictee", "text": "Demain, nous irons chez notre grand-mère ensemble.", "hint": "mots invariables" },
+        { "type": "dictee", "text": "Le chat dort toujours sur le canapé du salon.", "hint": "mots invariables" },
+        { "type": "dictee", "text": "Soudain, un éclair traverse le ciel très sombre.", "hint": "mots invariables" },
+        { "type": "dictee", "text": "Il y a longtemps, les chevaliers vivaient dans des châteaux.", "hint": "mots invariables" },
+        { "type": "dictee", "text": "Maintenant, je fais mes devoirs avant de jouer dehors.", "hint": "mots invariables" },
+        { "type": "dictee", "text": "Pendant les vacances, nous lisons souvent des bandes dessinées.", "hint": "mots invariables" }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Les lettres muettes finales",
+      "description": "Dictées avec des mots qui se terminent par une lettre que l'on n'entend pas.",
+      "difficulty": 3,
+      "exercises": [
+        { "type": "dictee", "text": "Le chat blanc dort au bord du lit.", "hint": "lettres muettes finales" },
+        { "type": "dictee", "text": "Un grand tapis gris décore le salon.", "hint": "lettres muettes finales" },
+        { "type": "dictee", "text": "Le marchand vend des fruits au marché.", "hint": "lettres muettes finales" },
+        { "type": "dictee", "text": "Le loup se cache dans le bois profond.", "hint": "lettres muettes finales" },
+        { "type": "dictee", "text": "Cet enfant porte un bonnet chaud et des gants.", "hint": "lettres muettes finales" },
+        { "type": "dictee", "text": "Le canard plonge dans l'étang près du pont.", "hint": "lettres muettes finales" },
+        { "type": "dictee", "text": "Au printemps, le champ se couvre de fleurs.", "hint": "lettres muettes finales" }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Le passé composé avec avoir",
+      "description": "Dictées de phrases au passé composé formé avec l'auxiliaire avoir et le participe passé.",
+      "difficulty": 3,
+      "exercises": [
+        { "type": "dictee", "text": "Hier, nous avons visité le musée avec la classe.", "hint": "passé composé" },
+        { "type": "dictee", "text": "J'ai fini tous mes devoirs avant le dîner.", "hint": "passé composé" },
+        { "type": "dictee", "text": "Les enfants ont construit une cabane dans le jardin.", "hint": "passé composé" },
+        { "type": "dictee", "text": "Elle a trouvé un joli coquillage sur la plage.", "hint": "passé composé" },
+        { "type": "dictee", "text": "Tu as gagné la course pendant la récréation.", "hint": "passé composé" },
+        { "type": "dictee", "text": "Mon oncle a réparé le vélo de mon cousin.", "hint": "passé composé" },
+        { "type": "dictee", "text": "Nous avons regardé un film hier soir en famille.", "hint": "passé composé" }
+      ]
+    }
+  ]
+}
