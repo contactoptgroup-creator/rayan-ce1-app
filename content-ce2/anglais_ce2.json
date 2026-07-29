@@ -1,0 +1,292 @@
+{
+  "key": "anglais_ce2",
+  "fiches": [
+    {
+      "id": 6,
+      "title": "Les couleurs",
+      "description": "Apprendre les couleurs en anglais.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « rouge » en anglais ?", "answer": "red"},
+        {"type": "input", "question": "Comment dit-on « bleu » en anglais ?", "answer": "blue"},
+        {"type": "qcm", "question": "Comment dit-on « vert » en anglais ?", "options": ["green", "grey", "brown"], "answer": "green"},
+        {"type": "input", "question": "Comment dit-on « jaune » en anglais ?", "answer": "yellow"},
+        {"type": "qcm", "question": "Comment dit-on « noir » en anglais ?", "options": ["black", "white", "blue"], "answer": "black"},
+        {"type": "input", "question": "Comment dit-on « blanc » en anglais ?", "answer": "white"},
+        {"type": "qcm", "question": "Comment dit-on « orange » en anglais ?", "options": ["orange", "purple", "pink"], "answer": "orange"},
+        {"type": "input", "question": "Comment dit-on « rose » en anglais ?", "answer": "pink"},
+        {"type": "qcm", "question": "Comment dit-on « marron » en anglais ?", "options": ["brown", "black", "red"], "answer": "brown"},
+        {"type": "input", "question": "Comment dit-on « violet » en anglais ?", "answer": "purple"},
+        {"type": "input", "question": "Comment dit-on « gris » en anglais ?", "answer": "grey", "accept": ["gray"]},
+        {"type": "qcm", "question": "Quelle couleur obtient-on en mélangeant le bleu et le jaune ?", "options": ["green", "purple", "orange"], "answer": "green"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Les nombres de 1 à 20",
+      "description": "Compter de 1 à 20 en anglais.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « un » en anglais ?", "answer": "one"},
+        {"type": "input", "question": "Comment dit-on « deux » en anglais ?", "answer": "two"},
+        {"type": "qcm", "question": "Comment dit-on « trois » en anglais ?", "options": ["three", "tree", "free"], "answer": "three"},
+        {"type": "input", "question": "Comment dit-on « quatre » en anglais ?", "answer": "four"},
+        {"type": "input", "question": "Comment dit-on « cinq » en anglais ?", "answer": "five"},
+        {"type": "input", "question": "Comment dit-on « sept » en anglais ?", "answer": "seven"},
+        {"type": "qcm", "question": "Comment dit-on « huit » en anglais ?", "options": ["eight", "ate", "eighty"], "answer": "eight"},
+        {"type": "input", "question": "Comment dit-on « dix » en anglais ?", "answer": "ten"},
+        {"type": "qcm", "question": "Comment dit-on « douze » en anglais ?", "options": ["twelve", "twenty", "two"], "answer": "twelve"},
+        {"type": "qcm", "question": "Comment dit-on « quinze » en anglais ?", "options": ["fifteen", "fifty", "five"], "answer": "fifteen"},
+        {"type": "qcm", "question": "Comment dit-on « vingt » en anglais ?", "options": ["twenty", "twelve", "ten"], "answer": "twenty"},
+        {"type": "qcm", "question": "Combien font six plus trois ? Choisis la réponse en anglais.", "options": ["nine", "eight", "six"], "answer": "nine"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Les animaux familiers et sauvages",
+      "description": "Le nom des animaux de la maison et de la savane.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « chien » en anglais ?", "answer": "dog"},
+        {"type": "input", "question": "Comment dit-on « chat » en anglais ?", "answer": "cat"},
+        {"type": "qcm", "question": "Comment dit-on « lapin » en anglais ?", "options": ["rabbit", "rat", "cat"], "answer": "rabbit"},
+        {"type": "input", "question": "Comment dit-on « oiseau » en anglais ?", "answer": "bird"},
+        {"type": "qcm", "question": "Comment dit-on « cheval » en anglais ?", "options": ["horse", "mouse", "house"], "answer": "horse"},
+        {"type": "input", "question": "Comment dit-on « poisson » en anglais ?", "answer": "fish"},
+        {"type": "qcm", "question": "Comment dit-on « lion » en anglais ?", "options": ["lion", "tiger", "bear"], "answer": "lion"},
+        {"type": "input", "question": "Comment dit-on « singe » en anglais ?", "answer": "monkey"},
+        {"type": "qcm", "question": "Comment dit-on « éléphant » en anglais ?", "options": ["elephant", "crocodile", "giraffe"], "answer": "elephant"},
+        {"type": "input", "question": "Comment dit-on « souris » en anglais ?", "answer": "mouse"},
+        {"type": "qcm", "question": "Quel animal sauvage a des rayures noires et oranges ?", "options": ["tiger", "zebra", "lion"], "answer": "tiger"},
+        {"type": "qcm", "question": "Comment dit-on « vache » en anglais ?", "options": ["cow", "sheep", "pig"], "answer": "cow"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "La famille",
+      "description": "Le vocabulaire de la famille.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « mère » en anglais ?", "answer": "mother", "accept": ["mum", "mom", "mummy", "mommy"]},
+        {"type": "input", "question": "Comment dit-on « père » en anglais ?", "answer": "father", "accept": ["dad", "daddy"]},
+        {"type": "qcm", "question": "Comment dit-on « frère » en anglais ?", "options": ["brother", "sister", "father"], "answer": "brother"},
+        {"type": "input", "question": "Comment dit-on « sœur » en anglais ?", "answer": "sister"},
+        {"type": "qcm", "question": "Comment dit-on « grand-mère » en anglais ?", "options": ["grandmother", "grandfather", "mother"], "answer": "grandmother"},
+        {"type": "input", "question": "Comment dit-on « grand-père » en anglais ?", "answer": "grandfather", "accept": ["grandpa", "granddad", "grandad"]},
+        {"type": "qcm", "question": "Comment dit-on « oncle » en anglais ?", "options": ["uncle", "aunt", "cousin"], "answer": "uncle"},
+        {"type": "input", "question": "Comment dit-on « tante » en anglais ?", "answer": "aunt", "accept": ["auntie", "aunty"]},
+        {"type": "qcm", "question": "Comment dit-on « bébé » en anglais ?", "options": ["baby", "boy", "girl"], "answer": "baby"},
+        {"type": "input", "question": "Comment dit-on « garçon » en anglais ?", "answer": "boy", "accept": ["a boy"]},
+        {"type": "input", "question": "Comment dit-on « fille » en anglais ?", "answer": "girl", "accept": ["a girl"]},
+        {"type": "qcm", "question": "Comment dit-on « famille » en anglais ?", "options": ["family", "farm", "friends"], "answer": "family"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Le corps",
+      "description": "Les parties du corps en anglais.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « tête » en anglais ?", "answer": "head"},
+        {"type": "input", "question": "Comment dit-on « main » en anglais ?", "answer": "hand"},
+        {"type": "qcm", "question": "Comment dit-on « pied » en anglais ?", "options": ["foot", "feet", "hand"], "answer": "foot"},
+        {"type": "input", "question": "Comment dit-on « bras » en anglais ?", "answer": "arm"},
+        {"type": "qcm", "question": "Comment dit-on « jambe » en anglais ?", "options": ["leg", "arm", "head"], "answer": "leg"},
+        {"type": "input", "question": "Comment dit-on « nez » en anglais ?", "answer": "nose"},
+        {"type": "qcm", "question": "Comment dit-on « bouche » en anglais ?", "options": ["mouth", "mouse", "month"], "answer": "mouth"},
+        {"type": "input", "question": "Comment dit-on « œil » en anglais ?", "answer": "eye", "accept": ["an eye"]},
+        {"type": "qcm", "question": "Comment dit-on « oreille » en anglais ?", "options": ["ear", "eye", "arm"], "answer": "ear"},
+        {"type": "input", "question": "Comment dit-on « cheveux » en anglais ?", "answer": "hair"},
+        {"type": "qcm", "question": "Comment dit-on « dent » en anglais ?", "options": ["tooth", "teeth", "foot"], "answer": "tooth"},
+        {"type": "qcm", "question": "Avec quelle partie du corps voit-on ?", "options": ["eyes", "ears", "hands"], "answer": "eyes"}
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Les vêtements",
+      "description": "Le vocabulaire des vêtements.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « robe » en anglais ?", "answer": "dress", "accept": ["a dress"]},
+        {"type": "input", "question": "Comment dit-on « pantalon » en anglais ?", "answer": "trousers", "accept": ["pants"]},
+        {"type": "qcm", "question": "Comment dit-on « chemise » en anglais ?", "options": ["shirt", "skirt", "shoe"], "answer": "shirt"},
+        {"type": "input", "question": "Comment dit-on « jupe » en anglais ?", "answer": "skirt", "accept": ["a skirt"]},
+        {"type": "qcm", "question": "Comment dit-on « chaussures » en anglais ?", "options": ["shoes", "socks", "shorts"], "answer": "shoes"},
+        {"type": "input", "question": "Comment dit-on « chapeau » en anglais ?", "answer": "hat", "accept": ["a hat"]},
+        {"type": "qcm", "question": "Comment dit-on « manteau » en anglais ?", "options": ["coat", "boat", "goat"], "answer": "coat"},
+        {"type": "input", "question": "Comment dit-on « chaussette » en anglais ?", "answer": "sock", "accept": ["a sock", "socks"]},
+        {"type": "input", "question": "Comment dit-on « pull » en anglais ?", "answer": "jumper", "accept": ["sweater", "pullover", "a jumper", "a sweater"]},
+        {"type": "qcm", "question": "Comment dit-on « tee-shirt » en anglais ?", "options": ["T-shirt", "shirt", "shorts"], "answer": "T-shirt"},
+        {"type": "input", "question": "Comment dit-on « gant » en anglais ?", "answer": "glove", "accept": ["a glove", "gloves"]},
+        {"type": "qcm", "question": "Que portes-tu aux pieds quand il pleut ?", "options": ["boots", "hats", "gloves"], "answer": "boots"}
+      ]
+    },
+    {
+      "id": 12,
+      "title": "La nourriture et les boissons",
+      "description": "Le vocabulaire de la nourriture et des boissons.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « pomme » en anglais ?", "answer": "apple", "accept": ["an apple"]},
+        {"type": "input", "question": "Comment dit-on « pain » en anglais ?", "answer": "bread"},
+        {"type": "qcm", "question": "Comment dit-on « lait » en anglais ?", "options": ["milk", "water", "juice"], "answer": "milk"},
+        {"type": "input", "question": "Comment dit-on « eau » en anglais ?", "answer": "water"},
+        {"type": "qcm", "question": "Comment dit-on « fromage » en anglais ?", "options": ["cheese", "chicken", "chocolate"], "answer": "cheese"},
+        {"type": "input", "question": "Comment dit-on « banane » en anglais ?", "answer": "banana", "accept": ["a banana"]},
+        {"type": "qcm", "question": "Comment dit-on « poulet » en anglais ?", "options": ["chicken", "kitchen", "fish"], "answer": "chicken"},
+        {"type": "input", "question": "Comment dit-on « œuf » en anglais ?", "answer": "egg", "accept": ["an egg"]},
+        {"type": "qcm", "question": "Comment dit-on « gâteau » en anglais ?", "options": ["cake", "lake", "milk"], "answer": "cake"},
+        {"type": "input", "question": "Comment dit-on « fraise » en anglais ?", "answer": "strawberry", "accept": ["a strawberry"]},
+        {"type": "qcm", "question": "Comment dit-on « jus » en anglais ?", "options": ["juice", "milk", "tea"], "answer": "juice"},
+        {"type": "input", "question": "Comment dit-on « riz » en anglais ?", "answer": "rice"}
+      ]
+    },
+    {
+      "id": 13,
+      "title": "L'école et le matériel",
+      "description": "Le vocabulaire de la classe et du matériel scolaire.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « école » en anglais ?", "answer": "school", "accept": ["a school"]},
+        {"type": "input", "question": "Comment dit-on « livre » en anglais ?", "answer": "book", "accept": ["a book"]},
+        {"type": "qcm", "question": "Comment dit-on « stylo » en anglais ?", "options": ["pen", "pencil", "paper"], "answer": "pen"},
+        {"type": "input", "question": "Comment dit-on « crayon » en anglais ?", "answer": "pencil", "accept": ["a pencil"]},
+        {"type": "input", "question": "Comment dit-on « gomme » en anglais ?", "answer": "rubber", "accept": ["eraser", "a rubber", "an eraser"]},
+        {"type": "qcm", "question": "Comment dit-on « règle » en anglais ?", "options": ["ruler", "rubber", "pen"], "answer": "ruler"},
+        {"type": "input", "question": "Comment dit-on « cartable » en anglais ?", "answer": "schoolbag", "accept": ["bag", "satchel", "backpack", "a schoolbag"]},
+        {"type": "qcm", "question": "Comment dit-on « maître » ou « maîtresse » (la personne qui fait la classe) en anglais ?", "options": ["teacher", "doctor", "pupil"], "answer": "teacher"},
+        {"type": "input", "question": "Comment dit-on « ciseaux » en anglais ?", "answer": "scissors"},
+        {"type": "qcm", "question": "Comment dit-on « cahier » en anglais ?", "options": ["notebook", "book", "newspaper"], "answer": "notebook"},
+        {"type": "input", "question": "Comment dit-on « papier » en anglais ?", "answer": "paper"},
+        {"type": "qcm", "question": "Comment dit-on « bureau » (la table de l'écolier) en anglais ?", "options": ["desk", "disk", "door"], "answer": "desk"},
+        {"type": "qcm", "question": "Comment dit-on « élève » en anglais ?", "options": ["pupil", "people", "purple"], "answer": "pupil"}
+      ]
+    },
+    {
+      "id": 14,
+      "title": "La maison et les pièces",
+      "description": "Le vocabulaire de la maison et de ses pièces.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « maison » en anglais ?", "answer": "house", "accept": ["home", "a house"]},
+        {"type": "qcm", "question": "Comment dit-on « cuisine » en anglais ?", "options": ["kitchen", "chicken", "garden"], "answer": "kitchen"},
+        {"type": "input", "question": "Comment dit-on « chambre » en anglais ?", "answer": "bedroom", "accept": ["a bedroom"]},
+        {"type": "qcm", "question": "Comment dit-on « salle de bain » en anglais ?", "options": ["bathroom", "bedroom", "living room"], "answer": "bathroom"},
+        {"type": "qcm", "question": "Comment dit-on « salon » en anglais ?", "options": ["living room", "dining room", "bathroom"], "answer": "living room"},
+        {"type": "input", "question": "Comment dit-on « jardin » en anglais ?", "answer": "garden", "accept": ["a garden", "yard"]},
+        {"type": "qcm", "question": "Comment dit-on « porte » en anglais ?", "options": ["door", "floor", "window"], "answer": "door"},
+        {"type": "input", "question": "Comment dit-on « fenêtre » en anglais ?", "answer": "window", "accept": ["a window"]},
+        {"type": "qcm", "question": "Comment dit-on « table » en anglais ?", "options": ["table", "chair", "bed"], "answer": "table"},
+        {"type": "input", "question": "Comment dit-on « lit » en anglais ?", "answer": "bed", "accept": ["a bed"]},
+        {"type": "qcm", "question": "Comment dit-on « escalier » en anglais ?", "options": ["stairs", "stars", "street"], "answer": "stairs"},
+        {"type": "input", "question": "Comment dit-on « toit » en anglais ?", "answer": "roof", "accept": ["a roof"]}
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Les jours de la semaine et les mois",
+      "description": "Dire les jours de la semaine et les mois de l'année.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « lundi » en anglais ?", "answer": "monday", "accept": ["Monday"]},
+        {"type": "qcm", "question": "Comment dit-on « mardi » en anglais ?", "options": ["Tuesday", "Thursday", "Monday"], "answer": "Tuesday"},
+        {"type": "qcm", "question": "Comment dit-on « mercredi » en anglais ?", "options": ["Wednesday", "Thursday", "Tuesday"], "answer": "Wednesday"},
+        {"type": "qcm", "question": "Comment dit-on « jeudi » en anglais ?", "options": ["Thursday", "Tuesday", "Saturday"], "answer": "Thursday"},
+        {"type": "input", "question": "Comment dit-on « vendredi » en anglais ?", "answer": "friday", "accept": ["Friday"]},
+        {"type": "qcm", "question": "Comment dit-on « samedi » en anglais ?", "options": ["Saturday", "Sunday", "Someday"], "answer": "Saturday"},
+        {"type": "input", "question": "Comment dit-on « dimanche » en anglais ?", "answer": "sunday", "accept": ["Sunday"]},
+        {"type": "input", "question": "Comment dit-on « janvier » en anglais ?", "answer": "january", "accept": ["January"]},
+        {"type": "qcm", "question": "Comment dit-on « mars » en anglais ?", "options": ["March", "May", "Monday"], "answer": "March"},
+        {"type": "input", "question": "Comment dit-on « mai » en anglais ?", "answer": "may", "accept": ["May"]},
+        {"type": "qcm", "question": "Comment dit-on « juillet » en anglais ?", "options": ["July", "June", "January"], "answer": "July"},
+        {"type": "input", "question": "Comment dit-on « décembre » en anglais ?", "answer": "december", "accept": ["December"]},
+        {"type": "qcm", "question": "Quel mois vient juste après September ?", "options": ["October", "November", "August"], "answer": "October"}
+      ]
+    },
+    {
+      "id": 16,
+      "title": "La météo et les saisons",
+      "description": "Parler du temps qu'il fait et des saisons.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Comment dit-on « il pleut » en anglais ?", "options": ["It is raining", "It is sunny", "It is snowing"], "answer": "It is raining"},
+        {"type": "input", "question": "Comment dit-on « soleil » en anglais ?", "answer": "sun", "accept": ["the sun"]},
+        {"type": "qcm", "question": "Comment dit-on « il neige » en anglais ?", "options": ["It is snowing", "It is raining", "It is windy"], "answer": "It is snowing"},
+        {"type": "input", "question": "Comment dit-on « pluie » en anglais ?", "answer": "rain", "accept": ["the rain"]},
+        {"type": "qcm", "question": "Comment dit-on « il y a du vent » en anglais ?", "options": ["It is windy", "It is cloudy", "It is hot"], "answer": "It is windy"},
+        {"type": "input", "question": "Comment dit-on « neige » en anglais ?", "answer": "snow", "accept": ["the snow"]},
+        {"type": "qcm", "question": "Comment dit-on « nuage » en anglais ?", "options": ["cloud", "clown", "cold"], "answer": "cloud"},
+        {"type": "input", "question": "Comment dit-on « hiver » en anglais ?", "answer": "winter", "accept": ["the winter"]},
+        {"type": "qcm", "question": "Comment dit-on « été » en anglais ?", "options": ["summer", "spring", "sun"], "answer": "summer"},
+        {"type": "input", "question": "Comment dit-on « printemps » en anglais ?", "answer": "spring", "accept": ["the spring"]},
+        {"type": "input", "question": "Comment dit-on « automne » en anglais ?", "answer": "autumn", "accept": ["fall", "the autumn", "the fall"]},
+        {"type": "qcm", "question": "Quand il fait très chaud, que dit-on en anglais ?", "options": ["It is hot", "It is cold", "It is snowing"], "answer": "It is hot"}
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Salutations, politesse et se présenter",
+      "description": "Saluer, être poli et se présenter : nom, âge, pays.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Comment dit-on « bonjour » en anglais ?", "options": ["hello", "goodbye", "please"], "answer": "hello"},
+        {"type": "input", "question": "Comment dit-on « au revoir » en anglais ?", "answer": "goodbye", "accept": ["bye", "good-bye"]},
+        {"type": "qcm", "question": "Comment dit-on « merci » en anglais ?", "options": ["thank you", "please", "sorry"], "answer": "thank you"},
+        {"type": "input", "question": "Comment dit-on « s'il te plaît » en anglais ?", "answer": "please"},
+        {"type": "input", "question": "Comment dit-on « pardon » ou « désolé » en anglais ?", "answer": "sorry", "accept": ["i am sorry", "i'm sorry"]},
+        {"type": "qcm", "question": "Que réponds-tu poliment à « How are you? » ?", "options": ["I am fine, thank you.", "I am eight.", "My name is Rayan."], "answer": "I am fine, thank you."},
+        {"type": "qcm", "question": "Quelle question poses-tu pour demander le nom de quelqu'un ?", "options": ["What's your name?", "How old are you?", "Where do you live?"], "answer": "What's your name?"},
+        {"type": "qcm", "question": "Que réponds-tu à « What's your name? » ?", "options": ["My name is Rayan.", "I am eight years old.", "I live in Paris."], "answer": "My name is Rayan."},
+        {"type": "qcm", "question": "Quelle question poses-tu pour demander l'âge de quelqu'un ?", "options": ["How old are you?", "What's your name?", "How are you?"], "answer": "How old are you?"},
+        {"type": "qcm", "question": "Que réponds-tu à « How old are you? » si tu as huit ans ?", "options": ["I am eight years old.", "I am fine, thank you.", "I am Rayan."], "answer": "I am eight years old."},
+        {"type": "qcm", "question": "Quelle question poses-tu pour savoir où habite quelqu'un ?", "options": ["Where do you live?", "Where are you from yesterday?", "What do you live?"], "answer": "Where do you live?"},
+        {"type": "qcm", "question": "Que réponds-tu à « Where do you live? » si tu habites en France ?", "options": ["I live in France.", "I live France.", "I am living France."], "answer": "I live in France."},
+        {"type": "qcm", "question": "Comment dit-on « bonne nuit » en anglais ?", "options": ["Good night", "Good morning", "Goodbye"], "answer": "Good night"},
+        {"type": "qcm", "question": "Comment salue-t-on quelqu'un le matin en anglais ?", "options": ["Good morning", "Good night", "Good evening"], "answer": "Good morning"}
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Les verbes d'action",
+      "description": "Les verbes d'action courants : courir, sauter, manger...",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « courir » en anglais ?", "answer": "run", "accept": ["to run"]},
+        {"type": "qcm", "question": "Comment dit-on « sauter » en anglais ?", "options": ["jump", "run", "swim"], "answer": "jump"},
+        {"type": "input", "question": "Comment dit-on « manger » en anglais ?", "answer": "eat", "accept": ["to eat"]},
+        {"type": "qcm", "question": "Comment dit-on « boire » en anglais ?", "options": ["drink", "eat", "sleep"], "answer": "drink"},
+        {"type": "input", "question": "Comment dit-on « dormir » en anglais ?", "answer": "sleep", "accept": ["to sleep"]},
+        {"type": "qcm", "question": "Comment dit-on « chanter » en anglais ?", "options": ["sing", "sit", "swim"], "answer": "sing"},
+        {"type": "input", "question": "Comment dit-on « danser » en anglais ?", "answer": "dance", "accept": ["to dance"]},
+        {"type": "qcm", "question": "Comment dit-on « lire » en anglais ?", "options": ["read", "red", "ride"], "answer": "read"},
+        {"type": "input", "question": "Comment dit-on « écrire » en anglais ?", "answer": "write", "accept": ["to write"]},
+        {"type": "qcm", "question": "Comment dit-on « écouter » en anglais ?", "options": ["listen", "look", "like"], "answer": "listen"},
+        {"type": "input", "question": "Comment dit-on « nager » en anglais ?", "answer": "swim", "accept": ["to swim"]},
+        {"type": "qcm", "question": "Comment dit-on « marcher » en anglais ?", "options": ["walk", "work", "wake"], "answer": "walk"},
+        {"type": "input", "question": "Comment dit-on « jouer » en anglais ?", "answer": "play", "accept": ["to play"]}
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Les nombres jusqu'à 100, les ordinaux et l'heure",
+      "description": "Compter jusqu'à 100, dire premier, deuxième... et lire l'heure simple.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Comment dit-on « trente » en anglais ?", "answer": "thirty"},
+        {"type": "qcm", "question": "Comment dit-on « quarante » en anglais ?", "options": ["forty", "fourteen", "four"], "answer": "forty"},
+        {"type": "input", "question": "Comment dit-on « cinquante » en anglais ?", "answer": "fifty"},
+        {"type": "qcm", "question": "Comment dit-on « soixante » en anglais ?", "options": ["sixty", "sixteen", "six"], "answer": "sixty"},
+        {"type": "qcm", "question": "Comment dit-on « quatre-vingts » en anglais ?", "options": ["eighty", "eighteen", "eight"], "answer": "eighty"},
+        {"type": "input", "question": "Comment dit-on « cent » en anglais ?", "answer": "hundred", "accept": ["a hundred", "one hundred"]},
+        {"type": "qcm", "question": "Comment dit-on « vingt et un » en anglais ?", "options": ["twenty-one", "twenty-two", "twelve"], "answer": "twenty-one"},
+        {"type": "qcm", "question": "Comment dit-on « premier » en anglais ?", "options": ["first", "one", "fast"], "answer": "first"},
+        {"type": "input", "question": "Comment dit-on « deuxième » en anglais ?", "answer": "second"},
+        {"type": "qcm", "question": "Comment dit-on « troisième » en anglais ?", "options": ["third", "three", "thirteen"], "answer": "third"},
+        {"type": "input", "question": "Comment dit-on « quatrième » en anglais ?", "answer": "fourth"},
+        {"type": "qcm", "question": "Comment dit-on « il est trois heures » en anglais ?", "options": ["It is three o'clock", "It is three hours", "It is o'clock three"], "answer": "It is three o'clock"},
+        {"type": "qcm", "question": "Comment dit-on « il est huit heures et demie » en anglais ?", "options": ["It is half past eight", "It is eight and half", "It is half to eight"], "answer": "It is half past eight"},
+        {"type": "input", "question": "Comment dit-on « minuit » en anglais ?", "answer": "midnight"}
+      ]
+    }
+  ]
+}

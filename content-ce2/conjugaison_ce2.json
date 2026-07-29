@@ -1,0 +1,404 @@
+{
+  "key": "conjugaison_ce2",
+  "fiches": [
+    {
+      "id": 1,
+      "title": "L'infinitif et les groupes de verbes",
+      "description": "Reconnaître l'infinitif d'un verbe et savoir à quel groupe il appartient.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est l'infinitif du verbe dans la phrase : « Rayan chante une chanson. » ?", "options": ["chanter", "chante", "chanton"], "answer": "chanter"},
+        {"type": "qcm", "question": "Quel est l'infinitif du verbe dans la phrase : « Nous finissons nos devoirs. » ?", "options": ["finissir", "finir", "finisson"], "answer": "finir"},
+        {"type": "qcm", "question": "Quel est l'infinitif du verbe dans la phrase : « Ils prennent le bus. » ?", "options": ["prener", "prendre", "prenner"], "answer": "prendre"},
+        {"type": "qcm", "question": "À quel groupe appartient le verbe « manger » ?", "options": ["1er groupe", "2e groupe", "3e groupe"], "answer": "1er groupe"},
+        {"type": "qcm", "question": "À quel groupe appartient le verbe « finir » (nous finissons) ?", "options": ["1er groupe", "2e groupe", "3e groupe"], "answer": "2e groupe"},
+        {"type": "qcm", "question": "À quel groupe appartient le verbe « venir » ?", "options": ["1er groupe", "2e groupe", "3e groupe"], "answer": "3e groupe"},
+        {"type": "qcm", "question": "Quel verbe est du 1er groupe ?", "options": ["parler", "grandir", "voir"], "answer": "parler"},
+        {"type": "qcm", "question": "Quel verbe est du 2e groupe ?", "options": ["chanter", "choisir", "prendre"], "answer": "choisir"},
+        {"type": "qcm", "question": "Quel verbe est du 3e groupe ?", "options": ["danser", "rougir", "faire"], "answer": "faire"},
+        {"type": "input", "question": "Écris l'infinitif du verbe de la phrase : « Le chat dort sur le canapé. »", "answer": "dormir"},
+        {"type": "input", "question": "Écris l'infinitif du verbe de la phrase : « Vous regardez la télévision. »", "answer": "regarder"},
+        {"type": "qcm", "question": "Les verbes « être » et « avoir » sont appelés :", "options": ["des verbes du 1er groupe", "des auxiliaires", "des noms"], "answer": "des auxiliaires"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Les pronoms de conjugaison",
+      "description": "Connaître les pronoms personnels sujets et savoir les utiliser.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Quel pronom peut remplacer « Rayan et moi » ?", "options": ["nous", "vous", "ils"], "answer": "nous"},
+        {"type": "qcm", "question": "Quel pronom peut remplacer « Léa et toi » ?", "options": ["nous", "vous", "elles"], "answer": "vous"},
+        {"type": "qcm", "question": "Quel pronom peut remplacer « les garçons » ?", "options": ["il", "ils", "elles"], "answer": "ils"},
+        {"type": "qcm", "question": "Quel pronom peut remplacer « Marie et Julie » ?", "options": ["ils", "elles", "elle"], "answer": "elles"},
+        {"type": "qcm", "question": "Quel pronom peut remplacer « la maîtresse » ?", "options": ["elle", "il", "elles"], "answer": "elle"},
+        {"type": "qcm", "question": "Quel pronom convient : « ... chantes une chanson. »", "options": ["Je", "Tu", "Il"], "answer": "Tu"},
+        {"type": "qcm", "question": "Quel pronom convient : « ... jouons dans la cour. »", "options": ["Vous", "Nous", "Ils"], "answer": "Nous"},
+        {"type": "qcm", "question": "Quel pronom convient : « ... regardez un film. »", "options": ["Nous", "Vous", "Elles"], "answer": "Vous"},
+        {"type": "qcm", "question": "Quel pronom convient : « ... mange une pomme. »", "options": ["Je", "Tu", "Vous"], "answer": "Je"},
+        {"type": "qcm", "question": "Quel pronom peut remplacer « mon frère et ma sœur » ?", "options": ["ils", "elles", "il"], "answer": "ils"},
+        {"type": "qcm", "question": "Quel pronom convient : « ... écoutent la maîtresse. »", "options": ["Il", "Elles", "Elle"], "answer": "Elles"},
+        {"type": "qcm", "question": "Quel pronom convient : « ... finissez votre travail. »", "options": ["Nous", "Vous", "Ils"], "answer": "Vous"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Le présent des verbes du 1er groupe",
+      "description": "Conjuguer les verbes en -er au présent de l'indicatif.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Je ___ à la balle. (jouer - présent)", "answer": "joue"},
+        {"type": "input", "question": "Tu ___ une chanson. (chanter - présent)", "answer": "chantes"},
+        {"type": "input", "question": "Il ___ un dessin. (dessiner - présent)", "answer": "dessine"},
+        {"type": "input", "question": "Nous ___ nos leçons. (réciter - présent)", "answer": "récitons"},
+        {"type": "input", "question": "Vous ___ la porte. (fermer - présent)", "answer": "fermez"},
+        {"type": "input", "question": "Elles ___ dans le jardin. (danser - présent)", "answer": "dansent"},
+        {"type": "input", "question": "Elle ___ sa chambre. (ranger - présent)", "answer": "range"},
+        {"type": "input", "question": "Nous ___ à la piscine. (nager - présent)", "answer": "nageons"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Tu ... la télévision. »", "options": ["regarde", "regardes", "regardent"], "answer": "regardes"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Ils ... au football. »", "options": ["joue", "joues", "jouent"], "answer": "jouent"},
+        {"type": "qcm", "question": "Quelle est la terminaison du verbe avec « nous » au présent pour le 1er groupe ?", "options": ["-ons", "-ez", "-ent"], "answer": "-ons"},
+        {"type": "input", "question": "Vous ___ vos amis. (inviter - présent)", "answer": "invitez"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Elle ... un gâteau. »", "options": ["prépare", "prépares", "préparent"], "answer": "prépare"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Le présent du verbe être",
+      "description": "Conjuguer le verbe être au présent de l'indicatif.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Je ___ content. (être - présent)", "answer": "suis"},
+        {"type": "input", "question": "Tu ___ mon ami. (être - présent)", "answer": "es"},
+        {"type": "input", "question": "Il ___ à l'école. (être - présent)", "answer": "est"},
+        {"type": "input", "question": "Nous ___ en classe. (être - présent)", "answer": "sommes"},
+        {"type": "input", "question": "Vous ___ gentils. (être - présent)", "answer": "êtes"},
+        {"type": "input", "question": "Elles ___ dans la cour. (être - présent)", "answer": "sont"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Tu ... en retard. »", "options": ["est", "es", "êtes"], "answer": "es"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Nous ... contents. »", "options": ["somme", "sommes", "sont"], "answer": "sommes"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Ils ... sages. »", "options": ["son", "sont", "sonts"], "answer": "sont"},
+        {"type": "qcm", "question": "Complète : « Vous ... mes camarades. »", "options": ["êtes", "étes", "ètes"], "answer": "êtes"},
+        {"type": "input", "question": "Elle ___ ma voisine. (être - présent)", "answer": "est"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Le présent du verbe avoir",
+      "description": "Conjuguer le verbe avoir au présent de l'indicatif.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "J'___ un chien. (avoir - présent)", "answer": "ai"},
+        {"type": "input", "question": "Tu ___ huit ans. (avoir - présent)", "answer": "as"},
+        {"type": "input", "question": "Il ___ un vélo rouge. (avoir - présent)", "answer": "a"},
+        {"type": "input", "question": "Nous ___ faim. (avoir - présent)", "answer": "avons"},
+        {"type": "input", "question": "Vous ___ de la chance. (avoir - présent)", "answer": "avez"},
+        {"type": "input", "question": "Ils ___ un ballon. (avoir - présent)", "answer": "ont"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Tu ... un cartable neuf. »", "options": ["a", "as", "avez"], "answer": "as"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Elles ... soif. »", "options": ["on", "ont", "onts"], "answer": "ont"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Nous ... un nouveau maître. »", "options": ["avons", "avont", "avon"], "answer": "avons"},
+        {"type": "qcm", "question": "Complète : « Il ... les yeux bleus. »", "options": ["a", "as", "ont"], "answer": "a"},
+        {"type": "input", "question": "Elle ___ une petite sœur. (avoir - présent)", "answer": "a"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Le présent du verbe aller",
+      "description": "Conjuguer le verbe aller au présent de l'indicatif.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Je ___ à l'école. (aller - présent)", "answer": "vais"},
+        {"type": "input", "question": "Tu ___ au parc. (aller - présent)", "answer": "vas"},
+        {"type": "input", "question": "Il ___ chez le médecin. (aller - présent)", "answer": "va"},
+        {"type": "input", "question": "Nous ___ à la bibliothèque. (aller - présent)", "answer": "allons"},
+        {"type": "input", "question": "Vous ___ au marché. (aller - présent)", "answer": "allez"},
+        {"type": "input", "question": "Elles ___ à la piscine. (aller - présent)", "answer": "vont"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Tu ... trop vite. »", "options": ["va", "vas", "vais"], "answer": "vas"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Ils ... au cinéma. »", "options": ["vont", "von", "vons"], "answer": "vont"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Nous ... en vacances. »", "options": ["allon", "allons", "allont"], "answer": "allons"},
+        {"type": "qcm", "question": "À quel groupe appartient le verbe « aller » ?", "options": ["1er groupe", "2e groupe", "3e groupe"], "answer": "3e groupe"},
+        {"type": "input", "question": "Elle ___ bien. (aller - présent)", "answer": "va"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Le présent des verbes faire et dire",
+      "description": "Conjuguer les verbes faire et dire au présent de l'indicatif.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Je ___ un gâteau. (faire - présent)", "answer": "fais"},
+        {"type": "input", "question": "Tu ___ tes devoirs. (faire - présent)", "answer": "fais"},
+        {"type": "input", "question": "Il ___ du sport. (faire - présent)", "answer": "fait"},
+        {"type": "input", "question": "Nous ___ un puzzle. (faire - présent)", "answer": "faisons"},
+        {"type": "input", "question": "Vous ___ du bruit. (faire - présent)", "answer": "faites"},
+        {"type": "input", "question": "Ils ___ la course. (faire - présent)", "answer": "font"},
+        {"type": "input", "question": "Je ___ bonjour. (dire - présent)", "answer": "dis"},
+        {"type": "input", "question": "Il ___ la vérité. (dire - présent)", "answer": "dit"},
+        {"type": "input", "question": "Nous ___ un secret. (dire - présent)", "answer": "disons"},
+        {"type": "input", "question": "Vous ___ merci. (dire - présent)", "answer": "dites"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Elles ... une poésie. »", "options": ["dise", "disent", "dit"], "answer": "disent"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Vous ... attention. »", "options": ["faisez", "faites", "fêtes"], "answer": "faites"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Le présent des verbes du 2e groupe",
+      "description": "Conjuguer les verbes comme finir au présent de l'indicatif.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Je ___ mon assiette. (finir - présent)", "answer": "finis"},
+        {"type": "input", "question": "Tu ___ ton exercice. (finir - présent)", "answer": "finis"},
+        {"type": "input", "question": "Elle ___ sa lecture. (finir - présent)", "answer": "finit"},
+        {"type": "input", "question": "Nous ___ le travail. (finir - présent)", "answer": "finissons"},
+        {"type": "input", "question": "Vous ___ votre repas. (finir - présent)", "answer": "finissez"},
+        {"type": "input", "question": "Ils ___ la partie. (finir - présent)", "answer": "finissent"},
+        {"type": "input", "question": "Tu ___ ton dessert. (choisir - présent)", "answer": "choisis"},
+        {"type": "input", "question": "Nous ___ un livre. (choisir - présent)", "answer": "choisissons"},
+        {"type": "input", "question": "Les enfants ___ vite. (grandir - présent)", "answer": "grandissent"},
+        {"type": "input", "question": "Elle ___ quand on la complimente. (rougir - présent)", "answer": "rougit"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Vous ... vos crayons. »", "options": ["choisissez", "choisisez", "choisez"], "answer": "choisissez"},
+        {"type": "qcm", "question": "Quelle est la terminaison avec « nous » pour les verbes du 2e groupe au présent ?", "options": ["-ons", "-issons", "-issez"], "answer": "-issons"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Le présent des verbes venir, prendre et voir",
+      "description": "Conjuguer des verbes du 3e groupe au présent de l'indicatif.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Je ___ de la maison. (venir - présent)", "answer": "viens"},
+        {"type": "input", "question": "Tu ___ avec nous. (venir - présent)", "answer": "viens"},
+        {"type": "input", "question": "Il ___ à pied. (venir - présent)", "answer": "vient"},
+        {"type": "input", "question": "Nous ___ en bus. (venir - présent)", "answer": "venons"},
+        {"type": "input", "question": "Ils ___ demain. (venir - présent)", "answer": "viennent"},
+        {"type": "input", "question": "Je ___ mon cartable. (prendre - présent)", "answer": "prends"},
+        {"type": "input", "question": "Elle ___ son goûter. (prendre - présent)", "answer": "prend"},
+        {"type": "input", "question": "Nous ___ le train. (prendre - présent)", "answer": "prenons"},
+        {"type": "input", "question": "Ils ___ leur temps. (prendre - présent)", "answer": "prennent"},
+        {"type": "input", "question": "Je ___ un oiseau. (voir - présent)", "answer": "vois"},
+        {"type": "input", "question": "Il ___ la mer. (voir - présent)", "answer": "voit"},
+        {"type": "input", "question": "Nous ___ un arc-en-ciel. (voir - présent)", "answer": "voyons"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Vous ... bien le tableau. »", "options": ["voyez", "voiyez", "voyer"], "answer": "voyez"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Le présent des verbes pouvoir et vouloir",
+      "description": "Conjuguer les verbes pouvoir et vouloir au présent de l'indicatif.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Je ___ courir vite. (pouvoir - présent)", "answer": "peux"},
+        {"type": "input", "question": "Tu ___ venir avec moi. (pouvoir - présent)", "answer": "peux"},
+        {"type": "input", "question": "Il ___ sauter haut. (pouvoir - présent)", "answer": "peut"},
+        {"type": "input", "question": "Nous ___ jouer dehors. (pouvoir - présent)", "answer": "pouvons"},
+        {"type": "input", "question": "Vous ___ entrer. (pouvoir - présent)", "answer": "pouvez"},
+        {"type": "input", "question": "Elles ___ chanter. (pouvoir - présent)", "answer": "peuvent"},
+        {"type": "input", "question": "Je ___ un verre d'eau. (vouloir - présent)", "answer": "veux"},
+        {"type": "input", "question": "Elle ___ un livre. (vouloir - présent)", "answer": "veut"},
+        {"type": "input", "question": "Nous ___ gagner. (vouloir - présent)", "answer": "voulons"},
+        {"type": "input", "question": "Ils ___ jouer. (vouloir - présent)", "answer": "veulent"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Tu ... un bonbon. »", "options": ["veut", "veux", "veus"], "answer": "veux"}
+      ]
+    },
+    {
+      "id": 11,
+      "title": "L'imparfait des verbes du 1er groupe",
+      "description": "Conjuguer les verbes en -er à l'imparfait de l'indicatif.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Je ___ au parc. (jouer - imparfait)", "answer": "jouais"},
+        {"type": "input", "question": "Tu ___ dans la chorale. (chanter - imparfait)", "answer": "chantais"},
+        {"type": "input", "question": "Il ___ la télévision. (regarder - imparfait)", "answer": "regardait"},
+        {"type": "input", "question": "Nous ___ sur la plage. (marcher - imparfait)", "answer": "marchions"},
+        {"type": "input", "question": "Vous ___ vos jouets. (ranger - imparfait)", "answer": "rangiez"},
+        {"type": "input", "question": "Elles ___ ensemble. (danser - imparfait)", "answer": "dansaient"},
+        {"type": "input", "question": "Je ___ dans la mer. (nager - imparfait)", "answer": "nageais"},
+        {"type": "input", "question": "Il ___ beaucoup. (manger - imparfait)", "answer": "mangeait"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Nous ... nos grands-parents. »", "options": ["visitons", "visitions", "visitaient"], "answer": "visitions"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Ils ... dans la cour. »", "options": ["jouait", "jouaient", "jouais"], "answer": "jouaient"},
+        {"type": "qcm", "question": "Quelle est la terminaison de l'imparfait avec « tu » ?", "options": ["-ait", "-ais", "-aient"], "answer": "-ais"},
+        {"type": "input", "question": "Elle ___ des fleurs. (ramasser - imparfait)", "answer": "ramassait"}
+      ]
+    },
+    {
+      "id": 12,
+      "title": "L'imparfait des verbes être et avoir",
+      "description": "Conjuguer être et avoir à l'imparfait de l'indicatif.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "J'___ petit. (être - imparfait)", "answer": "étais"},
+        {"type": "input", "question": "Tu ___ malade. (être - imparfait)", "answer": "étais"},
+        {"type": "input", "question": "Il ___ content. (être - imparfait)", "answer": "était"},
+        {"type": "input", "question": "Nous ___ en vacances. (être - imparfait)", "answer": "étions"},
+        {"type": "input", "question": "Vous ___ en retard. (être - imparfait)", "answer": "étiez"},
+        {"type": "input", "question": "Elles ___ fatiguées. (être - imparfait)", "answer": "étaient"},
+        {"type": "input", "question": "J'___ un chat. (avoir - imparfait)", "answer": "avais"},
+        {"type": "input", "question": "Il ___ six ans. (avoir - imparfait)", "answer": "avait"},
+        {"type": "input", "question": "Nous ___ froid. (avoir - imparfait)", "answer": "avions"},
+        {"type": "input", "question": "Ils ___ peur du noir. (avoir - imparfait)", "answer": "avaient"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Tu ... de beaux crayons. »", "options": ["avait", "avais", "avaient"], "answer": "avais"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Vous ... sages. »", "options": ["étiez", "était", "êtiez"], "answer": "étiez"}
+      ]
+    },
+    {
+      "id": 13,
+      "title": "L'imparfait des verbes aller et faire",
+      "description": "Conjuguer aller et faire à l'imparfait de l'indicatif.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "J'___ à l'école à pied. (aller - imparfait)", "answer": "allais"},
+        {"type": "input", "question": "Tu ___ chez ta grand-mère. (aller - imparfait)", "answer": "allais"},
+        {"type": "input", "question": "Elle ___ au marché. (aller - imparfait)", "answer": "allait"},
+        {"type": "input", "question": "Nous ___ à la mer. (aller - imparfait)", "answer": "allions"},
+        {"type": "input", "question": "Ils ___ souvent au stade. (aller - imparfait)", "answer": "allaient"},
+        {"type": "input", "question": "Je ___ du vélo. (faire - imparfait)", "answer": "faisais"},
+        {"type": "input", "question": "Il ___ ses devoirs le soir. (faire - imparfait)", "answer": "faisait"},
+        {"type": "input", "question": "Nous ___ des châteaux de sable. (faire - imparfait)", "answer": "faisions"},
+        {"type": "input", "question": "Vous ___ du bruit. (faire - imparfait)", "answer": "faisiez"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Elles ... la cuisine. »", "options": ["faisait", "faisaient", "fesaient"], "answer": "faisaient"}
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Le futur simple des verbes du 1er groupe",
+      "description": "Conjuguer les verbes en -er au futur simple.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "input", "question": "Je ___ au tennis demain. (jouer - futur)", "answer": "jouerai"},
+        {"type": "input", "question": "Tu ___ à la chorale. (chanter - futur)", "answer": "chanteras"},
+        {"type": "input", "question": "Il ___ un château. (dessiner - futur)", "answer": "dessinera"},
+        {"type": "input", "question": "Nous ___ nos valises. (préparer - futur)", "answer": "préparerons"},
+        {"type": "input", "question": "Vous ___ le film. (regarder - futur)", "answer": "regarderez"},
+        {"type": "input", "question": "Elles ___ toute la soirée. (danser - futur)", "answer": "danseront"},
+        {"type": "input", "question": "Je ___ ma chambre. (ranger - futur)", "answer": "rangerai"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Tu ... tes jouets. »", "options": ["rangera", "rangeras", "rangerez"], "answer": "rangeras"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Nous ... nos amis demain. »", "options": ["inviterons", "inviteront", "invitons"], "answer": "inviterons"},
+        {"type": "qcm", "question": "Quelle est la terminaison du futur simple avec « ils » ?", "options": ["-ont", "-ons", "-ez"], "answer": "-ont"},
+        {"type": "input", "question": "Il ___ demain matin. (téléphoner - futur)", "answer": "téléphonera"},
+        {"type": "input", "question": "Vous ___ la porte. (fermer - futur)", "answer": "fermerez"}
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Le futur simple des verbes irréguliers",
+      "description": "Conjuguer être, avoir, aller, faire, venir, voir et pouvoir au futur simple.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Je ___ sage. (être - futur)", "answer": "serai"},
+        {"type": "input", "question": "Tu ___ content. (être - futur)", "answer": "seras"},
+        {"type": "input", "question": "Nous ___ en CE2. (être - futur)", "answer": "serons"},
+        {"type": "input", "question": "J'___ neuf ans. (avoir - futur)", "answer": "aurai"},
+        {"type": "input", "question": "Ils ___ un cadeau. (avoir - futur)", "answer": "auront"},
+        {"type": "input", "question": "Tu ___ à la montagne. (aller - futur)", "answer": "iras"},
+        {"type": "input", "question": "Nous ___ au zoo. (aller - futur)", "answer": "irons"},
+        {"type": "input", "question": "Elle ___ un gâteau. (faire - futur)", "answer": "fera"},
+        {"type": "input", "question": "Vous ___ vos devoirs. (faire - futur)", "answer": "ferez"},
+        {"type": "input", "question": "Il ___ demain. (venir - futur)", "answer": "viendra"},
+        {"type": "input", "question": "Nous ___ te voir. (venir - futur)", "answer": "viendrons"},
+        {"type": "input", "question": "Tu ___ les étoiles. (voir - futur)", "answer": "verras"},
+        {"type": "input", "question": "Je ___ t'aider. (pouvoir - futur)", "answer": "pourrai"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Vous ... venir dimanche. »", "options": ["pourez", "pourrez", "pouvrez"], "answer": "pourrez"}
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Le passé composé avec avoir",
+      "description": "Conjuguer des verbes au passé composé avec l'auxiliaire avoir.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "J'___ une pomme. (manger - passé composé)", "answer": "ai mangé"},
+        {"type": "input", "question": "Tu ___ sous la douche. (chanter - passé composé)", "answer": "as chanté"},
+        {"type": "input", "question": "Il ___ son travail. (finir - passé composé)", "answer": "a fini"},
+        {"type": "input", "question": "Nous ___ au ballon. (jouer - passé composé)", "answer": "avons joué"},
+        {"type": "input", "question": "Vous ___ un film. (regarder - passé composé)", "answer": "avez regardé"},
+        {"type": "input", "question": "Elles ___ un dessin. (faire - passé composé)", "answer": "ont fait"},
+        {"type": "input", "question": "J'___ un bruit. (entendre - passé composé)", "answer": "ai entendu"},
+        {"type": "input", "question": "Il ___ un lion au zoo. (voir - passé composé)", "answer": "a vu"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Nous ... nos devoirs. »", "options": ["avons finit", "avons fini", "avont fini"], "answer": "avons fini"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Tu ... ton bus. »", "options": ["as pris", "a pris", "as prit"], "answer": "as pris"},
+        {"type": "qcm", "question": "Le passé composé se forme avec :", "options": ["un auxiliaire et un participe passé", "deux infinitifs", "un pronom et un adjectif"], "answer": "un auxiliaire et un participe passé"},
+        {"type": "input", "question": "Vous ___ la réponse. (dire - passé composé)", "answer": "avez dit"}
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Le passé composé avec être et l'accord",
+      "description": "Conjuguer au passé composé avec l'auxiliaire être et accorder le participe passé avec le sujet.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "Je ___ à la maison. (rester - passé composé, sujet masculin)", "answer": "suis resté"},
+        {"type": "input", "question": "Elle ___ à huit heures. (arriver - passé composé)", "answer": "est arrivée"},
+        {"type": "input", "question": "Il ___ au parc. (aller - passé composé)", "answer": "est allé"},
+        {"type": "input", "question": "Elles ___ à la piscine. (aller - passé composé)", "answer": "sont allées"},
+        {"type": "input", "question": "Nous ___ en classe. (entrer - passé composé, sujet masculin pluriel)", "answer": "sommes entrés"},
+        {"type": "input", "question": "Ils ___ ce matin. (partir - passé composé)", "answer": "sont partis"},
+        {"type": "input", "question": "Elle ___ dans la cour. (tomber - passé composé)", "answer": "est tombée"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Marie est ... hier. »", "options": ["venu", "venue", "venus"], "answer": "venue"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Les garçons sont ... en retard. »", "options": ["arrivé", "arrivée", "arrivés"], "answer": "arrivés"},
+        {"type": "qcm", "question": "Avec l'auxiliaire être, le participe passé s'accorde avec :", "options": ["le sujet", "le verbe", "le complément"], "answer": "le sujet"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture ? « Les filles sont ... à la fête. »", "options": ["allées", "allés", "allée"], "answer": "allées"},
+        {"type": "input", "question": "Tu ___ par l'escalier. (monter - passé composé, sujet féminin)", "answer": "es montée"}
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Le participe passé des verbes courants",
+      "description": "Connaître le participe passé des verbes les plus fréquents.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est le participe passé de « manger » ?", "options": ["mangé", "mangi", "mangu"], "answer": "mangé"},
+        {"type": "qcm", "question": "Quel est le participe passé de « finir » ?", "options": ["finit", "fini", "finu"], "answer": "fini"},
+        {"type": "qcm", "question": "Quel est le participe passé de « prendre » ?", "options": ["prendu", "prit", "pris"], "answer": "pris"},
+        {"type": "qcm", "question": "Quel est le participe passé de « voir » ?", "options": ["vu", "voyé", "vis"], "answer": "vu"},
+        {"type": "qcm", "question": "Quel est le participe passé de « faire » ?", "options": ["fait", "fai", "faisé"], "answer": "fait"},
+        {"type": "qcm", "question": "Quel est le participe passé de « dire » ?", "options": ["disé", "dit", "du"], "answer": "dit"},
+        {"type": "qcm", "question": "Quel est le participe passé de « être » ?", "options": ["été", "êté", "étais"], "answer": "été"},
+        {"type": "qcm", "question": "Quel est le participe passé de « avoir » ?", "options": ["eu", "avu", "ayé"], "answer": "eu"},
+        {"type": "input", "question": "Écris le participe passé du verbe « venir ».", "answer": "venu"},
+        {"type": "input", "question": "Écris le participe passé du verbe « pouvoir ».", "answer": "pu"},
+        {"type": "input", "question": "Écris le participe passé du verbe « vouloir ».", "answer": "voulu"},
+        {"type": "input", "question": "Écris le participe passé du verbe « chanter ».", "answer": "chanté"}
+      ]
+    },
+    {
+      "id": 19,
+      "title": "L'impératif présent",
+      "description": "Donner un ordre ou un conseil avec l'impératif présent.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "input", "question": "___ ta chambre ! (ranger - impératif, 2e personne du singulier)", "answer": "range"},
+        {"type": "input", "question": "___ tes devoirs ! (finir - impératif, 2e personne du singulier)", "answer": "finis"},
+        {"type": "input", "question": "___ la porte ! (fermer - impératif, 2e personne du pluriel)", "answer": "fermez"},
+        {"type": "input", "question": "___ ensemble ! (chanter - impératif, 1re personne du pluriel)", "answer": "chantons"},
+        {"type": "input", "question": "___ ton manteau ! (prendre - impératif, 2e personne du singulier)", "answer": "prends"},
+        {"type": "input", "question": "___ attention ! (faire - impératif, 2e personne du pluriel)", "answer": "faites"},
+        {"type": "input", "question": "___ sage ! (être - impératif, 2e personne du singulier)", "answer": "sois"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture à l'impératif ? « ... vite ! » (aller, 2e personne du singulier)", "options": ["Va", "Vas", "Vais"], "answer": "Va"},
+        {"type": "qcm", "question": "Quelle est la bonne écriture à l'impératif ? « ... une pomme ! » (manger, 2e personne du singulier)", "options": ["Manges", "Mange", "Mangé"], "answer": "Mange"},
+        {"type": "qcm", "question": "À l'impératif, le verbe se conjugue :", "options": ["sans pronom sujet", "avec un pronom sujet", "à l'infinitif"], "answer": "sans pronom sujet"},
+        {"type": "input", "question": "___ du courage ! (avoir - impératif, 2e personne du singulier)", "answer": "aie"}
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Révision : présent, imparfait, futur et passé composé",
+      "description": "Reconnaître et utiliser les quatre temps étudiés en CE2.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "À quel temps est conjugué le verbe : « Nous chantions une chanson. » ?", "options": ["présent", "imparfait", "futur simple"], "answer": "imparfait"},
+        {"type": "qcm", "question": "À quel temps est conjugué le verbe : « Tu joueras demain. » ?", "options": ["présent", "imparfait", "futur simple"], "answer": "futur simple"},
+        {"type": "qcm", "question": "À quel temps est conjugué le verbe : « Ils ont mangé une glace. » ?", "options": ["imparfait", "passé composé", "futur simple"], "answer": "passé composé"},
+        {"type": "qcm", "question": "À quel temps est conjugué le verbe : « Elle regarde la mer. » ?", "options": ["présent", "imparfait", "passé composé"], "answer": "présent"},
+        {"type": "input", "question": "Je ___ mes chaussures. (chercher - présent)", "answer": "cherche"},
+        {"type": "input", "question": "Hier, vous ___ dans le jardin. (jouer - imparfait)", "answer": "jouiez"},
+        {"type": "input", "question": "Demain, elle ___ sa valise. (préparer - futur)", "answer": "préparera"},
+        {"type": "input", "question": "La semaine dernière, nous ___ un gâteau. (préparer - passé composé)", "answer": "avons préparé"},
+        {"type": "input", "question": "L'année prochaine, il ___ dix ans. (avoir - futur)", "answer": "aura"},
+        {"type": "input", "question": "Quand j'étais petit, j'___ un doudou. (avoir - imparfait)", "answer": "avais"},
+        {"type": "qcm", "question": "Quelle phrase est au futur simple ?", "options": ["Nous partirons en vacances.", "Nous partions en vacances.", "Nous sommes partis en vacances."], "answer": "Nous partirons en vacances."},
+        {"type": "qcm", "question": "Quelle phrase est au passé composé ?", "options": ["Elle a trouvé un trésor.", "Elle trouvait un trésor.", "Elle trouvera un trésor."], "answer": "Elle a trouvé un trésor."},
+        {"type": "input", "question": "Ce soir, je ___ mes devoirs. (finir - futur)", "answer": "finirai"},
+        {"type": "qcm", "question": "À quel temps est conjugué le verbe : « Vous étiez contents. » ?", "options": ["présent", "imparfait", "passé composé"], "answer": "imparfait"}
+      ]
+    }
+  ]
+}

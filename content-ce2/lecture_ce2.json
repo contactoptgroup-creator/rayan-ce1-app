@@ -1,0 +1,710 @@
+{
+  "key": "lecture_ce2",
+  "fiches": [
+    {
+      "id": 4,
+      "title": "La matinée de Lina",
+      "description": "Récit de vie quotidienne : comprendre une histoire simple du matin.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "Ce matin, Lina se réveille à sept heures. Elle s'étire, ouvre ses volets et regarde le ciel gris. Dans la cuisine, son papa prépare le petit déjeuner : du pain grillé, du beurre et un grand bol de chocolat chaud. Lina s'habille vite, mais elle ne trouve pas sa chaussure gauche. Elle cherche sous son lit, derrière la porte, dans le salon. Rien ! Soudain, elle entend un petit bruit. Son chat Moustache joue avec la chaussure dans le couloir. Lina rit, attrape sa chaussure et enfile son manteau, car il fait froid dehors. Avant de partir, elle vérifie son cartable : trousse, cahier, livre de lecture. Tout est prêt. Elle embrasse son papa et court vers l'école avec sa meilleure amie, Nour.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "À quelle heure Lina se réveille-t-elle ?",
+              "options": ["À six heures", "À sept heures", "À huit heures"],
+              "answer": "À sept heures"
+            },
+            {
+              "type": "input",
+              "question": "Que boit Lina au petit déjeuner ? (deux mots)",
+              "answer": "chocolat chaud",
+              "accept": ["du chocolat chaud", "un chocolat chaud", "le chocolat chaud"]
+            },
+            {
+              "type": "qcm",
+              "question": "Qui joue avec la chaussure de Lina ?",
+              "options": ["Son papa", "Son chat Moustache", "Son amie Nour"],
+              "answer": "Son chat Moustache"
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi Lina enfile-t-elle son manteau ?",
+              "options": ["Parce qu'il pleut très fort", "Parce qu'il fait froid dehors", "Parce qu'elle est en retard"],
+              "answer": "Parce qu'il fait froid dehors"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « elle enfile son manteau » ?",
+              "options": ["Elle met son manteau", "Elle lave son manteau", "Elle range son manteau"],
+              "answer": "Elle met son manteau"
+            },
+            {
+              "type": "input",
+              "question": "Comment s'appelle la meilleure amie de Lina ?",
+              "answer": "Nour"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "La grotte mystérieuse",
+      "description": "Récit d'aventure : suivre les actions et les émotions des personnages.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "Pendant les vacances, Tom et sa cousine Awa explorent la forêt derrière la maison de leur grand-mère. Ils suivent un petit sentier caché sous les fougères. Au bout du chemin, ils découvrent l'entrée d'une grotte. Tom allume sa lampe de poche. À l'intérieur, les murs brillent comme des étoiles. « Regarde ! » murmure Awa. Sur le sol, il y a des traces de pattes. Les enfants avancent doucement, le cœur battant. Soudain, un battement d'ailes traverse la grotte : ce sont des chauves-souris ! Tom sursaute et lâche sa lampe. Heureusement, Awa la rattrape avant qu'elle ne tombe. Les deux explorateurs décident de ressortir. Dehors, ils dessinent une carte pour retrouver la grotte demain, avec un casque et une corde cette fois.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Où Tom et Awa font-ils leur exploration ?",
+              "options": ["Dans la forêt", "À la plage", "À la montagne"],
+              "answer": "Dans la forêt"
+            },
+            {
+              "type": "input",
+              "question": "Qu'est-ce que Tom allume en entrant dans la grotte ? (un ou deux mots)",
+              "answer": "sa lampe",
+              "accept": ["une lampe", "lampe", "la lampe", "sa lampe de poche", "lampe de poche"]
+            },
+            {
+              "type": "qcm",
+              "question": "Quels animaux vivent dans la grotte ?",
+              "options": ["Des ours", "Des chauves-souris", "Des renards"],
+              "answer": "Des chauves-souris"
+            },
+            {
+              "type": "qcm",
+              "question": "Que ressent Tom quand il entend le battement d'ailes ?",
+              "options": ["Il a peur", "Il est très content", "Il s'ennuie"],
+              "answer": "Il a peur"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « murmure » ?",
+              "options": ["Parle tout bas", "Crie très fort", "Chante une chanson"],
+              "answer": "Parle tout bas"
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi les enfants dessinent-ils une carte ?",
+              "options": ["Pour retrouver la grotte demain", "Pour la donner à la maîtresse", "Pour décorer leur chambre"],
+              "answer": "Pour retrouver la grotte demain"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Le bol de lait",
+      "description": "Conte : comprendre une histoire merveilleuse et sa fin.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "Il était une fois une vieille dame qui vivait dans une chaumière au bord d'un village. Chaque soir, elle laissait un bol de lait sur sa fenêtre. Les habitants se moquaient d'elle : « Personne ne boit ce lait ! » Mais la vieille dame souriait sans répondre. Une nuit d'hiver, une tempête de neige recouvrit le village. Au matin, toutes les cheminées étaient gelées, sauf une : celle de la chaumière. Devant la porte, des traces minuscules brillaient dans la neige. Un lutin des bois, reconnaissant pour tout ce lait, avait protégé la maison avec sa magie. Depuis ce jour, les habitants ne se moquèrent plus jamais. Et chaque soir, on pouvait voir, sur toutes les fenêtres du village, de petits bols de lait fumant.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Que laisse la vieille dame sur sa fenêtre chaque soir ?",
+              "options": ["Un bol de lait", "Un morceau de pain", "Une bougie allumée"],
+              "answer": "Un bol de lait"
+            },
+            {
+              "type": "input",
+              "question": "Qui a protégé la maison avec sa magie ? (un ou deux mots)",
+              "answer": "un lutin",
+              "accept": ["le lutin", "lutin", "un lutin des bois", "le lutin des bois"]
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi le lutin protège-t-il la chaumière ?",
+              "options": ["Parce que la dame lui donnait du lait", "Parce qu'il a peur de la neige", "Parce qu'il adore les cheminées"],
+              "answer": "Parce que la dame lui donnait du lait"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « chaumière » ?",
+              "options": ["Une petite maison simple", "Un grand château", "Une forêt sombre"],
+              "answer": "Une petite maison simple"
+            },
+            {
+              "type": "qcm",
+              "question": "Que font les habitants au début de l'histoire ?",
+              "options": ["Ils se moquent de la vieille dame", "Ils aident la vieille dame", "Ils cherchent le lutin"],
+              "answer": "Ils se moquent de la vieille dame"
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi tous les habitants mettent-ils un bol de lait à la fin ?",
+              "options": ["Ils espèrent être protégés par le lutin", "Ils n'aiment plus boire le lait", "Ils veulent nourrir les chats"],
+              "answer": "Ils espèrent être protégés par le lutin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "L'écureuil vantard",
+      "description": "Fable animalière : comprendre l'histoire et trouver la morale.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "Un écureuil vantard sautait de branche en branche. « Je suis le plus rapide de la forêt ! » répétait-il à qui voulait l'entendre. Une tortue, qui passait par là, proposa : « Faisons la course jusqu'au grand chêne. » L'écureuil éclata de rire et accepta. Il partit comme une flèche, puis s'arrêta pour grignoter des noisettes. « J'ai tout mon temps », pensa-t-il. Il croqua, bavarda avec un geai, puis s'endormit au soleil. Pendant ce temps, la tortue avançait pas à pas, sans jamais s'arrêter. Quand l'écureuil se réveilla, il fila vers le chêne, mais la tortue l'attendait déjà, tranquille, à l'arrivée. « La régularité vaut mieux que la vitesse », dit-elle doucement. L'écureuil, tout penaud, ne se vanta plus jamais.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Quels animaux font la course ?",
+              "options": ["L'écureuil et la tortue", "L'écureuil et le geai", "La tortue et le lièvre"],
+              "answer": "L'écureuil et la tortue"
+            },
+            {
+              "type": "input",
+              "question": "Jusqu'à quel arbre va la course ? (deux mots)",
+              "answer": "grand chêne",
+              "accept": ["le grand chêne", "chêne", "le chêne", "un chêne"]
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi l'écureuil perd-il la course ?",
+              "options": ["Il s'arrête, bavarde et s'endort", "Il court beaucoup trop vite", "Il se perd dans la forêt"],
+              "answer": "Il s'arrête, bavarde et s'endort"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « penaud » ?",
+              "options": ["Honteux et gêné", "Très joyeux", "Très fatigué"],
+              "answer": "Honteux et gêné"
+            },
+            {
+              "type": "qcm",
+              "question": "Quelle est la leçon de cette fable ?",
+              "options": ["Mieux vaut avancer régulièrement que se vanter d'être rapide", "Il faut toujours dormir au soleil", "Les noisettes donnent de la force"],
+              "answer": "Mieux vaut avancer régulièrement que se vanter d'être rapide"
+            },
+            {
+              "type": "qcm",
+              "question": "Avec quel oiseau l'écureuil bavarde-t-il ?",
+              "options": ["Un geai", "Un hibou", "Un merle"],
+              "answer": "Un geai"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Le hérisson, ami du jardin",
+      "description": "Texte documentaire sur un animal : repérer des informations précises.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "Le hérisson est un petit mammifère qui vit dans les jardins, les haies et les forêts. Son dos est couvert d'environ six mille piquants. Quand il a peur, il se roule en boule : ses piquants le protègent alors des renards et des chiens. Le hérisson dort le jour et sort la nuit pour chercher sa nourriture. Il mange des insectes, des limaces, des escargots et des vers de terre. C'est pour cela que les jardiniers l'adorent : il protège les légumes du potager ! En hiver, quand il fait trop froid, le hérisson s'installe dans un tas de feuilles et dort pendant plusieurs mois : c'est l'hibernation. Au printemps, il se réveille, très affamé, et repart à la chasse aux limaces. Attention : il ne faut jamais lui donner du lait, car cela le rend malade.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Combien de piquants le hérisson a-t-il environ ?",
+              "options": ["Six cents", "Six mille", "Soixante"],
+              "answer": "Six mille"
+            },
+            {
+              "type": "qcm",
+              "question": "Quand le hérisson sort-il chercher sa nourriture ?",
+              "options": ["La nuit", "Le matin", "À midi"],
+              "answer": "La nuit"
+            },
+            {
+              "type": "input",
+              "question": "Cite un animal que mange le hérisson. (un ou deux mots)",
+              "answer": "limaces",
+              "accept": ["des limaces", "une limace", "insectes", "des insectes", "escargots", "des escargots", "vers", "vers de terre", "des vers", "des vers de terre"]
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « hibernation » ?",
+              "options": ["Dormir pendant plusieurs mois en hiver", "Chasser les limaces la nuit", "Se rouler en boule pour se protéger"],
+              "answer": "Dormir pendant plusieurs mois en hiver"
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi les jardiniers adorent-ils le hérisson ?",
+              "options": ["Il mange les petites bêtes qui abîment les légumes", "Il creuse des trous dans le potager", "Il fait fuir les oiseaux du jardin"],
+              "answer": "Il mange les petites bêtes qui abîment les légumes"
+            },
+            {
+              "type": "qcm",
+              "question": "Que ne faut-il jamais donner au hérisson ?",
+              "options": ["Du lait", "De l'eau", "Des feuilles"],
+              "answer": "Du lait"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "La recette du gâteau au yaourt",
+      "description": "Recette de cuisine : comprendre des ingrédients et des étapes.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "Gâteau au yaourt (pour six personnes). Ingrédients : un pot de yaourt nature, deux pots de sucre, trois pots de farine, un demi-pot d'huile, trois œufs et un sachet de levure. Préparation : 1. Demande à un adulte d'allumer le four à cent quatre-vingts degrés. 2. Verse le yaourt dans un saladier, puis garde le pot vide : il servira à mesurer les autres ingrédients. 3. Ajoute le sucre et les œufs, puis mélange avec un fouet. 4. Verse la farine, la levure et l'huile, et remue jusqu'à obtenir une pâte lisse. 5. Verse la pâte dans un moule beurré. 6. Fais cuire trente-cinq minutes. Pour vérifier la cuisson, plante la lame d'un couteau dans le gâteau : si elle ressort sèche, le gâteau est prêt. Laisse bien refroidir avant de le démouler.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Combien de pots de farine faut-il ?",
+              "options": ["Un pot", "Deux pots", "Trois pots"],
+              "answer": "Trois pots"
+            },
+            {
+              "type": "input",
+              "question": "Combien d'œufs faut-il pour cette recette ? (un mot)",
+              "answer": "trois",
+              "accept": ["3", "trois oeufs", "trois œufs"]
+            },
+            {
+              "type": "qcm",
+              "question": "À quoi sert le pot de yaourt vide ?",
+              "options": ["À mesurer les autres ingrédients", "À décorer la table", "À boire de l'eau"],
+              "answer": "À mesurer les autres ingrédients"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « une pâte lisse » ?",
+              "options": ["Une pâte bien mélangée, sans morceaux", "Une pâte très dure", "Une pâte brûlée"],
+              "answer": "Une pâte bien mélangée, sans morceaux"
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi faut-il demander à un adulte d'allumer le four ?",
+              "options": ["Parce que le four très chaud peut être dangereux", "Parce que l'adulte a très faim", "Parce que le four est trop lourd à porter"],
+              "answer": "Parce que le four très chaud peut être dangereux"
+            },
+            {
+              "type": "qcm",
+              "question": "Comment sait-on que le gâteau est cuit ?",
+              "options": ["La lame du couteau ressort sèche", "Le gâteau devient tout blanc", "Le four s'éteint tout seul"],
+              "answer": "La lame du couteau ressort sèche"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Fabriquer un moulin à vent",
+      "description": "Notice de fabrication : suivre des consignes dans l'ordre.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "Fabriquer un moulin à vent en papier. Matériel : une feuille de papier carrée, des ciseaux, une règle, une punaise, une baguette en bois et une gomme. Étapes : 1. Trace les deux diagonales du carré avec ta règle. 2. Découpe le long des traits, mais arrête-toi à trois centimètres du centre. Tu obtiens quatre pointes. 3. Replie une pointe sur deux vers le centre, sans écraser le pli. 4. Demande à un adulte de planter la punaise au centre, à travers les quatre pointes repliées. 5. Fixe la punaise sur la baguette et protège sa pointe avec la gomme. Ton moulin est terminé ! Souffle sur les ailes ou cours dans le jardin : le moulin tournera comme une vraie hélice. Astuce : un papier léger tourne beaucoup mieux qu'un papier épais.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Quelle forme doit avoir la feuille de papier ?",
+              "options": ["Un carré", "Un rond", "Un triangle"],
+              "answer": "Un carré"
+            },
+            {
+              "type": "input",
+              "question": "Combien de pointes obtient-on après le découpage ? (un mot)",
+              "answer": "quatre",
+              "accept": ["4", "quatre pointes"]
+            },
+            {
+              "type": "qcm",
+              "question": "Où faut-il s'arrêter de découper ?",
+              "options": ["À trois centimètres du centre", "Au milieu exact de la feuille", "Au bord de la feuille"],
+              "answer": "À trois centimètres du centre"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « fixe la punaise sur la baguette » ?",
+              "options": ["Attache solidement la punaise à la baguette", "Casse la punaise en deux", "Peins la punaise en couleur"],
+              "answer": "Attache solidement la punaise à la baguette"
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi demande-t-on à un adulte de planter la punaise ?",
+              "options": ["Parce que la punaise pique et peut blesser", "Parce que l'enfant ne sait pas compter", "Parce que l'adulte s'ennuie"],
+              "answer": "Parce que la punaise pique et peut blesser"
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi vaut-il mieux choisir un papier léger ?",
+              "options": ["Parce qu'il tourne mieux au vent", "Parce qu'il est plus joli", "Parce qu'il coûte moins cher"],
+              "answer": "Parce qu'il tourne mieux au vent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Le courriel de Mamie Jeanne",
+      "description": "Courriel : identifier l'expéditeur, le destinataire et les informations.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "De : mamie.jeanne@courrier.fr — À : sami.famille@courrier.fr — Objet : Ta visite des vacances. Mon cher Sami, merci pour ta jolie carte d'anniversaire ! Ton dessin du phare m'a beaucoup plu : je l'ai accroché dans la cuisine. J'ai une grande nouvelle : le vieux cerisier du jardin est enfin couvert de fruits. Si tu viens aux vacances d'août, nous ferons des confitures ensemble, comme l'année dernière. J'ai aussi réparé la cabane : le toit ne laisse plus passer la pluie. Ton cousin Malik viendra la deuxième semaine, vous pourrez pêcher au lac tous les deux. Demande à tes parents de me téléphoner pour choisir les dates. Je t'embrasse très fort et j'ai hâte de te voir. À très bientôt, Mamie Jeanne.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Qui a écrit ce courriel ?",
+              "options": ["Mamie Jeanne", "Sami", "Malik"],
+              "answer": "Mamie Jeanne"
+            },
+            {
+              "type": "qcm",
+              "question": "Qu'avait dessiné Sami sur sa carte d'anniversaire ?",
+              "options": ["Un phare", "Un cerisier", "Une cabane"],
+              "answer": "Un phare"
+            },
+            {
+              "type": "input",
+              "question": "Quel arbre du jardin est couvert de fruits ? (un ou deux mots)",
+              "answer": "le cerisier",
+              "accept": ["cerisier", "un cerisier", "le vieux cerisier", "vieux cerisier"]
+            },
+            {
+              "type": "qcm",
+              "question": "Que ressent Mamie Jeanne en écrivant ce courriel ?",
+              "options": ["Elle est heureuse et impatiente de voir Sami", "Elle est fâchée contre Sami", "Elle est triste à cause de la pluie"],
+              "answer": "Elle est heureuse et impatiente de voir Sami"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « je l'ai accroché » ?",
+              "options": ["Je l'ai fixé au mur", "Je l'ai jeté à la poubelle", "Je l'ai plié en deux"],
+              "answer": "Je l'ai fixé au mur"
+            },
+            {
+              "type": "qcm",
+              "question": "Que pourront faire Sami et Malik ensemble ?",
+              "options": ["Pêcher au lac", "Réparer la cabane", "Cueillir des pommes"],
+              "answer": "Pêcher au lac"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Une forêt dans la cour de l'école",
+      "description": "Article de journal pour enfants : trouver les informations essentielles.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "LE PETIT JOURNAL DES ÉCOLES — jeudi 12 mars. Une classe plante une forêt miniature. À Lyon, les élèves de la classe de CE2 de l'école des Tilleuls ont planté deux cents arbres dans la cour de leur école. Chênes, noisetiers, érables : les jeunes pousses occupent un carré de la taille d'un terrain de basket. « Dans cinq ans, nous aurons de l'ombre pour lire dehors », explique Inès, neuf ans. Le projet a duré trois mois. Les élèves ont d'abord étudié les arbres de la région, puis ils ont creusé, planté et arrosé. La mairie a offert les plants. Grâce à cette mini-forêt, les oiseaux et les insectes reviennent déjà dans la cour. D'autres écoles de la ville veulent maintenant imiter cette belle idée.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Dans quelle ville se passe cette histoire ?",
+              "options": ["À Lyon", "À Paris", "À Marseille"],
+              "answer": "À Lyon"
+            },
+            {
+              "type": "input",
+              "question": "Combien d'arbres les élèves ont-ils plantés ? (deux mots)",
+              "answer": "deux cents",
+              "accept": ["200", "deux cent", "deux cents arbres"]
+            },
+            {
+              "type": "qcm",
+              "question": "Qui a offert les plants d'arbres ?",
+              "options": ["La mairie", "Les parents", "Le journal"],
+              "answer": "La mairie"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « imiter cette belle idée » ?",
+              "options": ["Faire la même chose que cette école", "Se moquer de cette école", "Arroser les arbres de cette école"],
+              "answer": "Faire la même chose que cette école"
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi les oiseaux et les insectes reviennent-ils dans la cour ?",
+              "options": ["Parce que les arbres leur offrent un abri et de la nourriture", "Parce qu'ils aiment jouer au basket", "Parce que la mairie les a apportés"],
+              "answer": "Parce que les arbres leur offrent un abri et de la nourriture"
+            },
+            {
+              "type": "qcm",
+              "question": "Combien de temps le projet a-t-il duré ?",
+              "options": ["Trois mois", "Cinq ans", "Trois semaines"],
+              "answer": "Trois mois"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "D'où vient la pluie ?",
+      "description": "Texte documentaire scientifique : comprendre le cycle de l'eau.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "D'où vient la pluie ? L'eau de la Terre voyage sans arrêt : c'est le cycle de l'eau. Tout commence dans les océans, les lacs et les rivières. Chauffée par le soleil, l'eau se transforme en vapeur, un gaz invisible qui monte dans le ciel : c'est l'évaporation. En altitude, l'air est froid. La vapeur se refroidit et redevient de minuscules gouttes qui forment les nuages : c'est la condensation. Quand les gouttes deviennent trop lourdes, elles tombent : c'est la pluie, ou la neige s'il fait très froid. L'eau de pluie glisse ensuite vers les rivières, qui la ramènent à la mer. Puis tout recommence ! Ainsi, la goutte d'eau de ton verre a peut-être déjà été un nuage, un flocon de neige ou une vague de l'océan.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Qu'est-ce qui chauffe l'eau des océans ?",
+              "options": ["Le soleil", "Le vent", "Les nuages"],
+              "answer": "Le soleil"
+            },
+            {
+              "type": "input",
+              "question": "Comment s'appelle la transformation de l'eau en vapeur ? (un mot)",
+              "answer": "évaporation",
+              "accept": ["l'évaporation", "evaporation", "l'evaporation"]
+            },
+            {
+              "type": "qcm",
+              "question": "Que forment les minuscules gouttes dans le ciel ?",
+              "options": ["Les nuages", "Les rivières", "Les vagues"],
+              "answer": "Les nuages"
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi la pluie finit-elle par tomber ?",
+              "options": ["Parce que les gouttes deviennent trop lourdes", "Parce que le vent souffle très fort", "Parce que le soleil brille trop"],
+              "answer": "Parce que les gouttes deviennent trop lourdes"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « en altitude » ?",
+              "options": ["Très haut dans le ciel", "Tout au fond de la mer", "Au bord de la rivière"],
+              "answer": "Très haut dans le ciel"
+            },
+            {
+              "type": "qcm",
+              "question": "Quand tombe-t-il de la neige à la place de la pluie ?",
+              "options": ["Quand il fait très froid", "Quand il fait très chaud", "Quand la mer est agitée"],
+              "answer": "Quand il fait très froid"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Les châteaux forts du Moyen Âge",
+      "description": "Texte documentaire historique : comprendre la vie d'autrefois.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "Au Moyen Âge, il y a environ mille ans, les seigneurs faisaient construire des châteaux forts pour se protéger des attaques. Les premiers châteaux étaient en bois, mais ils brûlaient facilement. On les construisit donc en pierre, avec des murailles épaisses de plusieurs mètres. Tout en haut de la plus grande tour, appelée le donjon, vivait la famille du seigneur. Un fossé rempli d'eau, la douve, entourait le château. Pour entrer, il fallait franchir le pont-levis, un pont de bois que les gardes pouvaient relever en cas de danger. En temps de paix, le château était un lieu très animé : paysans, cuisiniers, forgerons et chevaliers s'y croisaient chaque jour. Aujourd'hui, on peut encore visiter certains de ces châteaux, debout depuis presque mille ans.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Pourquoi les seigneurs faisaient-ils construire des châteaux forts ?",
+              "options": ["Pour se protéger des attaques", "Pour organiser de grandes fêtes", "Pour ranger leurs trésors"],
+              "answer": "Pour se protéger des attaques"
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi a-t-on remplacé les châteaux en bois par des châteaux en pierre ?",
+              "options": ["Parce que le bois brûlait facilement", "Parce que la pierre est plus jolie", "Parce qu'il n'y avait plus d'arbres"],
+              "answer": "Parce que le bois brûlait facilement"
+            },
+            {
+              "type": "input",
+              "question": "Comment s'appelle la plus grande tour du château ? (un ou deux mots)",
+              "answer": "le donjon",
+              "accept": ["donjon", "un donjon"]
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « la douve » ?",
+              "options": ["Un fossé rempli d'eau autour du château", "Une grande salle du château", "Une arme des chevaliers"],
+              "answer": "Un fossé rempli d'eau autour du château"
+            },
+            {
+              "type": "qcm",
+              "question": "Que pouvaient faire les gardes en cas de danger ?",
+              "options": ["Relever le pont-levis", "Vider la douve", "Fermer les fenêtres du donjon"],
+              "answer": "Relever le pont-levis"
+            },
+            {
+              "type": "qcm",
+              "question": "Qui vivait tout en haut du donjon ?",
+              "options": ["La famille du seigneur", "Les paysans du village", "Les cuisiniers du château"],
+              "answer": "La famille du seigneur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Le cartable perdu",
+      "description": "Dialogue de théâtre : lire des répliques et des didascalies.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "LE CARTABLE PERDU — Scène 1. La cour de l'école, après la classe. MAËL, affolé : Zoé ! Mon cartable a disparu ! Je l'avais posé sous le préau, j'en suis sûr. ZOÉ, calme : Ne panique pas. Réfléchis : tu l'avais encore à la récréation ? MAËL : Oui... J'ai sorti mon goûter, puis je suis allé jouer au ballon avec Hugo. ZOÉ, souriant : Et où avez-vous joué, exactement ? MAËL, se frappant le front : Près du banc, à côté des grands arbres ! Ils courent vers le banc. ZOÉ, triomphante : Le voilà ! Ton cartable t'attendait bien sagement. MAËL, soulagé : Merci, Zoé. Sans toi, j'étais perdu. ZOÉ, en riant : Pas perdu... juste distrait ! Ils sortent ensemble.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Qu'est-ce que Maël a perdu ?",
+              "options": ["Son cartable", "Son goûter", "Son ballon"],
+              "answer": "Son cartable"
+            },
+            {
+              "type": "qcm",
+              "question": "Où se passe cette scène ?",
+              "options": ["Dans la cour de l'école", "Dans la maison de Zoé", "Dans un parc"],
+              "answer": "Dans la cour de l'école"
+            },
+            {
+              "type": "qcm",
+              "question": "Que ressent Maël au début de la scène ?",
+              "options": ["Il est affolé", "Il est très joyeux", "Il s'ennuie"],
+              "answer": "Il est affolé"
+            },
+            {
+              "type": "input",
+              "question": "Près de quel objet retrouve-t-on le cartable ? (deux mots)",
+              "answer": "le banc",
+              "accept": ["banc", "du banc", "un banc", "près du banc"]
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « distrait » ?",
+              "options": ["Qui ne fait pas attention", "Qui court très vite", "Qui est en colère"],
+              "answer": "Qui ne fait pas attention"
+            },
+            {
+              "type": "qcm",
+              "question": "Comment Zoé aide-t-elle Maël à retrouver son cartable ?",
+              "options": ["Elle lui pose des questions pour l'aider à se souvenir", "Elle lui achète un nouveau cartable", "Elle appelle la maîtresse à l'aide"],
+              "answer": "Elle lui pose des questions pour l'aider à se souvenir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Le peintre d'automne",
+      "description": "Poème : repérer les rimes et comprendre les images.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "Le peintre d'automne. Le vent d'automne est un peintre pressé : il barbouille de rouge les feuilles du verger, il pose sur les arbres un grand manteau doré, puis s'enfuit en dansant sans jamais se lasser. Les feuilles voltigent comme des papillons, elles tournent, s'envolent au-dessus des maisons, puis se posent sans bruit le long des buissons : l'automne a terminé sa jolie chanson. Demain, le vent reviendra du fond des bois, avec son pinceau invisible et froid ; il peindra le givre au bord des toits, et l'hiver, tout doucement, montrera ses doigts.",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "À quoi le poète compare-t-il le vent d'automne ?",
+              "options": ["À un peintre", "À un danseur", "À un oiseau"],
+              "answer": "À un peintre"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le poème, quel mot rime avec « papillons » ?",
+              "options": ["maisons", "verger", "peintre"],
+              "answer": "maisons"
+            },
+            {
+              "type": "qcm",
+              "question": "« Les feuilles voltigent comme des papillons » : que veut dire cette image ?",
+              "options": ["Les feuilles volent légèrement dans l'air", "Des papillons mangent les feuilles", "Les feuilles se transforment en insectes"],
+              "answer": "Les feuilles volent légèrement dans l'air"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le poème, que veut dire « il barbouille de rouge les feuilles » ?",
+              "options": ["Il couvre les feuilles de couleur rouge", "Il déchire les feuilles rouges", "Il lave les feuilles avec de l'eau"],
+              "answer": "Il couvre les feuilles de couleur rouge"
+            },
+            {
+              "type": "input",
+              "question": "Quelle saison arrive à la fin du poème ? (un mot)",
+              "answer": "l'hiver",
+              "accept": ["hiver"]
+            },
+            {
+              "type": "qcm",
+              "question": "Pourquoi le pinceau du vent est-il « froid » à la fin ?",
+              "options": ["Parce que l'hiver approche", "Parce qu'il est mouillé par la pluie", "Parce qu'il est fait en métal"],
+              "answer": "Parce que l'hiver approche"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Le mystère de la tarte disparue",
+      "description": "Texte à énigme : relier plusieurs indices pour trouver le coupable.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "lecture",
+          "text": "Dimanche midi, la tarte aux pommes de Papi Bernard a disparu de la cuisine ! Papi interroge toute la famille. Mamie dit : « À onze heures, je lisais dans le salon, et j'ai entendu la porte de la cuisine grincer. » Tonton Karim dit : « Moi, je lavais la voiture dehors, le voisin m'a vu ! » La petite Salma dit : « Je jouais aux cartes dans ma chambre. » Papi observe alors les indices : des miettes forment un chemin qui va de la cuisine jusqu'à la niche du jardin, et la porte de la cuisine est restée entrouverte, juste à la hauteur d'un animal. Dans la niche, Papi découvre le plat vide et... Filou, le chien, qui se lèche les babines, le museau couvert de compote de pommes. Le gourmand a profité de la porte mal fermée !",
+          "questions": [
+            {
+              "type": "qcm",
+              "question": "Qu'est-ce qui a disparu de la cuisine ?",
+              "options": ["La tarte aux pommes", "Un pot de compote", "Le jeu de cartes"],
+              "answer": "La tarte aux pommes"
+            },
+            {
+              "type": "qcm",
+              "question": "Jusqu'où mène le chemin de miettes ?",
+              "options": ["Jusqu'à la niche du jardin", "Jusqu'au salon", "Jusqu'à la voiture"],
+              "answer": "Jusqu'à la niche du jardin"
+            },
+            {
+              "type": "input",
+              "question": "Qui a mangé la tarte ? (un ou deux mots)",
+              "answer": "Filou",
+              "accept": ["le chien", "Filou le chien", "le chien Filou", "un chien"]
+            },
+            {
+              "type": "qcm",
+              "question": "Quel indice montre que le voleur est un animal ?",
+              "options": ["La porte est entrouverte à la hauteur d'un animal", "La voiture est très propre", "Mamie lisait dans le salon"],
+              "answer": "La porte est entrouverte à la hauteur d'un animal"
+            },
+            {
+              "type": "qcm",
+              "question": "Que faisait Tonton Karim au moment du vol ?",
+              "options": ["Il lavait la voiture dehors", "Il lisait dans le salon", "Il jouait aux cartes"],
+              "answer": "Il lavait la voiture dehors"
+            },
+            {
+              "type": "qcm",
+              "question": "Dans le texte, que veut dire « il se lèche les babines » ?",
+              "options": ["Il se lèche le tour de la bouche", "Il se gratte les oreilles", "Il aboie très fort"],
+              "answer": "Il se lèche le tour de la bouche"
+            },
+            {
+              "type": "qcm",
+              "question": "Comment Filou a-t-il pu entrer dans la cuisine ?",
+              "options": ["La porte était mal fermée", "Il a cassé la fenêtre", "Salma l'a fait entrer"],
+              "answer": "La porte était mal fermée"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

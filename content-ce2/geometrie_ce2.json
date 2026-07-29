@@ -1,0 +1,957 @@
+{
+  "key": "geometrie_ce2",
+  "fiches": [
+    {
+      "id": 5,
+      "title": "Les polygones",
+      "description": "Reconnaître et nommer les polygones selon leur nombre de côtés.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Qu'est-ce qu'un polygone ?",
+          "options": ["une figure fermée dont tous les côtés sont des traits droits", "une figure avec des côtés arrondis", "une ligne ouverte"],
+          "answer": "une figure fermée dont tous les côtés sont des traits droits"
+        },
+        {
+          "type": "qcm",
+          "question": "Comment s'appelle un polygone qui a 3 côtés ?",
+          "options": ["un triangle", "un carré", "un pentagone"],
+          "answer": "un triangle"
+        },
+        {
+          "type": "input",
+          "question": "Comment s'appelle un polygone qui a 5 côtés ?",
+          "answer": "un pentagone",
+          "accept": ["pentagone", "le pentagone", "un pentagone"]
+        },
+        {
+          "type": "qcm",
+          "question": "Comment s'appelle un polygone qui a 6 côtés ?",
+          "options": ["un hexagone", "un octogone", "un quadrilatère"],
+          "answer": "un hexagone"
+        },
+        {
+          "type": "input",
+          "question": "Comment s'appelle un polygone qui a 8 côtés ?",
+          "answer": "un octogone",
+          "accept": ["octogone", "le octogone", "l'octogone"]
+        },
+        {
+          "type": "qcm",
+          "question": "Comment appelle-t-on tous les polygones qui ont 4 côtés ?",
+          "options": ["les quadrilatères", "les triangles", "les hexagones"],
+          "answer": "les quadrilatères"
+        },
+        {
+          "type": "input",
+          "question": "Combien de côtés possède un triangle ?",
+          "answer": "3",
+          "accept": ["trois", "3 côtés", "3 cotes"]
+        },
+        {
+          "type": "input",
+          "question": "Un polygone a 6 côtés. Combien a-t-il de sommets ?",
+          "answer": "6",
+          "accept": ["six", "6 sommets"]
+        },
+        {
+          "type": "qcm",
+          "question": "Le cercle est-il un polygone ?",
+          "options": ["non, car il n'a aucun côté droit", "oui, car c'est une figure fermée", "oui, car il est rond"],
+          "answer": "non, car il n'a aucun côté droit"
+        },
+        {
+          "type": "qcm",
+          "question": "Dans un polygone, qu'est-ce qu'un sommet ?",
+          "options": ["le point où deux côtés se rencontrent", "le milieu d'un côté", "le centre de la figure"],
+          "answer": "le point où deux côtés se rencontrent"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Le carré et ses propriétés",
+      "description": "Connaître les propriétés du carré : côtés, angles droits, sommets.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Combien de côtés possède un carré ?",
+          "options": ["4", "3", "5"],
+          "answer": "4"
+        },
+        {
+          "type": "qcm",
+          "question": "Les côtés d'un carré sont :",
+          "options": ["tous de la même longueur", "tous de longueurs différentes", "égaux seulement deux par deux"],
+          "answer": "tous de la même longueur"
+        },
+        {
+          "type": "input",
+          "question": "Combien d'angles droits possède un carré ?",
+          "answer": "4",
+          "accept": ["quatre", "4 angles droits"]
+        },
+        {
+          "type": "input",
+          "question": "Combien de sommets possède un carré ?",
+          "answer": "4",
+          "accept": ["quatre", "4 sommets"]
+        },
+        {
+          "type": "qcm",
+          "question": "Le carré fait partie de la famille des :",
+          "options": ["quadrilatères", "triangles", "pentagones"],
+          "answer": "quadrilatères"
+        },
+        {
+          "type": "qcm",
+          "question": "Un carré a un côté qui mesure 5 cm. Combien mesurent ses trois autres côtés ?",
+          "options": ["5 cm chacun", "des longueurs différentes", "10 cm chacun"],
+          "answer": "5 cm chacun"
+        },
+        {
+          "type": "qcm",
+          "question": "Vrai ou faux : tous les angles d'un carré sont des angles droits.",
+          "options": ["Vrai", "Faux"],
+          "answer": "Vrai"
+        },
+        {
+          "type": "input",
+          "question": "Combien d'axes de symétrie possède un carré ?",
+          "answer": "4",
+          "accept": ["quatre", "4 axes", "4 axes de symétrie"]
+        },
+        {
+          "type": "qcm",
+          "question": "Vrai ou faux : un carré peut avoir un côté de 4 cm et un autre côté de 6 cm.",
+          "options": ["Faux", "Vrai"],
+          "answer": "Faux"
+        },
+        {
+          "type": "qcm",
+          "question": "Une figure a 4 côtés qui mesurent tous 3 cm et 4 angles droits. Quelle est cette figure ?",
+          "options": ["un carré", "un cercle", "un triangle"],
+          "answer": "un carré"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Le rectangle",
+      "description": "Connaître les propriétés du rectangle : longueur, largeur, angles droits.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Combien d'angles droits possède un rectangle ?",
+          "options": ["4", "2", "3"],
+          "answer": "4"
+        },
+        {
+          "type": "qcm",
+          "question": "Dans un rectangle, les côtés opposés sont :",
+          "options": ["de la même longueur", "toujours de longueurs différentes", "arrondis"],
+          "answer": "de la même longueur"
+        },
+        {
+          "type": "input",
+          "question": "Combien de côtés possède un rectangle ?",
+          "answer": "4",
+          "accept": ["quatre", "4 côtés", "4 cotes"]
+        },
+        {
+          "type": "qcm",
+          "question": "Comment s'appelle le grand côté d'un rectangle ?",
+          "options": ["la longueur", "la largeur", "la hauteur"],
+          "answer": "la longueur"
+        },
+        {
+          "type": "qcm",
+          "question": "Comment s'appelle le petit côté d'un rectangle ?",
+          "options": ["la largeur", "la longueur", "le rayon"],
+          "answer": "la largeur"
+        },
+        {
+          "type": "qcm",
+          "question": "La longueur d'un rectangle mesure 8 cm. Combien mesure le côté opposé à cette longueur ?",
+          "options": ["8 cm", "4 cm", "on ne peut pas savoir"],
+          "answer": "8 cm"
+        },
+        {
+          "type": "qcm",
+          "question": "Vrai ou faux : un carré est un rectangle particulier dont tous les côtés sont égaux.",
+          "options": ["Vrai", "Faux"],
+          "answer": "Vrai"
+        },
+        {
+          "type": "qcm",
+          "question": "Un rectangle a une longueur de 6 cm et une largeur de 4 cm. Combien de ses côtés mesurent 4 cm ?",
+          "options": ["2", "1", "4"],
+          "answer": "2"
+        },
+        {
+          "type": "qcm",
+          "question": "Un quadrilatère a 4 angles droits, une longueur de 7 cm et une largeur de 3 cm. Quelle est cette figure ?",
+          "options": ["un rectangle", "un carré", "un triangle"],
+          "answer": "un rectangle"
+        },
+        {
+          "type": "qcm",
+          "question": "Vrai ou faux : dans tous les rectangles, les 4 côtés ont la même longueur.",
+          "options": ["Faux", "Vrai"],
+          "answer": "Faux"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "L'angle droit",
+      "description": "Reconnaître un angle droit et le vérifier avec l'équerre.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Quel instrument permet de vérifier qu'un angle est droit ?",
+          "options": ["l'équerre", "le compas", "la gomme"],
+          "answer": "l'équerre"
+        },
+        {
+          "type": "qcm",
+          "question": "On trouve un angle droit :",
+          "options": ["au coin d'une feuille de papier rectangulaire", "au sommet d'un triangle équilatéral", "sur le bord d'un cercle"],
+          "answer": "au coin d'une feuille de papier rectangulaire"
+        },
+        {
+          "type": "input",
+          "question": "Combien d'angles droits possède un triangle rectangle ?",
+          "answer": "1",
+          "accept": ["un", "1 angle droit"]
+        },
+        {
+          "type": "qcm",
+          "question": "Parmi ces figures, laquelle possède quatre angles droits ?",
+          "options": ["le carré", "le triangle équilatéral", "le cercle"],
+          "answer": "le carré"
+        },
+        {
+          "type": "qcm",
+          "question": "Sur une horloge, il est exactement 3 heures : la grande aiguille est sur le 12 et la petite sur le 3. Quel angle forment les deux aiguilles ?",
+          "options": ["un angle droit", "un angle plat", "aucun angle"],
+          "answer": "un angle droit"
+        },
+        {
+          "type": "qcm",
+          "question": "Vrai ou faux : un triangle peut avoir deux angles droits.",
+          "options": ["Faux", "Vrai"],
+          "answer": "Faux"
+        },
+        {
+          "type": "qcm",
+          "question": "Quelle lettre majuscule d'imprimerie montre un angle droit entre ses deux traits ?",
+          "options": ["L", "O", "S"],
+          "answer": "L"
+        },
+        {
+          "type": "qcm",
+          "question": "Pour vérifier qu'un angle est droit, je pose sur cet angle :",
+          "options": ["le coin de l'angle droit de mon équerre", "la pointe de mon compas", "le zéro de ma règle"],
+          "answer": "le coin de l'angle droit de mon équerre"
+        },
+        {
+          "type": "qcm",
+          "question": "Combien d'angles droits possède un triangle équilatéral ?",
+          "options": ["0", "1", "3"],
+          "answer": "0"
+        },
+        {
+          "type": "qcm",
+          "question": "Le montant vertical d'une porte et le sol horizontal forment :",
+          "options": ["un angle droit", "un angle nul", "une ligne courbe"],
+          "answer": "un angle droit"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Les instruments de tracé",
+      "description": "Connaître le vocabulaire et l'usage de la règle, de l'équerre et du compas.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Quel instrument sert à tracer un trait bien droit ?",
+          "options": ["la règle", "le compas", "la gomme"],
+          "answer": "la règle"
+        },
+        {
+          "type": "qcm",
+          "question": "Quel instrument sert à tracer un cercle ?",
+          "options": ["le compas", "la règle", "l'équerre"],
+          "answer": "le compas"
+        },
+        {
+          "type": "qcm",
+          "question": "Quel instrument a la forme d'un triangle avec un angle droit ?",
+          "options": ["l'équerre", "la règle", "le compas"],
+          "answer": "l'équerre"
+        },
+        {
+          "type": "input",
+          "question": "Avec quel instrument mesure-t-on la longueur d'un segment en centimètres ?",
+          "answer": "une règle graduée",
+          "accept": ["la règle graduée", "règle graduée", "une règle", "la règle", "règle", "regle", "une regle graduee", "la regle"]
+        },
+        {
+          "type": "qcm",
+          "question": "Pour tracer un cercle, où place-t-on la pointe sèche du compas ?",
+          "options": ["au centre du cercle", "sur le bord du cercle", "n'importe où sur la feuille"],
+          "answer": "au centre du cercle"
+        },
+        {
+          "type": "qcm",
+          "question": "Quand on trace un cercle, l'écartement du compas correspond :",
+          "options": ["au rayon du cercle", "au diamètre du cercle", "au tour complet du cercle"],
+          "answer": "au rayon du cercle"
+        },
+        {
+          "type": "qcm",
+          "question": "Qu'est-ce qu'un segment ?",
+          "options": ["une portion de droite limitée par deux points", "une ligne courbe", "une droite qui ne s'arrête jamais"],
+          "answer": "une portion de droite limitée par deux points"
+        },
+        {
+          "type": "qcm",
+          "question": "Pour relier deux points par un trait droit, j'utilise :",
+          "options": ["une règle", "un compas", "seulement mes doigts"],
+          "answer": "une règle"
+        },
+        {
+          "type": "qcm",
+          "question": "Que signifie tracer une figure « à main levée » ?",
+          "options": ["dessiner la figure sans instrument", "tracer avec une règle", "tracer avec un compas"],
+          "answer": "dessiner la figure sans instrument"
+        },
+        {
+          "type": "input",
+          "question": "Quel instrument permet de reporter une longueur sans la mesurer ?",
+          "answer": "le compas",
+          "accept": ["un compas", "compas"]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Les triangles",
+      "description": "Reconnaître le triangle rectangle, le triangle isocèle et le triangle équilatéral.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Un triangle dont les 3 côtés ont la même longueur est un triangle :",
+          "options": ["équilatéral", "isocèle", "rectangle"],
+          "answer": "équilatéral"
+        },
+        {
+          "type": "qcm",
+          "question": "Un triangle qui a exactement 2 côtés de la même longueur est un triangle :",
+          "options": ["isocèle", "équilatéral", "rectangle"],
+          "answer": "isocèle"
+        },
+        {
+          "type": "input",
+          "question": "Comment s'appelle un triangle qui possède un angle droit ? C'est un triangle ...",
+          "answer": "rectangle",
+          "accept": ["un triangle rectangle", "triangle rectangle", "le triangle rectangle"]
+        },
+        {
+          "type": "input",
+          "question": "Combien de sommets possède un triangle ?",
+          "answer": "3",
+          "accept": ["trois", "3 sommets"]
+        },
+        {
+          "type": "qcm",
+          "question": "Un triangle dont les 3 côtés ont des longueurs toutes différentes est un triangle :",
+          "options": ["quelconque", "équilatéral", "isocèle"],
+          "answer": "quelconque"
+        },
+        {
+          "type": "qcm",
+          "question": "Un triangle a des côtés de 4 cm, 4 cm et 6 cm. C'est un triangle :",
+          "options": ["isocèle", "équilatéral", "quelconque"],
+          "answer": "isocèle"
+        },
+        {
+          "type": "qcm",
+          "question": "Un triangle a des côtés de 5 cm, 5 cm et 5 cm. C'est un triangle :",
+          "options": ["équilatéral", "rectangle", "quelconque"],
+          "answer": "équilatéral"
+        },
+        {
+          "type": "qcm",
+          "question": "Vrai ou faux : un triangle peut avoir 4 côtés.",
+          "options": ["Faux", "Vrai"],
+          "answer": "Faux"
+        },
+        {
+          "type": "input",
+          "question": "Un triangle rectangle isocèle possède un angle droit et combien de côtés de la même longueur ?",
+          "answer": "2",
+          "accept": ["deux", "2 côtés", "2 cotes"]
+        },
+        {
+          "type": "qcm",
+          "question": "Vrai ou faux : un triangle équilatéral a aussi ses trois angles égaux.",
+          "options": ["Vrai", "Faux"],
+          "answer": "Vrai"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Le cercle",
+      "description": "Connaître le centre, le rayon et le diamètre d'un cercle.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Comment s'appelle le point situé au milieu du cercle, à égale distance de tous ses points ?",
+          "options": ["le centre", "le rayon", "le sommet"],
+          "answer": "le centre"
+        },
+        {
+          "type": "qcm",
+          "question": "Comment s'appelle le segment qui relie le centre du cercle à un point du cercle ?",
+          "options": ["le rayon", "le diamètre", "le périmètre"],
+          "answer": "le rayon"
+        },
+        {
+          "type": "qcm",
+          "question": "Comment s'appelle le segment qui traverse le cercle d'un bord à l'autre en passant par le centre ?",
+          "options": ["le diamètre", "le rayon", "l'axe"],
+          "answer": "le diamètre"
+        },
+        {
+          "type": "input",
+          "question": "Le rayon d'un cercle mesure 3 cm. Combien mesure son diamètre ?",
+          "answer": "6 cm",
+          "accept": ["6", "6cm", "6 centimètres", "6 centimetres"]
+        },
+        {
+          "type": "input",
+          "question": "Le diamètre d'un cercle mesure 10 cm. Combien mesure son rayon ?",
+          "answer": "5 cm",
+          "accept": ["5", "5cm", "5 centimètres", "5 centimetres"]
+        },
+        {
+          "type": "qcm",
+          "question": "Le diamètre d'un cercle est égal à :",
+          "options": ["2 fois le rayon", "la moitié du rayon", "3 fois le rayon"],
+          "answer": "2 fois le rayon"
+        },
+        {
+          "type": "qcm",
+          "question": "Tous les points d'un cercle sont :",
+          "options": ["à la même distance du centre", "à des distances différentes du centre", "alignés sur une droite"],
+          "answer": "à la même distance du centre"
+        },
+        {
+          "type": "input",
+          "question": "Pour tracer un cercle de 4 cm de rayon, de combien dois-je écarter mon compas ?",
+          "answer": "4 cm",
+          "accept": ["4", "4cm", "4 centimètres", "4 centimetres"]
+        },
+        {
+          "type": "qcm",
+          "question": "Combien de diamètres différents peut-on tracer dans un même cercle ?",
+          "options": ["autant que l'on veut", "un seul", "deux exactement"],
+          "answer": "autant que l'on veut"
+        },
+        {
+          "type": "qcm",
+          "question": "Un rayon d'un cercle mesure 7 cm. Combien mesure un autre rayon de ce même cercle ?",
+          "options": ["7 cm", "14 cm", "on ne peut pas savoir"],
+          "answer": "7 cm"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Droites perpendiculaires et parallèles",
+      "description": "Reconnaître des droites perpendiculaires et des droites parallèles.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Deux droites qui se coupent en formant un angle droit sont :",
+          "options": ["perpendiculaires", "parallèles", "courbes"],
+          "answer": "perpendiculaires"
+        },
+        {
+          "type": "qcm",
+          "question": "Deux droites qui ne se croisent jamais et restent toujours à la même distance l'une de l'autre sont :",
+          "options": ["parallèles", "perpendiculaires", "sécantes"],
+          "answer": "parallèles"
+        },
+        {
+          "type": "qcm",
+          "question": "Les deux rails d'une voie de chemin de fer bien droite sont l'image de droites :",
+          "options": ["parallèles", "perpendiculaires", "courbes"],
+          "answer": "parallèles"
+        },
+        {
+          "type": "qcm",
+          "question": "Les deux côtés qui se rejoignent à un sommet d'un carré sont :",
+          "options": ["perpendiculaires", "parallèles", "arrondis"],
+          "answer": "perpendiculaires"
+        },
+        {
+          "type": "qcm",
+          "question": "Une droite verticale et une droite horizontale qui se croisent sont :",
+          "options": ["perpendiculaires", "parallèles", "confondues"],
+          "answer": "perpendiculaires"
+        },
+        {
+          "type": "qcm",
+          "question": "Vrai ou faux : deux droites perpendiculaires ne se coupent jamais.",
+          "options": ["Faux", "Vrai"],
+          "answer": "Faux"
+        },
+        {
+          "type": "qcm",
+          "question": "Dans un rectangle, les deux longueurs (côtés opposés) sont :",
+          "options": ["parallèles", "perpendiculaires", "de longueurs différentes"],
+          "answer": "parallèles"
+        },
+        {
+          "type": "qcm",
+          "question": "Dans un rectangle, une longueur et une largeur qui se rejoignent à un sommet sont :",
+          "options": ["perpendiculaires", "parallèles", "égales"],
+          "answer": "perpendiculaires"
+        },
+        {
+          "type": "qcm",
+          "question": "Les lignes horizontales tracées sur une page de cahier sont entre elles :",
+          "options": ["parallèles", "perpendiculaires", "sécantes"],
+          "answer": "parallèles"
+        },
+        {
+          "type": "qcm",
+          "question": "Dans la lettre majuscule T, le trait vertical et le trait horizontal sont :",
+          "options": ["perpendiculaires", "parallèles", "courbes"],
+          "answer": "perpendiculaires"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Les axes de symétrie",
+      "description": "Trouver les axes de symétrie des figures usuelles.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Qu'est-ce qu'un axe de symétrie d'une figure ?",
+          "options": ["une droite qui partage la figure en deux parties superposables par pliage", "une droite qui coupe la figure n'importe où", "le contour de la figure"],
+          "answer": "une droite qui partage la figure en deux parties superposables par pliage"
+        },
+        {
+          "type": "qcm",
+          "question": "Si on plie une figure exactement le long de son axe de symétrie, les deux parties :",
+          "options": ["se superposent exactement", "ne se touchent pas", "forment un cercle"],
+          "answer": "se superposent exactement"
+        },
+        {
+          "type": "input",
+          "question": "Combien d'axes de symétrie possède un rectangle qui n'est pas un carré ?",
+          "answer": "2",
+          "accept": ["deux", "2 axes", "2 axes de symétrie"]
+        },
+        {
+          "type": "qcm",
+          "question": "Combien d'axes de symétrie possède un triangle équilatéral ?",
+          "options": ["3", "1", "0"],
+          "answer": "3"
+        },
+        {
+          "type": "qcm",
+          "question": "Combien d'axes de symétrie possède un triangle isocèle qui n'est pas équilatéral ?",
+          "options": ["1", "2", "3"],
+          "answer": "1"
+        },
+        {
+          "type": "qcm",
+          "question": "Combien d'axes de symétrie possède un cercle ?",
+          "options": ["une infinité", "un seul", "aucun"],
+          "answer": "une infinité"
+        },
+        {
+          "type": "qcm",
+          "question": "La lettre majuscule A d'imprimerie a un axe de symétrie :",
+          "options": ["vertical", "horizontal", "elle n'en a pas"],
+          "answer": "vertical"
+        },
+        {
+          "type": "qcm",
+          "question": "Parmi ces lettres majuscules d'imprimerie, laquelle n'a aucun axe de symétrie ?",
+          "options": ["F", "O", "A"],
+          "answer": "F"
+        },
+        {
+          "type": "qcm",
+          "question": "Vrai ou faux : les diagonales d'un rectangle qui n'est pas un carré sont des axes de symétrie de ce rectangle.",
+          "options": ["Faux", "Vrai"],
+          "answer": "Faux"
+        },
+        {
+          "type": "qcm",
+          "question": "Un papillon a deux ailes exactement identiques. Où se trouve son axe de symétrie ?",
+          "options": ["au milieu de son corps", "au bout d'une aile", "il n'a pas d'axe de symétrie"],
+          "answer": "au milieu de son corps"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "La symétrie axiale",
+      "description": "Comprendre ce qu'est le symétrique d'une figure par rapport à une droite.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Le symétrique d'une figure par rapport à un axe a :",
+          "options": ["la même forme et la même taille que la figure", "une taille plus grande", "une forme différente"],
+          "answer": "la même forme et la même taille que la figure"
+        },
+        {
+          "type": "qcm",
+          "question": "Dans une symétrie axiale, la figure symétrique est :",
+          "options": ["retournée comme dans un miroir", "agrandie", "rétrécie"],
+          "answer": "retournée comme dans un miroir"
+        },
+        {
+          "type": "qcm",
+          "question": "Un point qui est placé exactement sur l'axe de symétrie a pour symétrique :",
+          "options": ["lui-même", "un point très éloigné", "aucun point"],
+          "answer": "lui-même"
+        },
+        {
+          "type": "qcm",
+          "question": "Le symétrique d'un point par rapport à un axe se trouve :",
+          "options": ["de l'autre côté de l'axe, à la même distance de l'axe", "du même côté de l'axe", "toujours sur l'axe"],
+          "answer": "de l'autre côté de l'axe, à la même distance de l'axe"
+        },
+        {
+          "type": "qcm",
+          "question": "Sur un quadrillage, un point est placé à 3 carreaux à gauche d'un axe vertical. Où se trouve son symétrique ?",
+          "options": ["à 3 carreaux à droite de l'axe", "à 3 carreaux à gauche de l'axe", "sur l'axe"],
+          "answer": "à 3 carreaux à droite de l'axe"
+        },
+        {
+          "type": "input",
+          "question": "Le symétrique d'un carré de 4 cm de côté est un carré. Combien mesure son côté ?",
+          "answer": "4 cm",
+          "accept": ["4", "4cm", "4 centimètres", "4 centimetres"]
+        },
+        {
+          "type": "qcm",
+          "question": "Le symétrique d'un triangle par rapport à un axe est :",
+          "options": ["un triangle", "un carré", "un cercle"],
+          "answer": "un triangle"
+        },
+        {
+          "type": "qcm",
+          "question": "Vrai ou faux : la symétrie axiale change la longueur des segments de la figure.",
+          "options": ["Faux", "Vrai"],
+          "answer": "Faux"
+        },
+        {
+          "type": "qcm",
+          "question": "Pour construire le symétrique d'une figure sur une feuille, on peut :",
+          "options": ["plier la feuille le long de l'axe et décalquer la figure", "déchirer la feuille en deux", "colorier la figure"],
+          "answer": "plier la feuille le long de l'axe et décalquer la figure"
+        },
+        {
+          "type": "input",
+          "question": "Un point se trouve à 2 carreaux de l'axe de symétrie. À combien de carreaux de l'axe se trouve son symétrique ?",
+          "answer": "2",
+          "accept": ["deux", "2 carreaux"]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Les solides",
+      "description": "Reconnaître le cube, le pavé droit, la pyramide, le cylindre, le cône et la sphère ; compter faces, arêtes et sommets.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "input",
+          "question": "Combien de faces possède un cube ?",
+          "answer": "6",
+          "accept": ["six", "6 faces"]
+        },
+        {
+          "type": "input",
+          "question": "Combien d'arêtes possède un cube ?",
+          "answer": "12",
+          "accept": ["douze", "12 arêtes", "12 aretes"]
+        },
+        {
+          "type": "input",
+          "question": "Combien de sommets possède un cube ?",
+          "answer": "8",
+          "accept": ["huit", "8 sommets"]
+        },
+        {
+          "type": "qcm",
+          "question": "Les faces d'un cube sont toutes :",
+          "options": ["des carrés", "des triangles", "des disques"],
+          "answer": "des carrés"
+        },
+        {
+          "type": "qcm",
+          "question": "Combien de faces possède un pavé droit ?",
+          "options": ["6", "4", "8"],
+          "answer": "6"
+        },
+        {
+          "type": "qcm",
+          "question": "Quel solide a une base carrée et 4 faces triangulaires qui se rejoignent en un seul sommet ?",
+          "options": ["la pyramide", "le cube", "le cylindre"],
+          "answer": "la pyramide"
+        },
+        {
+          "type": "qcm",
+          "question": "Quel solide peut rouler et possède 2 faces planes en forme de disque ?",
+          "options": ["le cylindre", "le cube", "la pyramide"],
+          "answer": "le cylindre"
+        },
+        {
+          "type": "qcm",
+          "question": "Quel solide n'a ni face plane, ni arête, ni sommet ?",
+          "options": ["la sphère", "le cône", "le pavé droit"],
+          "answer": "la sphère"
+        },
+        {
+          "type": "qcm",
+          "question": "Le cône possède :",
+          "options": ["une seule face plane en forme de disque et une pointe", "six faces carrées", "huit sommets"],
+          "answer": "une seule face plane en forme de disque et une pointe"
+        },
+        {
+          "type": "qcm",
+          "question": "Une boîte à chaussures a la forme :",
+          "options": ["d'un pavé droit", "d'une sphère", "d'un cône"],
+          "answer": "d'un pavé droit"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Le périmètre du carré et du rectangle",
+      "description": "Calculer le périmètre d'un carré et d'un rectangle.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Le périmètre d'une figure, c'est :",
+          "options": ["la longueur du tour de la figure", "la surface à l'intérieur de la figure", "la hauteur de la figure"],
+          "answer": "la longueur du tour de la figure"
+        },
+        {
+          "type": "qcm",
+          "question": "Pour calculer le périmètre d'un carré, on calcule :",
+          "options": ["côté x 4", "côté x 2", "côté + 4"],
+          "answer": "côté x 4"
+        },
+        {
+          "type": "input",
+          "question": "Quel est le périmètre d'un carré de 5 cm de côté ?",
+          "answer": "20 cm",
+          "accept": ["20", "20cm", "20 centimètres", "20 centimetres"]
+        },
+        {
+          "type": "input",
+          "question": "Quel est le périmètre d'un carré de 8 cm de côté ?",
+          "answer": "32 cm",
+          "accept": ["32", "32cm", "32 centimètres", "32 centimetres"]
+        },
+        {
+          "type": "qcm",
+          "question": "Pour calculer le périmètre d'un rectangle, on calcule :",
+          "options": ["(longueur + largeur) x 2", "longueur x largeur", "longueur + largeur"],
+          "answer": "(longueur + largeur) x 2"
+        },
+        {
+          "type": "input",
+          "question": "Quel est le périmètre d'un rectangle de 6 cm de longueur et 4 cm de largeur ?",
+          "answer": "20 cm",
+          "accept": ["20", "20cm", "20 centimètres", "20 centimetres"]
+        },
+        {
+          "type": "input",
+          "question": "Quel est le périmètre d'un rectangle de 10 cm de longueur et 3 cm de largeur ?",
+          "answer": "26 cm",
+          "accept": ["26", "26cm", "26 centimètres", "26 centimetres"]
+        },
+        {
+          "type": "input",
+          "question": "Le périmètre d'un carré est 24 cm. Combien mesure un côté de ce carré ?",
+          "answer": "6 cm",
+          "accept": ["6", "6cm", "6 centimètres", "6 centimetres"]
+        },
+        {
+          "type": "qcm",
+          "question": "Un carré a un côté de 6 cm. Un rectangle a une longueur de 8 cm et une largeur de 4 cm. Lequel a le plus grand périmètre ?",
+          "options": ["ils ont le même périmètre", "le carré", "le rectangle"],
+          "answer": "ils ont le même périmètre"
+        },
+        {
+          "type": "input",
+          "question": "Un fermier entoure d'une clôture un champ rectangulaire de 12 m de long et 8 m de large. Quelle longueur de clôture lui faut-il ?",
+          "answer": "40 m",
+          "accept": ["40", "40m", "40 mètres", "40 metres"]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Se repérer sur un quadrillage",
+      "description": "Utiliser les coordonnées des cases et coder des déplacements sur un quadrillage.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Sur un quadrillage, les colonnes sont repérées par des lettres et les lignes par des chiffres. Où se trouve la case (B, 3) ?",
+          "options": ["dans la colonne B et la ligne 3", "dans la colonne 3 et la ligne B", "au centre du quadrillage"],
+          "answer": "dans la colonne B et la ligne 3"
+        },
+        {
+          "type": "qcm",
+          "question": "Les colonnes d'un quadrillage sont nommées A, B, C, D, E de gauche à droite. Quelle colonne est juste à droite de la colonne C ?",
+          "options": ["D", "B", "E"],
+          "answer": "D"
+        },
+        {
+          "type": "input",
+          "question": "Sur un quadrillage, les lignes sont numérotées de 1 (en bas) à 5 (en haut). Je suis dans la case (C, 2) et je monte d'une case. Dans quelle case suis-je ?",
+          "answer": "(C, 3)",
+          "accept": ["C3", "(C,3)", "C, 3", "C 3", "c3"]
+        },
+        {
+          "type": "input",
+          "question": "Les colonnes A, B, C, D, E sont rangées de gauche à droite. Je suis dans la case (B, 4) et je me déplace de 2 cases vers la droite. Dans quelle case suis-je ?",
+          "answer": "(D, 4)",
+          "accept": ["D4", "(D,4)", "D, 4", "D 4", "d4"]
+        },
+        {
+          "type": "qcm",
+          "question": "On code les déplacements ainsi : D pour droite, G pour gauche, H pour haut, B pour bas. Que signifie le code 3D ?",
+          "options": ["avancer de 3 cases vers la droite", "descendre de 3 cases", "avancer de 3 cases vers la gauche"],
+          "answer": "avancer de 3 cases vers la droite"
+        },
+        {
+          "type": "qcm",
+          "question": "Avec le code D (droite), G (gauche), H (haut), B (bas), comment écrit-on : monter de 2 cases puis aller 1 case à gauche ?",
+          "options": ["2H puis 1G", "2B puis 1D", "1H puis 2G"],
+          "answer": "2H puis 1G"
+        },
+        {
+          "type": "input",
+          "question": "Les colonnes A, B, C, D, E vont de gauche à droite et les lignes de 1 (en bas) à 5 (en haut). Je pars de la case (A, 1), j'avance de 3 cases vers la droite puis je monte de 2 cases. Dans quelle case suis-je arrivé ?",
+          "answer": "(D, 3)",
+          "accept": ["D3", "(D,3)", "D, 3", "D 3", "d3"]
+        },
+        {
+          "type": "qcm",
+          "question": "Sur un quadrillage, qu'appelle-t-on un noeud ?",
+          "options": ["le croisement de deux lignes du quadrillage", "le centre d'une case", "le bord de la feuille"],
+          "answer": "le croisement de deux lignes du quadrillage"
+        },
+        {
+          "type": "input",
+          "question": "Les lignes sont numérotées de 1 (en bas) à 5 (en haut). Je suis dans la case (E, 5) et je descends de 4 cases. Dans quelle case suis-je ?",
+          "answer": "(E, 1)",
+          "accept": ["E1", "(E,1)", "E, 1", "E 1", "e1"]
+        },
+        {
+          "type": "qcm",
+          "question": "Pour reproduire exactement une figure sur un quadrillage, il faut :",
+          "options": ["compter les carreaux pour placer chaque point au bon endroit", "dessiner la figure au hasard", "obligatoirement utiliser un compas"],
+          "answer": "compter les carreaux pour placer chaque point au bon endroit"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Reconnaître une figure d'après sa description",
+      "description": "Retrouver le nom d'une figure ou d'un solide à partir de ses propriétés.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "J'ai 4 côtés de la même longueur et 4 angles droits. Qui suis-je ?",
+          "options": ["un carré", "un rectangle dont la longueur et la largeur sont différentes", "un triangle"],
+          "answer": "un carré"
+        },
+        {
+          "type": "qcm",
+          "question": "J'ai 4 angles droits, ma longueur mesure 6 cm et ma largeur mesure 3 cm. Qui suis-je ?",
+          "options": ["un rectangle", "un carré", "un pentagone"],
+          "answer": "un rectangle"
+        },
+        {
+          "type": "qcm",
+          "question": "Je suis un triangle et j'ai exactement 2 côtés de la même longueur. Qui suis-je ?",
+          "options": ["un triangle isocèle", "un triangle équilatéral", "un carré"],
+          "answer": "un triangle isocèle"
+        },
+        {
+          "type": "qcm",
+          "question": "J'ai 3 côtés et un de mes angles est un angle droit. Qui suis-je ?",
+          "options": ["un triangle rectangle", "un rectangle", "un triangle équilatéral"],
+          "answer": "un triangle rectangle"
+        },
+        {
+          "type": "qcm",
+          "question": "Tous mes points sont exactement à 5 cm d'un même point appelé centre. Qui suis-je ?",
+          "options": ["un cercle de 5 cm de rayon", "un carré de 5 cm de côté", "une droite"],
+          "answer": "un cercle de 5 cm de rayon"
+        },
+        {
+          "type": "qcm",
+          "question": "Je suis un polygone et j'ai 6 côtés. Qui suis-je ?",
+          "options": ["un hexagone", "un pentagone", "un octogone"],
+          "answer": "un hexagone"
+        },
+        {
+          "type": "qcm",
+          "question": "Je suis un solide et toutes mes faces sont des carrés identiques. Qui suis-je ?",
+          "options": ["un cube", "une pyramide", "un cylindre"],
+          "answer": "un cube"
+        },
+        {
+          "type": "qcm",
+          "question": "Je suis un solide, je n'ai aucune face plane et je roule dans toutes les directions. Qui suis-je ?",
+          "options": ["une sphère", "un cylindre", "un cube"],
+          "answer": "une sphère"
+        },
+        {
+          "type": "input",
+          "question": "Je suis un triangle et mes 3 côtés mesurent chacun 6 cm. Qui suis-je ?",
+          "answer": "un triangle équilatéral",
+          "accept": ["triangle équilatéral", "triangle equilateral", "un triangle equilateral", "équilatéral", "equilateral"]
+        },
+        {
+          "type": "qcm",
+          "question": "Un quadrilatère a 4 côtés de 5 cm chacun mais aucun angle droit. Est-ce un carré ?",
+          "options": ["non, car un carré doit aussi avoir 4 angles droits", "oui, car ses 4 côtés sont égaux", "oui, car il a 4 côtés"],
+          "answer": "non, car un carré doit aussi avoir 4 angles droits"
+        }
+      ]
+    }
+  ]
+}
