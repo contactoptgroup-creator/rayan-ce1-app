@@ -1,0 +1,19 @@
+{
+  "appId": "fr.taouo.champion",
+  "appName": "Champion",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "backgroundColor": "#080b16",
+  "ios": {
+    "contentInset": "always",
+    "backgroundColor": "#080b16"
+  },
+  "android": {
+    "backgroundColor": "#080b16",
+    "allowMixedContent": false
+  },
+  "server": {
+    "androidScheme": "https",
+    "iosScheme": "https"
+  }
+}

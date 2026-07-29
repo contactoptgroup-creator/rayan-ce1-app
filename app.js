@@ -12,6 +12,11 @@ const LEGACY_KEYS = ['rayan_champion_progress'];
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // sans O/0/I/1
 const SYNC_DEBOUNCE_MS = 2500;
 
+// Dans une coque native (App Store / Play Store), la page est servie en
+// capacitor:// ou file:// : les appels relatifs n'atteindraient aucun serveur.
+// On pointe alors explicitement vers la production.
+const API_BASE = /^https?:$/.test(location.protocol) ? '' : 'https://app-pi-nine-34.vercel.app';
+
 const state = {
     currentView: 'home',
     currentClass: 'ce1',
@@ -318,7 +323,7 @@ function setSyncStatus(status, text) {
 }
 
 async function cloudLoad(code) {
-    const response = await fetch(`/api/progress?code=${encodeURIComponent(cleanCode(code))}`, {
+    const response = await fetch(`${API_BASE}/api/progress?code=${encodeURIComponent(cleanCode(code))}`, {
         method: 'GET',
         cache: 'no-store'
     });
@@ -343,7 +348,7 @@ async function flushCloudSave() {
     setSyncStatus('pending', 'Sauvegarde…');
 
     try {
-        const response = await fetch(`/api/progress?code=${encodeURIComponent(state.profile.code)}`, {
+        const response = await fetch(`${API_BASE}/api/progress?code=${encodeURIComponent(state.profile.code)}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(getProgress())
@@ -369,7 +374,7 @@ function beaconSave() {
     if (!state.profile?.code) return;
     try {
         const blob = new Blob([JSON.stringify(getProgress())], { type: 'application/json' });
-        navigator.sendBeacon(`/api/progress?code=${encodeURIComponent(state.profile.code)}`, blob);
+        navigator.sendBeacon(`${API_BASE}/api/progress?code=${encodeURIComponent(state.profile.code)}`, blob);
     } catch (err) { /* ignore */ }
 }
 
@@ -399,8 +404,9 @@ function failsafeScreen(reason) {
     }
 }
 
-// Fonctionnement hors connexion
-if ('serviceWorker' in navigator) {
+// Fonctionnement hors connexion (inutile dans la coque native : les fichiers
+// y sont déjà embarqués).
+if ('serviceWorker' in navigator && !document.documentElement.dataset.native && API_BASE === '') {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js').catch(err => console.warn('SW non enregistré', err));
     });

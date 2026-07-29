@@ -1,0 +1,22 @@
+{
+  "name": "champion-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Coque native iOS et Android de l'application Champion (Rayan)",
+  "type": "module",
+  "scripts": {
+    "sync": "node sync-web.mjs && npx cap sync",
+    "add:android": "npx cap add android",
+    "add:ios": "npx cap add ios",
+    "open:android": "npx cap open android",
+    "open:ios": "npx cap open ios"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/ios": "^6.2.0"
+  }
+}
