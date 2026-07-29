@@ -1,0 +1,22 @@
+{
+  "key": "francais_ce2",
+  "corrections": [
+    { "ficheId": 32, "exerciseIndex": 6, "problem": "terminologie : « impérative » est le synonyme officiel de « injonctive », les deux sont enseignés", "fix": { "accept": ["injonctive", "impérative"] } },
+    { "ficheId": 34, "exerciseIndex": 10, "problem": "plusieurs mots de négation possibles : « Il n'aime pas/plus/jamais les épinards » sont tous corrects", "fix": { "accept": ["pas", "plus", "jamais"] } },
+    { "ficheId": 38, "exerciseIndex": 2, "problem": "réponse acceptable avec ou sans déterminant, et avec ou sans majuscule initiale", "fix": { "accept": ["Ma sœur", "ma sœur", "sœur"] } },
+    { "ficheId": 38, "exerciseIndex": 4, "problem": "réponse acceptable avec ou sans déterminant", "fix": { "accept": ["le train", "train"] } },
+    { "ficheId": 38, "exerciseIndex": 7, "problem": "réponse acceptable avec ou sans déterminant", "fix": { "accept": ["les chauves-souris", "chauves-souris"] } },
+    { "ficheId": 38, "exerciseIndex": 9, "problem": "pronom en début de phrase : recopie légitime avec ou sans majuscule", "fix": { "accept": ["Elle", "elle"] } },
+    { "ficheId": 38, "exerciseIndex": 11, "problem": "réponse acceptable avec ou sans déterminant", "fix": { "accept": ["les marmottes", "marmottes"] } },
+    { "ficheId": 41, "exerciseIndex": 10, "problem": "mot en début de phrase : recopie légitime avec ou sans majuscule", "fix": { "accept": ["Hier", "hier"] } },
+    { "ficheId": 42, "exerciseIndex": 2, "problem": "réponse acceptable avec ou sans déterminant", "fix": { "accept": ["la souris", "souris"] } },
+    { "ficheId": 42, "exerciseIndex": 4, "problem": "réponse acceptable avec ou sans déterminant", "fix": { "accept": ["les légumes", "légumes"] } },
+    { "ficheId": 42, "exerciseIndex": 7, "problem": "réponse acceptable avec ou sans déterminant", "fix": { "accept": ["les fleurs", "fleurs"] } },
+    { "ficheId": 42, "exerciseIndex": 9, "problem": "réponse acceptable avec ou sans déterminant", "fix": { "accept": ["la voiture", "voiture"] } },
+    { "ficheId": 43, "exerciseIndex": 3, "problem": "groupe en début de phrase : recopie légitime avec ou sans majuscule", "fix": { "accept": ["Ce soir", "ce soir"] } },
+    { "ficheId": 43, "exerciseIndex": 8, "problem": "groupe en début de phrase : recopie légitime avec ou sans majuscule", "fix": { "accept": ["Sous le lit", "sous le lit"] } },
+    { "ficheId": 45, "exerciseIndex": 6, "problem": "connecteur en début de phrase : recopie légitime avec ou sans majuscule", "fix": { "accept": ["Ensuite", "ensuite"] } },
+    { "ficheId": 46, "exerciseIndex": 3, "problem": "réponse acceptable avec ou sans déterminant", "fix": { "accept": ["les loups", "loups"] } },
+    { "ficheId": 46, "exerciseIndex": 5, "problem": "réponse acceptable avec ou sans déterminant", "fix": { "accept": ["le courrier", "courrier"] } }
+  ]
+}

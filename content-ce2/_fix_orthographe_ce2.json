@@ -1,0 +1,32 @@
+{
+  "key": "orthographe_ce2",
+  "corrections": [
+    {
+      "ficheId": 6,
+      "exerciseIndex": 9,
+      "problem": "Exercice de saisie : le trou est en début de phrase, la réponse attendue est « Ce » avec majuscule alors que la consigne propose « ce ou se » en minuscules — un enfant qui tape « ce » serait compté faux en comparaison stricte",
+      "fix": {
+        "question": "Complète avec ce ou se : J'admire ... travail très soigné.",
+        "answer": "ce"
+      }
+    },
+    {
+      "ficheId": 8,
+      "exerciseIndex": 4,
+      "problem": "Exercice de saisie : le trou est en début de phrase, la réponse attendue est « Ces » avec majuscule alors que la consigne propose « ces ou ses » en minuscules — piège de casse injuste pour une réponse tapée",
+      "fix": {
+        "question": "Complète avec ces ou ses : Regarde ... montagnes couvertes de neige, là-bas.",
+        "answer": "ces"
+      }
+    },
+    {
+      "ficheId": 11,
+      "exerciseIndex": 9,
+      "problem": "Plusieurs mots invariables conviennent (très, trop, si, bien) et l'indice « veut dire beaucoup » est approximatif (très = vraiment, pas beaucoup) — la réponse n'est pas incontestable",
+      "fix": {
+        "question": "Complète avec le mot invariable qui s'écrit avec un accent grave : Il fait ... froid en hiver.",
+        "answer": "très"
+      }
+    }
+  ]
+}

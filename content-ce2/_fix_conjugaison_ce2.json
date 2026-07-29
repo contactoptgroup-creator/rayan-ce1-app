@@ -1,0 +1,17 @@
+{
+  "key": "conjugaison_ce2",
+  "corrections": [
+    {
+      "ficheId": 11,
+      "exerciseIndex": 8,
+      "problem": "Ambigu : le temps n'est pas indiqué dans l'énoncé, or l'option « visitons » (présent) est aussi grammaticalement correcte avec « nous » que « visitions » (imparfait). L'enfant peut répondre juste et être compté faux.",
+      "fix": { "question": "Quelle est la bonne écriture à l'imparfait ? « Nous ... nos grands-parents. »" }
+    },
+    {
+      "ficheId": 14,
+      "exerciseIndex": 8,
+      "problem": "Ambigu : « Nous invitons nos amis demain » (présent à valeur de futur) est une phrase correcte en français, donc l'option « invitons » est défendable face à « inviterons ». Il faut préciser le temps demandé dans l'énoncé.",
+      "fix": { "question": "Quelle est la bonne écriture au futur simple ? « Nous ... nos amis demain. »" }
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "key": "francais_ce2",
+  "fiches": [
+    {
+      "id": 31,
+      "title": "La phrase et ses limites",
+      "description": "Reconnaître une phrase grâce à la majuscule, au point et au sens.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Par quoi commence toujours une phrase ?", "options": ["une majuscule", "une virgule", "un petit mot"], "answer": "une majuscule"},
+        {"type": "qcm", "question": "Par quoi se termine une phrase déclarative ?", "options": ["un point", "une majuscule", "une virgule"], "answer": "un point"},
+        {"type": "qcm", "question": "Laquelle de ces suites de mots est une phrase correcte ?", "options": ["Le chat dort sur le canapé.", "dort le canapé chat le sur", "le chat sur dort canapé"], "answer": "Le chat dort sur le canapé."},
+        {"type": "input", "question": "Combien de phrases y a-t-il dans ce texte ? « Il pleut. Léo prend son parapluie. Il sort. » Écris le nombre en chiffres.", "answer": "3"},
+        {"type": "qcm", "question": "Que manque-t-il à cette phrase : « le chien aboie dans le jardin. » ?", "options": ["la majuscule", "le point", "le verbe"], "answer": "la majuscule"},
+        {"type": "qcm", "question": "Que manque-t-il à cette phrase : « Maman prépare une tarte » ?", "options": ["le point final", "la majuscule", "le sujet"], "answer": "le point final"},
+        {"type": "input", "question": "Recopie le premier mot de cette phrase en lui ajoutant sa majuscule : « demain, nous irons à la piscine. »", "answer": "Demain"},
+        {"type": "qcm", "question": "Une phrase doit avoir du sens. Laquelle a du sens ?", "options": ["La lune brille dans le ciel.", "Brille la dans lune ciel le.", "Ciel la brille lune dans."], "answer": "La lune brille dans le ciel."},
+        {"type": "qcm", "question": "Combien y a-t-il de phrases dans ce texte ? « Le soir tombe. Les oiseaux se taisent. »", "options": ["2", "1", "3"], "answer": "2"},
+        {"type": "input", "question": "Combien de phrases y a-t-il dans ce texte ? « Rayan ouvre son cahier. Il écrit la date. Puis il fait son exercice. Enfin il se relit. » Écris le nombre en chiffres.", "answer": "4"},
+        {"type": "qcm", "question": "Pour séparer deux phrases qui se suivent, on utilise :", "options": ["un point puis une majuscule", "une virgule seulement", "rien du tout"], "answer": "un point puis une majuscule"},
+        {"type": "qcm", "question": "Laquelle de ces suites de mots n'est pas une phrase ?", "options": ["chien le mange os un", "Le chien mange un os.", "Il court très vite."], "answer": "chien le mange os un"}
+      ]
+    },
+    {
+      "id": 32,
+      "title": "Les types de phrases",
+      "description": "Identifier les phrases déclaratives, interrogatives, exclamatives et injonctives.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est le type de la phrase : « Le soleil brille. » ?", "options": ["déclarative", "interrogative", "exclamative"], "answer": "déclarative"},
+        {"type": "qcm", "question": "Quel est le type de la phrase : « Où habites-tu ? »", "options": ["interrogative", "déclarative", "injonctive"], "answer": "interrogative"},
+        {"type": "qcm", "question": "Quel est le type de la phrase : « Quel beau dessin ! »", "options": ["exclamative", "déclarative", "interrogative"], "answer": "exclamative"},
+        {"type": "qcm", "question": "Quel est le type de la phrase : « Range ta chambre. »", "options": ["injonctive", "déclarative", "interrogative"], "answer": "injonctive"},
+        {"type": "qcm", "question": "Une phrase interrogative se termine par :", "options": ["un point d'interrogation", "un point d'exclamation", "un point"], "answer": "un point d'interrogation"},
+        {"type": "qcm", "question": "Quelle phrase sert à donner un ordre ?", "options": ["Ferme la porte.", "La porte est fermée.", "La porte est-elle fermée ?"], "answer": "Ferme la porte."},
+        {"type": "input", "question": "De quel type est la phrase : « Viens ici tout de suite. » ? Écris le nom du type.", "answer": "injonctive"},
+        {"type": "qcm", "question": "Quel est le type de la phrase : « Est-ce que tu aimes le chocolat ? »", "options": ["interrogative", "exclamative", "déclarative"], "answer": "interrogative"},
+        {"type": "input", "question": "De quel type est la phrase : « Comme ce gâteau est délicieux ! » ? Écris le nom du type.", "answer": "exclamative"},
+        {"type": "qcm", "question": "Quelle phrase pose une question ?", "options": ["Quelle heure est-il ?", "Il est midi.", "Dépêche-toi un peu."], "answer": "Quelle heure est-il ?"},
+        {"type": "input", "question": "De quel type est la phrase : « Les élèves écoutent la maîtresse. » ? Écris le nom du type.", "answer": "déclarative"},
+        {"type": "qcm", "question": "Quelle phrase est injonctive ?", "options": ["Prends ton cartable.", "Tu prends ton cartable.", "Prends-tu ton cartable ?"], "answer": "Prends ton cartable."}
+      ]
+    },
+    {
+      "id": 33,
+      "title": "La ponctuation",
+      "description": "Connaître les signes de ponctuation et leur rôle dans la phrase.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Quel signe marque une petite pause à l'intérieur de la phrase ?", "options": ["la virgule", "le point", "le point d'interrogation"], "answer": "la virgule"},
+        {"type": "qcm", "question": "Quel signe faut-il à la fin de la phrase : « Veux-tu jouer avec moi » ?", "options": ["un point d'interrogation", "un point d'exclamation", "une virgule"], "answer": "un point d'interrogation"},
+        {"type": "qcm", "question": "Les deux-points servent souvent à :", "options": ["annoncer une explication ou une liste", "terminer une phrase", "poser une question"], "answer": "annoncer une explication ou une liste"},
+        {"type": "qcm", "question": "Dans un dialogue, quel signe indique qu'un personnage prend la parole ?", "options": ["le tiret", "la virgule", "le point"], "answer": "le tiret"},
+        {"type": "qcm", "question": "Quel signe faut-il à la fin de la phrase : « Quelle magnifique surprise » ?", "options": ["un point d'exclamation", "un point", "une virgule"], "answer": "un point d'exclamation"},
+        {"type": "qcm", "question": "Dans la phrase « Il achète des pommes, des poires et des cerises. », à quoi sert la virgule ?", "options": ["à séparer les mots d'une liste", "à terminer la phrase", "à poser une question"], "answer": "à séparer les mots d'une liste"},
+        {"type": "qcm", "question": "Quels signes encadrent les paroles d'un personnage ?", "options": ["les guillemets", "les virgules", "les points"], "answer": "les guillemets"},
+        {"type": "input", "question": "Combien y a-t-il de virgules dans la phrase : « Dans mon sac, j'ai un livre, un cahier et une trousse. » ? Écris le nombre en chiffres.", "answer": "2"},
+        {"type": "qcm", "question": "Quel signe faut-il à la fin de « J'adore les vacances » pour montrer une grande joie ?", "options": ["un point d'exclamation", "un point d'interrogation", "une virgule"], "answer": "un point d'exclamation"},
+        {"type": "qcm", "question": "Le point d'interrogation se place :", "options": ["à la fin d'une question", "au début d'une phrase", "après chaque mot"], "answer": "à la fin d'une question"},
+        {"type": "input", "question": "Combien y a-t-il de points dans ce texte ? « La nuit tombe. Les rues sont calmes. Tout le monde dort. » Écris le nombre en chiffres.", "answer": "3"},
+        {"type": "qcm", "question": "Quelle phrase est correctement ponctuée ?", "options": ["Tu viens avec nous ?", "Tu viens avec nous. ?", "? Tu viens avec nous"], "answer": "Tu viens avec nous ?"}
+      ]
+    },
+    {
+      "id": 34,
+      "title": "La forme affirmative et la forme négative",
+      "description": "Distinguer les phrases affirmatives et négatives et utiliser les mots de la négation.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "La phrase « Je ne veux pas de soupe. » est à la forme :", "options": ["négative", "affirmative", "interrogative"], "answer": "négative"},
+        {"type": "qcm", "question": "La phrase « Rayan aime le football. » est à la forme :", "options": ["affirmative", "négative", "exclamative"], "answer": "affirmative"},
+        {"type": "qcm", "question": "Quels petits mots forment le plus souvent la négation ?", "options": ["ne ... pas", "le ... la", "et ... ou"], "answer": "ne ... pas"},
+        {"type": "qcm", "question": "Quelle est la forme négative correcte de « Je mange. » ?", "options": ["Je ne mange pas.", "Je mange pas.", "Ne je mange pas."], "answer": "Je ne mange pas."},
+        {"type": "qcm", "question": "Dans « Il ne court jamais. », les mots de la négation sont :", "options": ["ne ... jamais", "ne ... court", "il ... jamais"], "answer": "ne ... jamais"},
+        {"type": "qcm", "question": "Quelle est la forme affirmative de « Elle ne chante plus. » ?", "options": ["Elle chante encore.", "Elle chante plus.", "Elle ne chante pas."], "answer": "Elle chante encore."},
+        {"type": "qcm", "question": "Quelle phrase est à la forme négative ?", "options": ["Nous n'irons pas à la plage.", "Nous irons à la plage.", "Irons-nous à la plage ?"], "answer": "Nous n'irons pas à la plage."},
+        {"type": "qcm", "question": "Quelle est la forme négative correcte de « Il y a quelqu'un dans la maison. » ?", "options": ["Il n'y a personne dans la maison.", "Il y a pas quelqu'un dans la maison.", "Il n'y a pas personne dans la maison."], "answer": "Il n'y a personne dans la maison."},
+        {"type": "input", "question": "Quel mot manque pour former la négation : « Tu ... viens pas avec nous. » ?", "answer": "ne"},
+        {"type": "qcm", "question": "La phrase « Ne cours pas dans le couloir ! » est à la forme :", "options": ["négative", "affirmative", "interrogative"], "answer": "négative"},
+        {"type": "input", "question": "Quel mot manque pour former la négation : « Il n'aime ... les épinards. » ?", "answer": "pas"},
+        {"type": "qcm", "question": "Pour dire le contraire de « toujours » dans une phrase négative, on utilise :", "options": ["ne ... jamais", "ne ... rien", "ne ... personne"], "answer": "ne ... jamais"}
+      ]
+    },
+    {
+      "id": 35,
+      "title": "Le genre et le nombre",
+      "description": "Reconnaître le masculin et le féminin, le singulier et le pluriel des noms.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Le groupe nominal « la maison » est :", "options": ["féminin singulier", "masculin singulier", "féminin pluriel"], "answer": "féminin singulier"},
+        {"type": "qcm", "question": "Le groupe nominal « les chevaux » est :", "options": ["masculin pluriel", "masculin singulier", "féminin pluriel"], "answer": "masculin pluriel"},
+        {"type": "input", "question": "Écris le pluriel de « un chat » (avec le déterminant « des »).", "answer": "des chats"},
+        {"type": "input", "question": "Écris le féminin de « un chien » (avec le déterminant « une »).", "answer": "une chienne"},
+        {"type": "qcm", "question": "Quel est le pluriel de « un cheval » ?", "options": ["des chevaux", "des chevals", "des chevales"], "answer": "des chevaux"},
+        {"type": "qcm", "question": "Quel est le pluriel de « un bijou » ?", "options": ["des bijoux", "des bijous", "des bijoues"], "answer": "des bijoux"},
+        {"type": "input", "question": "Écris le pluriel de « un tapis » (avec le déterminant « des »).", "answer": "des tapis"},
+        {"type": "qcm", "question": "Le nom « une fleur » est de genre :", "options": ["féminin", "masculin", "pluriel"], "answer": "féminin"},
+        {"type": "input", "question": "Écris le féminin de « le boulanger » (avec le déterminant « la »).", "answer": "la boulangère"},
+        {"type": "qcm", "question": "Quel groupe nominal est au pluriel ?", "options": ["les petites filles", "la petite fille", "une petite fille"], "answer": "les petites filles"},
+        {"type": "qcm", "question": "Quel est le pluriel de « un journal » ?", "options": ["des journaux", "des journals", "des journaus"], "answer": "des journaux"},
+        {"type": "input", "question": "Le groupe nominal « des voitures rouges » est-il au singulier ou au pluriel ? Écris un seul mot.", "answer": "pluriel"}
+      ]
+    },
+    {
+      "id": 36,
+      "title": "La nature des mots",
+      "description": "Identifier les noms communs, noms propres, déterminants, adjectifs, verbes, pronoms et adverbes.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quelle est la nature du mot « chien » ?", "options": ["un nom commun", "un verbe", "un adjectif"], "answer": "un nom commun"},
+        {"type": "qcm", "question": "Quelle est la nature du mot « Paris » ?", "options": ["un nom propre", "un nom commun", "un déterminant"], "answer": "un nom propre"},
+        {"type": "qcm", "question": "Quelle est la nature du mot « manger » ?", "options": ["un verbe", "un nom commun", "un adverbe"], "answer": "un verbe"},
+        {"type": "qcm", "question": "Dans « le petit chat », le mot « petit » est :", "options": ["un adjectif", "un nom commun", "un déterminant"], "answer": "un adjectif"},
+        {"type": "qcm", "question": "Dans « le petit chat », le mot « le » est :", "options": ["un déterminant", "un pronom", "un adverbe"], "answer": "un déterminant"},
+        {"type": "qcm", "question": "Dans « Elle chante. », le mot « Elle » est :", "options": ["un pronom", "un nom commun", "un verbe"], "answer": "un pronom"},
+        {"type": "qcm", "question": "Dans « Il court vite. », le mot « vite » est :", "options": ["un adverbe", "un adjectif", "un verbe"], "answer": "un adverbe"},
+        {"type": "input", "question": "Relève le verbe conjugué dans la phrase : « Les enfants jouent dans la cour. »", "answer": "jouent"},
+        {"type": "input", "question": "Relève le nom propre dans la phrase : « Le train arrive à Lyon. »", "answer": "Lyon"},
+        {"type": "input", "question": "Relève l'adjectif dans la phrase : « Une immense forêt entoure le village. »", "answer": "immense"},
+        {"type": "qcm", "question": "Quel mot est un déterminant ?", "options": ["mes", "joli", "courir"], "answer": "mes"},
+        {"type": "qcm", "question": "Quelle liste ne contient que des verbes ?", "options": ["finir, prendre, dormir", "table, finir, joli", "dormir, chaise, vite"], "answer": "finir, prendre, dormir"},
+        {"type": "input", "question": "Relève le déterminant dans la phrase : « Nous regardons les étoiles. »", "answer": "les"}
+      ]
+    },
+    {
+      "id": 37,
+      "title": "Le verbe et son infinitif",
+      "description": "Repérer le verbe conjugué et donner son infinitif.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est l'infinitif du verbe dans « Nous chantons » ?", "options": ["chanter", "chantons", "chanté"], "answer": "chanter"},
+        {"type": "input", "question": "Quel est l'infinitif du verbe dans « ils finissent » ?", "answer": "finir"},
+        {"type": "input", "question": "Quel est l'infinitif du verbe dans « Tu prends ton goûter. » ?", "answer": "prendre"},
+        {"type": "qcm", "question": "Quel est l'infinitif du verbe dans « Elle va à l'école. » ?", "options": ["aller", "avoir", "venir"], "answer": "aller"},
+        {"type": "qcm", "question": "Le verbe est le mot de la phrase qui :", "options": ["indique l'action ou l'état", "désigne une personne", "accompagne le nom"], "answer": "indique l'action ou l'état"},
+        {"type": "input", "question": "Relève le verbe conjugué dans la phrase : « Le vent souffle fort. »", "answer": "souffle"},
+        {"type": "qcm", "question": "Quel est l'infinitif du verbe dans « nous sommes » ?", "options": ["être", "avoir", "sommer"], "answer": "être"},
+        {"type": "input", "question": "Quel est l'infinitif du verbe dans « vous avez » ?", "answer": "avoir"},
+        {"type": "qcm", "question": "Quel mot est un verbe à l'infinitif ?", "options": ["grandir", "grand", "grandeur"], "answer": "grandir"},
+        {"type": "input", "question": "Quel est l'infinitif du verbe dans « je vois » ?", "answer": "voir"},
+        {"type": "qcm", "question": "Dans « Le bébé dort. », le verbe conjugué est :", "options": ["dort", "bébé", "le"], "answer": "dort"},
+        {"type": "input", "question": "Quel est l'infinitif du verbe dans la phrase : « Les feuilles tombent en automne. » ?", "answer": "tomber"}
+      ]
+    },
+    {
+      "id": 38,
+      "title": "Le sujet du verbe",
+      "description": "Trouver le sujet du verbe, même quand il est inversé ou éloigné du verbe.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Dans « Le chat dort. », le sujet est :", "options": ["le chat", "dort", "le"], "answer": "le chat"},
+        {"type": "qcm", "question": "Le sujet du verbe indique :", "options": ["qui fait l'action", "où se passe l'action", "quand se passe l'action"], "answer": "qui fait l'action"},
+        {"type": "input", "question": "Relève le sujet dans la phrase : « Ma sœur prépare un gâteau. »", "answer": "Ma sœur"},
+        {"type": "qcm", "question": "Dans « Dans le jardin chantent les oiseaux. », le sujet est :", "options": ["les oiseaux", "le jardin", "chantent"], "answer": "les oiseaux"},
+        {"type": "input", "question": "Relève le sujet dans la phrase : « Soudain arrive le train. »", "answer": "le train"},
+        {"type": "qcm", "question": "Pour trouver le sujet, on pose avant le verbe la question :", "options": ["Qui est-ce qui ?", "Où ?", "Quand ?"], "answer": "Qui est-ce qui ?"},
+        {"type": "qcm", "question": "Dans « Les élèves, après la récréation, rentrent en classe. », le sujet est :", "options": ["Les élèves", "la récréation", "rentrent"], "answer": "Les élèves"},
+        {"type": "input", "question": "Relève le sujet dans la phrase : « Le soir, les chauves-souris sortent. »", "answer": "les chauves-souris"},
+        {"type": "qcm", "question": "Dans « Au fond de la mer vivent des poissons étranges. », le sujet est :", "options": ["des poissons étranges", "la mer", "vivent"], "answer": "des poissons étranges"},
+        {"type": "input", "question": "Relève le sujet dans la phrase : « Elle regarde la télévision. »", "answer": "Elle"},
+        {"type": "qcm", "question": "Dans « Mon frère et ma sœur jouent aux cartes. », le sujet est :", "options": ["Mon frère et ma sœur", "Mon frère", "aux cartes"], "answer": "Mon frère et ma sœur"},
+        {"type": "input", "question": "Relève le sujet dans la phrase : « Sous la neige dorment les marmottes. »", "answer": "les marmottes"}
+      ]
+    },
+    {
+      "id": 39,
+      "title": "Le groupe nominal et son expansion",
+      "description": "Reconnaître le groupe nominal, son nom noyau et les mots qui l'enrichissent.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Un groupe nominal contient au moins :", "options": ["un déterminant et un nom", "un verbe conjugué", "un pronom et un adverbe"], "answer": "un déterminant et un nom"},
+        {"type": "qcm", "question": "Quel est le nom noyau du groupe nominal « la grande maison bleue » ?", "options": ["maison", "grande", "bleue"], "answer": "maison"},
+        {"type": "qcm", "question": "Dans « un gâteau délicieux », le mot qui enrichit le nom est :", "options": ["délicieux", "un", "gâteau"], "answer": "délicieux"},
+        {"type": "input", "question": "Relève l'adjectif qui complète le nom dans le groupe nominal « une histoire passionnante ».", "answer": "passionnante"},
+        {"type": "qcm", "question": "Lequel de ces groupes de mots est un groupe nominal ?", "options": ["le vélo rouge", "il roule", "très vite"], "answer": "le vélo rouge"},
+        {"type": "input", "question": "Quel est le nom noyau du groupe nominal « les jolies fleurs du jardin » ?", "answer": "fleurs"},
+        {"type": "qcm", "question": "Dans « le chien du voisin », le groupe « du voisin » sert à :", "options": ["préciser le nom « chien »", "conjuguer le verbe", "poser une question"], "answer": "préciser le nom « chien »"},
+        {"type": "qcm", "question": "Comment enrichir correctement le groupe nominal « une maison » avec un adjectif ?", "options": ["une grande maison", "une maison courir", "maison la grande"], "answer": "une grande maison"},
+        {"type": "input", "question": "Relève le déterminant du groupe nominal « ces beaux paysages ».", "answer": "ces"},
+        {"type": "qcm", "question": "Dans le groupe nominal « un ciel gris et nuageux », combien y a-t-il d'adjectifs ?", "options": ["2", "1", "3"], "answer": "2"},
+        {"type": "input", "question": "Relève l'adjectif dans le groupe nominal « un long voyage ».", "answer": "long"},
+        {"type": "qcm", "question": "Quel groupe nominal est enrichi par un adjectif ?", "options": ["une pomme verte", "une pomme", "des pommes"], "answer": "une pomme verte"}
+      ]
+    },
+    {
+      "id": 40,
+      "title": "Les pronoms personnels sujets et compléments",
+      "description": "Utiliser les pronoms personnels sujets et repérer les pronoms compléments.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quel pronom personnel sujet remplace « Marie » ?", "options": ["elle", "il", "nous"], "answer": "elle"},
+        {"type": "qcm", "question": "Quel pronom personnel sujet remplace « Paul et Lucas » ?", "options": ["ils", "il", "elles"], "answer": "ils"},
+        {"type": "qcm", "question": "Quel pronom personnel sujet remplace « ma sœur et moi » ?", "options": ["nous", "vous", "ils"], "answer": "nous"},
+        {"type": "input", "question": "Quel pronom personnel sujet remplace « les filles » ?", "answer": "elles"},
+        {"type": "qcm", "question": "Dans « Je te prête mon stylo. », le pronom complément est :", "options": ["te", "je", "mon"], "answer": "te"},
+        {"type": "qcm", "question": "Dans « Léa mange une pomme. Elle la croque. », que remplace le pronom « la » ?", "options": ["une pomme", "Léa", "croque"], "answer": "une pomme"},
+        {"type": "input", "question": "Relève le pronom personnel sujet dans la phrase : « Demain, vous partirez en voyage. »", "answer": "vous"},
+        {"type": "qcm", "question": "Quel pronom personnel sujet remplace « Marie et Julie » ?", "options": ["elles", "ils", "elle"], "answer": "elles"},
+        {"type": "qcm", "question": "Dans « Le maître nous explique la leçon. », le mot « nous » est :", "options": ["un pronom complément", "un pronom sujet", "un déterminant"], "answer": "un pronom complément"},
+        {"type": "input", "question": "Quel pronom personnel sujet utilise-t-on pour parler de soi-même ?", "answer": "je"},
+        {"type": "qcm", "question": "Dans « Je le vois. », le pronom « le » remplace :", "options": ["une personne ou une chose déjà nommée", "le verbe « vois »", "le pronom « je »"], "answer": "une personne ou une chose déjà nommée"},
+        {"type": "qcm", "question": "Quelle liste contient uniquement des pronoms personnels sujets ?", "options": ["je, tu, il, elle, nous, vous, ils, elles", "le, la, les, un, une", "et, ou, mais, donc"], "answer": "je, tu, il, elle, nous, vous, ils, elles"}
+      ]
+    },
+    {
+      "id": 41,
+      "title": "Les adverbes",
+      "description": "Reconnaître les adverbes et comprendre ce qu'ils précisent.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quelle est la nature du mot « lentement » ?", "options": ["un adverbe", "un adjectif", "un nom commun"], "answer": "un adverbe"},
+        {"type": "qcm", "question": "Dans « Il parle doucement. », l'adverbe précise :", "options": ["comment il parle", "qui parle", "où il parle"], "answer": "comment il parle"},
+        {"type": "input", "question": "Relève l'adverbe dans la phrase : « Elle court rapidement. »", "answer": "rapidement"},
+        {"type": "qcm", "question": "Quel adverbe indique le temps ?", "options": ["demain", "ici", "gentiment"], "answer": "demain"},
+        {"type": "qcm", "question": "Quel adverbe indique le lieu ?", "options": ["ici", "hier", "poliment"], "answer": "ici"},
+        {"type": "input", "question": "Relève l'adverbe dans la phrase : « Nous mangerons bientôt. »", "answer": "bientôt"},
+        {"type": "qcm", "question": "Beaucoup d'adverbes de manière se terminent par :", "options": ["-ment", "-tion", "-eur"], "answer": "-ment"},
+        {"type": "qcm", "question": "L'adverbe est un mot :", "options": ["invariable", "qui s'accorde avec le nom", "toujours au pluriel"], "answer": "invariable"},
+        {"type": "input", "question": "Forme l'adverbe en -ment à partir de l'adjectif « douce ».", "answer": "doucement"},
+        {"type": "qcm", "question": "Dans « Il fait très froid. », le mot « très » modifie :", "options": ["l'adjectif « froid »", "le verbe « fait »", "le pronom « il »"], "answer": "l'adjectif « froid »"},
+        {"type": "input", "question": "Relève l'adverbe de temps dans la phrase : « Hier, nous avons visité un musée. »", "answer": "Hier"},
+        {"type": "qcm", "question": "Quel mot est un adverbe ?", "options": ["souvent", "souvenir", "souple"], "answer": "souvent"}
+      ]
+    },
+    {
+      "id": 42,
+      "title": "Le complément d'objet direct",
+      "description": "Repérer le complément d'objet direct qui complète le verbe.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Dans « Rayan lit un livre. », le complément d'objet direct est :", "options": ["un livre", "Rayan", "lit"], "answer": "un livre"},
+        {"type": "qcm", "question": "Pour trouver le complément d'objet direct, on pose après le verbe la question :", "options": ["quoi ? ou qui ?", "où ?", "quand ?"], "answer": "quoi ? ou qui ?"},
+        {"type": "input", "question": "Relève le complément d'objet direct dans la phrase : « Le chat attrape la souris. »", "answer": "la souris"},
+        {"type": "qcm", "question": "Dans « Nous regardons un film. », le complément d'objet direct est :", "options": ["un film", "nous", "regardons"], "answer": "un film"},
+        {"type": "input", "question": "Relève le complément d'objet direct dans la phrase : « Maman épluche les légumes. »", "answer": "les légumes"},
+        {"type": "qcm", "question": "Quelle phrase contient un complément d'objet direct ?", "options": ["Léa dessine un château.", "Léa dort.", "Léa arrive demain."], "answer": "Léa dessine un château."},
+        {"type": "qcm", "question": "Dans « Je la regarde. », le complément d'objet direct est :", "options": ["la", "je", "regarde"], "answer": "la"},
+        {"type": "input", "question": "Relève le complément d'objet direct dans la phrase : « Le jardinier arrose les fleurs. »", "answer": "les fleurs"},
+        {"type": "qcm", "question": "Le complément d'objet direct complète :", "options": ["le verbe", "le nom", "l'adjectif"], "answer": "le verbe"},
+        {"type": "input", "question": "Relève le complément d'objet direct dans la phrase : « Papa répare la voiture. »", "answer": "la voiture"},
+        {"type": "qcm", "question": "Dans « Les élèves écoutent la maîtresse. », quelle question permet de trouver le complément d'objet direct ?", "options": ["Les élèves écoutent qui ?", "Les élèves écoutent où ?", "Les élèves écoutent quand ?"], "answer": "Les élèves écoutent qui ?"},
+        {"type": "qcm", "question": "Quelle phrase n'a pas de complément d'objet direct ?", "options": ["Le bébé dort.", "Le bébé boit son biberon.", "Le bébé regarde sa maman."], "answer": "Le bébé dort."}
+      ]
+    },
+    {
+      "id": 43,
+      "title": "Les compléments circonstanciels",
+      "description": "Identifier les compléments circonstanciels de temps, de lieu et de manière.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Dans « Demain, nous irons à la piscine. », le mot « Demain » est un complément circonstanciel de :", "options": ["temps", "lieu", "manière"], "answer": "temps"},
+        {"type": "qcm", "question": "Dans « Demain, nous irons à la piscine. », le groupe « à la piscine » est un complément circonstanciel de :", "options": ["lieu", "temps", "manière"], "answer": "lieu"},
+        {"type": "qcm", "question": "Dans « Il écrit avec soin. », le groupe « avec soin » est un complément circonstanciel de :", "options": ["manière", "temps", "lieu"], "answer": "manière"},
+        {"type": "input", "question": "Relève le complément circonstanciel de temps dans la phrase : « Ce soir, nous mangeons une pizza. »", "answer": "Ce soir"},
+        {"type": "input", "question": "Relève le complément circonstanciel de lieu dans la phrase : « Les enfants jouent dans la cour. »", "answer": "dans la cour"},
+        {"type": "qcm", "question": "Le complément circonstanciel de temps répond à la question :", "options": ["quand ?", "où ?", "comment ?"], "answer": "quand ?"},
+        {"type": "qcm", "question": "Quel complément circonstanciel répond à la question « où ? » ?", "options": ["le complément circonstanciel de lieu", "le complément circonstanciel de temps", "le complément circonstanciel de manière"], "answer": "le complément circonstanciel de lieu"},
+        {"type": "qcm", "question": "Dans « Le chevalier se bat courageusement. », le mot « courageusement » est un complément circonstanciel de :", "options": ["manière", "lieu", "temps"], "answer": "manière"},
+        {"type": "input", "question": "Relève le complément circonstanciel de lieu dans la phrase : « Sous le lit, le chat se cache. »", "answer": "Sous le lit"},
+        {"type": "qcm", "question": "Dans « Pendant les vacances, nous irons chez nos grands-parents. », le groupe « Pendant les vacances » est un complément circonstanciel de :", "options": ["temps", "lieu", "manière"], "answer": "temps"},
+        {"type": "input", "question": "Relève le complément circonstanciel de manière dans la phrase : « Elle chante avec joie. »", "answer": "avec joie"},
+        {"type": "qcm", "question": "Quelle phrase contient un complément circonstanciel de temps ?", "options": ["Hier, il a plu.", "Il pleut sur la ville.", "Il pleut doucement."], "answer": "Hier, il a plu."}
+      ]
+    },
+    {
+      "id": 44,
+      "title": "La phrase simple et la phrase complexe",
+      "description": "Distinguer la phrase simple de la phrase complexe en comptant les verbes conjugués.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Une phrase simple contient :", "options": ["un seul verbe conjugué", "plusieurs verbes conjugués", "aucun verbe conjugué"], "answer": "un seul verbe conjugué"},
+        {"type": "qcm", "question": "La phrase « Le chien aboie et le chat s'enfuit. » est une phrase :", "options": ["complexe", "simple", "négative"], "answer": "complexe"},
+        {"type": "qcm", "question": "La phrase « Les enfants jouent dans le parc. » est une phrase :", "options": ["simple", "complexe", "interrogative"], "answer": "simple"},
+        {"type": "input", "question": "Combien de verbes conjugués y a-t-il dans la phrase : « Quand la nuit tombe, les étoiles s'allument. » ? Écris le nombre en chiffres.", "answer": "2"},
+        {"type": "qcm", "question": "Quelle phrase est complexe ?", "options": ["Je lis un livre qui me plaît.", "Je lis un livre.", "Je lis souvent."], "answer": "Je lis un livre qui me plaît."},
+        {"type": "input", "question": "Combien de verbes conjugués y a-t-il dans la phrase : « Le vent souffle. » ? Écris le nombre en chiffres.", "answer": "1"},
+        {"type": "qcm", "question": "Une phrase complexe contient :", "options": ["plusieurs verbes conjugués", "un seul nom", "toujours une question"], "answer": "plusieurs verbes conjugués"},
+        {"type": "input", "question": "Combien de verbes conjugués y a-t-il dans la phrase : « Il pleut, alors nous restons à la maison. » ? Écris le nombre en chiffres.", "answer": "2"},
+        {"type": "qcm", "question": "Quelle phrase est simple ?", "options": ["Le boulanger prépare le pain.", "Le boulanger prépare le pain et il le vend.", "Quand il pleut, je reste chez moi."], "answer": "Le boulanger prépare le pain."},
+        {"type": "qcm", "question": "Dans « Je pense que tu as raison. », combien y a-t-il de verbes conjugués ?", "options": ["2", "1", "3"], "answer": "2"},
+        {"type": "input", "question": "La phrase « Marie chante pendant que Paul danse. » est-elle simple ou complexe ? Écris un seul mot.", "answer": "complexe"},
+        {"type": "input", "question": "La phrase « Le soleil se couche derrière la montagne. » est-elle simple ou complexe ? Écris un seul mot.", "answer": "simple"}
+      ]
+    },
+    {
+      "id": 45,
+      "title": "Les connecteurs logiques",
+      "description": "Utiliser les connecteurs pour relier les idées : temps, cause, conséquence, opposition.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Quel mot exprime la cause dans la phrase : « Je reste à la maison car il pleut. » ?", "options": ["car", "et", "puis"], "answer": "car"},
+        {"type": "qcm", "question": "Quel connecteur exprime une opposition ?", "options": ["mais", "car", "donc"], "answer": "mais"},
+        {"type": "qcm", "question": "Les mots « d'abord, puis, enfin » sont des connecteurs de :", "options": ["temps", "cause", "opposition"], "answer": "temps"},
+        {"type": "input", "question": "Relève le connecteur dans la phrase : « Il a bien travaillé, donc il est content. »", "answer": "donc"},
+        {"type": "qcm", "question": "Quel connecteur complète la phrase : « Je prends mon parapluie ... il pleut. » ?", "options": ["car", "mais", "ensuite"], "answer": "car"},
+        {"type": "qcm", "question": "Quel connecteur complète la phrase : « Il fait froid, ... je mets un manteau. » ?", "options": ["alors", "mais", "car"], "answer": "alors"},
+        {"type": "input", "question": "Relève le connecteur de temps dans la phrase : « Ensuite, nous rangeons le matériel. »", "answer": "Ensuite"},
+        {"type": "qcm", "question": "Quel connecteur indique la conséquence ?", "options": ["donc", "car", "d'abord"], "answer": "donc"},
+        {"type": "qcm", "question": "Quel connecteur complète la phrase : « Elle aime le chocolat, ... elle n'en mange pas souvent. » ?", "options": ["mais", "donc", "puis"], "answer": "mais"},
+        {"type": "input", "question": "Relève le connecteur de temps dans la phrase : « Je me lave les mains, puis je passe à table. »", "answer": "puis"},
+        {"type": "qcm", "question": "Pour raconter une histoire dans l'ordre, on utilise les connecteurs :", "options": ["d'abord, ensuite, enfin", "mais, car, donc", "le, la, les"], "answer": "d'abord, ensuite, enfin"},
+        {"type": "qcm", "question": "Quel mot complète la phrase : « ..., je me réveille ; ensuite, je prends mon petit déjeuner. » ?", "options": ["D'abord", "Donc", "Mais"], "answer": "D'abord"}
+      ]
+    },
+    {
+      "id": 46,
+      "title": "Révision générale de grammaire",
+      "description": "Réviser toutes les notions de grammaire de l'année : phrases, natures, fonctions et accords.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est le type de la phrase : « Que fais-tu ? »", "options": ["interrogative", "déclarative", "injonctive"], "answer": "interrogative"},
+        {"type": "input", "question": "Quel est l'infinitif du verbe dans « nous allons » ?", "answer": "aller"},
+        {"type": "qcm", "question": "Quelle est la nature du mot « rapidement » ?", "options": ["un adverbe", "un adjectif", "un verbe"], "answer": "un adverbe"},
+        {"type": "input", "question": "Relève le sujet dans la phrase : « Dans la forêt hurlent les loups. »", "answer": "les loups"},
+        {"type": "qcm", "question": "La phrase « Je ne comprends rien. » est à la forme :", "options": ["négative", "affirmative", "exclamative"], "answer": "négative"},
+        {"type": "input", "question": "Relève le complément d'objet direct dans la phrase : « Le facteur distribue le courrier. »", "answer": "le courrier"},
+        {"type": "qcm", "question": "Le groupe nominal « les beaux jours » est :", "options": ["masculin pluriel", "féminin pluriel", "masculin singulier"], "answer": "masculin pluriel"},
+        {"type": "qcm", "question": "Quelle est la nature du mot « Marseille » ?", "options": ["un nom propre", "un nom commun", "un adjectif"], "answer": "un nom propre"},
+        {"type": "input", "question": "Combien de verbes conjugués y a-t-il dans la phrase : « Le chat miaule parce qu'il a faim. » ? Écris le nombre en chiffres.", "answer": "2"},
+        {"type": "qcm", "question": "Dans « Nous partirons demain. », le mot « demain » est un complément circonstanciel de :", "options": ["temps", "lieu", "manière"], "answer": "temps"},
+        {"type": "input", "question": "Relève l'adjectif dans le groupe nominal « un exercice difficile ».", "answer": "difficile"},
+        {"type": "qcm", "question": "Quel pronom personnel sujet remplace « mon frère » ?", "options": ["il", "elle", "ils"], "answer": "il"},
+        {"type": "input", "question": "Quel mot manque pour former la négation : « Elle ... veut pas dormir. » ?", "answer": "ne"},
+        {"type": "qcm", "question": "Quelle phrase est correctement écrite, avec sa majuscule et son point ?", "options": ["Les enfants jouent dans la cour.", "les enfants jouent dans la cour.", "Les enfants jouent dans la cour"], "answer": "Les enfants jouent dans la cour."}
+      ]
+    }
+  ]
+}

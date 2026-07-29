@@ -1,0 +1,325 @@
+{
+  "key": "vocabulaire_ce2",
+  "fiches": [
+    {
+      "id": 1,
+      "title": "Les synonymes",
+      "description": "Trouver des mots qui veulent dire la même chose ou presque.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Quel mot est un synonyme de « maison » ?", "options": ["habitation", "jardin", "fenêtre"], "answer": "habitation"},
+        {"type": "qcm", "question": "Quel mot est un synonyme de « joli » ?", "options": ["beau", "laid", "grand"], "answer": "beau"},
+        {"type": "qcm", "question": "Quel mot est un synonyme de « content » ?", "options": ["heureux", "triste", "fatigué"], "answer": "heureux"},
+        {"type": "qcm", "question": "Quel mot est un synonyme de « voiture » ?", "options": ["automobile", "vélo", "route"], "answer": "automobile"},
+        {"type": "qcm", "question": "Quel mot est un synonyme de « peur » ?", "options": ["frayeur", "courage", "joie"], "answer": "frayeur"},
+        {"type": "qcm", "question": "Quel mot est un synonyme de « rapide » ?", "options": ["vif", "lent", "lourd"], "answer": "vif"},
+        {"type": "qcm", "question": "Quel mot est un synonyme de « bizarre » ?", "options": ["étrange", "normal", "simple"], "answer": "étrange"},
+        {"type": "qcm", "question": "Quel verbe est un synonyme de « casser » ?", "options": ["briser", "réparer", "coller"], "answer": "briser"},
+        {"type": "qcm", "question": "Quel mot est un synonyme de « fatigué » ?", "options": ["épuisé", "reposé", "joyeux"], "answer": "épuisé"},
+        {"type": "qcm", "question": "Quel mot est un synonyme de « énorme » ?", "options": ["gigantesque", "minuscule", "moyen"], "answer": "gigantesque"},
+        {"type": "qcm", "question": "Quel verbe est un synonyme de « parler » ?", "options": ["bavarder", "écouter", "se taire"], "answer": "bavarder"},
+        {"type": "qcm", "question": "Quel mot est un synonyme de « drôle » ?", "options": ["amusant", "ennuyeux", "méchant"], "answer": "amusant"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Les contraires",
+      "description": "Trouver des mots de sens opposé (antonymes).",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Quel est le contraire de « chaud » ?", "answer": "froid"},
+        {"type": "input", "question": "Quel est le contraire de « grand » ?", "answer": "petit"},
+        {"type": "qcm", "question": "Quel est le contraire de « monter » ?", "options": ["descendre", "grimper", "sauter"], "answer": "descendre"},
+        {"type": "qcm", "question": "Quel est le contraire de « rapide » ?", "options": ["lent", "vif", "pressé"], "answer": "lent"},
+        {"type": "input", "question": "Quel est le contraire de « le jour » ? (la ...)", "answer": "nuit", "accept": ["la nuit"]},
+        {"type": "qcm", "question": "Quel est le contraire de « gentil » ?", "options": ["méchant", "aimable", "poli"], "answer": "méchant"},
+        {"type": "qcm", "question": "Quel est le contraire de « allumer » ?", "options": ["éteindre", "briller", "éclairer"], "answer": "éteindre"},
+        {"type": "input", "question": "Quel est le contraire de « ouvrir » ?", "answer": "fermer"},
+        {"type": "qcm", "question": "Quel est le contraire de « propre » ?", "options": ["sale", "net", "lavé"], "answer": "sale"},
+        {"type": "qcm", "question": "Quel est le contraire de « courageux » ?", "options": ["peureux", "brave", "fort"], "answer": "peureux"},
+        {"type": "qcm", "question": "Quel est le contraire de « rire » ?", "options": ["pleurer", "sourire", "s'amuser"], "answer": "pleurer"},
+        {"type": "qcm", "question": "Quel est le contraire de « plein » ?", "options": ["vide", "rempli", "entier"], "answer": "vide"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "L'ordre alphabétique",
+      "description": "Connaître l'alphabet et ranger les mots dans l'ordre alphabétique.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Quelle lettre vient juste après le « d » ?", "options": ["e", "c", "f"], "answer": "e"},
+        {"type": "qcm", "question": "Quelle lettre vient juste avant le « m » ?", "options": ["l", "n", "k"], "answer": "l"},
+        {"type": "qcm", "question": "Quel mot vient en premier dans l'ordre alphabétique ?", "options": ["abricot", "banane", "cerise"], "answer": "abricot"},
+        {"type": "qcm", "question": "Quel mot vient en premier dans l'ordre alphabétique : chat, cheval, chien ?", "options": ["chat", "cheval", "chien"], "answer": "chat"},
+        {"type": "qcm", "question": "Quel mot vient en dernier dans l'ordre alphabétique ?", "options": ["zèbre", "lion", "girafe"], "answer": "zèbre"},
+        {"type": "qcm", "question": "Quel mot se range entre « lapin » et « nuage » dans l'ordre alphabétique ?", "options": ["maison", "avion", "soleil"], "answer": "maison"},
+        {"type": "input", "question": "Quelle lettre vient juste après le « p » ?", "answer": "q"},
+        {"type": "qcm", "question": "Quel mot vient en premier dans l'ordre alphabétique : pomme, poire, prune ?", "options": ["poire", "pomme", "prune"], "answer": "poire"},
+        {"type": "qcm", "question": "Quelle liste est rangée dans l'ordre alphabétique ?", "options": ["avion, bateau, camion", "bateau, avion, camion", "camion, avion, bateau"], "answer": "avion, bateau, camion"},
+        {"type": "qcm", "question": "Quel mot vient en premier dans l'ordre alphabétique : mardi, matin, mercredi ?", "options": ["mardi", "matin", "mercredi"], "answer": "mardi"},
+        {"type": "input", "question": "Quelle lettre vient juste avant le « t » ?", "answer": "s"},
+        {"type": "input", "question": "Combien y a-t-il de lettres dans l'alphabet français ?", "answer": "26", "accept": ["vingt-six", "vingt six"]}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Les familles de mots",
+      "description": "Reconnaître les mots construits à partir d'un même mot simple (le radical).",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "input", "question": "Trouve le mot de la famille de « dent » qui désigne le médecin qui soigne les dents.", "answer": "dentiste", "accept": ["le dentiste", "un dentiste"]},
+        {"type": "qcm", "question": "Quel mot est de la famille de « terre » ?", "options": ["terrain", "tortue", "têtu"], "answer": "terrain"},
+        {"type": "qcm", "question": "Quel mot est de la famille de « laver » ?", "options": ["lavage", "lever", "larve"], "answer": "lavage"},
+        {"type": "qcm", "question": "Quel mot n'est PAS de la famille de « chant » ?", "options": ["champignon", "chanteur", "chanson"], "answer": "champignon"},
+        {"type": "qcm", "question": "Quel mot est de la famille de « jardin » ?", "options": ["jardinier", "jarre", "jaune"], "answer": "jardinier"},
+        {"type": "qcm", "question": "Quel mot n'est PAS de la famille de « long » ?", "options": ["lion", "longueur", "allonger"], "answer": "lion"},
+        {"type": "input", "question": "Trouve le nom de la famille de « glisser » qui se termine par -ade : une ...", "answer": "glissade", "accept": ["une glissade"]},
+        {"type": "qcm", "question": "Quel est le radical du mot « dentiste » ?", "options": ["dent", "iste", "den"], "answer": "dent"},
+        {"type": "qcm", "question": "Quel mot est de la famille de « fleur » ?", "options": ["fleuriste", "flèche", "farine"], "answer": "fleuriste"},
+        {"type": "qcm", "question": "Quel mot n'est PAS de la famille de « mer » ?", "options": ["mère", "marin", "maritime"], "answer": "mère"},
+        {"type": "qcm", "question": "Quel mot est de la famille de « courir » ?", "options": ["coureur", "cour", "courage"], "answer": "coureur"},
+        {"type": "qcm", "question": "Quel mot est de la famille de « saut » ?", "options": ["sauter", "sauce", "saule"], "answer": "sauter"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Champs lexicaux : l'école et le sport",
+      "description": "Reconnaître les mots qui parlent du même thème : l'école et le sport.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Quel mot appartient au champ lexical de l'école ?", "options": ["cartable", "casserole", "volant"], "answer": "cartable"},
+        {"type": "qcm", "question": "Quel mot est l'intrus dans le champ lexical de l'école ?", "options": ["fourchette", "cahier", "tableau"], "answer": "fourchette"},
+        {"type": "qcm", "question": "Quel mot appartient au champ lexical du sport ?", "options": ["entraînement", "oreiller", "assiette"], "answer": "entraînement"},
+        {"type": "qcm", "question": "Quel mot est l'intrus dans le champ lexical du sport ?", "options": ["cartable", "ballon", "arbitre"], "answer": "cartable"},
+        {"type": "qcm", "question": "À l'école, comment s'appelle la personne qui fait la classe aux élèves ?", "options": ["le maître", "le boulanger", "le facteur"], "answer": "le maître"},
+        {"type": "qcm", "question": "Où les élèves jouent-ils pendant la récréation ?", "options": ["dans la cour", "dans la cave", "dans le grenier"], "answer": "dans la cour"},
+        {"type": "qcm", "question": "Quel mot appartient au champ lexical de l'école ?", "options": ["dictée", "marteau", "valise"], "answer": "dictée"},
+        {"type": "qcm", "question": "Quel mot va avec « stade, course, médaille » ?", "options": ["champion", "oreille", "cuisine"], "answer": "champion"},
+        {"type": "qcm", "question": "Comment s'appelle la personne qui siffle les fautes pendant un match ?", "options": ["l'arbitre", "le spectateur", "le boulanger"], "answer": "l'arbitre"},
+        {"type": "qcm", "question": "Quel mot est l'intrus dans le champ lexical de l'école ?", "options": ["plage", "récréation", "leçon"], "answer": "plage"},
+        {"type": "qcm", "question": "Quel verbe est l'intrus dans le champ lexical du sport ?", "options": ["dormir", "nager", "courir"], "answer": "dormir"},
+        {"type": "qcm", "question": "Quel lieu appartient au champ lexical du sport ?", "options": ["le gymnase", "la boulangerie", "la bibliothèque"], "answer": "le gymnase"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Les préfixes",
+      "description": "Comprendre les petites parties ajoutées au début d'un mot pour en changer le sens.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est le préfixe dans le mot « refaire » ?", "options": ["re-", "-aire", "fai-"], "answer": "re-"},
+        {"type": "qcm", "question": "Que signifie le préfixe re- dans « recommencer » ?", "options": ["faire de nouveau", "faire le contraire", "faire avant"], "answer": "faire de nouveau"},
+        {"type": "input", "question": "Ajoute un préfixe à « possible » pour dire le contraire.", "answer": "impossible"},
+        {"type": "input", "question": "Trouve le contraire de « heureux » formé avec un préfixe.", "answer": "malheureux"},
+        {"type": "qcm", "question": "Quel mot est formé avec un préfixe ?", "options": ["déranger", "danser", "donner"], "answer": "déranger"},
+        {"type": "qcm", "question": "Quel est le contraire de « visible » formé avec un préfixe ?", "options": ["invisible", "prévisible", "visiblement"], "answer": "invisible"},
+        {"type": "qcm", "question": "Que signifie le préfixe dé- dans « décoller » ?", "options": ["faire le contraire", "faire de nouveau", "faire très fort"], "answer": "faire le contraire"},
+        {"type": "input", "question": "Trouve le mot formé avec un préfixe qui veut dire « lire de nouveau ».", "answer": "relire"},
+        {"type": "qcm", "question": "Quel mot est formé avec le préfixe para- (qui protège) ?", "options": ["parapluie", "paresse", "parole"], "answer": "parapluie"},
+        {"type": "qcm", "question": "Dans « prévoir », que signifie le préfixe pré- ?", "options": ["avant", "après", "contre"], "answer": "avant"},
+        {"type": "qcm", "question": "Quel mot est formé avec un préfixe ?", "options": ["malchance", "marche", "matin"], "answer": "malchance"},
+        {"type": "input", "question": "Trouve le contraire de « obéir » formé avec le préfixe dés-.", "answer": "désobéir"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Les suffixes",
+      "description": "Comprendre les petites parties ajoutées à la fin d'un mot pour former de nouveaux mots.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est le suffixe dans le mot « fillette » ?", "options": ["-ette", "fil-", "-lle"], "answer": "-ette"},
+        {"type": "qcm", "question": "Que signifie le suffixe -ette dans « maisonnette » ?", "options": ["petite", "grande", "vieille"], "answer": "petite"},
+        {"type": "input", "question": "Comment appelle-t-on la personne qui chante ? (un nom en -eur)", "answer": "chanteur", "accept": ["un chanteur", "le chanteur"]},
+        {"type": "qcm", "question": "Quel mot est formé avec le suffixe -age ?", "options": ["lavage", "lange", "luge"], "answer": "lavage"},
+        {"type": "input", "question": "Comment appelle-t-on la personne qui danse ? (un nom en -eur)", "answer": "danseur", "accept": ["un danseur", "le danseur"]},
+        {"type": "qcm", "question": "Quel suffixe transforme « dent » en nom de métier ?", "options": ["-iste", "-age", "-ette"], "answer": "-iste"},
+        {"type": "qcm", "question": "Quel mot est formé avec un suffixe ?", "options": ["lenteur", "lundi", "large"], "answer": "lenteur"},
+        {"type": "qcm", "question": "Quel nom est formé à partir du verbe « planter » avec un suffixe ?", "options": ["plantation", "planète", "plafond"], "answer": "plantation"},
+        {"type": "input", "question": "Ajoute le suffixe -ier à « pomme » pour trouver le nom de l'arbre.", "answer": "pommier", "accept": ["un pommier", "le pommier"]},
+        {"type": "qcm", "question": "Que signifie le suffixe -able dans « lavable » ?", "options": ["que l'on peut laver", "que l'on doit laver", "que l'on veut laver"], "answer": "que l'on peut laver"},
+        {"type": "input", "question": "Comment s'appelle l'arbre qui donne des cerises ? (un nom en -ier)", "answer": "cerisier", "accept": ["un cerisier", "le cerisier"]},
+        {"type": "qcm", "question": "Quel mot est formé avec le suffixe -esse ?", "options": ["maîtresse", "messe", "mission"], "answer": "maîtresse"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Le dictionnaire : mots-repères et abréviations",
+      "description": "Savoir chercher un mot dans le dictionnaire et comprendre les abréviations.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "À quoi servent les mots-repères écrits en haut des pages du dictionnaire ?", "options": ["à trouver rapidement un mot", "à décorer la page", "à compter les pages"], "answer": "à trouver rapidement un mot"},
+        {"type": "qcm", "question": "Que signifie l'abréviation « n.m. » dans le dictionnaire ?", "options": ["nom masculin", "nombre mille", "nouvelle marque"], "answer": "nom masculin"},
+        {"type": "qcm", "question": "Que signifie l'abréviation « adj. » dans le dictionnaire ?", "options": ["adjectif", "adresse", "addition"], "answer": "adjectif"},
+        {"type": "qcm", "question": "Que signifie l'abréviation « v. » dans le dictionnaire ?", "options": ["verbe", "ville", "voyelle"], "answer": "verbe"},
+        {"type": "qcm", "question": "Sous quelle forme cherche-t-on un verbe dans le dictionnaire ?", "options": ["à l'infinitif", "au futur", "au pluriel"], "answer": "à l'infinitif"},
+        {"type": "qcm", "question": "Pour trouver « chantaient » dans le dictionnaire, quel mot dois-je chercher ?", "options": ["chanter", "chantaient", "chantait"], "answer": "chanter"},
+        {"type": "qcm", "question": "Les mots-repères d'une page sont « garage » et « gomme ». Quel mot se trouve sur cette page ?", "options": ["girafe", "bateau", "guitare"], "answer": "girafe"},
+        {"type": "qcm", "question": "Que signifie l'abréviation « n.f. » dans le dictionnaire ?", "options": ["nom féminin", "note finale", "nombre neuf"], "answer": "nom féminin"},
+        {"type": "qcm", "question": "Pour trouver « chevaux » dans le dictionnaire, quel mot dois-je chercher ?", "options": ["cheval", "chevaux", "chevalier"], "answer": "cheval"},
+        {"type": "qcm", "question": "Que trouve-t-on dans un article de dictionnaire ?", "options": ["la définition du mot", "le prix du mot", "la photo de l'auteur"], "answer": "la définition du mot"},
+        {"type": "qcm", "question": "Les mots-repères d'une page sont « lac » et « lune ». Quel mot n'est PAS sur cette page ?", "options": ["maison", "lion", "livre"], "answer": "maison"},
+        {"type": "qcm", "question": "Que signifie l'abréviation « inv. » dans le dictionnaire ?", "options": ["invariable", "invisible", "inventé"], "answer": "invariable"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Les mots génériques et les mots particuliers",
+      "description": "Trouver le mot-étiquette qui regroupe plusieurs mots particuliers.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est le mot générique de « pomme, poire, cerise » ?", "options": ["fruits", "légumes", "fleurs"], "answer": "fruits"},
+        {"type": "qcm", "question": "Quel est le mot générique de « marteau, tournevis, scie » ?", "options": ["outils", "jouets", "meubles"], "answer": "outils"},
+        {"type": "qcm", "question": "Quel mot est un mot particulier du mot générique « meuble » ?", "options": ["armoire", "cuisine", "maison"], "answer": "armoire"},
+        {"type": "qcm", "question": "Quel est le mot générique de « rose, tulipe, marguerite » ?", "options": ["fleurs", "arbres", "fruits"], "answer": "fleurs"},
+        {"type": "qcm", "question": "Quel mot est l'intrus dans la liste des vêtements ?", "options": ["banane", "pantalon", "chemise"], "answer": "banane"},
+        {"type": "qcm", "question": "Quel est le mot générique de « camion, moto, voiture » ?", "options": ["véhicules", "animaux", "métiers"], "answer": "véhicules"},
+        {"type": "qcm", "question": "Quel mot est un mot particulier du mot générique « instrument de musique » ?", "options": ["violon", "peinture", "cahier"], "answer": "violon"},
+        {"type": "qcm", "question": "Quel est le mot générique de « colère, joie, tristesse » ?", "options": ["émotions", "couleurs", "saisons"], "answer": "émotions"},
+        {"type": "qcm", "question": "Quel mot est l'intrus dans la liste des animaux ?", "options": ["tulipe", "renard", "hérisson"], "answer": "tulipe"},
+        {"type": "qcm", "question": "Quel est le mot générique de « carotte, poireau, courgette » ?", "options": ["légumes", "fruits", "desserts"], "answer": "légumes"},
+        {"type": "qcm", "question": "Quel mot est un mot particulier du mot générique « oiseau » ?", "options": ["hirondelle", "requin", "fourmi"], "answer": "hirondelle"},
+        {"type": "qcm", "question": "Quel est le mot générique de « boulanger, médecin, facteur » ?", "options": ["métiers", "sports", "pays"], "answer": "métiers"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Champs lexicaux : la nature, la cuisine, le voyage",
+      "description": "Reconnaître les mots qui appartiennent aux thèmes de la nature, de la cuisine et du voyage.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quel mot appartient au champ lexical de la nature ?", "options": ["forêt", "ordinateur", "trottoir"], "answer": "forêt"},
+        {"type": "qcm", "question": "Quel mot est l'intrus dans le champ lexical de la nature ?", "options": ["téléphone", "rivière", "montagne"], "answer": "téléphone"},
+        {"type": "qcm", "question": "Quel mot appartient au champ lexical de la cuisine ?", "options": ["casserole", "cartable", "guidon"], "answer": "casserole"},
+        {"type": "qcm", "question": "Quel mot est l'intrus dans le champ lexical de la cuisine ?", "options": ["valise", "four", "recette"], "answer": "valise"},
+        {"type": "qcm", "question": "Quel mot appartient au champ lexical du voyage ?", "options": ["valise", "gomme", "râteau"], "answer": "valise"},
+        {"type": "qcm", "question": "Quel mot est l'intrus dans le champ lexical du voyage ?", "options": ["aspirateur", "avion", "passeport"], "answer": "aspirateur"},
+        {"type": "qcm", "question": "Quel mot va avec « feuille, branche, racine » ?", "options": ["tronc", "clavier", "fourchette"], "answer": "tronc"},
+        {"type": "qcm", "question": "Les verbes « mélanger, éplucher, cuire » appartiennent au champ lexical de :", "options": ["la cuisine", "la mer", "l'école"], "answer": "la cuisine"},
+        {"type": "qcm", "question": "Quel mot va avec « gare, billet, quai » ?", "options": ["train", "lit", "stylo"], "answer": "train"},
+        {"type": "qcm", "question": "Dans la nature, comment appelle-t-on un tout petit cours d'eau ?", "options": ["un ruisseau", "un rocher", "un sentier"], "answer": "un ruisseau"},
+        {"type": "qcm", "question": "Comment s'appelle la personne qui prépare les repas dans un restaurant ?", "options": ["le cuisinier", "le jardinier", "le pilote"], "answer": "le cuisinier"},
+        {"type": "qcm", "question": "« Partir à l'étranger », c'est partir :", "options": ["dans un autre pays", "dans sa chambre", "dans son jardin"], "answer": "dans un autre pays"}
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Les différents sens d'un mot",
+      "description": "Comprendre qu'un mot peut avoir plusieurs sens selon le contexte.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "« La feuille de l'arbre est tombée. » Que veut dire « feuille » ici ?", "options": ["une partie de l'arbre", "un papier pour écrire", "une couverture"], "answer": "une partie de l'arbre"},
+        {"type": "qcm", "question": "« J'écris sur une feuille. » Que veut dire « feuille » ici ?", "options": ["un papier pour écrire", "une partie de l'arbre", "une fleur"], "answer": "un papier pour écrire"},
+        {"type": "qcm", "question": "« Je mange une glace au goûter. » Que veut dire « glace » ici ?", "options": ["un dessert glacé", "un miroir", "une vitre"], "answer": "un dessert glacé"},
+        {"type": "qcm", "question": "« Je me regarde dans la glace. » Que veut dire « glace » ici ?", "options": ["un miroir", "un dessert glacé", "une patinoire"], "answer": "un miroir"},
+        {"type": "qcm", "question": "« Le bouton de ma chemise est tombé. » Que veut dire « bouton » ici ?", "options": ["un petit objet pour fermer un vêtement", "une fleur pas encore ouverte", "un interrupteur de lampe"], "answer": "un petit objet pour fermer un vêtement"},
+        {"type": "qcm", "question": "« Le bouton de rose va s'ouvrir. » Que veut dire « bouton » ici ?", "options": ["une fleur pas encore ouverte", "un objet pour fermer un vêtement", "une poignée de porte"], "answer": "une fleur pas encore ouverte"},
+        {"type": "qcm", "question": "« Je clique avec la souris de l'ordinateur. » Que veut dire « souris » ici ?", "options": ["un objet qui sert à cliquer", "un petit animal gris", "un morceau de fromage"], "answer": "un objet qui sert à cliquer"},
+        {"type": "qcm", "question": "« L'avocat défend son client au tribunal. » Que veut dire « avocat » ici ?", "options": ["un métier de la justice", "un fruit vert", "un légume du potager"], "answer": "un métier de la justice"},
+        {"type": "qcm", "question": "« La baguette du magicien brille. » Que veut dire « baguette » ici ?", "options": ["un petit bâton", "un pain long", "un crayon de couleur"], "answer": "un petit bâton"},
+        {"type": "qcm", "question": "« Le pêcheur lance sa ligne dans l'eau. » Que veut dire « ligne » ici ?", "options": ["un fil pour attraper les poissons", "un trait tracé à la règle", "une rangée de mots"], "answer": "un fil pour attraper les poissons"},
+        {"type": "qcm", "question": "« Au restaurant, je lis la carte. » Que veut dire « carte » ici ?", "options": ["la liste des plats", "une carte de géographie", "une carte à jouer"], "answer": "la liste des plats"},
+        {"type": "qcm", "question": "« Le pied de la table est cassé. » Que veut dire « pied » ici ?", "options": ["la partie qui touche le sol", "une partie du corps humain", "une chaussure"], "answer": "la partie qui touche le sol"}
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Le sens propre et le sens figuré",
+      "description": "Faire la différence entre le sens réel d'un mot et son sens imagé.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "« Le loup dévore un mouton. » Le mot « dévore » est employé au :", "options": ["sens propre", "sens figuré"], "answer": "sens propre"},
+        {"type": "qcm", "question": "« Je dévore ce livre passionnant. » Le mot « dévore » est employé au :", "options": ["sens figuré", "sens propre"], "answer": "sens figuré"},
+        {"type": "qcm", "question": "« Il tombe des cordes dehors. » Cette phrase est au :", "options": ["sens figuré", "sens propre"], "answer": "sens figuré"},
+        {"type": "qcm", "question": "« La corde du puits est cassée. » Le mot « corde » est employé au :", "options": ["sens propre", "sens figuré"], "answer": "sens propre"},
+        {"type": "qcm", "question": "« Marie a un cœur d'or. » Cette phrase est au :", "options": ["sens figuré", "sens propre"], "answer": "sens figuré"},
+        {"type": "qcm", "question": "Que signifie « avoir un cœur d'or » ?", "options": ["être très gentil", "porter un bijou en or", "être très riche"], "answer": "être très gentil"},
+        {"type": "qcm", "question": "« Le soleil brille dans le ciel. » Le mot « brille » est employé au :", "options": ["sens propre", "sens figuré"], "answer": "sens propre"},
+        {"type": "qcm", "question": "« Cette élève brille en mathématiques. » Que veut dire « brille » ici ?", "options": ["elle réussit très bien", "elle éclaire la classe", "elle porte des habits brillants"], "answer": "elle réussit très bien"},
+        {"type": "qcm", "question": "« Il a sauté sur l'occasion. » Le mot « sauté » est employé au :", "options": ["sens figuré", "sens propre"], "answer": "sens figuré"},
+        {"type": "qcm", "question": "« Le chat saute sur le muret. » Le mot « saute » est employé au :", "options": ["sens propre", "sens figuré"], "answer": "sens propre"},
+        {"type": "qcm", "question": "Au sens figuré, « être une vraie tortue » signifie :", "options": ["être très lent", "avoir une carapace", "vivre très longtemps"], "answer": "être très lent"},
+        {"type": "qcm", "question": "« Léo a la tête dans les nuages. » Cela veut dire :", "options": ["il est distrait", "il est très grand", "il pilote un avion"], "answer": "il est distrait"}
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Les niveaux de langue",
+      "description": "Reconnaître le langage familier, le langage courant et le langage soutenu.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Le mot « bagnole » appartient au langage :", "options": ["familier", "courant", "soutenu"], "answer": "familier"},
+        {"type": "qcm", "question": "Le mot « automobile » appartient au langage :", "options": ["soutenu", "familier", "courant"], "answer": "soutenu"},
+        {"type": "qcm", "question": "Le mot « voiture » appartient au langage :", "options": ["courant", "familier", "soutenu"], "answer": "courant"},
+        {"type": "qcm", "question": "Quel mot est du langage familier ?", "options": ["pote", "ami", "camarade"], "answer": "pote"},
+        {"type": "qcm", "question": "Quel est le mot du langage soutenu pour « maison » ?", "options": ["demeure", "baraque", "cabane"], "answer": "demeure"},
+        {"type": "qcm", "question": "« Bouquin » est le mot familier pour :", "options": ["livre", "bouquet", "boulanger"], "answer": "livre"},
+        {"type": "qcm", "question": "Quel mot est du langage familier ?", "options": ["gamin", "enfant", "élève"], "answer": "gamin"},
+        {"type": "qcm", "question": "Quand utilise-t-on plutôt le langage soutenu ?", "options": ["à l'écrit ou avec des personnes que l'on ne connaît pas", "avec ses copains dans la cour", "quand on parle à son chien"], "answer": "à l'écrit ou avec des personnes que l'on ne connaît pas"},
+        {"type": "qcm", "question": "Comment dit-on « se dépêcher » en langage familier ?", "options": ["se grouiller", "se hâter", "avancer"], "answer": "se grouiller"},
+        {"type": "qcm", "question": "Le verbe « se hâter » appartient au langage :", "options": ["soutenu", "familier", "courant"], "answer": "soutenu"},
+        {"type": "qcm", "question": "Quel mot est du langage courant ?", "options": ["travail", "boulot", "labeur"], "answer": "travail"},
+        {"type": "qcm", "question": "« Rigoler » est le mot familier pour :", "options": ["rire", "ranger", "rougir"], "answer": "rire"}
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Les expressions imagées",
+      "description": "Comprendre le vrai sens des expressions courantes de la langue française.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Que signifie « donner sa langue au chat » ?", "options": ["ne pas connaître la réponse", "nourrir son chat", "tirer la langue"], "answer": "ne pas connaître la réponse"},
+        {"type": "qcm", "question": "Que signifie « avoir un chat dans la gorge » ?", "options": ["être enroué", "avoir avalé un animal", "avoir très faim"], "answer": "être enroué"},
+        {"type": "qcm", "question": "Que signifie « poser un lapin » à quelqu'un ?", "options": ["ne pas venir à un rendez-vous", "offrir un animal", "faire un tour de magie"], "answer": "ne pas venir à un rendez-vous"},
+        {"type": "qcm", "question": "Que signifie « tomber dans les pommes » ?", "options": ["s'évanouir", "faire la cueillette", "glisser dans le verger"], "answer": "s'évanouir"},
+        {"type": "qcm", "question": "Que signifie « avoir le cafard » ?", "options": ["être triste", "avoir un insecte chez soi", "être en colère"], "answer": "être triste"},
+        {"type": "qcm", "question": "Que signifie « raconter des salades » ?", "options": ["dire des mensonges", "parler de légumes", "donner une recette"], "answer": "dire des mensonges"},
+        {"type": "qcm", "question": "Que signifie « être haut comme trois pommes » ?", "options": ["être petit", "être gourmand", "être très fort"], "answer": "être petit"},
+        {"type": "qcm", "question": "Que signifie « casser les oreilles » de quelqu'un ?", "options": ["faire trop de bruit", "le blesser", "lui chanter une berceuse"], "answer": "faire trop de bruit"},
+        {"type": "qcm", "question": "Que signifie « avoir un poil dans la main » ?", "options": ["être paresseux", "être très poilu", "être bon bricoleur"], "answer": "être paresseux"},
+        {"type": "qcm", "question": "Que signifie « mettre la charrue avant les bœufs » ?", "options": ["faire les choses dans le mauvais ordre", "travailler dans les champs", "aller trop lentement"], "answer": "faire les choses dans le mauvais ordre"},
+        {"type": "qcm", "question": "Que signifie « être dans la lune » ?", "options": ["être distrait", "être astronaute", "dormir profondément"], "answer": "être distrait"},
+        {"type": "qcm", "question": "Que signifie « avoir une faim de loup » ?", "options": ["avoir très faim", "manger de la viande", "hurler très fort"], "answer": "avoir très faim"}
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Exprimer une émotion avec précision",
+      "description": "Choisir le mot juste pour dire exactement ce que l'on ressent.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Quel mot, plus précis que « content », exprime une très grande joie ?", "options": ["ravi", "fâché", "inquiet"], "answer": "ravi"},
+        {"type": "qcm", "question": "Quel mot signifie « très en colère » ?", "options": ["furieux", "étonné", "calme"], "answer": "furieux"},
+        {"type": "qcm", "question": "Quel mot signifie « qui a un peu peur, qui se fait du souci » ?", "options": ["inquiet", "terrorisé", "joyeux"], "answer": "inquiet"},
+        {"type": "qcm", "question": "Quel mot signifie « qui a une très grande peur » ?", "options": ["terrifié", "surpris", "déçu"], "answer": "terrifié"},
+        {"type": "qcm", "question": "Quel mot signifie « triste parce qu'on n'a pas eu ce que l'on espérait » ?", "options": ["déçu", "jaloux", "fier"], "answer": "déçu"},
+        {"type": "qcm", "question": "Quel mot signifie « content de ce que l'on a réussi » ?", "options": ["fier", "honteux", "effrayé"], "answer": "fier"},
+        {"type": "qcm", "question": "Quel mot signifie « très surpris » ?", "options": ["stupéfait", "fatigué", "poli"], "answer": "stupéfait"},
+        {"type": "qcm", "question": "Quel mot signifie « qui a honte » ?", "options": ["honteux", "heureux", "affamé"], "answer": "honteux"},
+        {"type": "qcm", "question": "Quel mot signifie « qui veut ce que possède quelqu'un d'autre » ?", "options": ["jaloux", "généreux", "ravi"], "answer": "jaloux"},
+        {"type": "qcm", "question": "Quel mot signifie « qui a un très grand chagrin, qui n'a plus d'espoir » ?", "options": ["désespéré", "amusé", "étonné"], "answer": "désespéré"},
+        {"type": "qcm", "question": "Quel mot signifie « calme, sans peur ni souci » ?", "options": ["serein", "furieux", "terrifié"], "answer": "serein"},
+        {"type": "qcm", "question": "Quel mot signifie « gêné devant les autres, qui n'ose pas parler » ?", "options": ["timide", "bavard", "bruyant"], "answer": "timide"}
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Des verbes précis à la place de « faire »",
+      "description": "Remplacer le verbe « faire » par un verbe plus précis.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "« Faire un gâteau » : quel verbe est plus précis ?", "options": ["confectionner", "démolir", "avaler"], "answer": "confectionner"},
+        {"type": "qcm", "question": "« Les ouvriers font une maison » : quel verbe est plus précis ?", "options": ["construire", "détruire", "habiter"], "answer": "construire"},
+        {"type": "qcm", "question": "« Faire un dessin » : quel verbe est plus précis ?", "options": ["dessiner", "découper", "effacer"], "answer": "dessiner"},
+        {"type": "qcm", "question": "« Faire du sport » : quel verbe est plus précis ?", "options": ["pratiquer", "regarder", "éviter"], "answer": "pratiquer"},
+        {"type": "qcm", "question": "« Faire une erreur » : quel verbe est plus précis ?", "options": ["commettre", "corriger", "réussir"], "answer": "commettre"},
+        {"type": "qcm", "question": "« Faire un puzzle » : quel verbe est plus précis ?", "options": ["assembler", "déchirer", "lancer"], "answer": "assembler"},
+        {"type": "qcm", "question": "« Faire une chanson » : quel verbe est plus précis ?", "options": ["composer", "écouter", "siffler"], "answer": "composer"},
+        {"type": "qcm", "question": "« Le maçon fait un mur » : quel verbe est plus précis ?", "options": ["bâtir", "franchir", "longer"], "answer": "bâtir"},
+        {"type": "qcm", "question": "« Rayan fait 1 mètre 30 » : quel verbe est plus précis ?", "options": ["mesurer", "peser", "grandir"], "answer": "mesurer"},
+        {"type": "qcm", "question": "« Faire du piano » : quel verbe est plus précis ?", "options": ["jouer", "porter", "accorder"], "answer": "jouer"},
+        {"type": "qcm", "question": "« Faire un voyage » : quel verbe est plus précis ?", "options": ["effectuer", "annuler", "imaginer"], "answer": "effectuer"},
+        {"type": "qcm", "question": "« Faire sa valise » : quel verbe est plus précis ?", "options": ["préparer", "vider", "perdre"], "answer": "préparer"}
+      ]
+    }
+  ]
+}

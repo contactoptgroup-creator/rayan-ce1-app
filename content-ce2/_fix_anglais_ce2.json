@@ -1,0 +1,22 @@
+{
+  "key": "anglais_ce2",
+  "corrections": [
+    { "ficheId": 8, "exerciseIndex": 0, "problem": "réponse avec article « a dog » légitime mais refusée (les autres fiches l'acceptent)", "fix": { "accept": ["a dog"] } },
+    { "ficheId": 8, "exerciseIndex": 1, "problem": "réponse avec article « a cat » légitime mais refusée", "fix": { "accept": ["a cat"] } },
+    { "ficheId": 8, "exerciseIndex": 3, "problem": "réponse avec article « a bird » légitime mais refusée", "fix": { "accept": ["a bird"] } },
+    { "ficheId": 8, "exerciseIndex": 5, "problem": "réponse avec article « a fish » légitime mais refusée", "fix": { "accept": ["a fish"] } },
+    { "ficheId": 8, "exerciseIndex": 7, "problem": "réponse avec article « a monkey » légitime mais refusée", "fix": { "accept": ["a monkey"] } },
+    { "ficheId": 8, "exerciseIndex": 9, "problem": "réponse avec article « a mouse » légitime mais refusée", "fix": { "accept": ["a mouse"] } },
+    { "ficheId": 9, "exerciseIndex": 3, "problem": "réponse avec article « a sister » légitime mais refusée (« a boy »/« a girl » sont acceptés dans la même fiche)", "fix": { "accept": ["a sister"] } },
+    { "ficheId": 10, "exerciseIndex": 0, "problem": "réponse avec article « a head » légitime mais refusée (« an eye » est accepté dans la même fiche)", "fix": { "accept": ["a head"] } },
+    { "ficheId": 10, "exerciseIndex": 1, "problem": "réponse avec article « a hand » légitime mais refusée", "fix": { "accept": ["a hand"] } },
+    { "ficheId": 10, "exerciseIndex": 3, "problem": "réponse avec article « an arm » légitime mais refusée", "fix": { "accept": ["an arm"] } },
+    { "ficheId": 10, "exerciseIndex": 5, "problem": "réponse avec article « a nose » légitime mais refusée", "fix": { "accept": ["a nose"] } },
+    { "ficheId": 15, "exerciseIndex": 0, "problem": "orthographe anglaise : les jours prennent une majuscule ; la réponse canonique affichée doit être « Monday », la minuscule passe en accept", "fix": { "answer": "Monday", "accept": ["monday"] } },
+    { "ficheId": 15, "exerciseIndex": 4, "problem": "orthographe anglaise : la réponse canonique doit être « Friday »", "fix": { "answer": "Friday", "accept": ["friday"] } },
+    { "ficheId": 15, "exerciseIndex": 6, "problem": "orthographe anglaise : la réponse canonique doit être « Sunday »", "fix": { "answer": "Sunday", "accept": ["sunday"] } },
+    { "ficheId": 15, "exerciseIndex": 7, "problem": "orthographe anglaise : les mois prennent une majuscule ; la réponse canonique doit être « January »", "fix": { "answer": "January", "accept": ["january"] } },
+    { "ficheId": 15, "exerciseIndex": 9, "problem": "orthographe anglaise : la réponse canonique doit être « May »", "fix": { "answer": "May", "accept": ["may"] } },
+    { "ficheId": 15, "exerciseIndex": 11, "problem": "orthographe anglaise : la réponse canonique doit être « December »", "fix": { "answer": "December", "accept": ["december"] } }
+  ]
+}

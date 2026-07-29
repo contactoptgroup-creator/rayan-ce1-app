@@ -137,6 +137,9 @@ function defaultProgress(name, code) {
         badges: [],
         challengesCompleted: [],
         session: null,
+        reviewQueue: [],   // coffre à erreurs (répétition espacée)
+        stats: {},         // { [matiere]: { answered, correct } }
+        reviewsDone: 0,
         settings: { sound: true, autoNext: true },
         rev: 0,
         updatedAt: new Date().toISOString()
@@ -153,6 +156,8 @@ function normalizeProgress(raw, fallbackName, fallbackCode) {
     out.subjects = (raw.subjects && typeof raw.subjects === 'object') ? raw.subjects : {};
     out.badges = Array.isArray(raw.badges) ? raw.badges : [];
     out.challengesCompleted = Array.isArray(raw.challengesCompleted) ? raw.challengesCompleted : [];
+    out.reviewQueue = Array.isArray(raw.reviewQueue) ? raw.reviewQueue.filter(i => i && i.id) : [];
+    out.stats = (raw.stats && typeof raw.stats === 'object') ? raw.stats : {};
     out.settings = { ...base.settings, ...(raw.settings || {}) };
     out.name = raw.name || fallbackName || base.name;
     out.code = raw.code || fallbackCode || null;
@@ -211,6 +216,28 @@ function mergeProgress(a, b) {
         subjects[subjectKey] = merged;
     });
     out.subjects = subjects;
+
+    // Coffre à erreurs : union par identifiant, en gardant l'avancement le plus fort.
+    const queue = new Map();
+    [...(a.reviewQueue || []), ...(b.reviewQueue || [])].forEach(item => {
+        if (!item || !item.id) return;
+        const existing = queue.get(item.id);
+        if (!existing || (item.box || 0) > (existing.box || 0)) queue.set(item.id, item);
+    });
+    out.reviewQueue = [...queue.values()];
+    out.reviewsDone = Math.max(a.reviewsDone || 0, b.reviewsDone || 0);
+
+    // Statistiques par matière : on garde les compteurs les plus élevés.
+    const stats = {};
+    new Set([...Object.keys(a.stats || {}), ...Object.keys(b.stats || {})]).forEach(key => {
+        const sa = (a.stats || {})[key] || {};
+        const sb = (b.stats || {})[key] || {};
+        stats[key] = {
+            answered: Math.max(sa.answered || 0, sb.answered || 0),
+            correct: Math.max(sa.correct || 0, sb.correct || 0)
+        };
+    });
+    out.stats = stats;
 
     out.session = newer.session || null;
     out.settings = { ...(a.settings || {}), ...(newer.settings || {}) };
@@ -372,6 +399,13 @@ function failsafeScreen(reason) {
     }
 }
 
+// Fonctionnement hors connexion
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(err => console.warn('SW non enregistré', err));
+    });
+}
+
 window.addEventListener('error', e => failsafeScreen(e.message));
 window.addEventListener('unhandledrejection', e => failsafeScreen(e.reason));
 setTimeout(() => failsafeScreen('délai dépassé'), 4000);
@@ -472,7 +506,7 @@ function startApp() {
     appStarted = true;
 
     [checkStreak, initNavigation, initClassSelector, initDifficultyFilter,
-     initSettings, initDailyChallengeBanner, buildSubjectCards, refreshEverything]
+     initSettings, initDailyChallengeBanner, buildSubjectCards, initInstall, refreshEverything]
         .forEach(step => {
             try { step(); } catch (err) { console.error(`Init ${step.name} a échoué`, err); }
         });
@@ -492,6 +526,9 @@ function refreshEverything() {
     updateBadgesView();
     updateChallengesView();
     updateResumeCard();
+    updateReviewCard();
+    updateWeakPointsView();
+    updateParentReport();
     updateDailyChallengeProgress();
     const name = getProgress().name || 'Champion';
     document.getElementById('header-name').textContent = name;
@@ -612,6 +649,7 @@ function initNavigation() {
         document.getElementById('badge-modal').classList.remove('active');
     });
     document.getElementById('resume-card').addEventListener('click', resumeSession);
+    document.getElementById('review-card').addEventListener('click', startReviewSession);
     document.getElementById('sync-chip').addEventListener('click', () => {
         flushCloudSave();
         showToast('Sauvegarde en cours…', 'info');
@@ -628,8 +666,15 @@ function navigateTo(viewName) {
     const target = document.getElementById(`${viewName}-view`);
     if (target) target.classList.add('active');
 
-    if (viewName === 'home') { updateHomeStats(); updateResumeCard(); updateDailyChallengeProgress(); }
-    if (viewName === 'progress') updateProgressView();
+    if (viewName === 'home') {
+        updateHomeStats();
+        updateResumeCard();
+        updateReviewCard();
+        updateDailyChallengeProgress();
+        updateLevelDisplay();
+    }
+    if (viewName === 'progress') { updateProgressView(); updateWeakPointsView(); }
+    if (viewName === 'settings') updateParentReport();
     if (viewName === 'badges') updateBadgesView();
     if (viewName === 'challenges') updateChallengesView();
 
@@ -868,6 +913,13 @@ function resumeSession() {
 
 function quitExercise() {
     stopTimer();
+    if (state.isReview) {
+        // Les révisions déjà faites sont enregistrées au fil de l'eau.
+        state.isReview = false;
+        commitProgress({ immediate: true });
+        navigateTo('home');
+        return;
+    }
     persistSession();
     if (state.sessionResults.length) {
         showToast('Progression gardée : tu pourras reprendre 👍', 'success');
@@ -974,9 +1026,21 @@ function showExercise() {
 }
 
 function optionsHtml(exercise) {
-    return `<div class="answer-options">${exercise.options
+    // Les options sont mélangées à chaque affichage : sans cela, la bonne
+    // réponse se trouvant souvent en tête, l'enfant apprendrait à cliquer
+    // sur le premier bouton au lieu de réfléchir.
+    return `<div class="answer-options">${shuffle(exercise.options)
         .map(opt => `<button type="button" class="option-btn" data-value="${escapeAttr(opt)}">${escapeHtml(String(opt))}</button>`)
         .join('')}</div>`;
+}
+
+function shuffle(list) {
+    const out = [...list];
+    for (let i = out.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [out[i], out[j]] = [out[j], out[i]];
+    }
+    return out;
 }
 
 function inputHtml(exercise) {
@@ -1020,7 +1084,7 @@ function checkAnswer() {
     } else {
         userAnswer = document.getElementById('answer-input').value;
         if (!userAnswer.trim()) { showToast('Écris ta réponse d\'abord !', 'error'); return; }
-        isCorrect = normalizeAnswer(userAnswer) === normalizeAnswer(exercise.answer);
+        isCorrect = answersMatch(userAnswer, exercise);
     }
 
     state.answered = true;
@@ -1043,10 +1107,13 @@ function checkAnswer() {
         playSound('incorrect');
     }
 
+    recordAnswerOutcome(exercise, isCorrect);
+
     renderQuestionDots();
     document.getElementById('check-answer').hidden = true;
     document.getElementById('next-question').hidden = false;
-    persistSession();
+    if (state.isReview) commitProgress();
+    else persistSession();
 
     if (isCorrect && getProgress().settings?.autoNext) {
         state.autoNextTimer = setTimeout(() => { if (state.answered) nextQuestion(); }, 1300);
@@ -1058,10 +1125,10 @@ function nextQuestion() {
     if (!state.answered) return;
     state.currentExerciseIndex++;
     if (state.currentExerciseIndex >= state.currentExercises.length) {
-        finishFiche();
+        state.isReview ? finishReviewSession() : finishFiche();
     } else {
         showExercise();
-        persistSession();
+        if (!state.isReview) persistSession();
     }
 }
 
@@ -1091,14 +1158,254 @@ function finishFiche() {
     document.getElementById('xp-gained').textContent = `+${xpGained} XP`;
     document.getElementById('result-modal').classList.add('active');
 
-    if (percentage >= 70) playSound('celebration');
+    if (percentage >= 70) { playSound('celebration'); fireConfetti(percentage === 100 ? 1.6 : 1); }
     if (leveledUp) setTimeout(() => showLevelUpModal(leveledUp), 1400);
     checkAndAwardBadges();
 }
 
 function closeModal() {
     document.getElementById('result-modal').classList.remove('active');
-    showSubjectView(state.currentSubject);
+    if (state.isReview) { state.isReview = false; navigateTo('home'); }
+    else showSubjectView(state.currentSubject);
+}
+
+/* =========================================================================
+   9 bis. COFFRE À ERREURS ET RÉVISION ESPACÉE
+   Une notion n'est acquise que si elle revient plusieurs fois, à intervalles
+   qui s'allongent. Chaque erreur de Rayan est mise de côté et lui revient à
+   J+1, J+3, J+7 puis J+15. S'il se retrompe, elle repart au début.
+   ========================================================================= */
+
+const REVIEW_INTERVALS_DAYS = [1, 3, 7, 15];
+const REVIEW_SESSION_MAX = 12;
+
+function answersMatch(userAnswer, exercise) {
+    const candidates = [exercise.answer, ...(Array.isArray(exercise.accept) ? exercise.accept : [])]
+        .filter(v => v !== undefined && v !== null)
+        .map(v => normalizeAnswer(v));
+    const user = normalizeAnswer(userAnswer);
+    if (candidates.includes(user)) return true;
+
+    // Tolérance aux accents : un enfant de 8 ans sur une tablette ne doit pas
+    // être puni pour « carre » au lieu de « carré ». Sauf en orthographe et en
+    // dictée, où l'accent EST la compétence évaluée.
+    if (exercise.strict) return false;
+    const stripped = stripAccents(user);
+    return candidates.some(c => stripAccents(c) === stripped);
+}
+
+function stripAccents(value) {
+    return String(value ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '');
+}
+
+function reviewItemId(subjectKey, ficheId, exIndex) {
+    return `${subjectKey}#${ficheId}#${exIndex}`;
+}
+
+function addDays(days) {
+    const d = new Date();
+    d.setHours(0, 0, 0, 0);
+    d.setDate(d.getDate() + days);
+    return d.toISOString();
+}
+
+// Appelé à chaque réponse : met à jour les statistiques et le coffre à erreurs.
+function recordAnswerOutcome(exercise, isCorrect) {
+    const progress = getProgress();
+    const subjectKey = state.isReview ? (exercise.__subjectKey || state.currentSubject) : state.currentSubject;
+    if (!subjectKey) return;
+
+    if (!progress.stats[subjectKey]) progress.stats[subjectKey] = { answered: 0, correct: 0 };
+    progress.stats[subjectKey].answered++;
+    if (isCorrect) progress.stats[subjectKey].correct++;
+
+    const ficheId = state.isReview ? exercise.__ficheId : state.currentFiche?.id;
+    const exIndex = state.isReview ? exercise.__exIndex : state.currentExerciseIndex;
+    if (ficheId === undefined || exIndex === undefined) return;
+
+    const id = reviewItemId(subjectKey, ficheId, exIndex);
+    const queue = progress.reviewQueue;
+    const existing = queue.find(item => item.id === id);
+
+    if (!isCorrect) {
+        if (existing) {
+            existing.box = 0;
+            existing.dueAt = addDays(REVIEW_INTERVALS_DAYS[0]);
+            existing.misses = (existing.misses || 0) + 1;
+        } else {
+            queue.push({
+                id, subjectKey, ficheId, exIndex,
+                box: 0, misses: 1,
+                dueAt: addDays(REVIEW_INTERVALS_DAYS[0]),
+                addedAt: new Date().toISOString()
+            });
+        }
+    } else if (existing) {
+        // Réussie : elle passe à l'intervalle suivant, et sort du coffre au bout du dernier.
+        existing.box = (existing.box || 0) + 1;
+        if (existing.box >= REVIEW_INTERVALS_DAYS.length) {
+            progress.reviewQueue = queue.filter(item => item.id !== id);
+        } else {
+            existing.dueAt = addDays(REVIEW_INTERVALS_DAYS[existing.box]);
+        }
+    }
+}
+
+function dueReviewItems() {
+    const now = Date.now();
+    return getProgress().reviewQueue
+        .filter(item => Date.parse(item.dueAt || 0) <= now)
+        .sort((a, b) => (b.misses || 0) - (a.misses || 0));
+}
+
+// Reconstruit l'exercice réel à partir de sa référence.
+function resolveReviewItem(item) {
+    const subject = allSubjects()[item.subjectKey];
+    if (!subject) return null;
+    const fiche = subject.fiches.find(f => String(f.id) === String(item.ficheId));
+    if (!fiche) return null;
+    const exercise = flattenExercises(fiche)[item.exIndex];
+    if (!exercise) return null;
+    return { ...exercise, __subjectKey: item.subjectKey, __ficheId: item.ficheId, __exIndex: item.exIndex };
+}
+
+function updateReviewCard() {
+    const card = document.getElementById('review-card');
+    if (!card) return;
+    const due = dueReviewItems();
+    const total = getProgress().reviewQueue.length;
+
+    if (!due.length) {
+        card.hidden = true;
+        const empty = document.getElementById('review-empty');
+        if (empty) {
+            empty.hidden = total > 0 ? false : true;
+            if (total > 0) empty.textContent = `Rien à revoir aujourd'hui. ${total} notion${total > 1 ? 's' : ''} en cours de consolidation. 👌`;
+        }
+        return;
+    }
+    const empty = document.getElementById('review-empty');
+    if (empty) empty.hidden = true;
+    document.getElementById('review-count').textContent =
+        `${Math.min(due.length, REVIEW_SESSION_MAX)} question${due.length > 1 ? 's' : ''} à revoir`;
+    card.hidden = false;
+}
+
+function startReviewSession() {
+    const items = dueReviewItems().slice(0, REVIEW_SESSION_MAX);
+    const exercises = items.map(resolveReviewItem).filter(Boolean);
+
+    if (!exercises.length) {
+        showToast('Rien à réviser pour le moment 👍', 'info');
+        // Les références devenues invalides sont nettoyées.
+        getProgress().reviewQueue = getProgress().reviewQueue.filter(i => resolveReviewItem(i));
+        commitProgress();
+        updateReviewCard();
+        return;
+    }
+
+    state.isReview = true;
+    state.currentSubject = null;
+    state.currentFiche = { id: '__revision__', title: 'Révision du jour', difficulty: 2 };
+    state.currentExercises = exercises;
+    state.currentExerciseIndex = 0;
+    state.sessionResults = [];
+    state.timerSeconds = 0;
+    state.comboStreak = 0;
+
+    document.getElementById('exercise-title').textContent = '🔁 Révision du jour';
+    document.getElementById('total-questions').textContent = exercises.length;
+
+    startTimer();
+    showExercise();
+
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById('exercise-view').classList.add('active');
+    document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+    document.body.classList.add('in-exercise');
+    state.currentView = 'exercise';
+    window.scrollTo(0, 0);
+}
+
+function finishReviewSession() {
+    stopTimer();
+    const results = state.sessionResults.filter(Boolean);
+    const correctCount = results.filter(r => r.isCorrect).length;
+    const totalCount = results.length || 1;
+    const percentage = Math.round((correctCount / totalCount) * 100);
+    const xpGained = correctCount * 5 + (percentage === 100 ? 15 : 0);
+
+    const progress = getProgress();
+    const oldLevel = progress.level;
+    progress.xp += xpGained;
+    progress.level = calculateLevel(progress.xp);
+    progress.reviewsDone = (progress.reviewsDone || 0) + 1;
+    bumpDailyCounter(progress);
+    commitProgress({ immediate: true });
+
+    document.getElementById('modal-title').textContent = percentage >= 70 ? 'Mémoire de champion ! 🧠' : 'On y retravaille ! 💪';
+    document.getElementById('result-stars').innerHTML = '🧠';
+    document.getElementById('result-message').textContent =
+        `${correctCount} révisions réussies sur ${totalCount}`;
+    document.getElementById('result-score').textContent =
+        percentage === 100 ? 'Tout est retenu !' : 'Ce qui reste te sera reproposé';
+    document.getElementById('xp-gained').textContent = `+${xpGained} XP`;
+    document.getElementById('result-modal').classList.add('active');
+
+    if (percentage >= 70) playSound('celebration');
+    if (progress.level > oldLevel) setTimeout(() => showLevelUpModal(progress.level), 1400);
+
+    refreshEverything();
+}
+
+/* ---- Points faibles ---- */
+
+function weakSubjects(limit = 3) {
+    const progress = getProgress();
+    const subjects = allSubjects();
+    return Object.keys(progress.stats || {})
+        .filter(key => subjects[key] && (progress.stats[key].answered || 0) >= 5)
+        .map(key => {
+            const s = progress.stats[key];
+            return { key, name: subjects[key].name, icon: subjects[key].icon,
+                     rate: Math.round((s.correct / s.answered) * 100), answered: s.answered };
+        })
+        .filter(s => s.rate < 85)
+        .sort((a, b) => a.rate - b.rate)
+        .slice(0, limit);
+}
+
+function updateWeakPointsView() {
+    const container = document.getElementById('weak-points');
+    if (!container) return;
+    const weak = weakSubjects();
+    container.innerHTML = '';
+
+    if (!weak.length) {
+        container.innerHTML = '<p class="empty-state">Pas encore assez d\'exercices pour repérer tes points faibles. Continue !</p>';
+        return;
+    }
+
+    weak.forEach(s => {
+        const row = document.createElement('button');
+        row.type = 'button';
+        row.className = 'weak-row';
+        row.innerHTML = `
+            <span class="icon">${s.icon}</span>
+            <div class="info">
+                <h4>${escapeHtml(s.name)}</h4>
+                <span class="muted">${s.rate}% de réussite sur ${s.answered} questions</span>
+            </div>
+            <span class="weak-go">S'entraîner →</span>
+        `;
+        row.addEventListener('click', () => {
+            state.currentClass = SUBJECTS_DATA[s.key] ? 'ce1' : 'ce2';
+            syncClassButtons();
+            buildSubjectCards();
+            showSubjectView(s.key);
+        });
+        container.appendChild(row);
+    });
 }
 
 /* =========================================================================
@@ -1130,7 +1437,22 @@ function recordFicheResult(subjectKey, ficheId, percentage, correctCount, answer
     progress.xp += xpGained;
     progress.level = calculateLevel(progress.xp);
 
-    // Série de jours consécutifs
+    bumpDailyCounter(progress);
+    progress.session = null;
+    commitProgress({ immediate: true });
+
+    updateHomeStats();
+    updateSubjectCards();
+    updateLevelDisplay();
+    updateResumeCard();
+    updateDailyChallengeProgress();
+
+    return progress.level > oldLevel ? progress.level : null;
+}
+
+// Série de jours consécutifs et compteur du jour, partagés par les fiches
+// et les séances de révision.
+function bumpDailyCounter(progress) {
     const today = new Date().toDateString();
     if (progress.lastActiveDate !== today) {
         const gap = progress.lastActiveDate
@@ -1142,17 +1464,6 @@ function recordFicheResult(subjectKey, ficheId, percentage, correctCount, answer
         progress.exercisesToday = (progress.exercisesToday || 0) + 1;
     }
     progress.lastActiveDate = today;
-
-    progress.session = null;
-    commitProgress({ immediate: true });
-
-    updateHomeStats();
-    updateSubjectCards();
-    updateLevelDisplay();
-    updateResumeCard();
-    updateDailyChallengeProgress();
-
-    return progress.level > oldLevel ? progress.level : null;
 }
 
 function calculateLevel(xp) {
@@ -1169,6 +1480,7 @@ function showLevelUpModal(newLevel) {
     document.getElementById('levelup-name').textContent = levelData.name;
     document.getElementById('levelup-modal').classList.add('active');
     playSound('celebration');
+    fireConfetti(1.8);
 }
 
 function updateLevelDisplay() {
@@ -1189,7 +1501,123 @@ function updateLevelDisplay() {
         percentage = Math.max(0, Math.min(100, (xpInLevel / xpNeeded) * 100));
     }
     document.getElementById('xp-fill').style.width = `${percentage}%`;
+
+    // Bloc héros : avatar qui évolue avec le niveau + anneau de progression
+    const avatar = document.getElementById('hero-avatar');
+    const ring = document.getElementById('rank-ring');
+    const heroLevel = document.getElementById('hero-level');
+    const heroFill = document.getElementById('hero-xp-fill');
+    const heroLabel = document.getElementById('hero-xp-label');
+    const heroSub = document.getElementById('hero-subtitle');
+    if (avatar) avatar.textContent = currentLevel.icon;
+    if (ring) ring.style.setProperty('--p', percentage.toFixed(1));
+    if (heroLevel) heroLevel.textContent = `Niv. ${progress.level}`;
+    if (heroFill) heroFill.style.width = `${percentage}%`;
+    if (heroLabel) {
+        heroLabel.textContent = nextLevel
+            ? `Plus que ${Math.max(0, nextLevel.xpRequired - progress.xp)} XP pour devenir ${nextLevel.name}`
+            : 'Niveau maximum atteint !';
+    }
+    if (heroSub) heroSub.textContent = `${currentLevel.name} · objectif major de la classe 🏆`;
 }
+
+/* ---- Effets de célébration ---- */
+
+function fireConfetti(intensity = 1) {
+    const canvas = document.getElementById('confetti');
+    if (!canvas) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = window.innerWidth * dpr;
+    canvas.height = window.innerHeight * dpr;
+    canvas.classList.add('active');
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    const colors = ['#f6c454', '#f79433', '#a06bff', '#35e08a', '#3ad6e8', '#ff6fb1'];
+    const count = Math.round(90 * intensity);
+    const pieces = Array.from({ length: count }, () => ({
+        x: window.innerWidth / 2 + (Math.random() - 0.5) * 220,
+        y: window.innerHeight * 0.42 + (Math.random() - 0.5) * 80,
+        vx: (Math.random() - 0.5) * 11,
+        vy: Math.random() * -13 - 4,
+        size: Math.random() * 8 + 4,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        rotation: Math.random() * Math.PI,
+        spin: (Math.random() - 0.5) * 0.28
+    }));
+
+    let frame = 0;
+    const draw = () => {
+        ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        let alive = false;
+        pieces.forEach(p => {
+            p.vy += 0.34;              // gravité
+            p.vx *= 0.995;
+            p.x += p.vx;
+            p.y += p.vy;
+            p.rotation += p.spin;
+            if (p.y < window.innerHeight + 40) alive = true;
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.rotation);
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = Math.max(0, 1 - frame / 150);
+            ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+            ctx.restore();
+        });
+        frame++;
+        if (alive && frame < 160) requestAnimationFrame(draw);
+        else { ctx.clearRect(0, 0, window.innerWidth, window.innerHeight); canvas.classList.remove('active'); }
+    };
+    requestAnimationFrame(draw);
+}
+
+/* ---- Installation sur l'appareil ---- */
+
+let deferredInstall = null;
+
+function initInstall() {
+    const section = document.getElementById('install-section');
+    const button = document.getElementById('install-btn');
+    const help = document.getElementById('install-help');
+    if (!section || !button) return;
+
+    const standalone = window.matchMedia('(display-mode: standalone)').matches
+        || window.navigator.standalone === true;
+    if (standalone) return; // déjà installée
+
+    const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    section.hidden = false;
+
+    if (isIOS) {
+        // iOS n'expose pas d'invite d'installation : on explique le geste.
+        button.hidden = true;
+        help.innerHTML = 'Sur iPhone et iPad&nbsp;: appuie sur le bouton <strong>Partager</strong> '
+            + '(le carré avec une flèche, en bas de Safari), puis choisis '
+            + '<strong>« Sur l\'écran d\'accueil »</strong>. Champion s\'ouvrira en plein écran, '
+            + 'comme une vraie application, et fonctionnera même sans internet.';
+        return;
+    }
+
+    button.hidden = !deferredInstall;
+    button.addEventListener('click', async () => {
+        if (!deferredInstall) { showToast('Utilise le menu du navigateur → « Installer »', 'info'); return; }
+        deferredInstall.prompt();
+        const { outcome } = await deferredInstall.userChoice;
+        if (outcome === 'accepted') { showToast('Application installée 🎉', 'success'); section.hidden = true; }
+        deferredInstall = null;
+    });
+}
+
+window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferredInstall = e;
+    const button = document.getElementById('install-btn');
+    const section = document.getElementById('install-section');
+    if (button && section) { section.hidden = false; button.hidden = false; }
+});
 
 function checkStreak() {
     const progress = getProgress();
@@ -1294,6 +1722,46 @@ function syncClassButtons() {
     });
 }
 
+/* ---- Bilan pour les parents ---- */
+
+function updateParentReport() {
+    const el = document.getElementById('parent-report');
+    if (!el) return;
+    const progress = getProgress();
+    const subjects = allSubjects();
+
+    const ranked = Object.keys(progress.stats || {})
+        .filter(key => subjects[key] && (progress.stats[key].answered || 0) >= 5)
+        .map(key => ({
+            name: subjects[key].name,
+            icon: subjects[key].icon,
+            rate: Math.round((progress.stats[key].correct / progress.stats[key].answered) * 100),
+            answered: progress.stats[key].answered
+        }))
+        .sort((a, b) => b.rate - a.rate);
+
+    const accuracy = progress.totalAnswers > 0
+        ? Math.round((progress.correctAnswers / progress.totalAnswers) * 100) : 0;
+    // Une matière ne peut pas figurer à la fois dans les forces et les faiblesses.
+    const strong = ranked.filter(s => s.rate >= 85).slice(0, 3);
+    const weak = ranked.filter(s => s.rate < 85).reverse().slice(0, 3);
+
+    const line = s => `<li><span>${s.icon} ${escapeHtml(s.name)}</span><strong>${s.rate}%</strong> <span class="muted">(${s.answered} q.)</span></li>`;
+
+    el.innerHTML = `
+        <div class="report-grid">
+            <div><span class="report-value">${progress.totalAnswers || 0}</span><span class="report-label">questions faites</span></div>
+            <div><span class="report-value">${accuracy}%</span><span class="report-label">de réussite</span></div>
+            <div><span class="report-value">${progress.streak || 0}</span><span class="report-label">jours d'affilée</span></div>
+            <div><span class="report-value">${progress.reviewQueue?.length || 0}</span><span class="report-label">notions à consolider</span></div>
+        </div>
+        ${strong.length ? `<h4 class="report-head">Ce qu'il maîtrise</h4><ul class="report-list">${strong.map(line).join('')}</ul>` : ''}
+        ${weak.length ? `<h4 class="report-head">Ce qu'il faut retravailler</h4><ul class="report-list weak">${weak.map(line).join('')}</ul>` : ''}
+        ${!ranked.length ? '<p class="settings-help">Le bilan apparaîtra après quelques fiches.</p>' : ''}
+        <p class="settings-help">${progress.reviewsDone || 0} séance(s) de révision effectuée(s).</p>
+    `;
+}
+
 /* =========================================================================
    11. BADGES
    ========================================================================= */
@@ -1365,6 +1833,7 @@ function showBadgeModal(badge) {
     document.getElementById('badge-unlock-desc').textContent = badge.description;
     document.getElementById('badge-modal').classList.add('active');
     playSound('celebration');
+    fireConfetti(1.4);
 }
 
 /* =========================================================================

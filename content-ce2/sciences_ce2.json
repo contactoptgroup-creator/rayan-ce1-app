@@ -1,0 +1,821 @@
+{
+  "key": "sciences_ce2",
+  "fiches": [
+    {
+      "id": 5,
+      "title": "Le vivant et le non-vivant",
+      "description": "Apprends à reconnaître les êtres vivants qui naissent, grandissent et se reproduisent.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Lequel de ces éléments est un être vivant ?",
+          "options": ["le chat", "le caillou", "le vélo"],
+          "answer": "le chat"
+        },
+        {
+          "type": "qcm",
+          "question": "Que font tous les êtres vivants au cours de leur vie ?",
+          "options": ["Ils naissent, grandissent et se reproduisent", "Ils restent toujours exactement pareils", "Ils sont fabriqués dans une usine"],
+          "answer": "Ils naissent, grandissent et se reproduisent"
+        },
+        {
+          "type": "qcm",
+          "question": "Lequel de ces éléments n'est pas un être vivant ?",
+          "options": ["la rivière", "l'arbre", "la fourmi"],
+          "answer": "la rivière"
+        },
+        {
+          "type": "qcm",
+          "question": "Une plante est-elle un être vivant ?",
+          "options": ["Oui, elle naît, grandit et meurt", "Non, car elle ne se déplace pas", "Non, car elle ne parle pas"],
+          "answer": "Oui, elle naît, grandit et meurt"
+        },
+        {
+          "type": "input",
+          "question": "Vrai ou faux : un robot est un être vivant.",
+          "answer": "faux",
+          "accept": ["Faux", "non", "Non"]
+        },
+        {
+          "type": "qcm",
+          "question": "De quoi tous les êtres vivants ont-ils besoin pour vivre ?",
+          "options": ["d'eau et de nourriture", "de télévision", "de jouets"],
+          "answer": "d'eau et de nourriture"
+        },
+        {
+          "type": "qcm",
+          "question": "Que se passe-t-il à la fin de la vie de tout être vivant ?",
+          "options": ["Il meurt", "Il se transforme en caillou", "Il devient invisible"],
+          "answer": "Il meurt"
+        },
+        {
+          "type": "input",
+          "question": "Un être vivant donne naissance à des petits : on dit qu'il se... ?",
+          "answer": "reproduit",
+          "accept": ["reproduire", "il se reproduit"]
+        },
+        {
+          "type": "qcm",
+          "question": "Lequel de ces éléments est naturel mais non vivant ?",
+          "options": ["le sable", "le papillon", "le chêne"],
+          "answer": "le sable"
+        },
+        {
+          "type": "input",
+          "question": "Vrai ou faux : une graine est vivante, car elle peut donner une nouvelle plante.",
+          "answer": "vrai",
+          "accept": ["Vrai", "oui", "Oui"]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Les plantes : besoins et cycle de vie",
+      "description": "Découvre ce dont une plante a besoin pour grandir, de la graine jusqu'à la fleur.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "De quoi une plante a-t-elle besoin pour bien pousser ?",
+          "options": ["d'eau et de lumière", "de chocolat", "de musique"],
+          "answer": "d'eau et de lumière"
+        },
+        {
+          "type": "qcm",
+          "question": "Quelle partie de la plante puise l'eau dans le sol ?",
+          "options": ["les racines", "les fleurs", "les feuilles"],
+          "answer": "les racines"
+        },
+        {
+          "type": "input",
+          "question": "Comment s'appelle le moment magique où la graine se réveille et commence à pousser ?",
+          "answer": "la germination",
+          "accept": ["germination", "La germination"]
+        },
+        {
+          "type": "qcm",
+          "question": "Quelle partie de la plante porte les feuilles et les fleurs ?",
+          "options": ["la tige", "la racine", "la graine"],
+          "answer": "la tige"
+        },
+        {
+          "type": "qcm",
+          "question": "Que devient souvent la fleur après avoir été visitée par les insectes ?",
+          "options": ["un fruit", "une racine", "un caillou"],
+          "answer": "un fruit"
+        },
+        {
+          "type": "input",
+          "question": "Que trouve-t-on à l'intérieur d'un fruit, comme dans la pomme ?",
+          "answer": "des graines",
+          "accept": ["graines", "une graine", "graine", "des pépins", "pépins"]
+        },
+        {
+          "type": "qcm",
+          "question": "Quel est le bon ordre du cycle de vie d'une plante ?",
+          "options": ["graine, jeune pousse, plante avec fleurs", "fleur, racine, graine", "fruit, graine, fleur, racine"],
+          "answer": "graine, jeune pousse, plante avec fleurs"
+        },
+        {
+          "type": "qcm",
+          "question": "Que fabriquent les feuilles grâce à la lumière du Soleil ?",
+          "options": ["la nourriture de la plante", "de la pluie", "du sable"],
+          "answer": "la nourriture de la plante"
+        },
+        {
+          "type": "input",
+          "question": "Vrai ou faux : une plante privée d'eau finit par se faner.",
+          "answer": "vrai",
+          "accept": ["Vrai", "oui", "Oui"]
+        },
+        {
+          "type": "qcm",
+          "question": "Quelle partie colorée de la plante attire les insectes comme les abeilles ?",
+          "options": ["la fleur", "la racine", "la tige"],
+          "answer": "la fleur"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "La classification des animaux",
+      "description": "Range les animaux en grandes familles : mammifères, oiseaux, poissons, reptiles, amphibiens et insectes.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Comment appelle-t-on les animaux qui ont une colonne vertébrale ?",
+          "options": ["les vertébrés", "les invertébrés", "les insectes"],
+          "answer": "les vertébrés"
+        },
+        {
+          "type": "qcm",
+          "question": "Combien de pattes possède un insecte ?",
+          "options": ["six", "quatre", "dix"],
+          "answer": "six"
+        },
+        {
+          "type": "qcm",
+          "question": "Le dauphin vit dans la mer, mais quel est son groupe ?",
+          "options": ["les mammifères", "les poissons", "les reptiles"],
+          "answer": "les mammifères"
+        },
+        {
+          "type": "input",
+          "question": "Quel groupe d'animaux a des plumes et pond des œufs ?",
+          "answer": "les oiseaux",
+          "accept": ["oiseaux", "oiseau", "un oiseau", "Les oiseaux"]
+        },
+        {
+          "type": "qcm",
+          "question": "Quel animal a des écailles, vit dans l'eau et respire grâce à ses branchies ?",
+          "options": ["le poisson", "le chien", "la poule"],
+          "answer": "le poisson"
+        },
+        {
+          "type": "qcm",
+          "question": "À quel groupe appartient la grenouille, qui vit dans l'eau puis sur terre ?",
+          "options": ["les amphibiens", "les oiseaux", "les mammifères"],
+          "answer": "les amphibiens"
+        },
+        {
+          "type": "input",
+          "question": "Combien de pattes possède une araignée ?",
+          "answer": "8",
+          "accept": ["huit", "8 pattes", "huit pattes"]
+        },
+        {
+          "type": "qcm",
+          "question": "Avec quoi les mamans mammifères nourrissent-elles leurs petits ?",
+          "options": ["avec du lait", "avec des graines", "avec des feuilles uniquement"],
+          "answer": "avec du lait"
+        },
+        {
+          "type": "qcm",
+          "question": "Lequel de ces animaux est un reptile ?",
+          "options": ["le lézard", "la truite", "le moineau"],
+          "answer": "le lézard"
+        },
+        {
+          "type": "input",
+          "question": "Vrai ou faux : l'escargot est un vertébré.",
+          "answer": "faux",
+          "accept": ["Faux", "non", "Non"]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Les régimes alimentaires et les chaînes alimentaires",
+      "description": "Qui mange quoi dans la nature ? Découvre les herbivores, les carnivores et les chaînes alimentaires.",
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Comment appelle-t-on un animal qui mange uniquement des plantes ?",
+          "options": ["un herbivore", "un carnivore", "un omnivore"],
+          "answer": "un herbivore"
+        },
+        {
+          "type": "qcm",
+          "question": "Comment appelle-t-on un animal qui se nourrit d'autres animaux ?",
+          "options": ["un carnivore", "un herbivore", "un végétarien"],
+          "answer": "un carnivore"
+        },
+        {
+          "type": "input",
+          "question": "Comment appelle-t-on un animal qui mange de tout, des plantes et de la viande ?",
+          "answer": "un omnivore",
+          "accept": ["omnivore", "omnivores", "Un omnivore"]
+        },
+        {
+          "type": "qcm",
+          "question": "Par quoi commence presque toujours une chaîne alimentaire ?",
+          "options": ["par une plante", "par un lion", "par un caillou"],
+          "answer": "par une plante"
+        },
+        {
+          "type": "qcm",
+          "question": "Quel est le régime alimentaire du lapin, qui adore l'herbe et les carottes ?",
+          "options": ["herbivore", "carnivore", "omnivore"],
+          "answer": "herbivore"
+        },
+        {
+          "type": "qcm",
+          "question": "Le loup chasse d'autres animaux pour se nourrir : quel est son régime ?",
+          "options": ["carnivore", "herbivore", "granivore"],
+          "answer": "carnivore"
+        },
+        {
+          "type": "input",
+          "question": "Vrai ou faux : la vache est herbivore.",
+          "answer": "vrai",
+          "accept": ["Vrai", "oui", "Oui"]
+        },
+        {
+          "type": "qcm",
+          "question": "Dans la chaîne « herbe, lapin, renard », qui est mangé par le renard ?",
+          "options": ["le lapin", "l'herbe", "personne"],
+          "answer": "le lapin"
+        },
+        {
+          "type": "qcm",
+          "question": "Que se passe-t-il si l'herbe disparaît au début d'une chaîne alimentaire ?",
+          "options": ["Les animaux de la chaîne manquent de nourriture", "Rien ne change pour les animaux", "Les animaux mangent des cailloux"],
+          "answer": "Les animaux de la chaîne manquent de nourriture"
+        },
+        {
+          "type": "input",
+          "question": "Dans la chaîne « graine, souris, chouette », quel animal est le prédateur de la souris ?",
+          "answer": "la chouette",
+          "accept": ["chouette", "La chouette", "une chouette"]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Le squelette et les muscles",
+      "description": "Pars à la découverte des os et des muscles qui te permettent de bouger, courir et sauter.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Combien d'os environ compte le squelette d'un adulte ?",
+          "options": ["206", "20", "1000"],
+          "answer": "206"
+        },
+        {
+          "type": "qcm",
+          "question": "Quel est le plus long os du corps humain, situé dans la cuisse ?",
+          "options": ["le fémur", "le crâne", "la côte"],
+          "answer": "le fémur"
+        },
+        {
+          "type": "input",
+          "question": "Comment s'appelle l'ensemble d'os solides qui protège le cerveau ?",
+          "answer": "le crâne",
+          "accept": ["crâne", "crane", "le crane", "Le crâne"]
+        },
+        {
+          "type": "qcm",
+          "question": "Grâce à quoi peut-on plier le bras au niveau du coude ?",
+          "options": ["grâce à une articulation", "grâce à un aimant", "grâce à un ressort"],
+          "answer": "grâce à une articulation"
+        },
+        {
+          "type": "qcm",
+          "question": "Que font les muscles pour faire bouger les os ?",
+          "options": ["Ils se contractent et tirent sur les os", "Ils soufflent sur les os", "Ils dorment toute la journée"],
+          "answer": "Ils se contractent et tirent sur les os"
+        },
+        {
+          "type": "input",
+          "question": "Quel muscle formidable bat sans arrêt dans ta poitrine, jour et nuit ?",
+          "answer": "le cœur",
+          "accept": ["cœur", "coeur", "le coeur", "Le cœur"]
+        },
+        {
+          "type": "qcm",
+          "question": "Comment s'appelle la longue colonne d'os empilés au milieu du dos ?",
+          "options": ["la colonne vertébrale", "le fémur", "la mâchoire"],
+          "answer": "la colonne vertébrale"
+        },
+        {
+          "type": "qcm",
+          "question": "Comment s'appellent les attaches solides qui relient les muscles aux os ?",
+          "options": ["les tendons", "les cheveux", "les ongles"],
+          "answer": "les tendons"
+        },
+        {
+          "type": "input",
+          "question": "Vrai ou faux : les os des enfants grandissent en même temps qu'eux.",
+          "answer": "vrai",
+          "accept": ["Vrai", "oui", "Oui"]
+        },
+        {
+          "type": "qcm",
+          "question": "Quels organes fragiles sont protégés par la cage formée par les côtes ?",
+          "options": ["le cœur et les poumons", "les pieds", "les oreilles"],
+          "answer": "le cœur et les poumons"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Les cinq sens",
+      "description": "La vue, l'ouïe, l'odorat, le goût et le toucher : cinq sens merveilleux pour explorer le monde.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Combien de sens possédons-nous pour découvrir le monde ?",
+          "options": ["cinq", "deux", "dix"],
+          "answer": "cinq"
+        },
+        {
+          "type": "input",
+          "question": "Quels organes nous permettent de voir les couleurs et les formes ?",
+          "answer": "les yeux",
+          "accept": ["yeux", "l'œil", "l'oeil", "œil", "oeil", "Les yeux"]
+        },
+        {
+          "type": "qcm",
+          "question": "Quel sens utilise-t-on pour écouter de la musique ?",
+          "options": ["l'ouïe", "le goût", "l'odorat"],
+          "answer": "l'ouïe"
+        },
+        {
+          "type": "qcm",
+          "question": "Avec quel organe sent-on la bonne odeur du pain chaud ?",
+          "options": ["le nez", "la main", "le genou"],
+          "answer": "le nez"
+        },
+        {
+          "type": "input",
+          "question": "Quel sens nous fait découvrir la saveur sucrée d'une fraise ?",
+          "answer": "le goût",
+          "accept": ["goût", "gout", "le gout", "Le goût"]
+        },
+        {
+          "type": "qcm",
+          "question": "Quel organe est couvert de petites papilles qui reconnaissent les saveurs ?",
+          "options": ["la langue", "le nez", "l'oreille"],
+          "answer": "la langue"
+        },
+        {
+          "type": "qcm",
+          "question": "Grâce à quel organe sentons-nous la douceur d'un tissu ou la chaleur du soleil ?",
+          "options": ["la peau", "les dents", "les cheveux"],
+          "answer": "la peau"
+        },
+        {
+          "type": "input",
+          "question": "Quel sens utilise-t-on pour reconnaître le chaud et le froid avec les mains ?",
+          "answer": "le toucher",
+          "accept": ["toucher", "Le toucher"]
+        },
+        {
+          "type": "qcm",
+          "question": "Quels organes captent les sons autour de nous ?",
+          "options": ["les oreilles", "les mains", "les dents"],
+          "answer": "les oreilles"
+        },
+        {
+          "type": "qcm",
+          "question": "Pourquoi ne faut-il jamais regarder le Soleil en face ?",
+          "options": ["Parce que sa lumière très forte peut abîmer les yeux", "Parce que le Soleil est trop loin", "Parce qu'il fait trop de bruit"],
+          "answer": "Parce que sa lumière très forte peut abîmer les yeux"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "L'alimentation équilibrée, les dents et l'hygiène",
+      "description": "Bien manger, bien se laver et prendre soin de ses dents pour être en pleine forme.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Combien de fois par jour faut-il se brosser les dents ?",
+          "options": ["au moins deux fois", "une fois par semaine", "jamais"],
+          "answer": "au moins deux fois"
+        },
+        {
+          "type": "qcm",
+          "question": "Quelles dents, devant la bouche, servent à couper les aliments ?",
+          "options": ["les incisives", "les molaires", "les canines"],
+          "answer": "les incisives"
+        },
+        {
+          "type": "qcm",
+          "question": "Quelles dents larges et plates servent à broyer les aliments ?",
+          "options": ["les molaires", "les incisives", "les canines"],
+          "answer": "les molaires"
+        },
+        {
+          "type": "input",
+          "question": "Combien de dents de lait un enfant possède-t-il en tout ?",
+          "answer": "20",
+          "accept": ["vingt", "20 dents", "vingt dents"]
+        },
+        {
+          "type": "qcm",
+          "question": "Pour bien grandir, que faut-il manger chaque jour ?",
+          "options": ["des fruits et des légumes", "uniquement des bonbons", "uniquement des frites"],
+          "answer": "des fruits et des légumes"
+        },
+        {
+          "type": "qcm",
+          "question": "Que risque-t-on en mangeant trop de sucreries sans se brosser les dents ?",
+          "options": ["d'avoir des caries", "de devenir plus grand", "d'avoir de plus belles dents"],
+          "answer": "d'avoir des caries"
+        },
+        {
+          "type": "input",
+          "question": "Quelle boisson faut-il privilégier tout au long de la journée pour rester en forme ?",
+          "answer": "de l'eau",
+          "accept": ["l'eau", "eau", "De l'eau"]
+        },
+        {
+          "type": "qcm",
+          "question": "À quels moments est-il très important de se laver les mains ?",
+          "options": ["Avant de manger et après être allé aux toilettes", "Seulement le dimanche", "Uniquement quand il pleut"],
+          "answer": "Avant de manger et après être allé aux toilettes"
+        },
+        {
+          "type": "qcm",
+          "question": "Quelles dents pointues servent à déchirer les aliments ?",
+          "options": ["les canines", "les molaires", "les incisives"],
+          "answer": "les canines"
+        },
+        {
+          "type": "input",
+          "question": "Vrai ou faux : bien dormir aide le corps à grandir et à être en forme.",
+          "answer": "vrai",
+          "accept": ["Vrai", "oui", "Oui"]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Les états de l'eau et le cycle de l'eau",
+      "description": "Glace, eau liquide, vapeur : suis le grand voyage de l'eau entre le ciel et la Terre.",
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Quels sont les trois états de l'eau ?",
+          "options": ["solide, liquide et gazeux", "chaud, tiède et froid", "petit, moyen et grand"],
+          "answer": "solide, liquide et gazeux"
+        },
+        {
+          "type": "qcm",
+          "question": "À quelle température l'eau se transforme-t-elle en glace ?",
+          "options": ["0 °C", "100 °C", "50 °C"],
+          "answer": "0 °C"
+        },
+        {
+          "type": "input",
+          "question": "À quelle température l'eau se met-elle à bouillir dans une casserole ?",
+          "answer": "100 °C",
+          "accept": ["100", "100°C", "100 degrés", "cent degrés", "100 degres"]
+        },
+        {
+          "type": "qcm",
+          "question": "Comment s'appelle la transformation de l'eau liquide en vapeur ?",
+          "options": ["l'évaporation", "la solidification", "la germination"],
+          "answer": "l'évaporation"
+        },
+        {
+          "type": "qcm",
+          "question": "Que se passe-t-il quand la vapeur d'eau refroidit dans le ciel ?",
+          "options": ["Elle redevient liquide : c'est la condensation", "Elle disparaît pour toujours", "Elle se transforme en sable"],
+          "answer": "Elle redevient liquide : c'est la condensation"
+        },
+        {
+          "type": "input",
+          "question": "Comment s'appelle l'eau à l'état solide ?",
+          "answer": "la glace",
+          "accept": ["glace", "La glace"]
+        },
+        {
+          "type": "qcm",
+          "question": "De quoi sont faits les nuages ?",
+          "options": ["de minuscules gouttelettes d'eau", "de coton", "de fumée de cheminée"],
+          "answer": "de minuscules gouttelettes d'eau"
+        },
+        {
+          "type": "qcm",
+          "question": "Qu'est-ce qui chauffe l'eau des mers et des océans et la fait s'évaporer ?",
+          "options": ["le Soleil", "la Lune", "le vent seulement"],
+          "answer": "le Soleil"
+        },
+        {
+          "type": "qcm",
+          "question": "Sous quelles formes l'eau des nuages retombe-t-elle sur la Terre ?",
+          "options": ["en pluie ou en neige", "en sable", "en feuilles"],
+          "answer": "en pluie ou en neige"
+        },
+        {
+          "type": "input",
+          "question": "Vrai ou faux : la vapeur d'eau est invisible.",
+          "answer": "vrai",
+          "accept": ["Vrai", "oui", "Oui"]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Les mélanges et les matériaux",
+      "description": "Deviens un petit chimiste : mélange, dissous, filtre et découvre les matériaux qui nous entourent.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Que devient le sel quand on le mélange dans un verre d'eau ?",
+          "options": ["Il se dissout : on ne le voit plus", "Il flotte à la surface", "Il se transforme en sucre"],
+          "answer": "Il se dissout : on ne le voit plus"
+        },
+        {
+          "type": "qcm",
+          "question": "Que fait le sable quand on le mélange à l'eau ?",
+          "options": ["Il ne se dissout pas et tombe au fond", "Il disparaît complètement", "Il se transforme en glace"],
+          "answer": "Il ne se dissout pas et tombe au fond"
+        },
+        {
+          "type": "input",
+          "question": "Comment dit-on qu'un produit, comme le sucre, peut se dissoudre dans l'eau ? Il est...",
+          "answer": "soluble",
+          "accept": ["Soluble", "il est soluble"]
+        },
+        {
+          "type": "qcm",
+          "question": "Que fait l'huile quand on la verse dans l'eau ?",
+          "options": ["Elle flotte à la surface", "Elle coule au fond", "Elle se dissout aussitôt"],
+          "answer": "Elle flotte à la surface"
+        },
+        {
+          "type": "qcm",
+          "question": "Comment peut-on séparer le sable mélangé à l'eau ?",
+          "options": ["en filtrant le mélange", "en soufflant dessus", "en ajoutant du sucre"],
+          "answer": "en filtrant le mélange"
+        },
+        {
+          "type": "qcm",
+          "question": "D'où vient le bois utilisé pour fabriquer les meubles ?",
+          "options": ["des arbres", "des rochers", "du plastique fondu"],
+          "answer": "des arbres"
+        },
+        {
+          "type": "input",
+          "question": "Quelle matière transparente et fragile sert à fabriquer les bouteilles et les vitres ?",
+          "answer": "le verre",
+          "accept": ["verre", "Le verre", "du verre"]
+        },
+        {
+          "type": "qcm",
+          "question": "Lequel de ces matériaux est un métal ?",
+          "options": ["le fer", "le carton", "le coton"],
+          "answer": "le fer"
+        },
+        {
+          "type": "qcm",
+          "question": "Comment peut-on récupérer le sel dissous dans l'eau ?",
+          "options": ["en laissant l'eau s'évaporer", "en filtrant avec une passoire", "en secouant très fort le verre"],
+          "answer": "en laissant l'eau s'évaporer"
+        },
+        {
+          "type": "input",
+          "question": "Vrai ou faux : le sucre disparaît vraiment pour toujours quand il se dissout dans l'eau.",
+          "answer": "faux",
+          "accept": ["Faux", "non", "Non"]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Les objets techniques et l'électricité simple",
+      "description": "Pile, ampoule, interrupteur : construis des circuits électriques et comprends comment ils fonctionnent.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Que faut-il pour allumer une ampoule avec une pile ?",
+          "options": ["un circuit fermé qui relie la pile et l'ampoule", "un circuit ouvert", "beaucoup de lumière du jour"],
+          "answer": "un circuit fermé qui relie la pile et l'ampoule"
+        },
+        {
+          "type": "qcm",
+          "question": "À quoi sert un interrupteur ?",
+          "options": ["à ouvrir ou fermer le circuit électrique", "à fabriquer de l'eau", "à ranger les fils"],
+          "answer": "à ouvrir ou fermer le circuit électrique"
+        },
+        {
+          "type": "input",
+          "question": "Quel petit objet fournit l'électricité dans une lampe de poche ?",
+          "answer": "la pile",
+          "accept": ["pile", "une pile", "La pile"]
+        },
+        {
+          "type": "qcm",
+          "question": "Quel matériau laisse passer le courant électrique ?",
+          "options": ["le métal", "le plastique", "le bois sec"],
+          "answer": "le métal"
+        },
+        {
+          "type": "qcm",
+          "question": "Quel matériau est un isolant qui bloque le courant électrique ?",
+          "options": ["le plastique", "le cuivre", "le fer"],
+          "answer": "le plastique"
+        },
+        {
+          "type": "qcm",
+          "question": "Que se passe-t-il quand le circuit électrique est ouvert ?",
+          "options": ["L'ampoule s'éteint", "L'ampoule brille plus fort", "La pile se remplit"],
+          "answer": "L'ampoule s'éteint"
+        },
+        {
+          "type": "input",
+          "question": "Vrai ou faux : on peut toucher une prise électrique avec les doigts mouillés.",
+          "answer": "faux",
+          "accept": ["Faux", "non", "Non"]
+        },
+        {
+          "type": "qcm",
+          "question": "Quelle petite partie à l'intérieur de l'ampoule s'illumine quand le courant passe ?",
+          "options": ["le filament", "le bouchon", "la vis"],
+          "answer": "le filament"
+        },
+        {
+          "type": "qcm",
+          "question": "Lequel de ces objets a besoin d'électricité pour fonctionner ?",
+          "options": ["le réfrigérateur", "la brouette", "le livre"],
+          "answer": "le réfrigérateur"
+        },
+        {
+          "type": "input",
+          "question": "Comment s'appelle le chemin complet que suit le courant, de la pile à l'ampoule ?",
+          "answer": "un circuit",
+          "accept": ["circuit", "le circuit", "circuit électrique", "un circuit électrique", "le circuit électrique"]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Le jour, la nuit, les saisons et le système solaire",
+      "description": "Voyage dans l'espace pour comprendre le jour, la nuit, les saisons et les planètes.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Pourquoi y a-t-il un jour et une nuit sur Terre ?",
+          "options": ["Parce que la Terre tourne sur elle-même", "Parce que le Soleil s'éteint le soir", "Parce que la Lune cache toujours le Soleil"],
+          "answer": "Parce que la Terre tourne sur elle-même"
+        },
+        {
+          "type": "qcm",
+          "question": "En combien de temps la Terre fait-elle un tour complet sur elle-même ?",
+          "options": ["24 heures", "une heure", "un an"],
+          "answer": "24 heures"
+        },
+        {
+          "type": "input",
+          "question": "Combien de planètes tournent autour du Soleil ?",
+          "answer": "8",
+          "accept": ["huit", "8 planètes", "huit planètes"]
+        },
+        {
+          "type": "qcm",
+          "question": "Qu'est-ce que le Soleil ?",
+          "options": ["une étoile", "une planète", "un nuage brillant"],
+          "answer": "une étoile"
+        },
+        {
+          "type": "qcm",
+          "question": "En combien de temps la Terre fait-elle le tour complet du Soleil ?",
+          "options": ["environ un an", "une journée", "une semaine"],
+          "answer": "environ un an"
+        },
+        {
+          "type": "input",
+          "question": "Comment s'appelle l'astre qui tourne autour de la Terre et que l'on voit souvent la nuit ?",
+          "answer": "la Lune",
+          "accept": ["Lune", "lune", "la lune", "La Lune"]
+        },
+        {
+          "type": "qcm",
+          "question": "Combien de saisons se succèdent chaque année ?",
+          "options": ["quatre", "deux", "sept"],
+          "answer": "quatre"
+        },
+        {
+          "type": "qcm",
+          "question": "Quelle planète est la plus proche du Soleil ?",
+          "options": ["Mercure", "la Terre", "Jupiter"],
+          "answer": "Mercure"
+        },
+        {
+          "type": "qcm",
+          "question": "Pourquoi la Lune brille-t-elle dans le ciel la nuit ?",
+          "options": ["Elle renvoie la lumière du Soleil", "Elle fabrique sa propre lumière", "Elle est couverte de lampes"],
+          "answer": "Elle renvoie la lumière du Soleil"
+        },
+        {
+          "type": "input",
+          "question": "Quelle est la plus grande planète du système solaire ?",
+          "answer": "Jupiter",
+          "accept": ["jupiter", "la planète Jupiter"]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Protéger l'environnement, le tri et le recyclage",
+      "description": "Deviens un héros de la planète : trie tes déchets, économise l'eau et l'énergie.",
+      "difficulty": 3,
+      "exercises": [
+        {
+          "type": "qcm",
+          "question": "Pourquoi trie-t-on les déchets ?",
+          "options": ["pour les recycler et protéger la nature", "pour les mélanger ensuite", "pour remplir plus vite les poubelles"],
+          "answer": "pour les recycler et protéger la nature"
+        },
+        {
+          "type": "qcm",
+          "question": "Où jette-t-on les bouteilles et les pots en verre ?",
+          "options": ["dans le conteneur à verre", "dans la nature", "dans l'évier"],
+          "answer": "dans le conteneur à verre"
+        },
+        {
+          "type": "input",
+          "question": "Comment appelle-t-on la transformation d'un déchet en un nouvel objet ?",
+          "answer": "le recyclage",
+          "accept": ["recyclage", "Le recyclage"]
+        },
+        {
+          "type": "qcm",
+          "question": "Que peut-on fabriquer avec du papier recyclé ?",
+          "options": ["du nouveau papier", "du verre", "du métal"],
+          "answer": "du nouveau papier"
+        },
+        {
+          "type": "qcm",
+          "question": "Que deviennent les épluchures de légumes déposées dans un composteur ?",
+          "options": ["Elles se transforment en compost qui nourrit le sol", "Elles deviennent du plastique", "Elles restent identiques pour toujours"],
+          "answer": "Elles se transforment en compost qui nourrit le sol"
+        },
+        {
+          "type": "input",
+          "question": "Vrai ou faux : une bouteille en plastique jetée dans la nature disparaît en quelques jours.",
+          "answer": "faux",
+          "accept": ["Faux", "non", "Non"]
+        },
+        {
+          "type": "qcm",
+          "question": "Quel geste malin permet d'économiser l'eau ?",
+          "options": ["fermer le robinet pendant qu'on se brosse les dents", "laisser couler l'eau toute la journée", "prendre trois bains par jour"],
+          "answer": "fermer le robinet pendant qu'on se brosse les dents"
+        },
+        {
+          "type": "qcm",
+          "question": "Quel geste simple permet d'économiser l'électricité ?",
+          "options": ["éteindre la lumière en quittant une pièce", "allumer toutes les lampes de la maison", "laisser la télévision allumée la nuit"],
+          "answer": "éteindre la lumière en quittant une pièce"
+        },
+        {
+          "type": "qcm",
+          "question": "Pour aller à une école toute proche, quel moyen de déplacement pollue le moins ?",
+          "options": ["la marche ou le vélo", "la voiture", "l'avion"],
+          "answer": "la marche ou le vélo"
+        },
+        {
+          "type": "input",
+          "question": "Où faut-il jeter son papier quand on est dans la rue ?",
+          "answer": "la poubelle",
+          "accept": ["une poubelle", "dans la poubelle", "à la poubelle", "poubelle"]
+        }
+      ]
+    }
+  ]
+}

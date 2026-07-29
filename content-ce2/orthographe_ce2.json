@@ -1,0 +1,330 @@
+{
+  "key": "orthographe_ce2",
+  "fiches": [
+    {
+      "id": 1,
+      "title": "a / à",
+      "description": "Distinguer le verbe avoir (a) et la préposition (à). Astuce : si on peut dire « avait », on écrit a sans accent.",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Complète : Léo ... un chien très gentil.", "options": ["a", "à"], "answer": "a"},
+        {"type": "qcm", "question": "Complète : Nous allons ... la piscine le mardi.", "options": ["a", "à"], "answer": "à"},
+        {"type": "qcm", "question": "Complète : Maman ... acheté du pain.", "options": ["a", "à"], "answer": "a"},
+        {"type": "input", "question": "Complète avec a ou à : Le train arrive ... huit heures.", "answer": "à"},
+        {"type": "qcm", "question": "Complète : Il y ... beaucoup de monde au marché.", "options": ["a", "à"], "answer": "a"},
+        {"type": "input", "question": "Complète avec a ou à : Papa donne un livre ... sa fille.", "answer": "à"},
+        {"type": "qcm", "question": "Complète : Cette tarte ... la fraise est délicieuse.", "options": ["a", "à"], "answer": "à"},
+        {"type": "qcm", "question": "Complète : Elle ... perdu son cartable.", "options": ["a", "à"], "answer": "a"},
+        {"type": "input", "question": "Complète avec a ou à : Mon frère ... gagné la course.", "answer": "a"},
+        {"type": "qcm", "question": "Quand écrit-on « a » sans accent ?", "options": ["Quand on peut le remplacer par « avait »", "Quand on peut le remplacer par « avec »", "Quand il indique un lieu"], "answer": "Quand on peut le remplacer par « avait »"},
+        {"type": "qcm", "question": "Complète : Le chat dort ... côté du feu.", "options": ["a", "à"], "answer": "à"},
+        {"type": "input", "question": "Complète avec a ou à : Il pense ... ses vacances.", "answer": "à"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "et / est",
+      "description": "Distinguer la conjonction et (= et puis) du verbe être (est = était).",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Complète : Mon père ... très grand.", "options": ["et", "est"], "answer": "est"},
+        {"type": "qcm", "question": "Complète : J'aime le chocolat ... les bonbons.", "options": ["et", "est"], "answer": "et"},
+        {"type": "input", "question": "Complète avec et ou est : La mer ... calme aujourd'hui.", "answer": "est"},
+        {"type": "qcm", "question": "Complète : Rayan ... son ami jouent au ballon.", "options": ["et", "est"], "answer": "et"},
+        {"type": "qcm", "question": "Complète : Le ciel ... bleu.", "options": ["et", "est"], "answer": "est"},
+        {"type": "input", "question": "Complète avec et ou est : Elle achète des pommes ... des poires.", "answer": "et"},
+        {"type": "qcm", "question": "Quand écrit-on « est » ?", "options": ["Quand on peut le remplacer par « était »", "Quand on peut le remplacer par « et puis »", "Quand on ajoute deux mots ensemble"], "answer": "Quand on peut le remplacer par « était »"},
+        {"type": "qcm", "question": "Complète : Ce gâteau ... délicieux.", "options": ["et", "est"], "answer": "est"},
+        {"type": "input", "question": "Complète avec et ou est : Mon chat ... noir.", "answer": "est"},
+        {"type": "qcm", "question": "Complète : Il prend son manteau ... son bonnet.", "options": ["et", "est"], "answer": "et"},
+        {"type": "input", "question": "Complète avec et ou est : Le maître ... content de la classe.", "answer": "est"},
+        {"type": "qcm", "question": "Complète : Lundi ... mardi, il a plu.", "options": ["et", "est"], "answer": "et"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "son / sont",
+      "description": "Distinguer le déterminant son (= le sien) du verbe être (sont = étaient).",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Complète : Les enfants ... dans la cour.", "options": ["son", "sont"], "answer": "sont"},
+        {"type": "qcm", "question": "Complète : Il a oublié ... cahier.", "options": ["son", "sont"], "answer": "son"},
+        {"type": "input", "question": "Complète avec son ou sont : Elle range ... vélo dans le garage.", "answer": "son"},
+        {"type": "qcm", "question": "Complète : Mes cousins ... arrivés hier.", "options": ["son", "sont"], "answer": "sont"},
+        {"type": "qcm", "question": "Quand écrit-on « sont » ?", "options": ["Quand on peut le remplacer par « étaient »", "Quand on peut le remplacer par « mon »", "Quand on parle d'un seul objet"], "answer": "Quand on peut le remplacer par « étaient »"},
+        {"type": "input", "question": "Complète avec son ou sont : Les oiseaux ... partis vers le sud.", "answer": "sont"},
+        {"type": "qcm", "question": "Complète : Rayan prête ... stylo à Lisa.", "options": ["son", "sont"], "answer": "son"},
+        {"type": "input", "question": "Complète avec son ou sont : Le chien ronge ... os.", "answer": "son"},
+        {"type": "qcm", "question": "Complète : Les fraises ... mûres.", "options": ["son", "sont"], "answer": "sont"},
+        {"type": "qcm", "question": "Complète : Il met ... bonnet et ses gants.", "options": ["son", "sont"], "answer": "son"},
+        {"type": "input", "question": "Complète avec son ou sont : Où ... mes chaussures ?", "answer": "sont"},
+        {"type": "qcm", "question": "Complète : Elle appelle ... frère pour dîner.", "options": ["son", "sont"], "answer": "son"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "on / ont",
+      "description": "Distinguer le pronom on (= il) du verbe avoir (ont = avaient).",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Complète : Les élèves ... fini leur travail.", "options": ["on", "ont"], "answer": "ont"},
+        {"type": "qcm", "question": "Complète : ... mange à midi.", "options": ["On", "Ont"], "answer": "On"},
+        {"type": "input", "question": "Complète avec on ou ont : Mes parents ... une nouvelle voiture.", "answer": "ont"},
+        {"type": "qcm", "question": "Quand écrit-on « ont » ?", "options": ["Quand on peut le remplacer par « avaient »", "Quand on peut le remplacer par « il »", "Quand la phrase est une question"], "answer": "Quand on peut le remplacer par « avaient »"},
+        {"type": "qcm", "question": "Complète : Ils ... perdu leurs clés.", "options": ["on", "ont"], "answer": "ont"},
+        {"type": "input", "question": "Complète avec on ou ont : En hiver, ... met des gants.", "answer": "on"},
+        {"type": "qcm", "question": "Complète : Les chats ... griffé le canapé.", "options": ["on", "ont"], "answer": "ont"},
+        {"type": "input", "question": "Complète avec on ou ont : Les joueurs ... gagné le match.", "answer": "ont"},
+        {"type": "qcm", "question": "Complète : Ici, ... parle doucement.", "options": ["on", "ont"], "answer": "on"},
+        {"type": "input", "question": "Complète avec on ou ont : Demain, ... ira à la bibliothèque.", "answer": "on"},
+        {"type": "qcm", "question": "Complète : Elles ... apporté des gâteaux.", "options": ["on", "ont"], "answer": "ont"},
+        {"type": "qcm", "question": "Complète : Quand il pleut, ... reste à la maison.", "options": ["on", "ont"], "answer": "on"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "m devant m, b, p",
+      "description": "Devant les lettres m, b et p, la lettre n se transforme en m (sauf exceptions comme bonbon).",
+      "difficulty": 1,
+      "exercises": [
+        {"type": "qcm", "question": "Devant les lettres m, b et p, on écrit le plus souvent :", "options": ["m", "n", "r"], "answer": "m"},
+        {"type": "input", "question": "Écris le mot complet : une cha...bre (m ou n)", "answer": "chambre"},
+        {"type": "input", "question": "Écris le mot complet : un ti...bre (m ou n)", "answer": "timbre"},
+        {"type": "qcm", "question": "Quelle est la bonne orthographe ?", "options": ["une pompe", "une ponpe", "une pommpe"], "answer": "une pompe"},
+        {"type": "input", "question": "Écris le mot complet : e...porter (m ou n)", "answer": "emporter"},
+        {"type": "qcm", "question": "Quelle est la bonne orthographe ?", "options": ["la campagne", "la canpagne", "la campagnie"], "answer": "la campagne"},
+        {"type": "input", "question": "Écris le mot complet : un no...bre (m ou n)", "answer": "nombre"},
+        {"type": "qcm", "question": "Quel mot est une exception à la règle du m devant m, b, p ?", "options": ["un bonbon", "une jambe", "une lampe"], "answer": "un bonbon"},
+        {"type": "input", "question": "Écris le mot complet : gri...per (m ou n)", "answer": "grimper"},
+        {"type": "qcm", "question": "Quelle est la bonne orthographe du mois ?", "options": ["novembre", "novenbre", "novembe"], "answer": "novembre"},
+        {"type": "input", "question": "Écris le mot complet : une o...bre (m ou n)", "answer": "ombre"},
+        {"type": "qcm", "question": "Quelle est la bonne orthographe ?", "options": ["comprendre", "conprendre", "commprendre"], "answer": "comprendre"},
+        {"type": "input", "question": "Écris le verbe complet : e...mener quelqu'un (m ou n)", "answer": "emmener"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "ce / se",
+      "description": "Distinguer ce (déterminant devant un nom) et se (pronom devant un verbe).",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Complète : ... matin, il fait froid.", "options": ["Ce", "Se"], "answer": "Ce"},
+        {"type": "qcm", "question": "Complète : Le chat ... lave dans le salon.", "options": ["ce", "se"], "answer": "se"},
+        {"type": "input", "question": "Complète avec ce ou se : J'aime beaucoup ... livre.", "answer": "ce"},
+        {"type": "qcm", "question": "Complète : Ils ... retrouvent au parc.", "options": ["ce", "se"], "answer": "se"},
+        {"type": "input", "question": "Complète avec ce ou se : Elle ... coiffe devant le miroir.", "answer": "se"},
+        {"type": "qcm", "question": "Devant quel type de mot écrit-on « se » ?", "options": ["Devant un verbe", "Devant un nom", "Devant un déterminant"], "answer": "Devant un verbe"},
+        {"type": "qcm", "question": "Complète : ... soir, nous mangeons des crêpes.", "options": ["Ce", "Se"], "answer": "Ce"},
+        {"type": "input", "question": "Complète avec ce ou se : Le soleil ... couche derrière la colline.", "answer": "se"},
+        {"type": "qcm", "question": "Complète : Regarde ... beau papillon !", "options": ["ce", "se"], "answer": "ce"},
+        {"type": "input", "question": "Complète avec ce ou se : ... travail est très soigné.", "answer": "Ce"},
+        {"type": "qcm", "question": "Complète : Les enfants ... dépêchent pour ne pas être en retard.", "options": ["ce", "se"], "answer": "se"},
+        {"type": "input", "question": "Complète avec ce ou se : Mon frère ... brosse les dents.", "answer": "se"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "ou / où",
+      "description": "Distinguer ou (= ou bien) et où (qui indique un lieu).",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Complète : Tu préfères le jus d'orange ... le jus de pomme ?", "options": ["ou", "où"], "answer": "ou"},
+        {"type": "qcm", "question": "Complète : Dis-moi ... tu habites.", "options": ["ou", "où"], "answer": "où"},
+        {"type": "input", "question": "Complète avec ou ou bien où : Voici la maison ... je suis né.", "answer": "où"},
+        {"type": "qcm", "question": "Quand écrit-on « ou » sans accent ?", "options": ["Quand on peut le remplacer par « ou bien »", "Quand il indique un lieu", "Quand il commence une question"], "answer": "Quand on peut le remplacer par « ou bien »"},
+        {"type": "input", "question": "Complète avec ou ou bien où : Veux-tu du pain ... des biscottes ?", "answer": "ou"},
+        {"type": "qcm", "question": "Complète : ... as-tu rangé tes cahiers ?", "options": ["Où", "Ou"], "answer": "Où"},
+        {"type": "qcm", "question": "Complète : Il viendra samedi ... dimanche.", "options": ["ou", "où"], "answer": "ou"},
+        {"type": "input", "question": "Complète avec ou ou bien où : Le village ... nous partons en vacances est petit.", "answer": "où"},
+        {"type": "qcm", "question": "Complète : Je ne sais pas ... poser ce carton.", "options": ["ou", "où"], "answer": "où"},
+        {"type": "input", "question": "Complète avec ou ou bien où : Tu peux écrire au stylo ... au crayon.", "answer": "ou"},
+        {"type": "qcm", "question": "Complète : L'école ... va Rayan est à Paris.", "options": ["ou", "où"], "answer": "où"},
+        {"type": "qcm", "question": "Complète : Fromage ... dessert, il faut choisir !", "options": ["ou", "où"], "answer": "ou"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "ces / ses",
+      "description": "Distinguer ces (pour montrer : ceux-là) et ses (les siens, les siennes).",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Complète : Léa range ... jouets dans sa chambre.", "options": ["ces", "ses"], "answer": "ses"},
+        {"type": "qcm", "question": "Complète : Regarde ... nuages, ils sont énormes !", "options": ["ces", "ses"], "answer": "ces"},
+        {"type": "input", "question": "Complète avec ces ou ses : Paul a prêté ... crayons à sa voisine.", "answer": "ses"},
+        {"type": "qcm", "question": "Quand écrit-on « ses » ?", "options": ["Quand on peut dire « les siens »", "Quand on montre quelque chose du doigt", "Quand on parle d'un seul objet"], "answer": "Quand on peut dire « les siens »"},
+        {"type": "input", "question": "Complète avec ces ou ses : ... montagnes, là-bas, sont couvertes de neige.", "answer": "Ces"},
+        {"type": "qcm", "question": "Complète : Mamie cherche ... lunettes partout.", "options": ["ces", "ses"], "answer": "ses"},
+        {"type": "qcm", "question": "Complète : Goûte ... fraises, elles viennent du jardin !", "options": ["ces", "ses"], "answer": "ces"},
+        {"type": "input", "question": "Complète avec ces ou ses : L'oiseau nourrit ... petits dans le nid.", "answer": "ses"},
+        {"type": "qcm", "question": "Complète : ... livres, sur la table, sont à moi.", "options": ["Ces", "Ses"], "answer": "Ces"},
+        {"type": "input", "question": "Complète avec ces ou ses : Rayan invite ... amis pour son anniversaire.", "answer": "ses"},
+        {"type": "qcm", "question": "Complète : Le clown amuse les enfants avec ... grimaces.", "options": ["ces", "ses"], "answer": "ses"},
+        {"type": "qcm", "question": "Complète : Regarde ... photos que j'ai prises hier.", "options": ["ces", "ses"], "answer": "ces"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "leur / leurs",
+      "description": "Devant un verbe, leur ne prend jamais de s. Devant un nom, il s'accorde : leur + nom singulier, leurs + nom pluriel.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Complète : Les élèves rangent ... affaires.", "options": ["leur", "leurs"], "answer": "leurs"},
+        {"type": "qcm", "question": "Complète : Je ... donne un bonbon.", "options": ["leur", "leurs"], "answer": "leur"},
+        {"type": "input", "question": "Complète avec leur ou leurs : Les enfants embrassent ... maman.", "answer": "leur"},
+        {"type": "qcm", "question": "Quand « leur » est placé devant un verbe, il :", "options": ["ne prend jamais de s", "prend toujours un s", "prend un s au pluriel"], "answer": "ne prend jamais de s"},
+        {"type": "qcm", "question": "Complète : Les joueurs enfilent ... maillots.", "options": ["leur", "leurs"], "answer": "leurs"},
+        {"type": "input", "question": "Complète avec leur ou leurs : Le maître ... explique la leçon.", "answer": "leur"},
+        {"type": "qcm", "question": "Complète : Les filles prêtent ... crayons de couleur.", "options": ["leur", "leurs"], "answer": "leurs"},
+        {"type": "input", "question": "Complète avec leur ou leurs : Les chats boivent ... lait.", "answer": "leur"},
+        {"type": "qcm", "question": "Complète : Elle ... raconte une histoire chaque soir.", "options": ["leur", "leurs"], "answer": "leur"},
+        {"type": "input", "question": "Complète avec leur ou leurs : Les élèves ouvrent ... cahiers.", "answer": "leurs"},
+        {"type": "qcm", "question": "Complète : Les campeurs montent ... tentes.", "options": ["leur", "leurs"], "answer": "leurs"},
+        {"type": "qcm", "question": "Complète : Papa ... a acheté des glaces.", "options": ["leur", "leurs"], "answer": "leur"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Les valeurs des lettres s, c et g",
+      "description": "La lettre s entre deux voyelles se prononce [z], on écrit ss pour le son [s]. Le c et le g changent de son selon la lettre qui suit.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Dans le mot « maison », le s se prononce comme dans :", "options": ["zéro", "salade", "chat"], "answer": "zéro"},
+        {"type": "qcm", "question": "Pour faire le son [s] entre deux voyelles, on écrit :", "options": ["ss", "s", "z"], "answer": "ss"},
+        {"type": "qcm", "question": "Quel mot désigne l'animal qui vit dans l'eau ?", "options": ["le poisson", "le poison", "le poizon"], "answer": "le poisson"},
+        {"type": "input", "question": "Écris le mot complet : une chan...on (s ou ss)", "answer": "chanson"},
+        {"type": "input", "question": "Écris le mot complet : un dé...ert de sable, très sec (s ou ss)", "answer": "désert"},
+        {"type": "input", "question": "Écris le mot complet : une ta...e de café (s ou ss)", "answer": "tasse"},
+        {"type": "qcm", "question": "Dans quel mot la lettre c fait-elle le son [s] ?", "options": ["citron", "cadeau", "école"], "answer": "citron"},
+        {"type": "qcm", "question": "Dans quel mot la lettre c fait-elle le son [k] ?", "options": ["canard", "cerise", "cinéma"], "answer": "canard"},
+        {"type": "qcm", "question": "Pour faire le son [s] avec la lettre c devant a, o, u, on ajoute :", "options": ["une cédille (ç)", "un accent aigu", "un h"], "answer": "une cédille (ç)"},
+        {"type": "input", "question": "Écris le mot complet : un gar...on (c ou ç)", "answer": "garçon"},
+        {"type": "qcm", "question": "Dans quel mot entend-on le g doux, comme dans « girafe » ?", "options": ["le genou", "le gâteau", "la goutte"], "answer": "le genou"},
+        {"type": "qcm", "question": "Dans quel mot entend-on le g dur, comme dans « gare » ?", "options": ["une bague", "une girouette", "un géant"], "answer": "une bague"},
+        {"type": "input", "question": "Écris le verbe complet : nous man...ons à midi (g ou ge)", "answer": "mangeons"},
+        {"type": "input", "question": "Écris le mot complet : une ...itare (g ou gu)", "answer": "guitare"}
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Les mots invariables",
+      "description": "Les mots invariables s'écrivent toujours de la même façon. Il faut les connaître par cœur.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quelle est la bonne orthographe de ce mot invariable ?", "options": ["toujours", "toujour", "toujourt"], "answer": "toujours"},
+        {"type": "qcm", "question": "Quelle est la bonne orthographe ?", "options": ["beaucoup", "beaucou", "bocoup"], "answer": "beaucoup"},
+        {"type": "input", "question": "Écris le mot invariable qui est le contraire de « demain ».", "answer": "hier"},
+        {"type": "qcm", "question": "Quelle est la bonne orthographe ?", "options": ["aujourd'hui", "aujourdui", "aujourd'huit"], "answer": "aujourd'hui"},
+        {"type": "input", "question": "Complète avec un mot invariable, contraire de « sur » : Le chat dort ... la table.", "answer": "sous"},
+        {"type": "qcm", "question": "Un mot invariable est un mot qui :", "options": ["ne change jamais d'orthographe", "prend un s au pluriel", "change selon le verbe"], "answer": "ne change jamais d'orthographe"},
+        {"type": "qcm", "question": "Quelle est la bonne orthographe ?", "options": ["longtemps", "lontemps", "longtant"], "answer": "longtemps"},
+        {"type": "input", "question": "Écris le mot invariable qui est le contraire de « toujours ».", "answer": "jamais"},
+        {"type": "qcm", "question": "Quelle est la bonne orthographe ?", "options": ["maintenant", "maintenan", "mintenant"], "answer": "maintenant"},
+        {"type": "input", "question": "Complète avec le mot invariable qui veut dire « beaucoup » : Il fait ... froid en hiver.", "answer": "très"},
+        {"type": "qcm", "question": "Quelle est la bonne orthographe ?", "options": ["pendant", "pandant", "pendent"], "answer": "pendant"},
+        {"type": "input", "question": "Complète avec le mot invariable qui indique l'intérieur : Je range mes jouets ... ma chambre.", "answer": "dans"}
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Le pluriel des noms (-s, -x, -eaux, -eux)",
+      "description": "La plupart des noms prennent un s au pluriel. Les noms en -eau et -eu prennent un x. Les noms en -s, -x, -z ne changent pas.",
+      "difficulty": 2,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est le pluriel de « un chat » ?", "options": ["des chats", "des chat", "des chates"], "answer": "des chats"},
+        {"type": "input", "question": "Écris le nom au pluriel : un gâteau → des ...", "answer": "gâteaux"},
+        {"type": "qcm", "question": "Quel est le pluriel de « un jeu » ?", "options": ["des jeux", "des jeus", "des jeues"], "answer": "des jeux"},
+        {"type": "input", "question": "Écris le nom au pluriel : un oiseau → des ...", "answer": "oiseaux"},
+        {"type": "qcm", "question": "Quel est le pluriel de « une souris » ?", "options": ["des souris", "des souriss", "des sourix"], "answer": "des souris"},
+        {"type": "input", "question": "Écris le nom au pluriel : un cheveu → des ...", "answer": "cheveux"},
+        {"type": "qcm", "question": "Quel est le pluriel de « un caillou » ?", "options": ["des cailloux", "des caillous", "des caillouxs"], "answer": "des cailloux"},
+        {"type": "input", "question": "Écris le nom au pluriel : un bateau → des ...", "answer": "bateaux"},
+        {"type": "qcm", "question": "Quel est le pluriel de « un nez » ?", "options": ["des nez", "des nezs", "des nés"], "answer": "des nez"},
+        {"type": "input", "question": "Écris le nom au pluriel : un trou → des ...", "answer": "trous"},
+        {"type": "qcm", "question": "Au pluriel, les noms terminés par -eau prennent :", "options": ["un x", "un s", "rien du tout"], "answer": "un x"},
+        {"type": "input", "question": "Écris le nom au pluriel : un feu → des ...", "answer": "feux"}
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Le pluriel des noms en -al et -ail",
+      "description": "Les noms en -al font souvent leur pluriel en -aux (sauf bals, carnavals, festivals...). Les noms en -ail prennent un s, sauf quelques exceptions comme travaux et vitraux.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est le pluriel de « un cheval » ?", "options": ["des chevaux", "des chevals", "des chevaus"], "answer": "des chevaux"},
+        {"type": "input", "question": "Écris le nom au pluriel : un journal → des ...", "answer": "journaux"},
+        {"type": "qcm", "question": "Quel est le pluriel de « un travail » ?", "options": ["des travaux", "des travails", "des travailles"], "answer": "des travaux"},
+        {"type": "input", "question": "Écris le nom au pluriel : un animal → des ...", "answer": "animaux"},
+        {"type": "qcm", "question": "Quel nom en -al ne fait pas son pluriel en -aux ?", "options": ["un bal", "un cheval", "un journal"], "answer": "un bal"},
+        {"type": "input", "question": "Écris le nom au pluriel : un hôpital → des ...", "answer": "hôpitaux"},
+        {"type": "qcm", "question": "Quel est le pluriel de « un éventail » ?", "options": ["des éventails", "des éventaux", "des éventailles"], "answer": "des éventails"},
+        {"type": "input", "question": "Écris le nom au pluriel : un bocal → des ...", "answer": "bocaux"},
+        {"type": "qcm", "question": "Quel est le pluriel de « un carnaval » ?", "options": ["des carnavals", "des carnavaux", "des carnavalx"], "answer": "des carnavals"},
+        {"type": "input", "question": "Écris le nom au pluriel : un vitrail → des ...", "answer": "vitraux"},
+        {"type": "qcm", "question": "Quel est le pluriel de « un rail » ?", "options": ["des rails", "des raux", "des railx"], "answer": "des rails"},
+        {"type": "input", "question": "Écris le nom au pluriel : un canal → des ...", "answer": "canaux"}
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Le féminin et l'accord de l'adjectif",
+      "description": "Former le féminin des noms et des adjectifs, puis accorder l'adjectif en genre et en nombre avec le nom.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Quel est le féminin de « un marchand » ?", "options": ["une marchande", "une marchante", "une marchand"], "answer": "une marchande"},
+        {"type": "input", "question": "Écris le nom au féminin : un boulanger → une ...", "answer": "boulangère"},
+        {"type": "qcm", "question": "Quel est le féminin de « un directeur » ?", "options": ["une directrice", "une directeure", "une directeuse"], "answer": "une directrice"},
+        {"type": "input", "question": "Écris le nom au féminin : un chanteur → une ...", "answer": "chanteuse"},
+        {"type": "qcm", "question": "Quel est le féminin de « le maître » ?", "options": ["la maîtresse", "la maître", "la maîtrise"], "answer": "la maîtresse"},
+        {"type": "input", "question": "Écris l'adjectif au féminin : un pull vert → une robe ...", "answer": "verte"},
+        {"type": "qcm", "question": "Quel est le féminin de « heureux » ?", "options": ["heureuse", "heureux", "heureuxe"], "answer": "heureuse"},
+        {"type": "input", "question": "Écris l'adjectif au féminin : un mur blanc → une maison ...", "answer": "blanche"},
+        {"type": "qcm", "question": "Complète : une histoire ...", "options": ["amusante", "amusant", "amusants"], "answer": "amusante"},
+        {"type": "input", "question": "Accorde l'adjectif joli : des fleurs ...", "answer": "jolies"},
+        {"type": "qcm", "question": "Complète : des chats ...", "options": ["noirs", "noir", "noires"], "answer": "noirs"},
+        {"type": "qcm", "question": "Complète : des chaussures ...", "options": ["neuves", "neufs", "neuve"], "answer": "neuves"},
+        {"type": "input", "question": "Accorde l'adjectif poli : des garçons ...", "answer": "polis"},
+        {"type": "qcm", "question": "L'adjectif s'accorde avec :", "options": ["le nom qu'il accompagne", "le verbe de la phrase", "le premier mot de la phrase"], "answer": "le nom qu'il accompagne"}
+      ]
+    },
+    {
+      "id": 15,
+      "title": "L'accord sujet-verbe",
+      "description": "Le verbe s'accorde toujours avec son sujet, même quand le sujet est éloigné du verbe.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Complète : Les enfants ... dans la cour.", "options": ["jouent", "joue", "jouons"], "answer": "jouent"},
+        {"type": "qcm", "question": "Complète : Mon frère ... la télévision.", "options": ["regarde", "regardent", "regardes"], "answer": "regarde"},
+        {"type": "input", "question": "Écris le verbe chanter au présent : Les oiseaux ... le matin.", "answer": "chantent"},
+        {"type": "qcm", "question": "Complète : Le chien des voisins ... toute la nuit.", "options": ["aboie", "aboient", "aboies"], "answer": "aboie"},
+        {"type": "input", "question": "Écris le verbe parler au présent : Nous ... doucement.", "answer": "parlons"},
+        {"type": "qcm", "question": "Complète : Les élèves de la classe ... un poème.", "options": ["récitent", "récite", "récites"], "answer": "récitent"},
+        {"type": "qcm", "question": "Complète : Tu ... tes devoirs.", "options": ["finis", "finit", "finient"], "answer": "finis"},
+        {"type": "input", "question": "Écris le verbe arriver au présent : Le bus des écoliers ... à huit heures.", "answer": "arrive"},
+        {"type": "qcm", "question": "Complète : Dans le jardin, les tomates ... vite.", "options": ["poussent", "pousse", "pousses"], "answer": "poussent"},
+        {"type": "qcm", "question": "Avec quel sujet le verbe se termine-t-il par -ent au présent ?", "options": ["Ils", "Il", "Tu"], "answer": "Ils"},
+        {"type": "input", "question": "Écris le verbe porter au présent : La maîtresse ... des lunettes.", "answer": "porte"},
+        {"type": "qcm", "question": "Complète : Le panier de cerises ... très lourd.", "options": ["est", "sont", "es"], "answer": "est"}
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Les lettres muettes finales",
+      "description": "Pour trouver la lettre muette à la fin d'un mot, on cherche un mot de la même famille où on entend cette lettre.",
+      "difficulty": 3,
+      "exercises": [
+        {"type": "qcm", "question": "Quelle est la lettre muette à la fin de « chat » ?", "options": ["t", "s", "d"], "answer": "t"},
+        {"type": "qcm", "question": "Quel mot de la même famille aide à trouver la lettre finale de « grand » ?", "options": ["grandir", "grange", "gratter"], "answer": "grandir"},
+        {"type": "input", "question": "Grâce au mot « dentiste », écris le nom de ce qu'on a dans la bouche : une ...", "answer": "dent"},
+        {"type": "qcm", "question": "Quelle est la lettre muette à la fin de « galop » ? (pense à « galoper »)", "options": ["p", "t", "s"], "answer": "p"},
+        {"type": "input", "question": "Grâce au verbe « chanter », complète le nom : le ... du coq", "answer": "chant"},
+        {"type": "qcm", "question": "Quelle est la lettre muette à la fin de « lait » ? (pense à « laitier »)", "options": ["t", "d", "x"], "answer": "t"},
+        {"type": "input", "question": "Grâce au mot « lourdeur », écris l'adjectif : un sac très ...", "answer": "lourd"},
+        {"type": "qcm", "question": "Quelle est la lettre muette à la fin de « tapis » ? (pense à « tapisser »)", "options": ["s", "t", "d"], "answer": "s"},
+        {"type": "input", "question": "Grâce au verbe « sauter », écris le nom : faire un grand ...", "answer": "saut"},
+        {"type": "qcm", "question": "Quel mot de la même famille aide à écrire la fin de « bord » ?", "options": ["border", "botter", "bouder"], "answer": "border"},
+        {"type": "input", "question": "Grâce au verbe « refuser », écris le nom : un ...", "answer": "refus"},
+        {"type": "qcm", "question": "Quelle est la lettre muette à la fin de « bavard » ? (pense à « bavarder »)", "options": ["d", "t", "s"], "answer": "d"}
+      ]
+    }
+  ]
+}
